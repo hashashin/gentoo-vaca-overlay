@@ -1,0 +1,136 @@
+# ChangeLog for x11-apps/ccsm
+# $Header: $
+
+  30 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ccsm-0.9.2.ebuild, ccsm-9999.ebuild:
+  Synced ebuilds for the 0.9.2 release and live version.
+
+*ccsm-9999 (06 Jun 2010)
+
+  06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ccsm-9999.ebuild:
+  [x11-apps/ccsm-9999] Added live ebuild again to the overlay - thanks to
+  Scott Moreau (soreau).
+
+  02 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  x11-apps/ccsm/ccsm-0.8.2.ebuild:
+  Updated SRC_URI to use the same source for all compiz packages.
+
+  26 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dev-python/compizconfig-python/compizconfig-python-9999.ebuild,
+  -x11-apps/ccsm/ccsm-9999.ebuild:
+  Removing the live version until the new repo is ready. Use 0.8.2 for now.
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  x11-apps/ccsm/ccsm-0.8.2.ebuild:
+  Bumped pygtk dep and added librsvg dep - thanks to crdlb for the heads up.
+
+  09 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild,
+  x11-apps/ccsm/ccsm-0.8.2.ebuild,
+  x11-libs/compiz-bcop/compiz-bcop-0.8.2.ebuild,
+  x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-0.8.2.ebuil
+  d,
+  x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.2.e
+  build, x11-libs/libcompizconfig/libcompizconfig-0.8.2.ebuild:
+  Fixed SRC_URI - forgot the components/ part.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild,
+  x11-apps/ccsm/ccsm-0.8.2.ebuild,
+  dev-python/compizconfig-python/compizconfig-python-9999.ebuild,
+  x11-apps/ccsm/ccsm-9999.ebuild:
+  Explicitely make RDEPEND = DEPEND.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dev-python/compizconfig-python/compizconfig-python-0.7.6.ebuild,
+  -x11-apps/ccsm/ccsm-0.7.6.ebuild:
+  Removed old 0.7.6 ebuild.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild,
+  x11-apps/ccsm/ccsm-0.8.2.ebuild,
+  x11-apps/simple-ccsm/simple-ccsm-0.8.2.ebuild,
+  x11-libs/compiz-bcop/compiz-bcop-0.8.2.ebuild,
+  x11-libs/libcompizconfig/libcompizconfig-0.8.2.ebuild:
+  Fixed HOMEPAGE.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  profiles/package.mask:
+  Bumped ccsm to the 0.8.2 release. Updated copyright date.
+
+  01 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed metadata.xml by removing hanno now that he is on the desktop-effects
+  herd and fixing the description.
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed the metadata.xml
+
+  28 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ccsm-9999.ebuild:
+  Don't forget to call git_src_unpack.
+
+*ccsm-0.7.8 (26 Sep 2008)
+
+  26 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ccsm-0.7.6.ebuild, +ccsm-0.7.8.ebuild:
+  Bumped ccsm to the 0.7.8 release.
+
+*ccsm-0.7.6 (01 Jun 2008)
+
+  01 Jun 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ccsm-0.7.6.ebuild:
+  Bumped ccsm to 0.7.6.
+
+*ccsm-0.7.4 (06 Apr 2008)
+
+  06 Apr 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ccsm-0.6.0.ebuild, -ccsm-0.7.2.ebuild, +ccsm-0.7.4.ebuild:
+  Bumped ccsm to 0.7.4 and removed old versions.
+
+*ccsm-0.7.2 (18 Mar 2008)
+
+  18 Mar 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ccsm-0.7.2.ebuild:
+  Bumped ccsm to 0.7.2.
+
+  06 Jan 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ccsm-0.6.0.ebuild, ccsm-9999.ebuild:
+  Removed extra "cd ${S}" line.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ccsm-0.5.2.ebuild, ccsm-0.6.0.ebuild:
+  Removed 0.5.2 version and fixed dep on compizconfig-python.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ccsm-0.5.2.ebuild, ccsm-0.6.0.ebuild:
+  Removed default S definition.
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ccsm-0.5.2.ebuild, ccsm-0.6.0.ebuild, ccsm-9999.ebuild:
+  Some QA fixes.
+
+  21 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ccsm-0.6.0.ebuild:
+  Bumped package to 0.6.0 release.
+
+  02 Sep 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ccsm-0.5.2.ebuild, ccsm-9999.ebuild:
+  Using gnome2-utils eclass to fix gnome icon update.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml:
+  Added metadata.xml
+
+  14 May 2007; Alex Heck <nesl247@gmail.com> ccsm-9999.ebuild:
+  x11-apps/ccsm: Require pygtk 2.10 instead of 2.8
+
+  13 May 2007; Alex Heck <nesl247@gmail.com> +ccsm-9999.ebuild:
+  x11-apps/ccsm: Initial import
+

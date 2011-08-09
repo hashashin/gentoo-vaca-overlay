@@ -1,0 +1,51 @@
+# ChangeLog
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  24 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> use.local.desc:
+  Missing USE description for x11-wm/compiz[kde4].
+
+  12 Jan 2008; Ingmar Vanhassel <ingmar.vanhassel@gmail.com> package.mask:
+  Removed stale kde-misc/knetworkmanager mask.
+
+  02 Jan 2008; Ingmar Vanhassel <ingmar.vanhassel@gmail.com> use.local.desc:
+  Add ChangeLog entry for x11-wm/compiz:fuse. Removed obsolete USE flags for
+  packages that were removed.
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  use.local.desc:
+  Fixed the type on compiz-fusion unsupported use flag.
+
+  31 Aug 2007; <roderick_greening@hotmail.com> package.mask:
+  Masked kde-misc/knetworkmanager as it's not in portage
+
+  02 Mar 2007; <roderick_greening@hotmail.com> use.local.desc:
+  Updated flags for pertty and kickoff and qt-copy for KDE/Kickoff related
+  packages.
+
+  01 Mar 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add kiba-plugins glitz flag
+
+  25 Feb 2007; <roderick_greening@hotmail.com> use.local.desc:
+  Updated use desc for qt-copy and risky.
+
+  24 Feb 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add gtk+ USE flag use.local.desc
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add beryl-plugins vidcap flag
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add glitz flag for kiba-dock
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add metacity xcomposite flag
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add freetype stuff
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add kdelibs stuff
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> use.local.desc:
+  Add qt flags

@@ -1,0 +1,14 @@
+gnome-extra/cairo-dock-plugins:xfce - Enables the integration in xfce-base/xfce4 desktop. 
+gnome-extra/avant-window-navigator-extras:gconf - Enables support for the gnome-base/gconf backend. 
+gnome-extra/avant-window-navigator-extras:webkit - Enables support for net-libs/webkit-gtk. 
+gnome-extra/avant-window-navigator-extras:vala - Enables support for applets written in dev-lang/vala. 
+gnome-extra/cairo-dock:glitz - Enables support for media-libs/glitz. 
+gnome-extra/avant-window-navigator:gconf - Enables support for the gnome-base/gconf backend. 
+gnome-extra/avant-window-navigator:vala - Enables support for applets written in dev-lang/vala. 
+gnome-extra/avant-window-navigator:xfce - Enables the integration in xfce-base/xfce4 desktop. 
+gnome-extra/kiba-dock:glitz - Enables support for media-libs/glitz. 
+gnome-extra/kiba-dock:akamaru - Enables support for gnome-extra/akamaru. 
+gnome-extra/kiba-plugins:glitz - Enables support for media-libs/glitz. 
+x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse. 
+x11-wm/compiz:kde4 - Compile the kde4 window decorator and add support for kde-base/kdebase-startkde:4.1. 
+x11-wm/compiz-fusion:unsupported - Build the plugins in x11-plugins/compiz-fusion-plugins-unsupported. 

@@ -1,0 +1,26 @@
+*** compizconfig-backend-kconfig4/src/CMakeLists.txt	Mon Mar  7 02:10:53 2011
+--- CMakeLists.txt	Sat Apr  9 09:49:03 2011
+***************
+*** 1,11 ****
+  find_package(KDE4 REQUIRED)
+  find_package (Compiz REQUIRED)
+  
+  add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+- 
+- include(KDE4Defaults)
+  include(FindPkgConfig)
+- include(MacroLibrary)
+  include(CompizCommon)
+  include(CompizPackage)
+  
+--- 1,11 ----
+  find_package(KDE4 REQUIRED)
++ include(KDE4Defaults)
++ include(MacroLibrary)
++ 
+  find_package (Compiz REQUIRED)
+  
+  add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+  include(FindPkgConfig)
+  include(CompizCommon)
+  include(CompizPackage) 

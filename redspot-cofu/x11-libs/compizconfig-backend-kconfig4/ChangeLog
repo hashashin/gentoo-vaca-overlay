@@ -1,0 +1,146 @@
+# ChangeLog for x11-libs/compizconfig-backend-kconfig4
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  30 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-kconfig4-0.9.2.ebuild,
+  compizconfig-backend-kconfig4-9999.ebuild:
+  Synced ebuilds for the 0.9.2 release and live version.
+
+*compizconfig-backend-kconfig4-9999 (06 Jun 2010)
+
+  06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-backend-kconfig4-9999.ebuild:
+  [x11-libs/compizconfig-backend-kconfig4-9999] Added live ebuild again to
+  the overlay - thanks to Scott Moreau (soreau).
+
+  02 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.2.e
+  build:
+  Updated SRC_URI to use the same source for all compiz packages.
+
+  26 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dev-python/compizconfig-python/compizconfig-python-9999.ebuild,
+  -x11-apps/ccsm/ccsm-9999.ebuild,
+  -x11-apps/simple-ccsm/simple-ccsm-9999.ebuild,
+  -x11-libs/compiz-bcop/compiz-bcop-9999.ebuild,
+  -x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-9999.ebuil
+  d,
+  -x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-9999.e
+  build:
+  Removing the live version until the new repo is ready. Use 0.8.2 for now.
+
+  09 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  x11-libs/compiz-bcop/compiz-bcop-0.8.2.ebuild,
+  x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-0.8.2.ebuil
+  d,
+  x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.2.e
+  build, x11-libs/libcompizconfig/libcompizconfig-0.8.2.ebuild:
+  Fixed SRC_URI - forgot the components/ part.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild,
+  x11-apps/ccsm/ccsm-0.8.2.ebuild,
+  x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-0.8.2.ebuil
+  d,
+  x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.2.e
+  build, dev-python/compizconfig-python/compizconfig-python-9999.ebuild,
+  x11-apps/ccsm/ccsm-9999.ebuild,
+  x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-9999.ebuild
+  ,
+  x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-9999.eb
+  uild:
+  Explicitely make RDEPEND = DEPEND.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dev-python/compizconfig-python/compizconfig-python-0.7.6.ebuild,
+  -x11-apps/ccsm/ccsm-0.7.6.ebuild,
+  -x11-apps/simple-ccsm/simple-ccsm-0.7.6.ebuild,
+  -x11-libs/compiz-bcop/compiz-bcop-0.7.6.ebuild,
+  -x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-0.7.6.ebui
+  ld,
+  -x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.7.6.
+  ebuild:
+  Removed old 0.7.6 ebuild.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  profiles/package.mask:
+  Bumped compizconfig-backend-kconfig to the 0.8.2 release. Updated
+  copyright date
+
+  01 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed metadata.xml by removing hanno now that he is on the desktop-effects
+  herd and fixing the description.
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed the metadata.xml
+
+*compizconfig-backend-kconfig-0.7.8 (26 Sep 2008)
+
+  26 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-backend-kconfig-0.7.6.ebuild,
+  +compizconfig-backend-kconfig-0.7.8.ebuild:
+  Bumped compizconfig-backend-kconfig to the 0.7.8 release.
+
+  13 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-kconfig-0.7.6.ebuild,
+  compizconfig-backend-kconfig-9999.ebuild:
+  NEED-KDE must be called before the inherit.
+
+*compizconfig-backend-kconfig-0.7.6 (01 Jun 2008)
+
+  01 Jun 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-backend-kconfig-0.7.6.ebuild:
+  Bumped compizconfig-backend-kconfig to 0.7.6.
+
+*compizconfig-backend-kconfig-0.7.4 (06 Apr 2008)
+
+  06 Apr 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-backend-kconfig-0.6.0.ebuild,
+  -compizconfig-backend-kconfig-0.7.2.ebuild,
+  +compizconfig-backend-kconfig-0.7.4.ebuild:
+  Bumped compizconfig-backend-kconfig to 0.7.4 and removed old versions.
+
+  22 Mar 2008; Ingmar Vanhassel <ingmar@gentoo.org>
+  compizconfig-backend-kconfig-0.6.0.ebuild,
+  compizconfig-backend-kconfig-0.7.2.ebuild,
+  compizconfig-backend-kconfig-9999.ebuild:
+  x11-lilibs/compizconfig-backend-kconfig doesn't need an arts USE flag.
+
+  19 Mar 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> Manifest:
+  Fixed broken manifest.
+
+*compizconfig-backend-kconfig-0.7.2 (18 Mar 2008)
+
+  18 Mar 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-backend-kconfig-0.7.2.ebuild:
+  Bumped  compizconfig-backend-kconfig to 0.7.2
+
+  30 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-kconfig-0.6.0.ebuild,
+  compizconfig-backend-kconfig-9999.ebuild:
+  Fixed deps on kde.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-backend-kconfig-0.5.2.ebuild:
+  Removed 0.5.2 version.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-kconfig-0.5.2.ebuild,
+  compizconfig-backend-kconfig-0.6.0.ebuild:
+  Removed default S definition.
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-kconfig-0.6.0.ebuild:
+  Added compiz to deps.
+
+  21 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-backend-kconfig-0.6.0.ebuild:
+  Bumped package to 0.6.0 release.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml:
+  Added metadata.xml
+

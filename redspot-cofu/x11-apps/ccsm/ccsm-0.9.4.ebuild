@@ -4,13 +4,9 @@
 
 EAPI="3"
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-
 inherit distutils
 
-DESCRIPTION="Compizconfig Python Bindings"
+DESCRIPTION="Compizconfig Settings Manager"
 HOMEPAGE="http://www.compiz.org/"
 SRC_URI="http://releases.compiz.org/${PV}/compiz-${P}.tar.bz2"
 
@@ -20,10 +16,12 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="
-	>=dev-libs/glib-2.6
-	dev-python/cython
-	~x11-libs/libcompizconfig-${PV}
-	~x11-wm/compiz-${PV}
+	~dev-python/compizconfig-python-${PV}
+	>=dev-python/pygtk-2.10
 "
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/compizconfig-python"
+S="${WORKDIR}/ccsm"
+
+src_install() {
+	distutils_src_install --prefix="/usr"
+}

@@ -1,0 +1,149 @@
+# ChangeLog for dev-python/compizconfig-python
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Minor fixes.
+
+  28 Oct 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.9.2.ebuild, compizconfig-python-9999.ebuild:
+  Synced ebuilds for the 0.9.2 release and live version.
+
+*compizconfig-python-9999 (06 Jun 2010)
+
+  06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-python-9999.ebuild:
+  [dev-python/compizconfig-python-9999] Added live ebuild again to the
+  overlay - thanks to Scott Moreau (soreau).
+
+  02 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild:
+  Updated SRC_URI to use the same source for all compiz packages.
+
+  26 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dev-python/compizconfig-python/compizconfig-python-9999.ebuild:
+  Removing the live version until the new repo is ready. Use 0.8.2 for now.
+
+  09 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild,
+  x11-libs/compiz-bcop/compiz-bcop-0.8.2.ebuild,
+  x11-libs/compizconfig-backend-gconf/compizconfig-backend-gconf-0.8.2.ebuil
+  d,
+  x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.8.2.e
+  build, x11-libs/libcompizconfig/libcompizconfig-0.8.2.ebuild:
+  Fixed SRC_URI - forgot the components/ part.
+
+  07 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild:
+  Added an inherit for the python eclass to call python_need_rebuild -
+  should fix bug 244559.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild,
+  dev-python/compizconfig-python/compizconfig-python-9999.ebuild:
+  Explicitely make RDEPEND = DEPEND.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dev-python/compizconfig-python/compizconfig-python-0.7.6.ebuild:
+  Removed old 0.7.6 ebuild.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/compizconfig-python-0.8.2.ebuild:
+  Fixed HOMEPAGE and SRC_URI.
+
+  06 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  profiles/package.mask:
+  Bumped compizconfig-python to the 0.8.2 release. Updated copyright date.
+
+  31 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed metadata.xml.
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed the metadata.xml
+
+  28 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Don't forget to call git_src_unpack.
+
+*compizconfig-python-0.7.8 (26 Sep 2008)
+
+  26 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-python-0.7.6.ebuild, +compizconfig-python-0.7.8.ebuild,
+  compizconfig-python-9999.ebuild:
+  Bumped compizconfig-python to the 0.7.8 release, bumped to EAPI-2.
+
+  13 Sep 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Call scm src_unpack function and don't try to use unpack on live code.
+
+  03 Aug 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.7.6.ebuild:
+  Fixed QA errors: removed the inherit of autotools and fixed python dep.
+
+*compizconfig-python-0.7.6 (01 Jun 2008)
+
+  01 Jun 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-python-0.7.6.ebuild:
+  Bumped compizconfig-python to 0.7.6.
+
+*compizconfig-python-0.7.4 (06 Apr 2008)
+
+  06 Apr 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-python-0.6.0.1.ebuild, -compizconfig-python-0.7.2.ebuild,
+  +compizconfig-python-0.7.4.ebuild:
+  Bumped compizconfig-python to 0.7.4 and removed old versions.
+
+  19 Mar 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.7.2.ebuild, compizconfig-python-9999.ebuild:
+  Removed calls to eautoreconf and replaced make with emake.
+
+*compizconfig-python-0.7.2 (18 Mar 2008)
+
+  18 Mar 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-python-0.7.2.ebuild:
+  Bumped compizconfig-python to 0.7.2.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-python-0.5.2.ebuild, -compizconfig-python-0.6.0.ebuild:
+  Removed 0.5.2 and 0.6.0 version.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.5.2.ebuild, compizconfig-python-0.6.0.ebuild,
+  compizconfig-python-0.6.0.1.ebuild:
+  Removed default S definition. Removed old cruft.
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.5.2.ebuild, compizconfig-python-0.6.0.ebuild,
+  +compizconfig-python-0.6.0.1.ebuild, compizconfig-python-9999.ebuild:
+  Added version 0.6.0.1 that includes the missing VERSION file.
+
+  21 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-python-0.6.0.ebuild:
+  Bumped package to 0.6.0 release.
+
+  22 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Removed dep on compiz-0.5.2 for the live ebuild as it doesn't work.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Added missing dep for libcompizconfig to compizconfig-python-9999.
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml:
+  Added metadata.xml.
+
+  19 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Update to allow compiz-0.5.2 or compiz-9999 as deps.
+
+  13 May 2007; Alex Heck <nesl247@gmail.com> +ccs-python-9999.ebuild:
+  dev-python/ccs-python: Initial import
+
