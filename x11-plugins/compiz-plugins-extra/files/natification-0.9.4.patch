@@ -1,0 +1,19 @@
+*** notification/src/notification.cpp	Mon Mar  7 01:38:09 2011
+--- notification.cpp	Fri Apr  8 19:01:06 2011
+***************
+*** 55,61 ****
+      logLevel = (char *) logLevelToString (level);
+  
+      n = notify_notification_new (logLevel, message,
+! 				 iconUri.c_str (), NULL);
+  
+      timeout = optionGetTimeout ();
+      if (timeout > 0)
+--- 55,61 ----
+      logLevel = (char *) logLevelToString (level);
+  
+      n = notify_notification_new (logLevel, message,
+! 				 iconUri.c_str ());
+  
+      timeout = optionGetTimeout ();
+      if (timeout > 0)
