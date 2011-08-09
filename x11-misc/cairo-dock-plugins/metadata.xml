@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<use>
+	<flag name="xfce">Enables the integration in <pkg>xfce-base/xfce4</pkg> desktop.</flag>
+	<flag name="compiz">Enables compiz applet</flag>
+	<flag name="gio">Enables gio in gmenu</flag>
+	<flag name="gmenu">Enables gmenu applet</flag>
+	<flag name="mail">Enables mail checker applet</flag>
+	<flag name="nvidia">Enables nvidia applet</flag>
+	<flag name="powermanager">Enables PowerManager applet</flag>
+	<flag name="rhythmbox">Enables RhythmBox applet</flag>
+	<flag name="terminal">Enables terminal applet</flag>
+	<flag name="tomboy">Enables TomBoy applet</flag>
+	<flag name="webkit">Enables Weblet applet</flag>
+	<flag name="xgamma">Enables XGamma applet</flag>
+	<flag name="xklavier">Enables keyboard-indicator applet</flag>
+</use>
+<herd>no-herd</herd>
+<maintainer>
+	<email>jmbsvicetto@gentoo.org</email>
+	<name>Jorge Manuel B. S. Vicetto</name>
+</maintainer>
+<longdescription>Cairo-dock-plugins offers plugins for cairo-dock.</longdescription>
+</pkgmetadata>
