@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit cmake-utils eutils versionator
+inherit cmake-utils eutils versionator python
 
 MY_PN="${PN/plugins/plug-ins}"
 MY_PV=$(replace_version_separator 3 '~')
@@ -49,3 +49,7 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+src_configure(){
+	cmake-utils_src_configure
+
+}
