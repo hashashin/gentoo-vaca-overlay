@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils pam git toolchain-funcs
+inherit eutils pam git-2 toolchain-funcs
 
 DESCRIPTION="PAM module that enables authentication using an USB-Storage device through DSA private/public keys."
 HOMEPAGE="http://www.pamusb.org/"
