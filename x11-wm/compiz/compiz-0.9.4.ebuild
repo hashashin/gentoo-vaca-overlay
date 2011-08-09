@@ -44,6 +44,9 @@ COMMONDEPEND="
 	x11-libs/libICE
 	x11-libs/libSM
 	>=x11-libs/startup-notification-0.7
+	dev-libs/boost
+	dev-util/boost-build
+	dev-cpp/glibmm
 	gtk? (
 		>=x11-libs/gtk+-2.8.0
 		x11-libs/libwnck
