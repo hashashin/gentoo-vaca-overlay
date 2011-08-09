@@ -1,0 +1,21 @@
+--- conf/amun.conf	2010-03-04 21:37:18.000000000 +0100
++++ files/amun.conf	2011-05-11 08:20:42.000000000 +0200
+@@ -9,8 +9,8 @@
+
+ ### define the user amun should run as
+ ### NOTE: non-root user cannot open bindports below 1024
+-user: root
+-group: root
++user: amun
++group: amun
+
+ ### timeouts in seconds when everything else fails
+ ### (can be changed while running)
+@@ -85,6 +85,7 @@
+ log_modules:
+ #	log-surfnet
+ #	log-syslog
++#	log-mysql
+
+ ### define the vulnerability modules to load
+ ### (can be changed while running)

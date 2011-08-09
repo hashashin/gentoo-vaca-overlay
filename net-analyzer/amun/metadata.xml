@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>gentoo.power@gmail.com</email>
+</maintainer>
+<longdescription>Amun is a low-interaction honeypot, like Nepenthes or Omnivora, designed to capture autonomous spreading malware in an automated fashion. Amun is written in Python and therefore allows easy integration of new features.</longdescription> 
+</pkgmetadata>

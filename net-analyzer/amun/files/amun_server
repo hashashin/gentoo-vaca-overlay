@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+    use net
+}
+
+start() {
+    ebegin "Starting amun"
+    start-stop-daemon --start --quiet --pidfile /var/run/amun.pid \
+	--make-pidfile --background --exec /opt/amun/amun_server.py
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping amun"
+    start-stop-daemon --stop --quiet --pidfile /var/run/amun.pid
+    eend $?
+}
