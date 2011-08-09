@@ -20,18 +20,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="xcomposite"
 
-#"libcurl"
-#"gthread-2.0"
-
-#"dbus-glib-1"
-#"libxml-2.0"
-#"librsvg-2.0"
-#"dbus-1"
-#"cairo"
-#"gtk+-2.0"
-#"gtkglext-1.0"
-#"xrender"
-
 RDEPEND="
 	dev-libs/dbus-glib
 	dev-libs/glib:2
@@ -55,14 +43,6 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${PN}-${MY_PV}"
-
-#src_prepare() {
-#	epatch "${FILESDIR}/${P}-rpath.patch" || die
-#}
-
-#src_configure() {
-#	econf $(use_enable xcomposite xextend)
-#}
 
 pkg_postinst() {
 	elog "Cairo-Dock is an app that draws on a RGBA GLX visual."
