@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Aug 2011; <hash@gentoo.org> ChangeLog:
+  update to git-2 eclass
+
   13 May 2011; <hash@gentoo.org> pam_usb-9999.ebuild:
 
 
