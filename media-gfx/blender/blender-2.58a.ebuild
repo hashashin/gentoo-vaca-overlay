@@ -32,7 +32,7 @@ if [[ ${PV} == *9999 ]] ; then
 elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
 else # Official release
-	SRC_URI="http://download.blender.org/source/${P}a.tar.gz"
+	SRC_URI="http://download.blender.org/source/${P}.tar.gz"
 fi
 
 #SLOT="$(get_version_component_range 1-2)"
