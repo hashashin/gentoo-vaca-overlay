@@ -20,16 +20,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="alsa compiz exif gio gmenu gnome kde mail musicplayer network-monitor powermanager terminal tomboy webkit wifi xfce xgamma xklavier"
 
-# "dbus-glib-1"
-# "gthread-2.0" - glib
-# "libxml-2.0"
-# "librsvg-2.0"
-# "dbus-1"
-# "cairo"
-# "gtk+-2.0"
-# "gtkglext-1.0"
-# "cairo-dock"
-
 RDEPEND="
 	dev-libs/dbus-glib
 	dev-libs/glib:2
@@ -59,32 +49,3 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${PN}-${MY_PV}"
-
-# Additional config options
-#dnd2share
-#rssreader
-#xrandr-in-show-desktop
-#scooby-do
-#src_configure() {
-#	econf --disable-dependency-tracking       \
-#		--disable-old-gnome-integration       \
-#		$(use_enable alsa  alsa-mixer)        \
-#		$(use_enable compiz compiz-icon)      \
-#		$(use_enable exif)                    \
-#		$(use_enable gio gio-in-gmenu)        \
-#		$(use_enable gio gmenu)               \
-#		$(use_enable gmenu)                   \
-#		$(use_enable gnome gnome-integration) \
-#		$(use_enable kde kde-integration)     \
-#		$(use_enable mail)                    \
-#		$(use_enable musicplayer)             \
-#		$(use_enable network-monitor)         \
-#		$(use_enable powermanager)            \
-#		$(use_enable terminal)                \
-#		$(use_enable tomboy)                  \
-#		$(use_enable webkit weblets)          \
-#		$(use_enable wifi)                    \
-#		$(use_enable xfce  xfce-integration)  \
-#		$(use_enable xgamma)                  \
-#		$(use_enable xklavier keyboard-indicator)
-#}
