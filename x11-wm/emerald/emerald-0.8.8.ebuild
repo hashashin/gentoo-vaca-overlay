@@ -31,13 +31,13 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.15
 "
 
-#src_prepare() {
+src_prepare() {
 #	# Fixing GTK symbol - bug 308791.
 #	epatch "${FILESDIR}/${P}-gtk+-2.20-build.patch"
 #	# fix build with gtk+-2.22 - bug 341143
-#	sed -i -e '/#define G[DT]K_DISABLE_DEPRECATED/s:^://:' \
-#		include/emerald.h || die
-#}
+	sed -i -e '/#define G[DT]K_DISABLE_DEPRECATED/s:^://:' \
+		include/emerald.h || die
+}
 
 src_configure() {
 	econf \
