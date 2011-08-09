@@ -7,14 +7,14 @@
 	<flag name="gio">Enables gio in gmenu</flag>
 	<flag name="gmenu">Enables gmenu applet</flag>
 	<flag name="mail">Enables mail checker applet</flag>
-	<flag name="nvidia">Enables nvidia applet</flag>
 	<flag name="powermanager">Enables PowerManager applet</flag>
-	<flag name="rhythmbox">Enables RhythmBox applet</flag>
 	<flag name="terminal">Enables terminal applet</flag>
 	<flag name="tomboy">Enables TomBoy applet</flag>
 	<flag name="webkit">Enables Weblet applet</flag>
 	<flag name="xgamma">Enables XGamma applet</flag>
 	<flag name="xklavier">Enables keyboard-indicator applet</flag>
+	<flag name="musicplayer">Enables musicplayer applet</flag>
+        <flag name="network-monitor">Enables network-monitor applet</flag>
 </use>
 <herd>no-herd</herd>
 <maintainer>
