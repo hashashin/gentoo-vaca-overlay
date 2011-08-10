@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/tele2dic${PV}"
+S="${WORKDIR}/tele2dic_v${PV}"
 
 src_install() {
 	dosbin tele2dic
