@@ -22,5 +22,5 @@ S="${WORKDIR}/wlandecrypter-${PV}"
 
 src_install() {
         dosbin wlandecrypter
-        dodoc leeme.txt
+        dodoc README.txt
 }
