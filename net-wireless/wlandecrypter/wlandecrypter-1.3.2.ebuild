@@ -21,6 +21,6 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/wlandecrypter-${PV}"
 
 src_install() {
-        dosbin wlandecrypter
-        dodoc README.txt
+	dosbin wlandecrypter
+	dodoc README.txt
 }
