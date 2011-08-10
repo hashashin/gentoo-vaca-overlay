@@ -19,3 +19,7 @@ RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/WPAmagickey-${PV}"
+src_install() {
+	dosbin wpamagickey
+	dodoc leeme.txt
+}
