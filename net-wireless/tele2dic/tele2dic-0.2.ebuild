@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/tele2dic_v${PV}"
 
+src_prepare() {
+	make clean
+}
+
 src_install() {
 	dosbin tele2dic
 	dodoc README.txt
