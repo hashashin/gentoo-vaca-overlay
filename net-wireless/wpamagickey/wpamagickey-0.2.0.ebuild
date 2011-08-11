@@ -6,8 +6,8 @@ EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Saca las claves wpa de WLAN_XXXX."
-HOMEPAGE="http://foro.seguridadwireless.net/aplicaciones-y-diccionarios-linux/wpamagickey-claves-por-defecto-wlan_xxxx-jazztel_xxxx-routers-comtrend-35300/"
+DESCRIPTION="Saca las claves wpa de Wlan_XXXX, Jazztel_XXXX."
+HOMEPAGE="http://www.seguridadwireless.net"
 SRC_URI="http://www.seguridadwireless.net/archivos/WPAmagickey-${PV}.tar.gz"
 IUSE=""
 

@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Saca las claves wpa de WLAN_XXXX."
+DESCRIPTION="Generador de claves por defecto tele2."
 HOMEPAGE="http://www.seguridadwireless.net"
 SRC_URI="http://www.bitsdelocos.es/SW/tele2dic_v${PV}.tar.gz"
 IUSE=""
