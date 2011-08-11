@@ -19,7 +19,9 @@ IUSE=""
 S="${WORKDIR}/${PN}-${MM_PV}"
 
 src_prepare() {
-	rm "${S}/Makefile"
+	rm "${S}/Makefile ${S}/Makefile-CYGWIN ${S}/Makefile-Linux"
+	mv "${S}/src/ ${S}/"
+	rmdir "${S}/src/"
 }
 
 src_install() {
