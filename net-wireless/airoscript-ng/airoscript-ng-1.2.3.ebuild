@@ -16,15 +16,16 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-S="${WORKDIR}/${PN}-${MM_PV}"
+S="${WORKDIR}/${PN}-${MM_PV}/src"
 
 src_prepare() {
 	rm "${S}/Makefile"
 }
 
 src_install() {
-	insinto "/usr/${PN}"
-	doins -r "${S}/src/*"
+	insinto "/usr/local/${PN}"
+	doins -r "${S}"
+	exeinto /usr/local/bin
 	doexe "${S}/src/airoscript-ng"
 	insinto /etc
 	doins "${S}/src/airoscript-ng.conf"
