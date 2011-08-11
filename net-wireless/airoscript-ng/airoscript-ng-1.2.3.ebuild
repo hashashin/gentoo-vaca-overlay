@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-S="${WORKDIR}/${PN}-${MM_PV}/src"
+S="${WORKDIR}/${PN}-${MM_PV}"
 
 src_prepare() {
 	rm "${S}/Makefile"
@@ -24,7 +24,7 @@ src_prepare() {
 
 src_install() {
 	insinto "/usr/local/${PN}"
-	doins -r "${S}"
+	doins -r "${S}/src/"
 	exeinto /usr/local/bin
 	doexe "${S}/src/airoscript-ng"
 	insinto /etc
