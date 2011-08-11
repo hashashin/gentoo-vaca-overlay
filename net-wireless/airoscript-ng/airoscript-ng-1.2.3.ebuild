@@ -19,18 +19,25 @@ IUSE=""
 S="${WORKDIR}/${PN}-${MM_PV}"
 
 src_prepare() {
-	rm "${S}/Makefile ${S}/Makefile-CYGWIN ${S}/Makefile-Linux"
-	mv "${S}/src/ ${S}/"
-	rmdir "${S}/src/"
+	rm "${S}/Makefile"
+	rm "${S}/Makefile-CYGWIN"
+	rm "${S}/Makefile-Linux"
+	cp -r "${S}/src/functions" "${S}/"
+	cp -r "${S}/src/themes" "${S}/"
+	cp -r "${S}/src/plugins" "${S}/"
+	cp -r "${S}/src/locale" "${S}/"
+	cp "${S}/src/airoscript-ng.conf" "${S}/"
+	cp "${S}/src/airoscript-ng" "${S}/"
+	rm -rf "${S}/src/"
 }
 
 src_install() {
 	insinto "/usr/local/${PN}"
-	doins -r "${S}/src/"
+	doins -r "${S}"
 	exeinto /usr/local/bin
-	doexe "${S}/src/airoscript-ng"
+	doexe "${S}/airoscript-ng"
 	insinto /etc
-	doins "${S}/src/airoscript-ng.conf"
+	doins "${S}/airoscript-ng.conf"
 #	dodesktop "${S}/aircrack-airoscript.desktop"
 #	dolocale "${S}/src/locale"
 	dodoc "${S}/doc/authors"
