@@ -24,7 +24,7 @@ src_prepare() {
 
 src_install() {
 	insinto /usr
-	doins -r "${S}/src"
+	doins -r "${S}/src/"
 	doexe "${S}/src/airoscript-ng"
 	newconf "${S}/src/airoscript-ng.conf"
 	dodesktop "${S}/aircrack-airoscript.desktop"
