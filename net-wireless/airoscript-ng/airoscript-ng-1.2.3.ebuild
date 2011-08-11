@@ -17,3 +17,7 @@ KEYWORDS=""
 IUSE=""
 
 S="${WORKDIR}/${PN}-${MM_PV}"
+
+src_prepare() {
+	mv Makefile-Linux Makefile
+}
