@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${PV}"
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-hexformat.patch"
+}
+
 src_install() {
 	dosbin ono4xx
 	dodoc leeme.txt
