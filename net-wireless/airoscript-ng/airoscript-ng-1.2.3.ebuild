@@ -13,7 +13,7 @@ MM_PV=$(get_version_component_range '1-2')
 SRC_URI="http://airoscript.googlecode.com/files/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 S="${WORKDIR}/${PN}-${MM_PV}"
