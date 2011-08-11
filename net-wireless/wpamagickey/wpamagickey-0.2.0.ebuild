@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Saca las claves wpa de Wlan_XXXX, Jazztel_XXXX."
+DESCRIPTION="Generador de claves wpa para Wlan_XXXX, Jazztel_XXXX."
 HOMEPAGE="http://www.seguridadwireless.net"
 SRC_URI="http://www.seguridadwireless.net/archivos/WPAmagickey-${PV}.tar.gz"
 IUSE=""
