@@ -24,7 +24,5 @@ src_install() {
 	dobin "${S}/src/dictool"
 	dodoc README
 	dodoc AUTHORS
-	dodoc ChangeLog
 	dodoc INSTALL
-	dodoc COPYING
 }
