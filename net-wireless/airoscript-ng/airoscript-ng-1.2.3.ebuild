@@ -23,12 +23,13 @@ src_prepare() {
 }
 
 src_install() {
-	insinto /usr
-	doins -r "${S}/src/"
+	insinto "/usr/${PN}"
+	doins -r "${S}/src/*"
 	doexe "${S}/src/airoscript-ng"
-	newconf "${S}/src/airoscript-ng.conf"
-	dodesktop "${S}/aircrack-airoscript.desktop"
-	dolocale "${S}/src/locale"
+	insinto /etc
+	doins "${S}/src/airoscript-ng.conf"
+#	dodesktop "${S}/aircrack-airoscript.desktop"
+#	dolocale "${S}/src/locale"
 	dodoc "${S}/doc/authors"
 	dodoc "${S}/doc/changelog"
 	dodoc "${S}/doc/install"
