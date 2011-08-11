@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}-${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-hexformat.patch"
+	epatch "${FILESDIR}/${PN}-hexformat-r1.patch"
 }
 
 src_install() {
