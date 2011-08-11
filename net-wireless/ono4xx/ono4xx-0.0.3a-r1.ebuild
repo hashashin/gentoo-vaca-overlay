@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Saca las claves wpa de ONOXXXX."
+DESCRIPTION="Generador claves por defecto de ONOXXXX."
 HOMEPAGE="http://www.seguridadwireless.net"
 SRC_URI="http://www.seguridadwireless.net/archivos/${PN}-${PV}.tar.gz"
 IUSE=""
