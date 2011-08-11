@@ -21,6 +21,6 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}-${PV}"
 
 src_install() {
-	dosbin wlan4xx
+	dobin wlan4xx
 	dodoc README.txt
 }

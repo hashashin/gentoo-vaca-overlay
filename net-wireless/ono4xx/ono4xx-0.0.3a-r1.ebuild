@@ -25,6 +25,6 @@ src_prepare() {
 }
 
 src_install() {
-	dosbin ono4xx
+	dobin ono4xx
 	dodoc leeme.txt
 }

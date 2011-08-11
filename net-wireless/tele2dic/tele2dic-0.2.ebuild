@@ -25,6 +25,6 @@ src_prepare() {
 }
 
 src_install() {
-	dosbin tele2dic
+	dobin tele2dic
 	dodoc README.txt
 }

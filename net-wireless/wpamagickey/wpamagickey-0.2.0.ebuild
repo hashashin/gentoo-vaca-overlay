@@ -21,6 +21,6 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/WPAmagickey-${PV}"
 
 src_install() {
-	dosbin wpamagickey
+	dobin wpamagickey
 	dodoc leeme.txt
 }
