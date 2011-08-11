@@ -32,7 +32,7 @@ src_prepare() {
 }
 
 src_install() {
-	insinto "/usr/local/${PN}"
+	insinto "/usr/local"
 	doins -r "${S}/"
 	exeinto /usr/local/bin
 	doexe "${S}/airoscript-ng"
