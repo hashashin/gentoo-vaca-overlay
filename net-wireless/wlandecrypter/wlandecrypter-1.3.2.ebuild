@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Saca las claves wpa de WLAN_XXXX."
+DESCRIPTION="Generador de claves de WLAN_XXXX."
 HOMEPAGE="http://www.seguridadwireless.net"
 SRC_URI="http://www.seguridadwireless.net/archivos/wlandecrypter-${PV}.tar.gz"
 IUSE=""
