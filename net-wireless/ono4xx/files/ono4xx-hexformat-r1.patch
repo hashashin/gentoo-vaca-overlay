@@ -1,37 +1,5 @@
 --- ono4xx-0.0.3a/ono4xx.c	2011-02-14 20:03:35.000000000 +0100
 +++ ono4xx-0.0.4a/ono4xx.c	2011-08-02 20:22:10.000000000 +0200
-@@ -1,8 +1,8 @@
- /***************************************************************************************
- * Fichero:	ono4xx.c
--* Version:  	0.0.3a
-+* Version:  	0.0.4a
- * Autor:	Mambostar - NirozMe|on
--* Fecha:	01-02-2011
-+* Fecha:	01-08-2011
- * 
- * 
- * 				www.seguridadwireless.net
-@@ -29,7 +29,8 @@
- * 
- * Mas informacion en foro.seguridadwireless.net
- *
--* 
-+* v0.0.4a:	Guarda claves wep generadas con formato hex xx:xx:xx:xx:...
-+*		en lugar de xxxxxxxxxx...
- ****************************************************************************************/
- 
- #include <ctype.h>
-@@ -39,8 +40,8 @@
- 
- #define VERSION 0
- #define SUBVERSION 0
--#define RELEASE 3
--#define DATEVERSION "01/02/2011"
-+#define RELEASE 4
-+#define DATEVERSION "01/08/2011"
- 
- 
- //--------------------
 @@ -219,71 +220,71 @@
            for ( e = 0; e <= 9; ++e )
            {	
