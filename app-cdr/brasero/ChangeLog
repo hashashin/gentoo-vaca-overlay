@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.130 2011/07/19 13:14:46 pacho Exp $
 
+  12 Aug 2011; <hash@gentoo.org> ChangeLog:
+
+
+  Changes:
+
+  modified: ChangeLog
+
+  clean old version and patches bump to 3.0.0 version
+
+
 *brasero-2.32.1-r1 (19 Jul 2011)
 
   19 Jul 2011; Pacho Ramos <pacho@gentoo.org> +brasero-2.32.1-r1.ebuild,
