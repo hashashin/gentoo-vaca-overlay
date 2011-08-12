@@ -5,7 +5,7 @@
 EAPI=3
 PYTHON_DEPEND="2"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Wine-doors is a package manager for wine."
 HOMEPAGE="http://www.wine-doors.org"
