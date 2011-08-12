@@ -2,6 +2,20 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Aug 2011; <hash@gentoo.org> gnome-commander-1.2.8.12.ebuild, metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+  modified: gnome-commander-1.2.8.12.ebuild
+
+  modified: Manifest
+
+  add chm use
+
+
   12 Aug 2011; <hash@gentoo.org> gnome-commander-1.2.8.12.ebuild:
 
 

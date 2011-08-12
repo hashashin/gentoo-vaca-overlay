@@ -10,9 +10,9 @@ inherit eutils gnome2 versionator
 MM_PV=$(get_version_component_range '1-2')
 
 DESCRIPTION="two-pane graphical file manager for the GNOME desktop environment."
-HOMEPAGE="http://www.nongnu.org/gcmd/index.html"
+HOMEPAGE="http://www.nongnu.org/gcmd"
 SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${MM_PV}/${PN}-${PV}.tar.bz2"
-IUSE="vfs python taglib exiv gsf pdf"
+IUSE="vfs python taglib exiv gsf pdf chm"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,7 +27,8 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	taglib? ( >=media-libs/taglib-1.4 )
 	exiv? ( >=media-gfx/exiv2-0.14 )
 	gsf? ( >=gnome-extra/libgsf-1.12.0 )
-	pdf? ( >=app-text/poppler-0.6 )"
+	pdf? ( >=app-text/poppler-0.6 )
+	chm? ( dev-libs/chmlib )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${PV}"

@@ -13,5 +13,6 @@
 		<flag name="exiv">Exif and IPTC support.</flag>
 		<flag name="gsf">OLE and ODF support.</flag>
 		<flag name="pdf">PDF support.</flag>
+		<flag name="chm">add support for chm, MS Windows help files format.</flag>
 	</use>
 </pkgmetadata>
