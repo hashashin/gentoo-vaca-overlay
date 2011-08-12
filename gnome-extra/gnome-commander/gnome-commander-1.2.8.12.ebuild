@@ -20,7 +20,9 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
-	gnome-base/libgnomeui"
+	gnome-base/libgnomeui
+	gnome-base/libgnome
+	gnome-base/gnome-vfs:2"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${PV}"
