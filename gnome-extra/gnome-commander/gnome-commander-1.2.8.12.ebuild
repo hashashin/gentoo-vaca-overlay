@@ -35,15 +35,3 @@ S="${WORKDIR}/${PN}-${PV}"
 pkg_setup() {
 	DOCS="INSTALL AUTHORS BUGS ChangeLog README NEWS"
 }
-
-src_prepare() {
-	gnome2_src_prepare
-}
-
-pkg_preinst() {
-	gnome2_pkg_preinst
-}
-
-pkg_postinst() {
-	gnome2_pkg_postinst
-}
