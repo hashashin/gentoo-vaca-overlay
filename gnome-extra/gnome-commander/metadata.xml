@@ -6,4 +6,12 @@
 		<email>gentoo.power@gmail.com</email>
 		<name>hashashin</name>
 	</maintainer>
+	<use>
+		<flag name="vfs">Support for gnome-vfs.</flag>
+		<flag name="python">Support for python plugins.</flag>
+		<flag name="taglib">ID3, Vorbis, FLAC and APE support.</flag>
+		<flag name="exiv">Exif and IPTC support.</flag>
+		<flag name="gsf">OLE and ODF support.</flag>
+		<flag name="pdf">PDF support.</flag>
+	</use>
 </pkgmetadata>
