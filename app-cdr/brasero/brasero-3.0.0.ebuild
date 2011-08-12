@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.1 2011/07/19 13:14:46 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="no"
