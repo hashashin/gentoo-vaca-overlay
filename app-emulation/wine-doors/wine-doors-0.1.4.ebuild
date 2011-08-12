@@ -23,7 +23,8 @@ DEPEND="dev-python/pycairo
 	dev-libs/libxml2[python]
 	app-pda/orange
 	app-arch/cabextract
-	app-emulation/wine"
+	app-emulation/wine
+	x11-apps/setxkbmap"
 RDEPEND="${DEPEND}
 	dev-python/gconf-python"
 
