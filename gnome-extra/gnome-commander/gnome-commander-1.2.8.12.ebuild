@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -21,8 +21,9 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
 	gnome-base/libgnomeui
-	gnome-base/libgnome
-	gnome-base/gnome-vfs:2"
+	gnome-base/libgnome:2
+	gnome-base/gnome-vfs:2
+	dev-lang/python:2.4"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${PV}"
