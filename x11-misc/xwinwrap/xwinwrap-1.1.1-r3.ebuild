@@ -28,10 +28,6 @@ ECVS_LOCALNAME="xwinwrap"
 
 S=${WORKDIR}/${ECVS_LOCALNAME}
 
-src_prepare() {
-	epatch ${FILESDIR}/parche-assneed.patch
-}
-
 src_compile() {
 	append-ldflags $(no-as-needed)
 	emake
