@@ -32,12 +32,6 @@ src_unpack() {
 #	epatch "${FILESDIR}/xwinwrap-frameless-geometry.patch"
 }
 
-src_compile() {
-
-	emake || die "emake failed"
-}
-
-
 src_install() {
 	dobin xwinwrap
 }
