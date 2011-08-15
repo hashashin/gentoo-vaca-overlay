@@ -20,9 +20,9 @@ ECVS_SERVER="anoncvs.freedesktop.org:/cvs/xapps"
 ECVS_MODULE="xwinwrap"
 ECVS_BRANCH=""
 ECVS_LOCALNAME="xwinwrap"
-ECVS_CO_DATE=${PV##*alpha}
-ECVS_UP_OPTS="-D ${ECVS_CO_DATE} -dP"
-ECVS_CO_OPTS="-D ${ECVS_CO_DATE}"
+#ECVS_CO_DATE=${PV##*alpha}
+#ECVS_UP_OPTS="-D ${ECVS_CO_DATE} -dP"
+#ECVS_CO_OPTS="-D ${ECVS_CO_DATE}"
 
 S=${WORKDIR}/${ECVS_LOCALNAME}
 
