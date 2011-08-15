@@ -29,7 +29,7 @@ S=${WORKDIR}/${ECVS_LOCALNAME}
 src_unpack() {
 	cvs_src_unpack
 	cd ${S}
-	epatch "${FILESDIR}/xwinwrap-frameless-geometry.patch"
+#	epatch "${FILESDIR}/xwinwrap-frameless-geometry.patch"
 }
 
 src_compile() {
