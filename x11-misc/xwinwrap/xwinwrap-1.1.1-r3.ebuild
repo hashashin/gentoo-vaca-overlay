@@ -29,7 +29,7 @@ ECVS_LOCALNAME="xwinwrap"
 S=${WORKDIR}/${ECVS_LOCALNAME}
 
 src_compile() {
-	append-ldflags -L/usr/X11/lib/ -lX11 -lXext -lXrender
+	append-ldflags -L/usr/lib/
 	emake
 }
 
