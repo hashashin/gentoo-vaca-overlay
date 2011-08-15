@@ -33,7 +33,7 @@ src_prepare() {
 }
 
 src_compile() {
-	append-ldflags -L/usr/lib/X11/
+	append-ldflags $(no-as-needed)
 	emake
 }
 
