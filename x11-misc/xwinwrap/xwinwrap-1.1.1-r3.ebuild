@@ -28,9 +28,8 @@ ECVS_LOCALNAME="xwinwrap"
 
 S=${WORKDIR}/${ECVS_LOCALNAME}
 
-src_compile() {
+pkg_setup() {
 	append-ldflags $(no-as-needed)
-	emake
 }
 
 src_install() {
