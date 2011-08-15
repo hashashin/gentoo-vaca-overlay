@@ -26,12 +26,6 @@ ECVS_LOCALNAME="xwinwrap"
 
 S=${WORKDIR}/${ECVS_LOCALNAME}
 
-src_unpack() {
-	cvs_src_unpack
-	cd ${S}
-#	epatch "${FILESDIR}/xwinwrap-frameless-geometry.patch"
-}
-
 src_install() {
 	dobin xwinwrap
 }
