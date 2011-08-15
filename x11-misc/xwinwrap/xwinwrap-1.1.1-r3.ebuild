@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit cvs eutils
+inherit cvs eutils flag-o-matic 
 
 DESCRIPTION="Utility to replace a desktop background with a movie, screensaver, etc."
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
