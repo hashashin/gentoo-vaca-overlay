@@ -2,6 +2,54 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.193 2011/07/23 22:36:21 spock Exp $
 
+  15 Aug 2011; <hash@gentoo.org> -splashutils-1.5.4.3-r3.ebuild,
+  -files/splashutils-1.5.4.3-daemon-exit-signal.patch,
+  -files/splashutils-1.5.4.3-fix_rc_var.patch,
+  -files/splashutils-1.5.4.3-libjpeg.patch,
+  -files/splashutils-1.5.4.3-libpng15_compat.patch,
+  -files/splashutils-1.5.4.3-makefile.patch,
+  -files/splashutils-1.5.4.3-nondefault-runlevel.patch,
+  -files/splashutils-1.5.4.3-openrc-effects.patch,
+  -files/splashutils-1.5.4.3-openrc-umount-fix.patch,
+  -files/splashutils-1.5.4.3-splash-functions.patch,
+  -files/splashutils-1.5.4.3-splash_geninitramfs.patch,
+  -files/splashutils-1.5.4.3-splash_util.patch, -splashutils-1.5.4.4.ebuild:
+
+
+  Changes:
+
+  deleted: files/splashutils-1.5.4.3-makefile.patch
+
+  deleted: files/splashutils-1.5.4.3-splash_util.patch
+
+  deleted: files/splashutils-1.5.4.3-libpng15_compat.patch
+
+  deleted: files/splashutils-1.5.4.3-splash-functions.patch
+
+  deleted: splashutils-1.5.4.4.ebuild
+
+  deleted: files/splashutils-1.5.4.3-daemon-exit-signal.patch
+
+  deleted: files/splashutils-1.5.4.3-openrc-umount-fix.patch
+
+  deleted: files/splashutils-1.5.4.3-openrc-effects.patch
+
+  deleted: files/splashutils-1.5.4.3-fix_rc_var.patch
+
+  deleted: files/splashutils-1.5.4.3-nondefault-runlevel.patch
+
+  modified: Manifest
+
+  deleted: files/splashutils-1.5.4.3-libjpeg.patch
+
+  deleted: splashutils-1.5.4.3-r3.ebuild
+
+  deleted: files/splashutils-1.5.4.3-splash_geninitramfs.patch
+
+  fix Bug 379295 - media-gfx/splashutils-1.5.4.4 needs
+  app-arch/bzip2[static-libs] and clean
+
+
   23 Jul 2011; Michał Januszewski <spock@gentoo.org>
   splashutils-1.5.4.4.ebuild, +files/splashutils-1.5.4.4-freetype-bz2.patch:
   Fix bug #374203 (patch by Theofilos Intzoglou).
