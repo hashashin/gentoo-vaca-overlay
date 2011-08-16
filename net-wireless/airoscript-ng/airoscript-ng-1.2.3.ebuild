@@ -7,7 +7,7 @@ EAPI=3
 inherit eutils versionator
 
 DESCRIPTION="Script para automatizar aircrack-ng."
-HOMEPAGE="http://amunhoney.sourceforge.net/"
+HOMEPAGE="http://www.seguridadwireless.net/"
 MY_PV=$(replace_version_separator 2 '-')
 MM_PV=$(get_version_component_range '1-2')
 SRC_URI="http://airoscript.googlecode.com/files/${PN}-${MY_PV}.tar.gz"
