@@ -2,3 +2,4 @@
 =app-cdr/brasero-3.0.0
 =app-emulation/wine-doors-0.1.4
 =net-wireless/airoscript-ng-1.2.3
+=net-im/empathy-2.91.93
