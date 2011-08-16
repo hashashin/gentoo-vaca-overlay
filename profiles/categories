@@ -1,7 +1,9 @@
 app-cdr
 app-emulation
 dev-db
+games-stategy
 net-analyzer
+net-im
 net-misc
 www-apache
 media-gfx
@@ -9,4 +11,3 @@ net-mail
 net-wireless
 sys-auth
 x11-misc
-games-stategy
