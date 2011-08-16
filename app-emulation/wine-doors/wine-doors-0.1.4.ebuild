@@ -13,7 +13,7 @@ SRC_URI="http://sourceforge.net/projects/winedoors/files/${PN}-${PV}a2.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-python/pycairo
