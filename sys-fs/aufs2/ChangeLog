@@ -1,0 +1,49 @@
+# ChangeLog for sys-fs/aufs2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+  09 Aug 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Update patches for grsecurity.
+  Skip patches not named aufs* (unless USE=all-patches is set).
+  Only install the most current grsecurity patch by default.
+
+  20 Jun 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Update patches for grsecurity.
+
+  21 Jan 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Make git checkout more stable.
+  Apply patches conditionally and more stable (retry after failure).
+  Provide patches for grsecurity (hardened-sources).
+
+  03 Jan 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump to EAPI=4.
+
+  21 Nov 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Default to aufs2.1. Do not install broken Kbuild files.
+  Call epatch only once with collected list of patches.
+
+  23 Aug 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Fix treatment of EGIT_PRUNE. Bump EAPI.
+
+  17 Mar 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Update git dependency according to package move.
+
+  04 Mar 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Support ESCM_OFFLINE/EGIT_OFFLINE in the same sense as git.eclass.
+  Output corresponding message only if *_OFFLINE is nonempty.
+
+  16 Jan 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Remove patch again since git.eclass is now fixed:
+  http://bugs.gentoo.org/show_bug.cgi?id=299204
+
+  29 Dec 2009; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Patch for broken git.eclass 1.33 2009/12/29
+
+  17 Dec 2009; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Adapt for new git.eclass 1.32 2009/12/16
+
+  14 Oct 2009; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Patch automatically instead of informing the user
+
+  04 Apr 2009; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  aufs2-99999999.ebuild: Initial ebuild.
