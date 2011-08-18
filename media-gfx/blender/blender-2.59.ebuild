@@ -36,6 +36,7 @@ RDEPEND="virtual/jpeg
 	media-libs/glew
 	dev-cpp/eigen:2
 	>=sci-physics/bullet-2.76
+	app-misc/libspnav
 	iconv? ( virtual/libiconv )
 	zlib? ( sys-libs/zlib )
 	sdl? ( media-libs/libsdl[audio,joystick] )
@@ -68,7 +69,7 @@ fi
 blend_with() {
 	local UWORD="$2"
 	[ -z "${UWORD}" ] && UWORD="$1"
-	if useq $1; then
+	if use $1; then
 		echo "WITH_BF_${UWORD}=1" | tr '[:lower:]' '[:upper:]' \
 			>> "${S}"/user-config.py
 	else
