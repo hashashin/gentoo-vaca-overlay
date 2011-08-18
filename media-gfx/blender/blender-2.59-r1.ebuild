@@ -1,24 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.3 2011/07/08 10:22:39 ssuominen Exp $
+# $Header: $
 
 PYTHON_DEPEND="3:3.2"
-
 EAPI=3
 
-if [[ ${PV} == *9999 ]] ; then
-SCM="subversion"
-ESVN_REPO_URI="https://svn.blender.org/svnroot/bf-blender/trunk/blender"
-fi
-
-inherit eutils python versionator flag-o-matic toolchain-funcs ${SCM}
+inherit eutils python versionator flag-o-matic toolchain-funcs
 
 IUSE="+game-engine player +elbeem +openexr ffmpeg jpeg2k openal openmp \
 	+dds debug fftw jack apidoc sndfile lcms tweak-mode sdl sse \
-	redcode +zlib iconv contrib collada verse"
-
-# not complete/working features
-#IUSE="verse collada test"
+	redcode +zlib iconv contrib"
 
 LANGS="en ar bg ca cs de el es fi fr hr it ja ko nl pl pt_BR ro ru sr sv uk zh_CN"
 for X in ${LANGS} ; do
@@ -27,15 +18,8 @@ done
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org"
-if [[ ${PV} == *9999 ]] ; then
-	SRC_URI=""
-elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
-else # Official release
-	SRC_URI="http://download.blender.org/source/${P}.tar.gz"
-fi
+SRC_URI="http://download.blender.org/source/${P}.tar.gz"
 
-#SLOT="$(get_version_component_range 1-2)"
 SLOT="2.5"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
@@ -52,13 +36,14 @@ RDEPEND="virtual/jpeg
 	media-libs/glew
 	dev-cpp/eigen:2
 	>=sci-physics/bullet-2.76
+	app-misc/libspnav
 	iconv? ( virtual/libiconv )
 	zlib? ( sys-libs/zlib )
 	sdl? ( media-libs/libsdl[audio,joystick] )
 	openexr? ( media-libs/openexr )
 	ffmpeg? (
-		virtual/ffmpeg[x264,mp3,encode,theora]
-		jpeg2k? ( virtual/ffmpeg[x264,mp3,encode,theora,jpeg2k] )
+		>=virtual/ffmpeg-0.6.90[x264,mp3,encode,theora]
+		jpeg2k? ( >=virtual/ffmpeg-0.6.90[x264,mp3,encode,theora,jpeg2k] )
 	)
 	openal? ( >=media-libs/openal-1.6.372 )
 	fftw? ( sci-libs/fftw:3.0 )
@@ -93,18 +78,6 @@ blend_with() {
 	fi
 }
 
-src_unpack() {
-if [[ ${PV} == *9999 ]] ; then
-	subversion_fetch
-	if use contrib; then
-		S="${S}"/release/scripts/addons_contrib subversion_fetch \
-		"https://svn.blender.org/svnroot/bf-extensions/contrib/py/scripts/addons/"
-	fi
-else
-	unpack ${A}
-fi
-}
-
 pkg_setup() {
 	enable_openmp=0
 	if use openmp; then
@@ -120,9 +93,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.57-bmake.patch
-	epatch "${FILESDIR}"/${PN}-2.57-doxygen.patch
-	epatch "${FILESDIR}"/${PN}-2.57-desktop.patch
+	epatch "${FILESDIR}"/${PN}-desktop.patch
+	epatch "${FILESDIR}"/${PN}-${SLOT}-doxyfile.patch
+
+	# TODO: write a proper Makefile to replace the borked bmake script
+	epatch "${FILESDIR}"/${PN}-${SLOT}-bmake.patch
+
 	# OpenJPEG
 	einfo "Removing bundled OpenJPEG ..."
 	rm -r extern/libopenjpeg
@@ -130,22 +106,12 @@ src_prepare() {
 	# Glew
 	einfo "Removing bundled Glew ..."
 	rm -r extern/glew
-#	epatch "${FILESDIR}"/${P}-glew.patch
-
-	# binreloc
-#	einfo "Removing bundled binreloc ..."
-#	rm -r extern/binreloc
-#	epatch "${FILESDIR}"/${PN}-${SLOT}-binreloc.patch
+	epatch "${FILESDIR}"/${PN}-${SLOT}-glew.patch
 
 	# Eigen2
 	einfo "Removing bundled Eigen2 ..."
 	rm -r extern/Eigen2
-	epatch "${FILESDIR}"/${PN}-2.57-eigen.patch
-
-	# Bullet
-#	einfo "Removing bundled Bullet2 ..."
-#	rm -r extern/bullet2
-#	epatch "${FILESDIR}"/${PN}-${SLOT}-bullet.patch
+	epatch "${FILESDIR}"/${PN}-${SLOT}-eigen.patch
 }
 
 src_configure() {
@@ -164,14 +130,6 @@ src_configure() {
 			BF_LCMS_LIBPATH="/usr/lib/"
 		EOF
 	fi
-
-	# add system sci-physic/bullet into Scons build options.
-#	cat <<- EOF >> "${S}"/user-config.py
-#		WITH_BF_BULLET=1
-#		BF_BULLET="/usr/include"
-#		BF_BULLET_INC="/usr/include /usr/include/BulletCollision /usr/include/BulletDynamics /usr/include/LinearMath /usr/include/BulletSoftBody"
-#		BF_BULLET_LIB="BulletSoftBody BulletDynamics BulletCollision LinearMath"
-#	EOF
 
 	#add iconv into Scons build options.
 	if use !elibc_glibc && use !elibc_uclibc && use iconv; then
@@ -194,8 +152,7 @@ src_configure() {
 	# FIX: Game Engine module needs to be active to build the Blender Player
 	if ! use game-engine && use player; then
 		elog "Forcing Game Engine [+game-engine] as required by Blender Player [+player]"
-		echo "WITH_BF_GAMEENGINE=1" >> "${S
-}"/user-config.py
+		echo "WITH_BF_GAMEENGINE=1" >> "${S}"/user-config.py
 	else
 		blend_with game-engine gameengine
 	fi
@@ -273,8 +230,7 @@ src_configure() {
 		'collada' \
 		'sse rayoptimization' \
 		'redcode' \
-		'zlib' \
-		'verse' ; do
+		'zlib' ; do
 		blend_with ${arg}
 	done
 
@@ -288,11 +244,17 @@ src_compile() {
 		'!!! Please add "${S}/scons.config" when filing bugs reports \
 		to bugs.gentoo.org'
 
-	einfo "Not building plugins ..."	
+	einfo "Building plugins ..."
+	cd "${WORKDIR}"/${P}/release/plugins \
+		|| die "dir ${WORKDIR}/${P}/release/plugins do not exist"
+	chmod 755 bmake
 
-	# final cleanup
-	rm -r "${WORKDIR}"/install/{Python-license.txt,icons,GPL-license.txt,copyright.txt}
-
+	# FIX: plugins are built without respecting user's LDFLAGS
+	emake \
+		CFLAGS="${CFLAGS} -fPIC" \
+		LDFLAGS="$(raw-ldflags) -Bshareable" \
+		> /dev/null \
+		|| die "plugins compilation failed"
 }
 
 src_install() {
@@ -324,22 +286,16 @@ src_install() {
 			"${WORKDIR}/install/blenderplayer-${SLOT}"
 		doexe "${WORKDIR}/install/blenderplayer-${SLOT}"
 	fi
-	if use verse; then
-		cp "${WORKDIR}"/install/bin/verse_server \
-			"${WORKDIR}/install/bin/verse_server-${SLOT}"
-		doexe "${WORKDIR}"/install/bin/verse_server-${SLOT}
-	fi
 
 	# install desktop file
 	insinto /usr/share/pixmaps
 	cp release/freedesktop/icons/scalable/apps/blender.svg \
-	release/freedesktop/icons/scalable/apps/blender-${SLOT}.svg
+		release/freedesktop/icons/scalable/apps/blender-${SLOT}.svg
 	doins release/freedesktop/icons/scalable/apps/blender-${SLOT}.svg
 	insinto /usr/share/applications
 	cp release/freedesktop/blender.desktop \
 		release/freedesktop/blender-${SLOT}.desktop
-	doins release/freedesktop/blender-${SLOT}.desktop || die
-	newins "${FILESDIR}"/${PN}-2.57-insecure.desktop ${PN}-${SLOT}-insecure.desktop || die
+	doins release/freedesktop/blender-${SLOT}.desktop
 
 	# install docs
 #	use doc && dodoc release/text/BlenderQuickStart.pdf
@@ -347,23 +303,10 @@ src_install() {
 
 		einfo "Generating (BGE) Blender Game Engine API docs ..."
 		docinto "API/BGE_API"
-		dohtml -r "${WORKDIR}"/blender/doc/*
-#		rm -r "${WORKDIR}"/blender/doc
-
-#		einfo "Generating (BPY) Blender Python API docs ..."
-#		epydoc source/blender/python/doc/*.py -v \
-#			-o doc/BPY_API \
-#			--quiet --quiet --quiet \
-#			--simple-term \
-#			--inheritance=included \
-#			--graph=all \
-#			--dotpath /usr/bin/dot \
-#			|| die "epydoc failed."
-#		docinto "API/python"
-#		dohtml -r doc/BPY_API/*
+		dohtml -r "${WORKDIR}"/${P}/doc/*
 
 		einfo "Generating Blender C/C++ API docs ..."
-		pushd "${WORKDIR}"/blender/doc/doxygen > /dev/null
+		pushd "${WORKDIR}"/${P}/doc/doxygen > /dev/null
 			doxygen -u Doxyfile
 			doxygen || die "doxygen failed to build API docs."
 			docinto "API/blender"
@@ -371,16 +314,18 @@ src_install() {
 		popd > /dev/null
 	fi
 
+	# final cleanup
+	rm -r "${WORKDIR}"/install/{Python-license.txt,icons,GPL-license.txt,copyright.txt}
+
 	# installing blender
 	insinto /usr/share/${PN}/${SLOT}
-	doins -r "${WORKDIR}"/install/2.58/*
-#        doins -r "${WORKDIR}"/install/${SLOT}/*
+	doins -r "${WORKDIR}"/install/${PV}/* || die
 
 	# FIX: making all python scripts readable only by group 'users',
-	#      so nobody can modify scripts apart root user, but python
-	#      cache (*.pyc) can be written and shared across the users.
-#	chown root:users -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
-#	chmod 750 -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
+   #	  so nobody can modify scripts apart root user, but python
+   #	  cache (*.pyc) can be written and shared across the users.
+	chown root:users -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
+	chmod 755 -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
 }
 
 pkg_preinst() {
@@ -395,15 +340,6 @@ pkg_postinst() {
 	elog "Blender uses python integration. As such, may have some"
 	elog "inherit risks with running unknown python scripting."
 	elog
-#	elog "CVE-2008-1103-1.patch has been removed as it interferes"
-#	elog "with autosave undo features. Up stream blender coders"
-#	elog "have not addressed the CVE issue as the status is still"
-#	elog "a CANDIDATE and not CONFIRMED."
-#	elog
-#	elog "CVE-2008-4863.patch has been remove as it interferes"
-#	elog "with the load of bpy_ops.py and all the UI python"
-#	elog "scripts."
-#	elog
 	elog "It is recommended to change your blender temp directory"
 	elog "from /tmp to /home/user/tmp or another tmp file under your"
 	elog "home directory. This can be done by starting blender, then"
