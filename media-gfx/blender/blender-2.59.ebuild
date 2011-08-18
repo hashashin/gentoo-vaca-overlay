@@ -348,7 +348,7 @@ src_install() {
 
 	# installing blender
 	insinto /usr/share/${PN}/${SLOT}
-	doins -r "${WORKDIR}"/install/2.58/* || die
+	doins -r "${WORKDIR}"/install/${PV}/* || die
 
 	# FIX: making all python scripts readable only by group 'users',
    #	  so nobody can modify scripts apart root user, but python
