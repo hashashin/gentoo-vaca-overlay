@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/jre"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND=">=virtual/jre-1.6.0"
 
 APP_INSTALL_DIR="/opt/appinventor"
 S="${WORKDIR}/${PN}-setup_${PV}"
