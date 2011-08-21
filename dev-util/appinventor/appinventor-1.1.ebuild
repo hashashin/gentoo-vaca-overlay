@@ -22,8 +22,8 @@ S="${WORKDIR}/${PN}-setup_${PV}"
 src_install() {
 	insinto ${APP_INSTALL_DIR}
 	dodir ${APP_INSTALL_DIR}
-	doins -r "${S}"/"${PN}"/extras
-	doins -r "${S}"/"${PN}"/from-Android-SDK
+	doins -r "${PN}"/extras
+	doins -r "${PN}"/from-Android-SDK
 	exeinto "${APP_INSTALL_DIR}"/commands-for-Appinventor/
-	doexe "${S}"/"${PN}"/commands-for-Appinventor/*
+	doexe "${PN}"/commands-for-Appinventor/*
 }
