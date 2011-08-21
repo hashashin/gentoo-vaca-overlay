@@ -4,8 +4,6 @@
 
 EAPI="4"
 
-inherit eutils
-
 DESCRIPTION="App Inventor Setup package."
 HOMEPAGE="http://appinventor.googlelabs.com"
 SRC_URI="http://dl.google.com/dl/${PN}/installers/linux/${PN}-setup_${PV}.tar.gz"
