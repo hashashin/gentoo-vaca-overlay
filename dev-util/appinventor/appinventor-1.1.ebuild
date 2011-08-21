@@ -6,16 +6,16 @@ EAPI="3"
 
 inherit eutils
 
-DESCRIPTION="Placeholder."
-HOMEPAGE=""
+DESCRIPTION="App Inventor Setup package."
+HOMEPAGE="http://appinventor.googlelabs.com"
 SRC_URI="http://dl.google.com/dl/${PN}/installers/linux/${PN}-setup_${PV}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="android"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="virtual/jre"
 RDEPEND="${DEPEND}"
 
 APP_INSTALL_DIR="/opt/appinventor"
