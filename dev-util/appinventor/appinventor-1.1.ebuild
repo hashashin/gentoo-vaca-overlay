@@ -26,5 +26,5 @@ src_install() {
 	dodir ${APP_INSTALL_DIR}
 	doins -r "${S}"/"${PN}"/*
 	exeinto "${APP_INSTALL_DIR}"/commands-for-Appinventor
-	doexe commands-for-Appinventor/*
+	doexe opt/appinventor/commands-for-Appinventor/*
 }
