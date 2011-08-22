@@ -24,5 +24,4 @@ APACHE2_MOD_DEFINE="BW"
 need_apache2_2
 
 # tarball don't contain a basedir since 0.9
-#S="${WORKDIR}/${PN}"
 S="${WORKDIR}"
