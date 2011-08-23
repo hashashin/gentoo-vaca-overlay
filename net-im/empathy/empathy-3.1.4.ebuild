@@ -18,7 +18,7 @@ HOMEPAGE="http://live.gnome.org/Empathy"
 LICENSE="GPL-2"
 SLOT="0"
 if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
+	KEYWORDS="~x86"
 else
 	KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 fi
