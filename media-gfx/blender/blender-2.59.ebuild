@@ -321,7 +321,6 @@ src_install() {
 		einfo "Generating (BGE) Blender Game Engine API docs ..."
 		docinto "API/BGE_API"
 		dohtml -r "${WORKDIR}"/${P}/doc/*
-
 #		einfo "Generating (BPY) Blender Python API docs ..."
 #		epydoc source/blender/python/doc/*.py -v \
 #			-o doc/BPY_API \
@@ -333,7 +332,6 @@ src_install() {
 #			|| die "epydoc failed."
 #		docinto "API/python"
 #		dohtml -r doc/BPY_API/*
-
 		einfo "Generating Blender C/C++ API docs ..."
 		pushd "${WORKDIR}"/${P}/doc/doxygen > /dev/null
 			doxygen -u Doxyfile
@@ -351,8 +349,8 @@ src_install() {
 	doins -r "${WORKDIR}"/install/${PV}/* || die
 
 	# FIX: making all python scripts readable only by group 'users',
-   #	  so nobody can modify scripts apart root user, but python
-   #	  cache (*.pyc) can be written and shared across the users.
+#	  so nobody can modify scripts apart root user, but python
+#	  cache (*.pyc) can be written and shared across the users.
 	chown root:users -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
 	chmod 755 -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
 }
