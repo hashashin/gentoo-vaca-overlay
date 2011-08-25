@@ -2,6 +2,21 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header:
 
+*apt-cacher-ng-0.6.6 (25 Aug 2011)
+
+  25 Aug 2011; <hash@gentoo.org> -apt-cacher-ng-0.6.5.ebuild,
+  +apt-cacher-ng-0.6.6.ebuild:
+  Version bump corrected uptreams uri and bump to eapi 4
+
+  Changes:
+
+  deleted: apt-cacher-ng-0.6.5.ebuild
+
+  new file: apt-cacher-ng-0.6.6.ebuild
+
+  modified: Manifest
+
+
   09 Aug 2011; <hash@gentoo.org> -apt-cacher-ng-0.6.3.ebuild,
   +apt-cacher-ng-0.6.5.ebuild:
   update

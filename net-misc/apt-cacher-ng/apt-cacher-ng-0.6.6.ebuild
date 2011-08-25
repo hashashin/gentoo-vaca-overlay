@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="4"
 inherit eutils cmake-utils
 
 DESCRIPTION="Yet another implementation of a HTTP proxy for Debian/Ubuntu software packages written in C++"
 HOMEPAGE="http://www.unix-ag.uni-kl.de/~bloch/acng/"
-SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.xz"
 #	mirror://debian/pool/main/a/${PN}/${PN}_${PV}-1.diff.gz
 LICENSE="as-is"
 SLOT="0"
