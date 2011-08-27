@@ -2,6 +2,18 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.295 2011/07/31 13:06:28 maekke Exp $
 
+*nvidia-drivers-285.03 (27 Aug 2011)
+
+  27 Aug 2011; <hash@gentoo.org> +nvidia-drivers-285.03.ebuild:
+  add last beta nvdia-driver
+
+  Changes:
+
+  modified: Manifest
+
+  new file: nvidia-drivers-285.03.ebuild
+
+
   31 Jul 2011; Markus Meier <maekke@gentoo.org>
   nvidia-drivers-270.41.19.ebuild:
   x86 stable, bug #375587
