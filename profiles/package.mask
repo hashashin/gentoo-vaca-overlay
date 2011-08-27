@@ -4,3 +4,4 @@
 =net-wireless/airoscript-ng-1.2.3
 =net-im/empathy-2.91.93
 =sys-devel/gnuconfig-99999999
+=x11-drivers/nvidia-drivers-285.03
