@@ -1,0 +1,169 @@
+--- /usr/sbin/rkhunter	2011-08-27 23:14:28.000000000 +0200
++++ rkhunter	2011-08-29 00:22:56.000000000 +0200
+@@ -725,7 +725,7 @@
+ 	#
+ 
+ 	if [ $STRICT -eq 1 ]; then
+-		if [ -n "`echo \"${RKHTMPVAR}\" | grep '[][?*{}]'`" ]; then
++		if [ -n "`echo \"${RKHTMPVAR}\" | grep '[][?*]'`" ]; then
+ 			ERRCODE=1
+ 			test $CONFIG_CHECK -eq 1 && RET_CODE=1
+ 			echo "Invalid ${OPT_NAME} configuration option: Invalid pathname: ${RKHTMPVAR}"
+@@ -758,6 +758,8 @@
+ 			FNAME=`echo "${FNAME}" | tr '%' ' '`
+ 		elif [ "${OPT_NAME}" = "RTKT_DIR_WHITELIST" ]; then
+ 			FNAME=`echo "${FNAME}" | tr '%' ' '`
++		elif [ "${OPT_NAME}" = "ALLOWDEVFILE" ]; then
++			FNAME=`echo "${FNAME}" | tr '%' ' '`
+ 		fi
+ 
+ 		#
+@@ -3614,7 +3616,7 @@
+ 
+ 		check_paths ALLOWDEVFILES ALLOWDEVFILE
+ 
+-		ALLOWDEVFILES=" ${ALLOWDEVFILES} "
++		ALLOWDEVFILES=`echo " ${ALLOWDEVFILES} " | tr '%' ' '`
+ 	fi
+ 
+ 	if [ $ERRCODE -eq 1 ]; then
+@@ -3985,7 +3987,7 @@
+ 		HASH_CMD=`echo "${HASH_FUNC}" | cut -d' ' -f1`
+ 
+ 		# Stop globbing from being expanded.
+-		if [ -z "`echo \"${HASH_CMD}\" | grep '[][*?{}]'`" ]; then
++		if [ -z "`echo \"${HASH_CMD}\" | grep '[][*?]'`" ]; then
+ 			HASH_FUNC=`echo ${HASH_FUNC}`
+ 		else
+ 			LEAVE=1
+@@ -4754,7 +4756,7 @@
+ 
+ 		test -z "${FNAME}" && break
+ 
+-		if [ -n "`echo \"${FNAME}\" | grep '^[^/]*[][*?{}][^/]*$'`" ]; then
++		if [ -n "`echo \"${FNAME}\" | grep '^[^/]*[][*?][^/]*$'`" ]; then
+ 			ERRCODE=1
+ 			echo "Invalid USER_FILEPROP_FILES_DIRS configuration option: Invalid pathname: ${FNAME}"
+ 		fi
+@@ -8285,7 +8287,13 @@
+ 		    du:/dev/ptyxx/.file:Ambient (ark) Rootkit
+ 		    w:libproc.so.2.0.7:Fuckit Rootkit
+ 		    xlogin:/lib/libext:SHV4 Rootkit
+-		    hdparm:/dev/ida/.inet:Xzibit Rootkit"
++		    hdparm:/dev/ida/.inet:Xzibit Rootkit
++		    pgrep:/usr/include/mysql/mysql.hh1:Rootkit component
++		    pkill:/usr/include/mysql/mysql.hh1:Rootkit component
++		    pmap:/usr/include/mysql/mysql.hh1:Rootkit component
++		    ps:/usr/include/mysql/mysql.hh1:Rootkit component
++		    w:/usr/include/mysql/mysql.hh1:Rootkit component
++		    top:/usr/include/mysql/mysql.hh1:Rootkit component"
+ 
+ 
+ 	# Possible rootkit files and directories
+@@ -8337,6 +8345,15 @@
+ 		  file:${RKHROOTDIR}/etc/rc.d/init.d/jcd:Rootkit component
+ 		  file:${RKHROOTDIR}/usr/sbin/atd2:Rootkit component
+ 		  file:${RKHROOTDIR}/etc/rc.d/rc5.d/S93users:Rootkit component
++		  file:${RKHROOTDIR}/usr/include/mysql/mysql.hh1:Rootkit component
++		  file:${RKHROOTDIR}/etc/init.d/xfs3:Rootkit component
++		  file:${RKHROOTDIR}/usr/sbin/t.txt:Opyum kit component
++		  file:${RKHROOTDIR}/usr/sbin/change:Opyum kit component
++		  file:${RKHROOTDIR}/usr/sbin/s:Opyum kit component
++		  file:${RKHROOTDIR}/bin/f:Opyum kit component
++		  file:${RKHROOTDIR}/bin/i:Opyum kit component
++		  file:${RKHROOTDIR}/lib/libncom.so.4.0.1:ncom rootkit library
++		  file:${RKHROOTDIR}/sbin/zinit:Rootkit component
+ 		  dir:${RKHROOTDIR}/dev/ptyas:Langsuir installation directory
+ 		  dir:${RKHROOTDIR}/usr/bin/take:Trojaned SSH daemon
+ 		  dir:${RKHROOTDIR}/usr/src/.lib:Rootkit component
+@@ -8368,7 +8385,8 @@
+ 		  dir:${RKHROOTDIR}/dev/...:Rootkit component
+ 		  dir:${RKHROOTDIR}/usr/share/man/mansps:Rootkit component
+ 		  dir:${RKHROOTDIR}/lib/.so:Rootkit component
+-		  dir:${RKHROOTDIR}/lib/.sso:Rootkit component"
++		  dir:${RKHROOTDIR}/lib/.sso:Rootkit component
++		  dir:${RKHROOTDIR}/usr/include/sslv3:Rootkit component"
+ 
+ 
+ 	# Evil strings for FreeBSD KLD (Dynamic Kernel Linker modules)
+@@ -9880,9 +9898,9 @@
+ 					test -n "${BASENAME_CMD}" && RKHTMPVAR=`${BASENAME_CMD} ${FNAME}` || RKHTMPVAR=`echo "${FNAME}" | sed -e 's:^.*/::'`
+ 
+ 					if [ "${RKHTMPVAR}" = "rkhunter" ]; then
+-						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i -v '(shell|/bin/sh) script( |$)'`
++						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i -v '(shell|/bin/sh) script( |,|$)'`
+ 					else
+-						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i ' script( |$)'`
++						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i ' script( |,|$)'`
+ 					fi
+ 
+ 					test -n "${SYSSCRIPT}" && TEST_RESULT="${TEST_RESULT} script"
+@@ -11956,6 +11974,8 @@
+ 					PROCWHITELISTED=0
+ 					PROCDELFILES_GIVEN=0
+ 
++					IFS=$RKHIFS
++
+ 					for RKHTMPVAR in ${ALLOWPROCDELFILES}; do
+ 						PROCDELFILES_GIVEN=0
+ 
+@@ -11979,6 +11999,8 @@
+ 						fi
+ 					done
+ 
++					IFS=$IFSNL
++
+ 					test $HAVE_READLINK -eq 0 && PROC="\"${PROC}\""
+ 
+ 					if [ $PROCWHITELISTED -eq 1 ]; then
+@@ -12925,14 +12947,19 @@
+ 	if [ -n "${SOCKSTAT_CMD}" -a -n "${NETSTAT_CMD}" ]; then
+ 		test "${OPERATING_SYSTEM}" = "NetBSD" && RKHTMPVAR="-n" || RKHTMPVAR=""
+ 
+-		SOCKSTAT_OUTPUT=`${SOCKSTAT_CMD} ${RKHTMPVAR} | awk '{ print $6 }' |grep '[:.][0-9][0-9]*$' | sed -e 's/^.*[:.]\([0-9]*\)$/\1/' | sort | uniq`
+-		NETSTAT_OUTPUT=`${NETSTAT_CMD} -an |  awk '{ print $4 }' |grep '[:.][0-9][0-9]*$' | sed -e 's/^.*[:.]\([0-9]*\)$/\1/' | sort | uniq`
++		SOCKSTAT_OUTPUT=`${SOCKSTAT_CMD} ${RKHTMPVAR} | awk '$5 ~ /^(tcp|udp)/ && $6 != "6" { print $6 }'`
++		SOCKSTAT_OUTPUT="${SOCKSTAT_OUTPUT}
++`${SOCKSTAT_CMD} ${RKHTMPVAR} | awk '$5 ~ /^(tcp|udp)/ && $6 == "6" { print $7 }'`"
++
++		SOCKSTAT_OUTPUT=`echo "${SOCKSTAT_OUTPUT}" | grep '[:.][0-9][0-9]*$' | sed -e 's/^.*[:.]\([0-9]*\)$/\1/' | sort | uniq`
++
++		NETSTAT_OUTPUT=`${NETSTAT_CMD} -an | awk '$1 ~ /^(tcp|udp)/ { print $4 }' | grep '[:.][0-9][0-9]*$' | sed -e 's/^.*[:.]\([0-9]*\)$/\1/' | sort | uniq`
+ 
+ 		if [ "${SOCKSTAT_OUTPUT}" = "${NETSTAT_OUTPUT}" ]; then
+ 			display --to SCREEN+LOG --type PLAIN --result OK --color GREEN --log-indent 2 --screen-indent 4 ROOTKIT_OS_BSD_SOCKNET
+ 		else
+-			SOCKSTAT_OUTPUT=`echo $SOCKSTAT_OUTPUT`
+-			NETSTAT_OUTPUT=`echo $NETSTAT_OUTPUT`
++			SOCKSTAT_OUTPUT=`echo ${SOCKSTAT_OUTPUT}`
++			NETSTAT_OUTPUT=`echo ${NETSTAT_OUTPUT}`
+ 
+ 			display --to SCREEN+LOG --type PLAIN --result WARNING --color RED --log-indent 2 --screen-indent 4 ROOTKIT_OS_BSD_SOCKNET
+ 
+@@ -13022,7 +13049,7 @@
+ 		PKGDB_CMD=`find_cmd pkgdb`
+ 
+ 		if [ -n "${PKGDB_CMD}" ]; then
+-			RKHTMPVAR=`${PKGDB_CMD} -Fa -v | grep 'Skipped\.'`
++			RKHTMPVAR=`${PKGDB_CMD} -Fa -v 2>&1 | grep 'Skipped\.'`
+ 
+ 			if [ -z "${RKHTMPVAR}" ]; then
+ 				display --to SCREEN+LOG --type PLAIN --result OK --color GREEN --log-indent 2 --screen-indent 4 ROOTKIT_OS_FREEBSD_PKGDB
+@@ -15358,7 +15385,7 @@
+ 				;;
+ 			proftpd)
+ 				WHOLE_VERSION=`${APP_CMD_FOUND} -v 2>&1`
+-				VERSION=`echo "${WHOLE_VERSION}" | grep 'ProFTPD[ 	][ 	]*Version[ 	][ 	]*[0-9]' | awk '{ print $3 }'`
++				VERSION=`echo "${WHOLE_VERSION}" | sed -e 's/^.*\(ProFTPD.*\)$/\1/' | grep '^ProFTPD[ 	][ 	]*Version[ 	][ 	]*[0-9]' | awk '{ print $3 }'`
+ 				;;
+ 			sshd)
+ 				WHOLE_VERSION=`${APP_CMD_FOUND} -t -d 2>&1`
+@@ -15979,7 +16006,7 @@
+ 	    killall ksyms kudzu last lastlog ldd less links locate logger login
+ 	    ls lsattr lsmod lsof lynx mail md5 md5sum mktemp mlocate modinfo
+ 	    modload modprobe modstat modunload more mount mv netstat newgrp
+-	    newsyslog nologin passwd perl pgrep pkgdb pkg_info prelink ps pstree pwck
++	    newsyslog nologin passwd perl pgrep ping pkgdb pkg_info prelink ps pstree pwck
+ 	    pwd readlink rkhunter rmmod route rpm rsyslogd runcon runlevel sed sestatus sh
+ 	    sha1 sha1sum sha224 sha224sum sha256 sha256sum sha384 sha384sum sha512
+ 	    sha512sum size skdet slocate sockstat sort stat strace strings su sudo
