@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+squash_dir-11.0 (03 Sep 2011)
+
+  03 Sep 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Support COMPRESSION, default to xz. Update openrc interface.
+
 squash_dir-10.21 (21 Jan 2011)
 
   21 Jan 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
