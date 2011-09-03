@@ -1,0 +1,113 @@
+# ChangeLog for sys-fs/squash_dir
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+squash_dir-10.21 (21 Jan 2011)
+
+  21 Jan 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Support for titlebar
+
+squash_dir-10.20 (25 Dec 2010)
+
+  04 Jan 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump to EAPI=4.
+
+  25 Dec 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Minor improvements in zsh-completion
+
+squash_dir-10.19 (21 Dec 2010)
+
+  21 Dec 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Minor fixes in zsh-completion and configure.ac
+
+squash_dir-10.18 (11 Dec 2010)
+
+  11 Dec 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Allow masks in squash_dir wrapper; minor changes in output
+
+squash_dir-10.17 (09 Dec 2010)
+
+  09 Dec 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Improve zsh-completion
+
+squash_dir-10.16 (27 Nov 2010)
+
+  27 Nov 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Provide zsh-completion
+
+squash_dir-10.15 (26 Nov 2010)
+
+  26 Nov 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Do no longer default to MOUNT_AUFS=-i
+
+squash_dir-10.14 (24 Nov 2010)
+
+  24 Nov 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Introduce MOUNT_AUFS_OPTS.
+  Introduce KILL_FILE and option -k to the squash_dir wrapper script
+
+squash_dir-10.13 (18 Nov 2010)
+
+  18 Nov 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Introduce option -n to the squash_dir wrapper script
+
+squash_dir-10.12 (28 Aug 2010)
+
+  28 Aug 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Improve output of the squash_dir wrapper script
+
+squash_dir-10.11 (15 Aug 2010)
+
+  15 Aug 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Rename squash-dir -> squash_dir.
+  Omit spaces in function definition (more compatible).
+
+squash_dir-10.9 (20 Jul 2010)
+
+  20 Jul 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump to provide workaround if readlink command is missing
+
+squash_dir-10.6 (02 Jun 2010)
+
+  02 Jun 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump to support modified syntax of unionfs-fuse
+
+squash_dir-10.7 (23 Mar 2010)
+
+  23 May 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump to fix regression.
+
+squash_dir-10.6 (23 Mar 2010)
+
+  23 May 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Now "stop" (umount) should be more reliable, and a second
+  "stop" might succeed, making "zap" unnecessary in many cases.
+
+squash_dir-10.5 (20 May 2010)
+
+  22 May 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Do not require >=unionfs-fuse-0.25_alpha, but print a message
+  recommending it if an earlier version is used.
+
+  20 May 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Depend on >unionfs-fuse-0.24
+
+squash_dir-10.4 (28 Apr 2010)
+
+  28 Apr 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump because of a stupid automake bug.
+
+squash_dir-10.3 (27 Apr 2010)
+
+  27 Apr 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Version bump. Support USE=readonly, making USE=+unionfs-fuse obsolete.
+  Remove USE=hack-squash-utils and warn for previous installs.
+  Recommend sys-fs/squashfs-tools[progress-redirect] from mv overlay.
+
+squash_dir-10.3 (28 Mar 2010)
+
+  01 Apr 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Update tarball without revbump (remove ebuild from tarball).
+
+  28 Mar 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  import with minor changes from a personal overlay.
