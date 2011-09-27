@@ -46,7 +46,8 @@ RDEPEND="gpm? ( sys-libs/gpm )
 	app-arch/cpio
 	media-gfx/fbgrab
 	!sys-apps/lcdsplash
-	app-arch/bzip2[static-libs]"
+	app-arch/bzip2[static-libs]
+	sys-libs/zlib[static-libs]"
 DEPEND="${RDEPEND}
 	>=dev-libs/klibc-1.5
 	dev-util/pkgconfig"
