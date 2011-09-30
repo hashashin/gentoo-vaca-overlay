@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.25 2011/07/29 19:12:19 rich0 Exp $
 
+  30 Sep 2011; <hash@gentoo.org> android-sdk-update-manager-13.ebuild:
+
+
+  Changes:
+
+  modified: android-sdk-update-manager-13.ebuild
+
+  Bump eapi 4, signed manifest
+
+
 *android-sdk-update-manager-13 (27 Sep 2011)
 
   27 Sep 2011; <hash@gentoo.org> +android-sdk-update-manager-13.ebuild,
