@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.xz"
 #	mirror://debian/pool/main/a/${PN}/${PN}_${PV}-1.diff.gz
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc fuse logrotate examples lzma"
 
 DEPEND="app-arch/bzip2
