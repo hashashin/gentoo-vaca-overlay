@@ -2,6 +2,20 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*cairo-dock-2.4.0.2 (09 Oct 2011)
+
+  09 Oct 2011; <hash@gentoo.org> +cairo-dock-2.4.0.2.ebuild, metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+  modified: Manifest
+
+  new file: cairo-dock-2.4.0.2.ebuild
+
+
   11 Aug 2011; <hash@gentoo.org> ChangeLog:
 
 
