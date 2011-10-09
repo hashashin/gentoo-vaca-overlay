@@ -16,7 +16,6 @@
 	<flag name="musicplayer">Enables musicplayer applet</flag>
         <flag name="network-monitor">Enables network-monitor applet</flag>
 </use>
-<herd>no-herd</herd>
 <maintainer>
 	<email>jmbsvicetto@gentoo.org</email>
 	<name>Jorge Manuel B. S. Vicetto</name>
