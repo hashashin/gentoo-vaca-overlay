@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*libspnav-9999-r1 (09 Oct 2011)
+
+  09 Oct 2011; <hash@gentoo.org> +libspnav-9999-r1.ebuild:
+  nevermind to bump libspnav
+
+  Changes:
+
+  new file: libspnav-9999-r1.ebuild
+
+
   09 Oct 2011; <hash@gentoo.org> +metadata.xml, files/libspnav-makefile.patch:
 
 
