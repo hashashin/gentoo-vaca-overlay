@@ -1,0 +1,30 @@
+# ChangeLog for app-misc/libspnav
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Oct 2011; <hash@gentoo.org> +metadata.xml, files/libspnav-makefile.patch:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  modified: files/libspnav-makefile.patch
+
+  modified: Manifest
+
+  new file: ChangeLog
+
+  Thanks to yevgeny for the patch.
+
+
+  09 Oct 2011; <hash@gentoo.org> files/libspnav-makefile.patch:
+
+
+  Changes:
+
+  modified: files/libspnav-makefile.patch
+
+  Thanks to yevgeny for the patch.
+
+
