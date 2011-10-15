@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.21 2011/01/21 01:47:16 fordfrog Exp $
 
+  15 Oct 2011; <hash@gentoo.org> ChangeLog:
+  fix manifest sign
+
   15 Oct 2011; <hash@gentoo.org> +jta-1.1.ebuild, +metadata.xml:
   version bump
 
