@@ -2,6 +2,18 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*apktool-1.4.1-r1 (16 Oct 2011)
+
+  16 Oct 2011; <hash@gentoo.org> +apktool-1.4.1-r1.ebuild:
+
+
+  Changes:
+
+  modified: Manifest
+
+  new file: apktool-1.4.1-r1.ebuild
+
+
   30 Sep 2011; <hash@gentoo.org> apktool-1.4.1.ebuild, +metadata.xml:
 
 
