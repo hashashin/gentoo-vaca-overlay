@@ -4,3 +4,4 @@
 =net-wireless/airoscript-ng-1.2.3
 =net-im/empathy-2.91.93
 =sys-devel/gnuconfig-99999999
+=dev-util/android-ndk-6b
