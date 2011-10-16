@@ -10,6 +10,7 @@ DESCRIPTION="A tool for reengineering 3rd party, closed, binary Android apps."
 HOMEPAGE="http://code.google.com/p/android-apktool/"
 SRC_URI="http://android-${PN}.googlecode.com/files/${PN}${PV}.tar.bz2
 	http://android-${PN}.googlecode.com/files/${PN}-install-linux-r04-brut1.tar.bz2"
+s="/var/tmp/portage/dev-util/apktool-1.4.1/work"
 
 LICENSE="GPL-3"
 SLOT="0"
