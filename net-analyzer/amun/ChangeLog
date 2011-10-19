@@ -2,6 +2,14 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Oct 2011; <hash@gentoo.org> -amun-0.1.9.ebuild:
+
+
+  Changes:
+
+  deleted: amun-0.1.9.ebuild
+
+
   19 Oct 2011; <hash@gentoo.org> +amun-0.1.9-r1.ebuild:
 
 
