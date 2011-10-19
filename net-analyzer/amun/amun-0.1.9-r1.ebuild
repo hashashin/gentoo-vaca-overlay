@@ -51,11 +51,11 @@ src_install() {
 		"${D}/opt/${PN}/LICENSE" \
 		"${D}/opt/${PN}/conf/${PN}_db.sql"
 	doinitd "${FILESDIR}"/${PN}_server
+	fowners -R ${PN}:${PN} /opt/${PN}
 }
 
 pkg_postinst() {
 	python_mod_optimize /opt/${PN}
-	fowners -R ${PN}:${PN} /opt/${PN}
 	if use mysql; then
 		elog "If you plan log to mysql you can create a database using:"
 		elog "/usr/share/doc/"${P}"/"${PN}"_db.sql.bz2"
