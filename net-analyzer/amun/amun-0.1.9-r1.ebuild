@@ -56,7 +56,7 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize /opt/${PN}
-	if USE = mysql; then
+	if [[ "${USE}" == "mysql" ]]; then
 		elog "If you plan log to mysql you can create a database using:"
 		elog "/usr/share/doc/"${P}"/"${PN}"_db.sql.bz2"
 		elog " "
