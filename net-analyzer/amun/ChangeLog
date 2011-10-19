@@ -2,6 +2,18 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Oct 2011; <hash@gentoo.org> +amun-0.1.9-r1.ebuild:
+
+
+  Changes:
+
+  modified: Manifest
+
+  new file: amun-0.1.9-r1.ebuild
+
+  Bump to EAPI 4, added mysql USE.
+
+
   12 May 2011; <hash@gentoo.org> ChangeLog:
 
 
