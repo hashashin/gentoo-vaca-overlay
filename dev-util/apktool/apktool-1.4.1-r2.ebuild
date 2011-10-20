@@ -14,7 +14,7 @@ S="${WORKDIR}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -23,5 +23,6 @@ RDEPEND="dev-util/android-sdk-update-manager"
 src_install() {
 	exeinto /usr/local/bin
 	doexe apktool
-	doexe apktool.jar
+	insinto /usr/local/bin
+	doins apktool.jar
 }
