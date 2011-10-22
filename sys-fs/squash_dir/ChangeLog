@@ -4,6 +4,18 @@
 
 squash_dir-11.0 (03 Sep 2011)
 
+*squash_dir-11.1 (22 Oct 2011)
+
+  22 Oct 2011; <hash@gentoo.org> +squash_dir-11.1.ebuild:
+
+
+  Changes:
+
+  new file: squash_dir-11.1.ebuild
+
+  Version bump.
+
+
   03 Sep 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
   Version bump. Support COMPRESSION, default to xz. Update openrc interface.
 
