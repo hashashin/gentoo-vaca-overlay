@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer><email>maintainer-wanted@gentoo.org</email></maintainer>
-	<use>
-		<flag name="doc">Installs some documentation and config examples.</flag>
-		<flag name="fuse">Build fuse httpfs named 'acngfs'. It's can be used to mount apt cache on server to client filesystem.</flag>
-		<flag name="logrotate">Installs logrotate configs.</flag>
-		<flag name="lzma">Build fuse lzma support.</flag>
-	</use>
+<herd>deb-tools</herd>
+<maintainer>
+<email>jer@gentoo.org</email>
+<name>Jeroen Roovers</name>
+</maintainer>
+<use>
+<flag name="fuse">
+	Install the <pkg>sys-fs/fuse</pkg> based acngfs, to use a userspace
+	filesystem for the apt cache.
+</flag>
+</use>
 </pkgmetadata>
