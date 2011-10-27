@@ -1,5 +1,5 @@
---- release/freedesktop/blender.desktop   2010-09-12 00:05:51.000000000 -0700
-+++ release/freedesktop/blender.desktop   2010-09-12 00:07:32.000000000 -0700
+--- release/freedesktop/blender.desktop	2010-09-12 00:05:51.000000000 -0700
++++ release/freedesktop/blender.desktop	2010-09-12 00:07:32.000000000 -0700
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Blender
@@ -13,8 +13,8 @@
  Comment[es]=modelado 3D, animación, renderizado y post-producción
 -Exec=blender
 -Icon=blender
-+Exec=blender-2.5
-+Icon=blender-2.5
++Exec=blender-2.5 %f
++Icon=blender-2.5.svg
  Terminal=false
  Type=Application
  Categories=Graphics;3DGraphics;

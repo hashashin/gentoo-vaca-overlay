@@ -55,5 +55,8 @@
 			This flag add support for RED CODE camera digital format (5K HD
 			images *.r3d) - EXPERIMENTAL.
 		</flag>
+		<flag name="3dmouse">
+			Enables support for Space Navigator 3D mouse.
+		</flag>
 	</use>
 </pkgmetadata>

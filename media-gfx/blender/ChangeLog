@@ -2,6 +2,38 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.201 2011/07/09 16:56:25 xarthisius Exp $
 
+*blender-2.60a (27 Oct 2011)
+
+  27 Oct 2011; <hash@gentoo.org> files/blender-2.5-bmake.patch,
+  +files/blender-2.5-doxygen.patch, files/blender-2.5-eigen.patch,
+  files/blender-2.5-glew.patch, +files/blender-2.5-linux3.patch,
+  +blender-2.60a.ebuild, files/blender-desktop.patch, metadata.xml:
+
+
+  Changes:
+
+  new file: files/blender-2.5-doxygen.patch
+
+  modified: metadata.xml
+
+  new file: files/blender-2.5-linux3.patch
+
+  modified: files/blender-desktop.patch
+
+  modified: files/blender-2.5-eigen.patch
+
+  modified: Manifest
+
+  modified: files/blender-2.5-bmake.patch
+
+  modified: files/blender-2.5-glew.patch
+
+  new file: blender-2.60a.ebuild
+
+  Version bump, now using eclass blender from alice overlay 
+  (http://code.google.com/p/alice-gentoo/) and more.
+
+
   16 Oct 2011; <hash@gentoo.org> -blender-2.59.ebuild:
 
 
