@@ -1,0 +1,19 @@
+# ChangeLog for sci-geosciences/mobac
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Oct 2011; <hash@gentoo.org> +mobac-1.9.2.ebuild, +files/mobac,
+  +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: mobac-1.9.2.ebuild
+
+  new file: Manifest
+
+  new file: ChangeLog
+
+  new file: files/mobac
