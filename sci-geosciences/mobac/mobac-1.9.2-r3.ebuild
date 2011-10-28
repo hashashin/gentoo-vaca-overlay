@@ -58,3 +58,7 @@ pkg_postinst() {
 		elog "tiles the library files."
 	fi
 }
+
+pkg_postrm() {
+	elog "Remeber to manual clean runtime created files in /opt/${PN}"
+}
