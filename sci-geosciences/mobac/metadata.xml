@@ -10,5 +10,8 @@
                 <flag name='spanish-maps'>
                         Adds Spain online map sources.
                 </flag>
+		<flag name='jai'>
+                        jai support.
+                </flag>
 </use>
 </pkgmetadata>

@@ -13,10 +13,11 @@ SRC_URI="mirror://sourceforge/mobac/Mobile%20Atlas%20Creator/MOBAC%201.9/Mobile%
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="spanish-maps"
+IUSE="jai spanish-maps"
 
 DEPEND=""
-RDEPEND=">=virtual/jre-1.6.0"
+RDEPEND=">=virtual/jre-1.6.0
+	jai? ( dev-java/sun-jai-bin )"
 
 S="${WORKDIR}"
 
@@ -37,6 +38,8 @@ src_install() {
 	dodoc README.HTM
 	dodoc CHANGELOG.txt
 	dodoc ReleaseNotes.txt
+	domenu "${FILESDIR}"/mobac.desktop
+	doicon "${FILESDIR}"/mobac.png
 	if use spanish-maps; then
 		insinto /opt/${PN}/mapsources
 		doins "${FILESDIR}"/*.xml
@@ -46,5 +49,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "add your user to group mobac"
+	elog "Add your user to group mobac to use the program"
+	if use jai; then
+		elog ""
+		elog "You need to manual copy /usr/share/sun-jai-bin/lib/jai_core.jar"
+		elog "and /usr/share/sun-jai-bin/lib/jai_codec.jar to /opt/${PN}"
+		elog "in order to be posible reduce the color depth of downloaded"
+		elog "tiles the library files."
+	fi
 }
