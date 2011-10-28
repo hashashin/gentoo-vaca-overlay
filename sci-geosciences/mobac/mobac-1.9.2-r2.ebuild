@@ -38,7 +38,7 @@ src_install() {
 	dodoc CHANGELOG.txt
 	dodoc ReleaseNotes.txt
 	domenu "${FILESDIR}"/mobac.desktop
-	doicon "${FILESDIR}"/mobac.ico
+	doicon "${FILESDIR}"/mobac.png
 	if use spanish-maps; then
 		insinto /opt/${PN}/mapsources
 		doins "${FILESDIR}"/*.xml
