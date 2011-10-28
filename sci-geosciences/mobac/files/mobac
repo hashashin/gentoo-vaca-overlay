@@ -4,4 +4,4 @@
 # the JVM. With the below settings the heap size (Available memory for the application)
 # will range from 64 megabyte up to 512 megabyte.
 
-java -Xms64m -Xmx512M -jar /usr/share/mobac/Mobile_Atlas_Creator.jar
+java -Xms128m -Xmx1024M -jar /opt/mobac/Mobile_Atlas_Creator.jar
