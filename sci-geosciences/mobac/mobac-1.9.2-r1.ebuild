@@ -38,7 +38,8 @@ src_install() {
 	dodoc CHANGELOG.txt
 	dodoc ReleaseNotes.txt
 	if use spanish-maps; then
-		cp "${FILESDIR}"/*.xml /opt/${PN}/mapsources
+		insinto /opt/${PN}/mapsources
+		doins "${FILESDIR}"/*.xml
 	fi
 	fowners -R ${PN}:${PN} /opt/${PN}
 	fperms 0775 /opt/${PN}
