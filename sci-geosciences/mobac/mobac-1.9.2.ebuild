@@ -32,7 +32,7 @@ src_install() {
 	doins Mobile_Atlas_Creator.jar
 	doins sqlitejdbc-v056.jar
 	doins -r mapsources
-	dodir /usr/share/${PN}/tilestore
+	dodir /opt/${PN}/tilestore
 	dodoc README.HTM
 	dodoc CHANGELOG.txt
 	dodoc ReleaseNotes.txt
