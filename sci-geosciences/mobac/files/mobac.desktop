@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MOBAC
+GenericName=Mobile Atlas Creator
+Comment=Prepare online maps for your mobile device
+Exec=mobac
+Icon=mobac.png
+Terminal=false
+Type=Application
+Categories=Education;Geography;
