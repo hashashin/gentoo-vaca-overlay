@@ -26,6 +26,7 @@ pkg_setup() {
 }
 
 src_install() {
+	diropts -m0775
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mobac
 	insinto /opt/${PN}
