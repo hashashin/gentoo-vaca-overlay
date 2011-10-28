@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customWmsMapSource>
+<name>IGN - ES</name>
+<url>http://www.idee.es/wms/MTN-Raster/MTN-Raster?</url>
+<minZoom>0</minZoom>
+<maxZoom>17</maxZoom>
+<version>1.1.1</version>
+<layers>mtn_rasterizado</layers>
+<coordinatesystem>EPSG:4326</coordinatesystem>
+<tileType>JPG</tileType>
+</customWmsMapSource>

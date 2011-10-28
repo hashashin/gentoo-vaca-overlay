@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customWmsMapSource>
+<name>ICC Orto 1:2.500</name>
+<url>http://shagrat.icc.es/lizardtech/iserv/ows?</url>
+<minZoom>8</minZoom>
+<maxZoom>19</maxZoom>
+<version>1.1.1</version><!-- do not change -->
+<layers>orto25c</layers>
+<coordinatesystem>EPSG:4326</coordinatesystem><!-- do not change -->
+<tileType>JPG</tileType>
+</customWmsMapSource>

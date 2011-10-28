@@ -6,4 +6,9 @@
 		<email>gentoo.power@gmail.com</email>
 		<name>hashashin</name>
 	</maintainer>
+<use>
+                <flag name='spanish-maps'>
+                        Adds Spain online map sources.
+                </flag>
+</use>
 </pkgmetadata>

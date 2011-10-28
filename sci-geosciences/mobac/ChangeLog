@@ -2,6 +2,32 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mobac-1.9.2-r1 (28 Oct 2011)
+
+  28 Oct 2011; <hash@gentoo.org> +files/ICCorto2500.xml,
+  +files/ICCtopo10000.xml, +mobac-1.9.2-r1.ebuild, +files/ICCtopo5000.xml,
+  +files/IGN.xml, +files/PNOA.xml, metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+  new file: files/ICCorto2500.xml
+
+  new file: files/IGN.xml
+
+  new file: files/PNOA.xml
+
+  modified: Manifest
+
+  new file: mobac-1.9.2-r1.ebuild
+
+  new file: files/ICCtopo5000.xml
+
+  new file: files/ICCtopo10000.xml
+
+
   28 Oct 2011; <hash@gentoo.org> +mobac-1.9.2.ebuild, +files/mobac,
   +metadata.xml:
 
