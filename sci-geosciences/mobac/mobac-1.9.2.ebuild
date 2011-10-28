@@ -38,6 +38,7 @@ src_install() {
 	dodoc CHANGELOG.txt
 	dodoc ReleaseNotes.txt
 	fowners -R ${PN}:${PN} /opt/${PN}
+	fperms 0775 /opt/${PN}
 }
 
 pkg_postinst() {
