@@ -1,0 +1,45 @@
+# ChangeLog for sys-fs/squashfs-tools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*squashfs-tools-4.2 (29 Oct 2011)
+*squashfs-tools-4.1-r1 (29 Oct 2011)
+*squashfs-tools-4.0-r1 (29 Oct 2011)
+
+  29 Oct 2011; <hash@gentoo.org> +squashfs-tools-4.0-r1.ebuild,
+  +squashfs-tools-4.1-r1.ebuild, +squashfs-tools-4.2.ebuild, +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: squashfs-tools-4.1-r1.ebuild
+
+  new file: Manifest
+
+  new file: ChangeLog
+
+  new file: squashfs-tools-4.2.ebuild
+
+  new file: squashfs-tools-4.0-r1.ebuild
+
+
+  31 Mar 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump 4.2 from tree.
+
+  03 Jan 2011; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump to EAPI=4.
+
+  25 Sep 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump 4.1 from tree with new patch.
+
+  23 Aug 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump EAPI.
+
+  03 Jul 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Bump all versions to force upgrade.
+
+  27 Apr 2010; Martin Väth <vaeth@mathematik.uni-wuerzburg.de>
+  Copy from the portage tree to add USE=progress-redirect
+  Clear previous ChangeLog.
