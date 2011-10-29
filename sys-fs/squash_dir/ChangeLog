@@ -4,6 +4,21 @@
 
 squash_dir-11.0 (03 Sep 2011)
 
+*squash_dir-11.2 (29 Oct 2011)
+
+  29 Oct 2011; <hash@gentoo.org> -squash_dir-11.0-r1.ebuild,
+  -squash_dir-11.1.ebuild, +squash_dir-11.2.ebuild:
+
+
+  Changes:
+
+  deleted: squash_dir-11.0-r1.ebuild
+
+  deleted: squash_dir-11.1.ebuild
+
+  new file: squash_dir-11.2.ebuild
+
+
 *squash_dir-11.1 (22 Oct 2011)
 
   22 Oct 2011; <hash@gentoo.org> +squash_dir-11.1.ebuild:
