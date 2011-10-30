@@ -1,0 +1,21 @@
+# ChangeLog for app-accessibility/festvox-sflpc16k
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*festvox-sflpc16k-1.0.0 (30 Oct 2011)
+
+  30 Oct 2011; <hash@gentoo.org> +festvox-sflpc16k-1.0.0.ebuild, +Changelog,
+  +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: festvox-sflpc16k-1.0.0.ebuild
+
+  new file: Changelog
+
+  new file: Manifest
+
+
