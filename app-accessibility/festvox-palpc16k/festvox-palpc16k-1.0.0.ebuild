@@ -20,3 +20,8 @@ src_install() {
 	tar xvzf "${WORKDIR}"/data.tar.gz
 	rm "${D}"/usr/share/doc -rf
 }
+
+pkg_postinst() {
+	elog "To make this voice default edit /etc/festival/siteinit.scm and"
+	elog "add (set! voice_default 'voice_JuntaDeAndalucia_es_pa_diphone)"
+}
