@@ -2,6 +2,23 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*festvox-palpc16k-1.0.0-r1 (01 Nov 2011)
+
+  01 Nov 2011; <hash@gentoo.org> -festvox-palpc16k-1.0.0.ebuild,
+  +festvox-palpc16k-1.0.0-r1.ebuild:
+
+
+  Changes:
+
+  modified: Manifest
+
+  deleted: festvox-palpc16k-1.0.0.ebuild
+
+  new file: festvox-palpc16k-1.0.0-r1.ebuild
+
+  Added dependency
+
+
 *festvox-palpc16k-1.0.0 (30 Oct 2011)
 
   30 Oct 2011; <hash@gentoo.org> +festvox-palpc16k-1.0.0.ebuild, +metadata.xml:

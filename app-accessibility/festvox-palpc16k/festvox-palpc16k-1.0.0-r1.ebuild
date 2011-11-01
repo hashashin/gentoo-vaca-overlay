@@ -13,6 +13,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
+RDEPEND=">=app-accessibility/festival-1.96_beta"
+DEPEND=""
+
 S="${WORKDIR}"
 
 src_install() {
