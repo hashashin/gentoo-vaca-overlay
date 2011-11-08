@@ -31,6 +31,9 @@ CMAKE_BUILD_DIR=${WORKDIR}/${PN}-${MY_VER}-r3937-src
 
 src_prepare() {
 	tar xf "${WORKDIR}"/"${PN}"-"${MY_VER}"-r3937-src.tar
+	rm "${WORKDIR}"/"${PN}"-"${MY_VER}"-r3937-src.tar
+	cd "${WORKDIR}"/"${PN}"-"${MY_VER}"-r3937-src
+	epatch "${FILESDIR}"/bindir.patch
 }
 
 src_configure() {
@@ -40,7 +43,6 @@ src_configure() {
 		'-DOPTION_DEBUG:BOOL=OFF'
 		'-DOPTION_TRACE:BOOL=OFF'
 		"-DCMAKE_INSTALL_PREFIX:STRING=${GAMES_PREFIX}"
-		"-DCMAKE_INSTALL_BINDIR=${GAMES_BINDIR}"
 	)
 	cmake-utils_src_configure
 }
@@ -51,9 +53,9 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-	dodoc doc/changelogs doc/history doc/testing
-	dohtml doc/faq doc/userman
-	doman doc/man
+	dodoc doc/changelogs/* doc/history/* doc/testing/*
+	dohtml -r doc/faq/*
+	doman doc/man/*
 	newicon data/data/icons/icon.svg ${PN}.svg
 	make_desktop_entry ${PN}-2 "Speed Dreams 2"
 	prepgamesdirs
