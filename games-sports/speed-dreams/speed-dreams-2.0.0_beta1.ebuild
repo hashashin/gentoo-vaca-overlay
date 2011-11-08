@@ -54,6 +54,6 @@ src_install() {
 	dohtml -r doc/faq doc/userman
 	doman -r doc/man
 	newicon data/data/icons/icon.svg ${PN}.svg
-	make_desktop_entry ${PN}-2 "Speed Dreams 2"
+	make_desktop_entry ${PN} "Speed Dreams 2"
 	prepgamesdirs
 }
