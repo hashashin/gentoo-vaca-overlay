@@ -2,6 +2,19 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gnome-commander-1.2.8.15 (16 Dec 2011)
+
+  16 Dec 2011; <hash@gentoo.org> -gnome-commander-1.2.8.12-r1.ebuild,
+  +gnome-commander-1.2.8.15.ebuild:
+
+
+  Changes:
+
+  new file: gnome-commander-1.2.8.15.ebuild
+
+  deleted: gnome-commander-1.2.8.12-r1.ebuild
+
+
   16 Oct 2011; <hash@gentoo.org> -gnome-commander-1.2.8.12.ebuild:
   cleanup
 

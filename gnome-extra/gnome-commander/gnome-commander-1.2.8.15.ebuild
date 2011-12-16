@@ -11,7 +11,7 @@ MM_PV=$(get_version_component_range '1-2')
 
 DESCRIPTION="two-pane graphical file manager for the GNOME desktop environment."
 HOMEPAGE="http://www.nongnu.org/gcmd"
-SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${MM_PV}/${PN}-${PV}.tar.bz2"
+SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/${MM_PV}/${PN}-${PV}.tar.xz"
 IUSE="vfs python taglib exiv gsf pdf chm keybind"
 
 LICENSE="GPL-3"
