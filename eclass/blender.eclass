@@ -143,9 +143,9 @@ EOF
 #  epatch "${FILESDIR}"/${PN}-${PATCH_SLOT}-binreloc.patch
 
    # Eigen2
-   einfo "Removing bundled Eigen2 ..."
-   rm -r extern/Eigen2
-   epatch "${FILESDIR}"/${PN}-${PATCH_SLOT}-eigen.patch
+#   einfo "Removing bundled Eigen2 ..."
+#   rm -r extern/Eigen2
+#   epatch "${FILESDIR}"/${PN}-${PATCH_SLOT}-eigen.patch
 
    # Bullet
 #  einfo "Removing bundled Bullet2 ..."
