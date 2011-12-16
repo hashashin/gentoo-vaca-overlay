@@ -133,9 +133,9 @@ EOF
    rm -r extern/libopenjpeg
 
    # Glew
-   einfo "Removing bundled Glew ..."
-   rm -r extern/glew
-   epatch "${FILESDIR}"/${PN}-${PATCH_SLOT}-glew.patch
+#   einfo "Removing bundled Glew ..."
+#   rm -r extern/glew
+#   epatch "${FILESDIR}"/${PN}-${PATCH_SLOT}-glew.patch
 
    # binreloc
 #  einfo "Removing bundled binreloc ..."
