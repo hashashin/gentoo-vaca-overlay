@@ -38,7 +38,7 @@ QA_DT_HASH_x86="
 "
 QA_DT_HASH_amd64="${QA_DT_HASH_x86}"
 
-S="${WORKDIR}/android-sdk-linux_x86"
+S="${WORKDIR}/android-sdk-linux"
 
 pkg_setup() {
 	enewgroup android || die
