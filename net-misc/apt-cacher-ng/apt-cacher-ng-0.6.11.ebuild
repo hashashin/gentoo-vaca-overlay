@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.6.8.ebuild,v 1.1 2011/10/17 18:30:42 jer Exp $
+# $Header: $
 
 EAPI="4"
 
