@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="creates offline atlases for GPS handhelds and cell phone applications"
 HOMEPAGE="http://mobac.sourceforge.net"
-SRC_URI="mirror://sourceforge/mobac/Mobile%20Atlas%20Creator/MOBAC%201.9/Mobile%20Atlas%20Creator%201.9.3.zip \
+SRC_URI="mirror://sourceforge/mobac/Mobile%20Atlas%20Creator/MOBAC%201.9/Mobile%20Atlas%20Creator%20${PV}.zip \
 mirror://sourceforge/mobac/Misc/mappack-misc.zip"
 
 LICENSE="GPL-2"
