@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.20.412-$
 
@@ -8,12 +8,13 @@ inherit eutils
 
 DESCRIPTION="creates offline atlases for GPS handhelds and cell phone applications"
 HOMEPAGE="http://mobac.sourceforge.net"
-SRC_URI="mirror://sourceforge/mobac/Mobile%20Atlas%20Creator/MOBAC%201.9/Mobile%20Atlas%20Creator%201.9.2.zip"
+SRC_URI="mirror://sourceforge/mobac/Mobile%20Atlas%20Creator/MOBAC%201.9/Mobile%20Atlas%20Creator%201.9.3.zip \
+mirror://sourceforge/mobac/Misc/mappack-misc.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="jai spanish-maps"
+IUSE="jai spanish-maps misc-maps"
 
 DEPEND=""
 RDEPEND=">=virtual/jre-1.6.0
@@ -43,6 +44,10 @@ src_install() {
 	if use spanish-maps; then
 		insinto /opt/${PN}/mapsources
 		doins "${FILESDIR}"/*.xml
+	fi
+	if use misc-maps; then
+		insinto /opt/${PN}/mapsources
+		doins mp-misc.jar
 	fi
 	fowners -R ${PN}:${PN} /opt/${PN}
 	fperms 0775 /opt/${PN}

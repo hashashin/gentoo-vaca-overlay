@@ -1,6 +1,24 @@
 # ChangeLog for sci-geosciences/mobac
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 Jan 2012; <hash@gentoo.org> -mobac-1.9.3.ebuild, +mobac-1.9.3-r1.ebuild,
+  metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+  deleted: mobac-1.9.3.ebuild
+
+  modified: Manifest
+
+  modified: ChangeLog
+
+  new file: mobac-1.9.3-r1.ebuild
+  fix download, add extra misc-maps use
+
 
 *mobac-1.9.3 (16 Dec 2011)
 

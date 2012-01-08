@@ -9,6 +9,9 @@
                 <flag name='spanish-maps'>
                         Adds Spain online map sources.
                 </flag>
+		<flag name='misc-maps'>
+                        Adds extra misc map sources.
+                </flag>
 		<flag name='jai'>
                         jai support.
                 </flag>
