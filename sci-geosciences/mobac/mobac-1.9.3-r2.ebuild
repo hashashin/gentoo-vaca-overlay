@@ -65,5 +65,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	elog "Remeber to manual clean runtime created files in /opt/${PN}"
+	elog "Remenber to manual clean runtime created files in /opt/${PN}"
 }
