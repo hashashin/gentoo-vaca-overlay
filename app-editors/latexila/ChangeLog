@@ -1,0 +1,16 @@
+# ChangeLog for app-editors/latexila
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  16 Jan 2012; <hash@gentoo.org> +latexila-2.3.0.ebuild, +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: Manifest
+
+  new file: ChangeLog
+
+  new file: latexila-2.3.0.ebuild
