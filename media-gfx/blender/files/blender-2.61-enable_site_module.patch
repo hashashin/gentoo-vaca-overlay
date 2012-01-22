@@ -1,0 +1,31 @@
+--- source/blender/python/intern/bpy_interface.c-original	2011-12-15 23:01:09.059429414 +0100
++++ source/blender/python/intern/bpy_interface.c	2011-12-15 23:01:17.312478333 +0100
+@@ -219,10 +219,6 @@
+ 	 * blender is utf-8 too - campbell */
+ 	BLI_setenv("PYTHONIOENCODING", "utf-8:surrogateescape");
+ 
+-	/* Python 3.2 now looks for '2.xx/python/include/python3.2d/pyconfig.h' to
+-	 * parse from the 'sysconfig' module which is used by 'site',
+-	 * so for now disable site. alternatively we could copy the file. */
+-	Py_NoSiteFlag= 1;
+ 
+ 	Py_Initialize();
+ 
+--- source/gameengine/Ketsji/KX_PythonInit.cpp-original	2011-12-15 23:01:05.043919062 +0100
++++ source/gameengine/Ketsji/KX_PythonInit.cpp	2011-12-15 23:01:23.926318921 +0100
+@@ -1823,7 +1823,6 @@
+ 	STR_String pname = progname;
+ 	Py_SetProgramName(pname.Ptr());
+ #endif
+-	Py_NoSiteFlag=1;
+ 	Py_FrozenFlag=1;
+ 
+ 	/* must run before python initializes */
+@@ -1896,7 +1895,6 @@
+ 	STR_String pname = progname;
+ 	Py_SetProgramName(pname.Ptr());
+ #endif
+-	Py_NoSiteFlag=1;
+ 	Py_FrozenFlag=1;
+ 
+ 	initPyTypes();

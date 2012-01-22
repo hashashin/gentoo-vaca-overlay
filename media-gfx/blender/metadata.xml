@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-
 <pkgmetadata>
 
 	<herd>graphics</herd>
@@ -10,34 +9,43 @@
 		<name>Luca Barbato</name>
 	</maintainer>
 
+	<maintainer>
+		<email>anthoine.bourgeois@gmail.com</email>
+		<name>Anthoine Bourgeois</name>
+		<description>aluco's overlay maintainer</description>
+	</maintainer>
+
 	<longdescription>
 		Blender, the open source software for 3D modeling, animation,
 		rendering, post-production, interactive creation and playback.
 		Available for Windows, Linux, Irix, Sun Solaris, FreeBSD or Mac OS X.
 	</longdescription>
 	<use>
-		<flag name='blender-game'>
-			Adds Game Engine support to Blender (2.4* ebuilds).
+		<flag name="3dmouse">
+			Support 3D mouse (<pkg>media-libs/libspnav</pkg>).
 		</flag>
-		<flag name='game-engine'>
-			Adds Game Engine support to Blender (2.5* ebuilds).
+		<flag name="game-engine">
+			Adds Game Engine support to Blender (>=2.5* ebuilds).
 		</flag>
-		<flag name='contrib'>
+		<flag name="contrib">
 			Install contrib scripts.
 		</flag>
-		<flag name='collada'>
+		<flag name="openexr">
+			Support for the OpenEXR graphics file format.
+		</flag>
+		<flag name="collada">
 			Add support for Collada interchange format.
 		</flag>
-		<flag name='verse'>
-			Adds verse clustering features to Blender.
+		<flag name="cycles">
+			Enables Cycles render engine.
 		</flag>
-		<flag name='dds'>
+		<flag name="dds">
 			Adds DDS textures support to Blender.
 		</flag>
-		<flag name='player'>
+		<flag name="player">
 			Build the Blender Player.
 		</flag>
-		<flag name='elbeem'>
+		<flag name="elbeem">
 			Adds surface fluid simulation to Blender using El'Beem library.
 		</flag>
 		<flag name="apidoc">
@@ -54,9 +62,6 @@
 		<flag name="redcode">
 			This flag add support for RED CODE camera digital format (5K HD
 			images *.r3d) - EXPERIMENTAL.
-		</flag>
-		<flag name="3dmouse">
-			Enables support for Space Navigator 3D mouse.
 		</flag>
 	</use>
 </pkgmetadata>

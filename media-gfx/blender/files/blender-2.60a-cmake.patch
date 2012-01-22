@@ -1,0 +1,67 @@
+--- source/creator/CMakeLists.txt.orig	2011-11-11 01:19:03.166796150 +0100
++++ source/creator/CMakeLists.txt	2011-11-11 01:19:48.300795335 +0100
+@@ -745,6 +745,7 @@ set(BLENDER_LINK_LIBS
+ 	${BLENDER_LINK_LIBS}
+ 	bf_windowmanager
+ 	bf_render
++	bf_render_raytrace
+ )
+ 
+ if(WITH_MOD_FLUID)
+@@ -795,6 +796,7 @@ endif()
+ 		bf_editor_datafiles
+ 
+ 		bf_render
++		bf_render_raytrace
+ 		bf_intern_opennl
+ 		bf_python
+ 		bf_python_ext
+--- source/blender/render/CMakeLists.txt.orig	2011-11-11 01:19:26.089795736 +0100
++++ source/blender/render/CMakeLists.txt	2011-11-11 01:21:56.243793090 +0100
+@@ -43,6 +43,27 @@ set(INC_SYS
+ 
+ )
+ 
++set(SRC_RAYTRACE
++	intern/raytrace/rayobject.cpp
++	intern/raytrace/rayobject_empty.cpp
++	intern/raytrace/rayobject_octree.cpp
++	intern/raytrace/rayobject_raycounter.cpp
++	intern/raytrace/rayobject_svbvh.cpp
++	intern/raytrace/rayobject_blibvh.cpp
++	intern/raytrace/rayobject_instance.cpp
++	intern/raytrace/rayobject_qbvh.cpp
++	intern/raytrace/rayobject_rtbuild.cpp
++	intern/raytrace/rayobject_vbvh.cpp
++
++	intern/raytrace/bvh.h
++	intern/raytrace/rayobject_hint.h
++	intern/raytrace/rayobject_internal.h
++	intern/raytrace/rayobject_rtbuild.h
++	intern/raytrace/reorganize.h
++	intern/raytrace/svbvh.h
++	intern/raytrace/vbvh.h
++)
++
+ set(SRC
+ 	intern/raytrace/rayobject.cpp
+ 	intern/raytrace/rayobject_empty.cpp
+@@ -107,13 +128,6 @@ set(SRC
+ 	intern/include/volumetric.h
+ 	intern/include/voxeldata.h
+ 	intern/include/zbuf.h
+-	intern/raytrace/bvh.h
+-	intern/raytrace/rayobject_hint.h
+-	intern/raytrace/rayobject_internal.h
+-	intern/raytrace/rayobject_rtbuild.h
+-	intern/raytrace/reorganize.h
+-	intern/raytrace/svbvh.h
+-	intern/raytrace/vbvh.h
+ )
+ 
+ if(WITH_IMAGE_OPENEXR)
+@@ -142,3 +156,4 @@ if(APPLE)
+ endif()
+ 
+ blender_add_lib_nolist(bf_render "${SRC}" "${INC}" "${INC_SYS}")
++blender_add_lib_nolist(bf_render_raytrace "${SRC_RAYTRACE}" "${INC}" "${INC_SYS}")
