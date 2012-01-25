@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/WPAmagickey-${PV}"
 
+src_unpack() {
+	tar xf "${DISTDIR}"/WPAmagickey-"${PV}".tar.gz
+}
+
 src_install() {
 	dobin wpamagickey
 	dodoc leeme.txt
