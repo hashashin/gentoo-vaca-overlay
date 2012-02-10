@@ -1,6 +1,18 @@
 # ChangeLog for net-im/empathy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.89 2011/08/06 11:35:50 zmedico Exp $
+
+  10 Feb 2012; <hash@gentoo.org> empathy-2.91.93.ebuild, empathy-3.1.4.ebuild:
+
+
+  Changes:
+
+  modified: empathy-2.91.93.ebuild
+
+  modified: empathy-3.1.4.ebuild
+
+  fix: Invalid syntax of PYTHON_DEPEND: Unrecognized minimal version '2.4'
+
 
   06 Aug 2011; Zac Medico <zmedico@gentoo.org> empathy-2.34.0-r1.ebuild:
   Add ~x86-linux keyword.

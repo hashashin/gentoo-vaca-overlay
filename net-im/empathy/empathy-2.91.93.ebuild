@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r1.ebuild,v 1.4 2011/08/06 11:35:50 zmedico Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.7"
 
 inherit eutils gnome2 multilib python
 
