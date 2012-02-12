@@ -114,4 +114,3 @@ pkg_postinst() {
 	elog "See the USE flags on net-voip/telepathy-connection-managers"
 	elog "to install them."
 }
-

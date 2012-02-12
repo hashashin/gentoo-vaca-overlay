@@ -2,6 +2,17 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.89 2011/08/06 11:35:50 zmedico Exp $
 
+  12 Feb 2012; <hash@gentoo.org> metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+  placeholders for sendto and geoloc iuse for make repoman stop complain an 
+  sign commit
+
+
   10 Feb 2012; <hash@gentoo.org> empathy-2.91.93.ebuild, empathy-3.1.4.ebuild:
 
 
