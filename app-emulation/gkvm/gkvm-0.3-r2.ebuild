@@ -21,4 +21,6 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	doicon pixmaps/gkvm.png
+	domenu gkvm.desktop
+	doexe src/gkvm
 }
