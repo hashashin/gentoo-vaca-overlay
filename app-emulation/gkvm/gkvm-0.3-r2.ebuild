@@ -24,5 +24,5 @@ src_install() {
 	domenu gkvm.desktop
 	exeinto /usr/bin
 	doexe src/gkvm
-	dodoc README Changelog AUTHORS NEWS TODO
+	dodoc README ChangeLog AUTHORS NEWS TODO
 }
