@@ -18,3 +18,7 @@ RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_install() {
+	doicon pixmaps/gkvm.png
+}
