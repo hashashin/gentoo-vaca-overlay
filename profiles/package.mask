@@ -5,3 +5,4 @@
 =net-im/empathy-2.91.93
 =sys-devel/gnuconfig-99999999
 =dev-util/android-ndk-6b
+=net-misc/gwibber-3.3.6
