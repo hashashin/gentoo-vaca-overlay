@@ -26,3 +26,7 @@ src_install() {
 	doins sgabios.bin
 	dosym /usr/share/sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
 }
+
+src_compile() {
+	emake
+}
