@@ -28,5 +28,5 @@ src_install() {
 }
 
 src_compile() {
-	emake
+	make
 }
