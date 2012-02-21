@@ -9,10 +9,10 @@ inherit subversion
 ESVN_REPO_URI="http://sgabios.googlecode.com/svn/trunk/"
 
 KEYWORDS="~x86"
-DESCRIPTION="Open Source BIOS"
+DESCRIPTION="The Google Serial Graphics Adapter BIOS"
 HOMEPAGE="http://sgabios.googlecode.com"
 
-LICENSE="GPL-3"
+LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
