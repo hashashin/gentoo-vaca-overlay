@@ -32,9 +32,9 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}
 CMAKE_BUILD_DIR=${WORKDIR}/build
 
-src_prepare() {
-	epatch "${FILESDIR}"/bindir.patch
-}
+#src_prepare() {
+#	epatch "${FILESDIR}"/bindir.patch
+#}
 
 src_configure() {
 	mycmakeargs+=(
