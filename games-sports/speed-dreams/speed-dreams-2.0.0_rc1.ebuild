@@ -1,15 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.5 2011/06/14 22:00:20 mr_bones_ Exp $
+# $Header: $
 
-EAPI=2
+EAPI=3
 inherit eutils games cmake-utils
 
-MY_VER="2.0.0-b1"
+MY_VER="2.0.0-rc1-r4420"
 
 DESCRIPTION="A fork of the famous open racing car simulator TORCS"
 HOMEPAGE="http://speed-dreams.sourceforge.net/"
-SRC_URI="mirror://sourceforge/speed-dreams/${PN}-${MY_VER}-r3937-src.tar.7z"
+SRC_URI="mirror://sourceforge/speed-dreams/${PN}-src-base-${MY_VER}.tar.xz
+	mirror://sourceforge/speed-dreams/${PN}-src-wip-cars-and-tracks-${MY_VER}.tar.xz
+	mirror://sourceforge/speed-dreams/${PN}-src-hq-cars-and-tracks-${MY_VER}.tar.xz
+	mirror://sourceforge/speed-dreams/${PN}-src-more-hq-cars-and-tracks-${MY_VER}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,13 +29,10 @@ RDEPEND="virtual/opengl
 	>=media-libs/libpng-1.2.40"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}-${MY_VER}-r3937-src
-CMAKE_BUILD_DIR=${WORKDIR}/${PN}-${MY_VER}-r3937-src
+S=${WORKDIR}
+CMAKE_BUILD_DIR=${WORKDIR}
 
 src_prepare() {
-	tar xf "${WORKDIR}"/"${PN}"-"${MY_VER}"-r3937-src.tar
-	rm "${WORKDIR}"/"${PN}"-"${MY_VER}"-r3937-src.tar
-	cd "${WORKDIR}"/"${PN}"-"${MY_VER}"-r3937-src
 	epatch "${FILESDIR}"/bindir.patch
 }
 
