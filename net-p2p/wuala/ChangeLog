@@ -1,0 +1,18 @@
+# ChangeLog for net-p2p/wuala
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*wuala-9999 (29 Feb 2012)
+
+  29 Feb 2012; <hash@gentoo.org> +wuala-9999.ebuild, +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: wuala-9999.ebuild
+
+  new file: Manifest
+
+
