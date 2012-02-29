@@ -24,5 +24,4 @@ src_install() {
 	exeinto /opt/bin
 	doexe wuala wualacmd
 	dodoc readme.txt
-	dodoc copyright
 }
