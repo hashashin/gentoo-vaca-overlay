@@ -18,13 +18,11 @@ RDEPEND=">=virtual/jre-1.6.0"
 S="${WORKDIR}"/"${PN}"
 
 src_install() {
-	dodir /opt/"${PN}"
-	insinto /opt/"${PN}"
+	dodir /opt/bin
+	insinto /opt/bin
 	doins loader3.jar
-	exeinto /opt/"${PN}"
+	exeinto /opt/bin
 	doexe wuala wualacmd
-	dosym /opt/${PN}/wuala /opt/bin/wuala
-	dosym /opt/${PN}/wualacmd /opt/bin/wualacmd
 	dodoc readme.txt
 	dodoc copyright
 }
