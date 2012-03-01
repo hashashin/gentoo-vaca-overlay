@@ -1,9 +1,13 @@
 app-accessibility
 app-cdr
+app-editors
 app-emulation
 app-forensics
 app-misc
+app-office
 dev-db
+dev-java
+dev-lang
 dev-python
 dev-util
 games-sports
@@ -15,8 +19,10 @@ net-analyzer
 net-im
 net-mail
 net-misc
+net-p2p
 net-wireless
 sci-geosciences
+sys-apps
 sys-auth
 sys-devel
 sys-fs
