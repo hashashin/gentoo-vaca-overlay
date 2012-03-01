@@ -1,0 +1,20 @@
+# ChangeLog for sys-fs/fuse_7z
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*fuse_7z-9999 (01 Mar 2012)
+
+  01 Mar 2012; <hash@gentoo.org> +fuse_7z-9999.ebuild, +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: Manifest
+
+  new file: fuse_7z-9999.ebuild
+
+  Just adapted ebuild from http://gitorious.org/fuse-7z
+
+
