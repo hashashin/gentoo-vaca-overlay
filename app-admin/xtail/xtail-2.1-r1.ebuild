@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tail multiple logfiles at once, even if rotated"
 HOMEPAGE="http://www.unicom.com/sw/xtail/"
