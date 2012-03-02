@@ -21,6 +21,11 @@ src_prepare() {
 	epatch "$FILESDIR"/xtail_2.1-5-debian-local-changes.patch
 }
 
+src_compile() {
+	tc-export CC
+	emake
+}
+
 src_install() {
 	dobin xtail
 	doman xtail.1
