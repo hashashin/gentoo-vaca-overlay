@@ -1,0 +1,32 @@
+From 1adcb84005899f172195b23a4f603708d84836c4 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 10 Feb 2012 13:48:55 +0200
+Subject: [PATCH] xtail.1: remove SIGQUIT
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ xtail.1 |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/xtail.1 b/xtail.1
+index cff150e..969c4a9 100644
+--- a/xtail.1
++++ b/xtail.1
+@@ -24,8 +24,8 @@ will watch for it and monitor it once created.  When switching files in
+ the display, a banner showing the pathname of the file is printed.
+ .P
+ An interrupt character (usually CTRL/C or DEL) will display a list of the
+-most recently modified files being watched.  Send a quit signal
+-(usually CTRL/backslash) to stop
++most recently modified files being watched.
++
+ .IR xtail .
+ .SH SEE ALSO
+ tail(1)
+-- 
+1.7.5.1
+

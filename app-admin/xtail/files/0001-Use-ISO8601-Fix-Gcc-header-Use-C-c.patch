@@ -1,0 +1,101 @@
+From 6d3b7c3e82186aec732d15cbbef5902a9c74586e Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 10 Feb 2012 13:41:39 +0200
+Subject: [PATCH] Use ISO8601, Fix Gcc header, Use -C-c
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ miscfuncs.c |   14 ++++++++++----
+ xtail.c     |   17 +++++++++++------
+ 2 files changed, 21 insertions(+), 10 deletions(-)
+
+diff --git a/miscfuncs.c b/miscfuncs.c
+index ae2e500..050dffe 100644
+--- a/miscfuncs.c
++++ b/miscfuncs.c
+@@ -215,26 +215,32 @@ void show_status(void)
+ {
+     int i, n;
+     struct tm *tp;
++/*
+     static char *monname[] = {
+ 	"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+ 	"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+     };
++*/
+     static time_t tval0;
+     time_t tval;
+ 
+     /* give user a hint if they are whacking on SIGINT */
+     time(&tval);
+-    if (tval0 != 0 && difftime(tval, tval0) < 3)
++/*  if (tval0 != 0 && difftime(tval, tval0) < 3)
+ 	(void) printf("(note: use \"%s\" SIQUIT to exit program)\n", quit_ch());
+     tval0 = tval;
+-
++*/
+     (void) printf("\n*** recently changed files ***\n");
+     for (i = 0, n = 0 ; i < List_file->num_entries ; ++i) {
+ 	if (List_file->list[i]->fd > 0) {
+ 	    tp = localtime(&List_file->list[i]->mtime);
+-	    (void) printf("%4d  %2d-%3s-%02d %02d:%02d:%02d  %s\n",
++	    (void) printf("%4d  %d-%02d-%02d %02d:%02d:%02d  %s\n",
+ 		++n,
+-		tp->tm_mday, monname[tp->tm_mon], (tp->tm_year % 100),
++		tp->tm_year + 1900,
++		tp->tm_mon + 1,
++		tp->tm_mday,
++/*		monname[tp->tm_mon], */
++/*		(tp->tm_year % 100), */
+ 		tp->tm_hour, tp->tm_min, tp->tm_sec,
+ 		List_file->list[i]->name
+ 	    );
+diff --git a/xtail.c b/xtail.c
+index ebe2ff5..a1663bb 100644
+--- a/xtail.c
++++ b/xtail.c
+@@ -1,5 +1,5 @@
+ /* $Id: xtail.c,v 2.5 2000/06/04 09:09:03 chip Exp $ */
+-
++#include <string.h>
+ #include "config.h"
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -138,12 +138,10 @@ int main(int argc, char *argv[])
+ 
+ 	/*
+ 	 * Display what we are watching if a SIGINT was caught.
+-	 */
+ 	if (sigcaught) {
+-	    show_status();
+ 	    sigcatcher(0);
+ 	}
+-
++	*/
+ 
+ 	/*
+ 	 * Go through all of the files looking for changes.
+@@ -357,8 +355,15 @@ int main(int argc, char *argv[])
+ 
+ RETSIGTYPE sigcatcher(int sig)
+ {
+-    if (sig == SIGQUIT)
+-	(void) exit(0);
++    if (sig == SIGINT)
++    {
++	show_status();
++	printf("Exit (y/N)? ");
++	int ch = getchar();
++
++	if ( (ch == (int)'y') || (ch == (int)'Y') )
++	    (void) exit(0);
++    }
+     sigcaught = sig;
+ #ifdef STATUS_ENAB
+     (void) signal(SIGINT, sigcatcher);
+-- 
+1.7.5.1
+
