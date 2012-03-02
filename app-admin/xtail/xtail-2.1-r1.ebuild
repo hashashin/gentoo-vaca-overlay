@@ -8,7 +8,8 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="Tail multiple logfiles at once, even if rotated"
 HOMEPAGE="http://www.unicom.com/sw/xtail/"
-SRC_URI="http://www.unicom.com/sw/xtail/${P}.tar.gz"
+SRC_URI="http://www.unicom.com/sw/xtail/${P}.tar.gz
+	http://www.unicom.com/files/20120219-patch-aalto.zip"
 
 LICENSE="as-is"
 SLOT="0"
@@ -16,9 +17,9 @@ KEYWORDS="~x86"
 IUSE=""
 
 src_prepare() {
-	epatch "$FILESDIR"/0001-Use-ISO8601-Fix-Gcc-header-Use-C-c.patch
-	epatch "$FILESDIR"/0001-xtail.1-remove-SIGQUIT.patch
-	epatch "$FILESDIR"/xtail_2.1-5-debian-local-changes.patch
+	epatch ../0001-Use-ISO8601-Fix-Gcc-header-Use-C-c.patch
+	epatch ../0001-xtail.1-remove-SIGQUIT.patch
+	epatch ../xtail_2.1-5-debian-local-changes.patch
 }
 
 src_compile() {
@@ -30,4 +31,5 @@ src_install() {
 	dobin xtail
 	doman xtail.1
 	dodoc README
+	newdoc ../README README.patches
 }
