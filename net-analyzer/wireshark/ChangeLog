@@ -1,6 +1,37 @@
 # ChangeLog for net-analyzer/wireshark
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.310 2011/08/07 16:48:43 armin76 Exp $
+
+  05 Mar 2012; <hash@gentoo.org> -wireshark-1.6.1.ebuild,
+  +wireshark-1.6.5.ebuild:
+
+
+  Changes:
+
+  modified: ChangeLog
+
+  fixes
+
+
+*wireshark-1.6.5 (05 Mar 2012)
+
+  05 Mar 2012; <hash@gentoo.org> -wireshark-1.6.1.ebuild,
+  +files/wireshark-1.6.4-build.patch, +files/wireshark-1.6.4-doc-build.patch,
+  +wireshark-1.6.5.ebuild:
+
+
+  Changes:
+
+  new file: wireshark-1.6.5.ebuild
+
+  new file: files/wireshark-1.6.4-doc-build.patch
+
+  new file: files/wireshark-1.6.4-build.patch
+
+  deleted: wireshark-1.6.1.ebuild
+
+  Version bump and ebuild update from portage tree
+
 
   09 Aug 2011; <hash@gentoo.org> Manifest:
   version bump y limpieza
