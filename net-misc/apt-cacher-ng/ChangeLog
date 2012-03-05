@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/apt-cacher-ng
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header:
+
+*apt-cacher-ng-0.7.2 (05 Mar 2012)
+
+  05 Mar 2012; <hash@gentoo.org> +apt-cacher-ng-0.7.2.ebuild:
+
+
+  Changes:
+
+  new file: apt-cacher-ng-0.7.2.ebuild
+
+  ebuild and package version bump
+
 
 *apt-cacher-ng-0.6.11 (30 Dec 2011)
 
