@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/files/rsyncd.init.d,v 1.5 2007/02/23 11:33:59 uberlord Exp $
 
@@ -17,7 +17,7 @@ depend() {
 start() {
 	ebegin "Starting $NAME"
 	start-stop-daemon --start --exec $DAEMON \
-	    --chuid $NAME --group $NAME \
+	    --user $NAME --group $NAME \
 	    --pidfile $PIDFILE \
 	    -- $DAEMON_OPTS
 	eend $?

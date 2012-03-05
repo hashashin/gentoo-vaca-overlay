@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header:
 
+  05 Mar 2012; <hash@gentoo.org> files/initd:
+
+
+  Changes:
+
+  modified: files/initd
+
+  fix initd
+
+
 *apt-cacher-ng-0.7.2 (05 Mar 2012)
 
   05 Mar 2012; <hash@gentoo.org> +apt-cacher-ng-0.7.2.ebuild:
