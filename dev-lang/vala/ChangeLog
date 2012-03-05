@@ -2,6 +2,20 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*vala-0.15.2 (05 Mar 2012)
+
+  05 Mar 2012; <hash@gentoo.org> -vala-0.15.1.ebuild, +vala-0.15.2.ebuild:
+
+
+  Changes:
+
+  deleted: vala-0.15.1.ebuild
+
+  new file: vala-0.15.2.ebuild
+
+  Version Bump
+
+
 *vala-0.15.1 (19 Feb 2012)
 
   19 Feb 2012; <hash@gentoo.org> +vala-0.15.1.ebuild, +metadata.xml:
