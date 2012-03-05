@@ -21,12 +21,12 @@ RDEPEND="${DEPEND}
 	!app-emulation/qemu
 	!<=app-emulation/qemu-kvm-0.15.0"
 
+src_compile() {
+	make
+}
+
 src_install() {
 	insinto /usr/share/sgabios
 	doins sgabios.bin
 	dosym /usr/share/sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
-}
-
-src_compile() {
-	make
 }
