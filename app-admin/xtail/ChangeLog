@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.16 2009/04/07 03:12:23 mr_bones_ Exp $
 
+  06 Mar 2012; <hash@gentoo.org> xtail-2.1-r1.ebuild:
+
+
+  Changes:
+
+  modified: xtail-2.1-r1.ebuild
+
+  should depend on app-arch/unzip"
+
+
 *xtail-2.1-r1 (02 Mar 2012)
 
   02 Mar 2012; <hash@gentoo.org> +xtail-2.1-r1.ebuild,

@@ -15,6 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+DEPEND="app-arch/unzip"
 
 src_prepare() {
 	epatch ../0001-Use-ISO8601-Fix-Gcc-header-Use-C-c.patch
