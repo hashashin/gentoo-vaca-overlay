@@ -28,7 +28,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch files/Makefile.patch
+	epatch "$FILESDIR"/Makefile.patch
 }
 
 src_compile() {
