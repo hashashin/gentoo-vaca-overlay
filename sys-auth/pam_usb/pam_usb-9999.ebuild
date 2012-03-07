@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.3 2011/04/22 16:20:13 ssuominen Exp $
+# $Header: $
 
 EAPI=4
 
@@ -26,6 +26,10 @@ RDEPEND="${COMMON_DEPEND}
 	sys-fs/udisks"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch files/Makefile.patch
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)"

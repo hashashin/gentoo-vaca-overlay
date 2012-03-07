@@ -1,0 +1,11 @@
+--- Makefile	2012-03-07 17:29:41.000000000 +0100
++++ Makefile.orig	2012-03-07 17:30:23.000000000 +0100
+@@ -43,7 +43,7 @@
+ CONFS_DEST		:= $(DESTDIR)/etc
+ 
+ # Doc
+-DOCS		:= doc/CONFIGURATION.md
++DOCS		:= doc/CONFIGURATION
+ DOCS_DEST	:= $(DESTDIR)/usr/share/doc/pamusb
+ 
+ # Man
