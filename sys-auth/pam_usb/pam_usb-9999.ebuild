@@ -37,6 +37,5 @@ src_install() {
 		DOCS_DEST="${D}/usr/share/doc/${PF}" \
 		PAM_USB_DEST="${D}/$(getpam_mod_dir)" \
 		install
-
 	dodoc ChangeLog README.md
 }
