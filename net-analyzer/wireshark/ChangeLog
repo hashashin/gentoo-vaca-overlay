@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.310 2011/08/07 16:48:43 armin76 Exp $
 
+  08 Mar 2012; <hash@gentoo.org> -wireshark-1.6.5.ebuild:
+
+
+  Changes:
+
+  deleted: wireshark-1.6.5.ebuild
+
+  delete old version
+
+
   08 Mar 2012; <hash@gentoo.org> wireshark-1.7.0.ebuild:
 
 
