@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.310 2011/08/07 16:48:43 armin76 Exp $
 
+  08 Mar 2012; <hash@gentoo.org> wireshark-1.7.0.ebuild:
+
+
+  Changes:
+
+  modified: wireshark-1.7.0.ebuild
+
+  removing depends !=sys-libs/zlib-1.2.4 is not in portage anyway
+
+
 *wireshark-1.7.0 (08 Mar 2012)
 
   08 Mar 2012; <hash@gentoo.org> +wireshark-1.7.0.ebuild:

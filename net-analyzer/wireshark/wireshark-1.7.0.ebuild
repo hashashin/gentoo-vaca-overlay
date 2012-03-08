@@ -18,8 +18,7 @@ IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
 profile +pcap portaudio python +caps selinux smi ssl threads zlib"
 
 RDEPEND=">=dev-libs/glib-2.14:2
-	zlib? ( sys-libs/zlib
-		!=sys-libs/zlib-1.2.4 )
+	zlib? ( sys-libs/zlib )
 	smi? ( net-libs/libsmi )
 	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
