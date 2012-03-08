@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="4"
 
-PYTHON_DEPEND="2:2.5"
+PYTHON_DEPEND="2:2.7"
 RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils python
