@@ -9,6 +9,22 @@
 
   modified: metadata.xml
 
+  modified: Manifest
+
+  modified: ChangeLog
+
+  modified: amun-0.1.9-r1.ebuild
+
+  removed psyco iuse since need python 2.6.6
+
+
+  08 Mar 2012; <hash@gentoo.org> amun-0.1.9-r1.ebuild, metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
   modified: amun-0.1.9-r1.ebuild
 
   tweak more uses added

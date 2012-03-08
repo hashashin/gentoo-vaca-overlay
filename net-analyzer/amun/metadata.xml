@@ -7,6 +7,5 @@
 <longdescription>Amun is a low-interaction honeypot, like Nepenthes or Omnivora, designed to capture autonomous spreading malware in an automated fashion. Amun is written in Python and therefore allows easy integration of new features.</longdescription> 
 <use>
 <flag name='surfnet'>Adds optional log-surfnet support.</flag>
-<flag name='psyco'>Adds optional psyco support.</flag>
 </use>
 </pkgmetadata>
