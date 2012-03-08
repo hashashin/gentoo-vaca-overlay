@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/amun
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 Mar 2012; <hash@gentoo.org> amun-0.1.9-r1.ebuild, metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+  modified: amun-0.1.9-r1.ebuild
+
+  tweak more uses added
+
 
   19 Oct 2011; <hash@gentoo.org> -amun-0.1.9.ebuild:
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.7"
 RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils python
@@ -16,9 +16,12 @@ SRC_URI="mirror://sourceforge/project/${PN}honey/${PN}/${PN}-v${PV}/${PN}-v${PV}
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="mysql"
+IUSE="mysql surfnet psyco"
 
-DEPEND="mysql? ( virtual/mysql )"
+DEPEND="mysql? ( virtual/mysql )
+	surfnet? ( <=dev-python/psycopg-2.4.2 )
+	psyco? ( dev-python/psyco )
+"
 
 S="${WORKDIR}/${PN}"
 
