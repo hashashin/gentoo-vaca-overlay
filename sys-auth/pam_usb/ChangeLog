@@ -1,6 +1,21 @@
 # ChangeLog for sys-auth/pam_usb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 Mar 2012; <hash@gentoo.org> pam_usb-9999.ebuild, -files,
+  -files/Makefile.patch:
+
+
+  Changes:
+
+  deleted: files/Makefile.patch
+
+  modified: pam_usb-9999.ebuild
+
+  deleted: files
+
+  removed patch cause upstream fixed the Makefile
+
 
   09 Aug 2011; <hash@gentoo.org> ChangeLog:
   update to git-2 eclass

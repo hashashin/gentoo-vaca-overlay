@@ -27,10 +27,6 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
-src_prepare() {
-	epatch "$FILESDIR"/Makefile.patch
-}
-
 src_compile() {
 	emake CC="$(tc-getCC)"
 }
