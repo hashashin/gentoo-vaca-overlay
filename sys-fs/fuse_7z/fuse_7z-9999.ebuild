@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit git-2
+inherit git-2 python waf-utils
 
 DESCRIPTION="Allows to mount 7-zip supported archives"
 HOMEPAGE="http://gitorious.org/fuse-7z"
