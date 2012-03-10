@@ -8,7 +8,7 @@ inherit git-2 waf-utils
 
 DESCRIPTION="Allows to mount 7-zip supported archives"
 HOMEPAGE="http://gitorious.org/fuse-7z"
-SRC_URI="https://waf.googlecode.com/files/waf-1.6.11"
+#SRC_URI="https://waf.googlecode.com/files/waf-1.6.11"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 EGIT_REPO_URI="git://gitorious.org/fuse-7z/fuse-7z.git"
 
-RESTRICT="primaryuri"
+#RESTRICT="primaryuri"
 
 DEPEND=""
 RDEPEND="app-arch/p7zip
