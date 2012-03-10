@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit git-2
+inherit git-2 waf-utils
 
 DESCRIPTION="Allows to mount 7-zip supported archives"
 HOMEPAGE="http://gitorious.org/fuse-7z"
@@ -23,12 +23,14 @@ RDEPEND="app-arch/p7zip
 	${DEPEND}"
 
 src_configure() {
-	ln -sf "$DISTDIR"/$A waf
-	python waf configure
+#	ln -sf "$DISTDIR"/$A waf
+#	python waf configure
+	waf-utils_src_configure
 }
 
 src_compile() {
-	python waf
+#	python waf
+	waf-utils_src_compile
 }
 
 src_install() {
