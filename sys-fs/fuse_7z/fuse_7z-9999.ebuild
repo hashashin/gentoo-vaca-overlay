@@ -9,7 +9,7 @@ inherit git-2 python waf-utils
 DESCRIPTION="Allows to mount 7-zip supported archives"
 HOMEPAGE="http://gitorious.org/fuse-7z"
 #SRC_URI="https://waf.googlecode.com/files/waf-1.6.11"
-
+SRC_URI=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
