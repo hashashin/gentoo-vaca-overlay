@@ -4,12 +4,12 @@
 
 EAPI=4
 
-inherit git-2 python waf-utils
+inherit git-2
 
 DESCRIPTION="Allows to mount 7-zip supported archives"
 HOMEPAGE="http://gitorious.org/fuse-7z"
-#SRC_URI="https://waf.googlecode.com/files/waf-1.6.11"
-SRC_URI=""
+SRC_URI="https://waf.googlecode.com/files/waf-1.6.11"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -20,22 +20,18 @@ RESTRICT="primaryuri"
 
 DEPEND=""
 RDEPEND="app-arch/p7zip
-	${DEPEND}
-"
+	${DEPEND}"
 
 src_configure() {
 	ln -sf "$DISTDIR"/$A waf
-#	python waf configure
-	python_execute_function -s waf-utils_src_configure
+	python waf configure
 }
 
 src_compile() {
-#	python waf
-	python_execute_function -s waf-utils_src_compile
+	python waf
 }
 
 src_install() {
-	python_execute_function -s waf-utils_src_install
 	dobin wrapper/fuse-7z
 	exeinto /usr/libexec/fuse-7z
 	doexe build/fuse-7z
