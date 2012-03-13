@@ -50,8 +50,8 @@ src_install() {
 		doins mp-misc.jar
 	fi
 	if use jai; then
-		ln -s /usr/share/sun-jai-bin/lib/jai_codec.jar "${D}"/opt/${PN}/jai_codec.jar
-		ln -s /usr/share/sun-jai-bin/lib/jai_core.jar "${D}"/opt/${PN}/jai_core.jar
+		cp /usr/share/sun-jai-bin/lib/jai_codec.jar "${D}"/opt/${PN}/jai_codec.jar
+		cp /usr/share/sun-jai-bin/lib/jai_core.jar "${D}"/opt/${PN}/jai_core.jar
 	fi
 	fowners -R ${PN}:${PN} /opt/${PN}
 	fperms 0775 /opt/${PN}
