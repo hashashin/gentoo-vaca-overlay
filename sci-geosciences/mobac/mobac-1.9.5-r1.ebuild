@@ -49,19 +49,16 @@ src_install() {
 		insinto /opt/${PN}/mapsources
 		doins mp-misc.jar
 	fi
+	if use jai; then
+		ln -s /usr/share/sun-jai-bin/lib/jai_codec.jar "${D}"/opt/${PN}/jai_codec.jar
+		ln -s /usr/share/sun-jai-bin/lib/jai_core.jar "${D}"/opt/${PN}/jai_core.jar
+	fi
 	fowners -R ${PN}:${PN} /opt/${PN}
 	fperms 0775 /opt/${PN}
 }
 
 pkg_postinst() {
 	elog "Add your user to group mobac to use the program"
-	if use jai; then
-		elog ""
-		elog "You need to manual copy /usr/share/sun-jai-bin/lib/jai_core.jar"
-		elog "and /usr/share/sun-jai-bin/lib/jai_codec.jar to /opt/${PN}"
-		elog "in order to be posible reduce the color depth of downloaded"
-		elog "tiles the library files."
-	fi
 }
 
 pkg_postrm() {
