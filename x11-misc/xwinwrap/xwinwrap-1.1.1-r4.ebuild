@@ -1,13 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 
-inherit cvs eutils flag-o-matic 
+inherit cvs eutils flag-o-matic
 
 DESCRIPTION="Utility to replace a desktop background with a movie, screensaver, etc."
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+LICENSE="as-is"
+HOMEPAGE="http://wwww.freedesktop.org"
 
 SLOT="0"
 
@@ -22,9 +24,6 @@ ECVS_SERVER="anoncvs.freedesktop.org:/cvs/xapps"
 ECVS_MODULE="xwinwrap"
 ECVS_BRANCH=""
 ECVS_LOCALNAME="xwinwrap"
-#ECVS_CO_DATE=${PV##*alpha}
-#ECVS_UP_OPTS="-D ${ECVS_CO_DATE} -dP"
-#ECVS_CO_OPTS="-D ${ECVS_CO_DATE}"
 
 S=${WORKDIR}/${ECVS_LOCALNAME}
 
