@@ -22,10 +22,14 @@ DEPEND=">=x11-libs/libX11-1.0.3
 
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch "$FILESDIR"/Makefile.patch
+}
+
 pkg_setup() {
 	append-ldflags $(no-as-needed)
 }
 
 src_install() {
-	dobin i386/xwinwrap
+	dobin xwinwrap
 }
