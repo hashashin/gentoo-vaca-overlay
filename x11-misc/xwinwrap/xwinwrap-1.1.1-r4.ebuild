@@ -4,12 +4,13 @@
 
 EAPI=4
 
-inherit cvs eutils flag-o-matic
+inherit bzr eutils flag-o-matic
 
 DESCRIPTION="Utility to replace a desktop background with a movie, screensaver, etc."
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 LICENSE="as-is"
-HOMEPAGE="http://wwww.freedesktop.org"
+HOMEPAGE="http://tech.shantanugoel.com"
+EBZR_REPO_URI="lp:xwinwrap"
 
 SLOT="0"
 
@@ -20,17 +21,12 @@ DEPEND=">=x11-libs/libX11-1.0.3
 
 RDEPEND="${DEPEND}"
 
-ECVS_SERVER="anoncvs.freedesktop.org:/cvs/xapps"
-ECVS_MODULE="xwinwrap"
-ECVS_BRANCH=""
-ECVS_LOCALNAME="xwinwrap"
-
-S=${WORKDIR}/${ECVS_LOCALNAME}
+#S=${WORKDIR}
 
 pkg_setup() {
 	append-ldflags $(no-as-needed)
 }
 
 src_install() {
-	dobin xwinwrap
+	dobin i386/xwinwrap
 }

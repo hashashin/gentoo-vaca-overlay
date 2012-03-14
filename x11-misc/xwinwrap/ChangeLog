@@ -2,6 +2,18 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Mar 2012; <hash@gentoo.org> xwinwrap-1.1.1-r4.ebuild:
+
+
+  Changes:
+
+  modified: Manifest
+
+  modified: xwinwrap-1.1.1-r4.ebuild
+
+  new upstream source, seems more updated and working
+
+
 *xwinwrap-1.1.1-r4 (14 Mar 2012)
 
   14 Mar 2012; <hash@gentoo.org> -xwinwrap-1.1.1-r3.ebuild,
