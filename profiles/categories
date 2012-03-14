@@ -1,15 +1,12 @@
 app-accessibility
 app-admin
-app-cdr
 app-editors
 app-emulation
 app-forensics
 app-misc
-app-office
 dev-db
 dev-java
 dev-lang
-dev-python
 dev-util
 games-sports
 games-strategy
@@ -17,7 +14,6 @@ gnome-extra
 media-gfx
 media-tv
 net-analyzer
-net-im
 net-mail
 net-misc
 net-p2p
@@ -25,7 +21,6 @@ net-wireless
 sci-geosciences
 sys-apps
 sys-auth
-sys-devel
 sys-fs
 www-apache
 x11-misc
