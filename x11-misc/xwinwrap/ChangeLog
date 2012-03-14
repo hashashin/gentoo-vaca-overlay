@@ -2,6 +2,21 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*xwinwrap-9999 (14 Mar 2012)
+
+  14 Mar 2012; <hash@gentoo.org> -xwinwrap-1.1.1-r4.ebuild,
+  +xwinwrap-9999.ebuild:
+
+
+  Changes:
+
+  new file: xwinwrap-9999.ebuild
+
+  deleted: xwinwrap-1.1.1-r4.ebuild
+
+  proper name ebuild
+
+
   14 Mar 2012; <hash@gentoo.org> xwinwrap-1.1.1-r4.ebuild:
 
 
