@@ -1,6 +1,24 @@
 # ChangeLog for dev-util/apktool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*apktool-1.4.3-r1 (15 Mar 2012)
+
+  15 Mar 2012; <hash@gentoo.org> apktool-1.4.3.ebuild,
+  +apktool-1.4.3-r1.ebuild, +files/apktool.patch:
+
+
+  Changes:
+
+  modified: apktool-1.4.3.ebuild
+
+  new file: files/apktool.patch
+
+  new file: apktool-1.4.3-r1.ebuild
+  fix added aapt app now included from upstream in apktool package 
+  added patch to install apktool.jar in /usr/local/lib instead of 
+  /usr/local/bin
+
 
 *apktool-1.4.3 (16 Dec 2011)
 

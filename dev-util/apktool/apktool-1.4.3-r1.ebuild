@@ -20,9 +20,14 @@ IUSE=""
 DEPEND=""
 RDEPEND="dev-util/android-sdk-update-manager"
 
+src_prepare() {
+	epatch "$FILESDIR"/apktool.patch
+}
+
 src_install() {
 	exeinto /usr/local/bin
 	doexe apktool
-	insinto /usr/local/bin
+	doexe aapt
+	insinto /usr/local/lib
 	doins apktool.jar
 }

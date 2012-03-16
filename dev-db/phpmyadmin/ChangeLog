@@ -1,6 +1,29 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Mar 2012; <hash@gentoo.org> +files/postinstall-en-3.1.txt,
+  +phpmyadmin-3.4.10.ebuild, metadata.xml:
+
+
+  Changes:
+
+  modified: metadata.xml
+
+*phpmyadmin-3.4.10 (15 Mar 2012)
+
+  15 Mar 2012; <hash@gentoo.org> +files/postinstall-en-3.1.txt,
+  +phpmyadmin-3.4.10.ebuild:
+
+
+  Changes:
+
+  new file: phpmyadmin-3.4.10.ebuild
+
+  new file: files/postinstall-en-3.1.txt
+
+  bump
+
 
   10 May 2011; hash metadata.xml:
 

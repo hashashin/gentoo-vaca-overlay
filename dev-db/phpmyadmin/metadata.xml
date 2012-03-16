@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer><email>gentoo.power@gmail.com</email></maintainer>
+	<use>
+		<flag name="setup">
+			Installs the phpMyAdmin setup utility.
+			Users who don't use the utility should disable this USE flag
+			for security reasons as the setup tool was the target of various
+			exploits in the past.
+		</flag>
+	</use>
 </pkgmetadata>
