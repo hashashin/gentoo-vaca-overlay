@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>mobile</herd>
+        <maintainer>
+                <email>gentoo.power@gmail.com</email>
+                <name>hashashin</name>
+        </maintainer>
   <use>
     <flag name="client">Build the ncurses-based user interface</flag>
     <flag name="pcap">

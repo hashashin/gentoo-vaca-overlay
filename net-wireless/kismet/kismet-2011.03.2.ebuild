@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1-r1.ebuild,v 1.2 2010/04/15 07:17:37 mr_bones_ Exp $
+# $Header: $
 
 EAPI="2"
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>vaeth@mathematik.uni-wuerzburg.de</email>
-	<name>Martin Väth</name>
-</maintainer>
+        <maintainer>
+                <email>gentoo.power@gmail.com</email>
+                <name>hashashin</name>
+        </maintainer>
 <use>
 	<flag name="progress-redirect">Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir</flag>
 </use>

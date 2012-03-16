@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/appinventor/appinventor-1.1.ebuild,v 1.1 2011/08/26 13:49:27 hwoarang Exp $
+# $Header: $
 
 EAPI="4"
 

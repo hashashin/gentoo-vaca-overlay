@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.2.2.ebuild,v 1.2 2011/12/18 03:24:42 tetromino Exp $
+# $Header: $
 
 EAPI="4"
 CMAKE_MIN_VERSION="2.6.4"

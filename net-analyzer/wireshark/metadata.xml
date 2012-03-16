@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>netmon</herd>
-<maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
+        <maintainer>
+                <email>gentoo.power@gmail.com</email>
+                <name>hashashin</name>
+        </maintainer>
 <longdescription>
 	Wireshark is the world's foremost network protocol analyzer, and is the de
 	facto (and often de jure) standard across many industries and educational

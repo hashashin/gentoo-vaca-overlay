@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.6.3.ebuild,v 1.5 2012/01/28 15:18:13 phajdan.jr Exp $
+# $Header: $
 
 EAPI=4
 

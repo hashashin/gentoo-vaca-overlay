@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.4.ebuild,v 1.8 2012/01/06 18:52:52 armin76 Exp $
+# $Header: $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"

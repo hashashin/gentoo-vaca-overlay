@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>jmbsvicetto@gentoo.org</email>
-	<name>Jorge Manuel B. S. Vicetto</name>
+	<email>gentoo.power@gmail.com</email>
+	<name>hashashin</name>
 </maintainer>
 <longdescription>Cairo-dock is a kind of dock applet, which doesn't depend on any gnome package.</longdescription>
 </pkgmetadata>
