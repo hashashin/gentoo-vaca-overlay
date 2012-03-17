@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Mar 2012; <hash@gentoo.org> -apktool-1.4.3.ebuild:
+
+
+  Changes:
+
+  deleted: apktool-1.4.3.ebuild
+
+  deleted old
+
+
 *apktool-1.4.3-r1 (15 Mar 2012)
 
   15 Mar 2012; <hash@gentoo.org> apktool-1.4.3.ebuild,
