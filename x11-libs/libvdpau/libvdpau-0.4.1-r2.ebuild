@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.4.1-r1.ebuild,v 1.2 2012/04/01 16:51:47 scarabeus Exp $
 
 EAPI=4
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="VDPAU wrapper and trace libraries"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/VDPAU"
