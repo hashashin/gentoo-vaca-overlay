@@ -1,2 +1,2 @@
-=net-analyzer/wireshark-1.7.0::gentoo-vaca-overlay
-=x11-libs/libvdpau-0.4.1-r2::gentoo-vaca-overlay
+=net-analyzer/wireshark-1.7.0
+=x11-libs/libvdpau-0.4.1-r2
