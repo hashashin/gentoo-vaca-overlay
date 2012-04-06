@@ -34,11 +34,6 @@ pkg_info() {
 	"${ROOT}"/opt/amun/amun_server.py --version
 }
 
-src_prepare() {
-	einfo "This patch set runtime (after bind ports) privileges to user amun, default is root."
-	epatch "${FILESDIR}/${PN}.conf.patch"
-}
-
 src_install() {
 	insinto /opt
 	doins -r "${S}"
