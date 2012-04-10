@@ -5,12 +5,4 @@
                 <email>gentoo.power@gmail.com</email>
                 <name>hashashin</name>
         </maintainer>
-	<use>
-		<flag name="setup">
-			Installs the phpMyAdmin setup utility.
-			Users who don't use the utility should disable this USE flag
-			for security reasons as the setup tool was the target of various
-			exploits in the past.
-		</flag>
-	</use>
 </pkgmetadata>
