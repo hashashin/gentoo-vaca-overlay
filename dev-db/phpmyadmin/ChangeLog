@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Apr 2012; <hash@gentoo.org> -files/postinstall-en-3.1.txt:
+
+
+  Changes:
+
+  deleted: files/postinstall-en-3.1.txt
+
+  removed old file
+
+
   10 Apr 2012; <hash@gentoo.org> -phpmyadmin-3.4.10.1.ebuild,
   -phpmyadmin-3.5.0_rc1.ebuild:
 
