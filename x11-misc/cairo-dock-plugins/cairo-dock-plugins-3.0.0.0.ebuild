@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 "
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/${PN}-${MY_PV}rc1"
 addpredict /usr/lib/python2.7/site-packages/CDApplet.py
 addpredict /usr/lib/python2.7/site-packages/CDBashApplet.py
 addpredict /usr/lib/python2.7/site-packages/CairoDock.py
