@@ -7,7 +7,7 @@ EAPI="2"
 inherit cmake-utils eutils versionator
 
 MY_PN="${PN/plugins/plug-ins}"
-MY_PV=$(replace_version_separator 3 '~')
+MY_PV=$(replace_version_separator 3 '.')
 MM_PV=$(get_version_component_range '1-2')
 MMD_PV=$(get_version_component_range '1-3')
 
