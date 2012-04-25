@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="2"
-inherit cmake-utils eutils versionator
+inherit cmake-utils eutils versionator python
 
 MY_PN="${PN/plugins/plug-ins}"
 MY_PV=$(replace_version_separator 3 '~')
@@ -47,6 +47,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 "
 S="${WORKDIR}/${PN}-${MY_PV}"
+src_configure() {
+	python_enable_pyc
+	cmake-utils_src_configure
+}
 addpredict /usr/lib/python2.7/site-packages/CDApplet.py
 addpredict /usr/lib/python2.7/site-packages/CDBashApplet.py
 addpredict /usr/lib/python2.7/site-packages/CairoDock.py
