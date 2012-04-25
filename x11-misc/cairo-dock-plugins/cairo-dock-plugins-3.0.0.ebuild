@@ -49,3 +49,7 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+addpredict /usr/lib/python2.7/site-packages/CDApplet.py
+addpredict /usr/lib/python2.7/site-packages/CDBashApplet.py
+addpredict /usr/lib/python2.7/site-packages/CairoDock.py
+
