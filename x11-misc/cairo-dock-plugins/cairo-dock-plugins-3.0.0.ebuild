@@ -3,8 +3,6 @@
 # $Header: $
 
 EAPI="2"
-SUPPORT_PYTHON_ABIS="1"
-
 inherit cmake-utils eutils versionator
 
 MY_PN="${PN/plugins/plug-ins}"
@@ -48,9 +46,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig
 "
-PYTHON_MODNAME="CDApplet.py CDBashApplet.py CairoDock.py"
 S="${WORKDIR}/${PN}-${MY_PV}"
 addpredict /usr/lib/python2.7/site-packages/CDApplet.py
 addpredict /usr/lib/python2.7/site-packages/CDBashApplet.py
 addpredict /usr/lib/python2.7/site-packages/CairoDock.py
-
