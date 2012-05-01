@@ -1,6 +1,20 @@
 # ChangeLog for dev-util/appinventor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-util/appinventor/ChangeLog,v 1.1 2011/08/26 13:49:27 hwoarang Exp $
+
+*appinventor-1.1-r1 (01 May 2012)
+
+  01 May 2012; <hash@gentoo.org> +appinventor-1.1-r1.ebuild:
+
+
+  Changes:
+
+  modified: Manifest
+
+  new file: appinventor-1.1-r1.ebuild
+
+  Change web page to new MIT appinventor
+
 
 *appinventor-1.1 (26 Aug 2011)
 
