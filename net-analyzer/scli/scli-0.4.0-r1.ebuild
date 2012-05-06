@@ -28,7 +28,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/scli-0.4.4.huawei-vendor.patch
+	epatch "${FILESDIR}"/${P}.huawei-vendor.patch
 }
 
 src_configure() {
