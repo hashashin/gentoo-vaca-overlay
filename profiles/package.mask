@@ -4,5 +4,5 @@
 #need some testing but seems works:
 =net-analyzer/amun-9999
 #
-=x11-misc/cairo-dock-3.0.1
-=x11-misc/cairo-dock-plugins-3.0.1
+=x11-misc/cairo-dock-3.0.2
+=x11-misc/cairo-dock-plugins-3.0.2
