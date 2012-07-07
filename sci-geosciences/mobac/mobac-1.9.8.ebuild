@@ -33,7 +33,7 @@ src_install() {
 	doexe "${FILESDIR}"/mobac
 	insinto /opt/${PN}
 	doins Mobile_Atlas_Creator.jar
-	doins sqlitejdbc-v056.jar
+	doins sqlite-jdbc-3.7.2.jar
 	doins -r mapsources
 	dodir /opt/${PN}/tilestore
 	dodoc README.HTM
