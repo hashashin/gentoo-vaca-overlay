@@ -6,3 +6,4 @@
 #
 =x11-misc/cairo-dock-3.0.2
 =x11-misc/cairo-dock-plugins-3.0.2
+=net-analyzer/nikto-2.1.5
