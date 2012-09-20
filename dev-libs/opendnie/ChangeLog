@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Sep 2012; <hash@gentoo.org> opendnie-0.12.2.ebuild:
+
+
+  Changes:
+
+  modified: opendnie-0.12.2.ebuild
+
+  fix compile deps
+
+
 *opendnie-0.12.2 (20 Sep 2012)
 
   20 Sep 2012; <hash@gentoo.org> +opendnie-0.12.2.ebuild, +metadata.xml:

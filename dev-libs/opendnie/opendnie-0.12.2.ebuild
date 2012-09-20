@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="sys-apps/pcsc-lite"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/opensc-${PV}"
