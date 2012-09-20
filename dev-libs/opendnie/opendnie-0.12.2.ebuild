@@ -19,14 +19,14 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/opensc-${PV}"
 
 src_compile() {
-   econf --prefix=/usr \
+econf --prefix=/usr \
       --sysconfdir=/etc \
       --datadir=/usr/share \
       --infodir=/usr/share/info \
       --mandir=/usr/share/man || die "Could not configure"
-   emake || die "Emake failed"
+emake || die "Emake failed"
 }
 
 src_install() {
-   emake DESTDIR=${D} install || die "make failed"
+emake DESTDIR="${D}" install || die "make failed"
 }
