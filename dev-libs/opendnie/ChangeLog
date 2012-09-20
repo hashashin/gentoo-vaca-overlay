@@ -1,0 +1,16 @@
+# ChangeLog for dev-libs/opendnie
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*opendnie-0.12.2 (20 Sep 2012)
+
+  20 Sep 2012; <hash@gentoo.org> +opendnie-0.12.2.ebuild, +metadata.xml:
+
+
+  Changes:
+
+  new file: metadata.xml
+
+  new file: opendnie-0.12.2.ebuild
+
+
