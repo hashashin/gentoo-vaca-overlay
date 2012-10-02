@@ -2,6 +2,20 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*speed-dreams-2.0.0 (02 Oct 2012)
+
+  02 Oct 2012; <hash@gentoo.org> -speed-dreams-2.0.0_rc1-r1.ebuild,
+  +speed-dreams-2.0.0.ebuild:
+
+
+  Changes:
+
+  new file: speed-dreams-2.0.0.ebuild
+
+  deleted: speed-dreams-2.0.0_rc1-r1.ebuild
+  2.0.0 release
+
+
   02 Oct 2012; <hash@gentoo.org> -speed-dreams-2.0.0_beta1-r1.ebuild,
   -speed-dreams-2.0.0_rc1.ebuild:
 

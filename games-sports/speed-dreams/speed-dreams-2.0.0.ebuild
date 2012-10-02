@@ -5,7 +5,7 @@
 EAPI=3
 inherit eutils games cmake-utils
 
-MY_VER="2.0.0-rc1-r4420"
+MY_VER="2.0.0-r4687"
 
 DESCRIPTION="A fork of the famous open racing car simulator TORCS"
 HOMEPAGE="http://speed-dreams.sourceforge.net/"
