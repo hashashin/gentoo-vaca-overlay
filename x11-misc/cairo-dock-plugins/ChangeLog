@@ -2,6 +2,23 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*cairo-dock-plugins-3.1.0 (21 Oct 2012)
+
+  21 Oct 2012; <hash@gentoo.org> cairo-dock-plugins-2.4.0.2.ebuild,
+  cairo-dock-plugins-3.0.2.ebuild, +cairo-dock-plugins-3.1.0.ebuild:
+
+
+  Changes:
+
+  modified: cairo-dock-plugins-2.4.0.2.ebuild
+
+  modified: cairo-dock-plugins-3.0.2.ebuild
+
+  new file: cairo-dock-plugins-3.1.0.ebuild
+
+  vesion bump minor fix
+
+
 *cairo-dock-plugins-3.0.2 (18 Jun 2012)
 
   18 Jun 2012; <hash@gentoo.org> -cairo-dock-plugins-3.0.1.ebuild,
