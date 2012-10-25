@@ -23,7 +23,7 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libxml2:2
 	gnome-base/librsvg:2
-	net-misc/curl	
+	net-misc/curl
 	sys-apps/dbus
 	x11-libs/cairo
 	x11-libs/pango
@@ -46,14 +46,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-${PV}"
 
-src_prepare() {
-	epatch "${FILESDIR}/fix_lib6464.patch" 
-}
-
 pkg_postinst() {
 	elog "Additional plugins are available to extend the functionality"
 	elog "of Cairo-Dock. It is recommended to install at least"
-	elog "x11-misc/cairo-dock-plugins-core."
+	elog "x11-pluings/cairo-dock-plugins."
 	elog
 	elog "Cairo-Dock is an app that draws on a RGBA GLX visual."
 	elog "Some users have noticed that if the dock is launched,"
