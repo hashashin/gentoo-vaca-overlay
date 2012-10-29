@@ -2,6 +2,18 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.135 2012/10/28 18:59:12 dev-zero Exp $
 
+*qemu-1.1.2-r3 (29 Oct 2012)
+
+  29 Oct 2012; <hash@gentoo.org> -qemu-1.1.2-r2.ebuild, +qemu-1.1.2-r3.ebuild:
+
+
+  Changes:
+
+  new file: qemu-1.1.2-r3.ebuild
+
+  deleted: qemu-1.1.2-r2.ebuild
+
+
   29 Oct 2012; <hash@gentoo.org> +files/65-kvm.rules, +qemu-1.1.2-r2.ebuild,
   +files/qemu-1.2.0-cflags.patch, +files/qemu-9999-fix-mipsen.patch,
   +files/qemu-kvm, +files/transparent_hugepages.patch, +metadata.xml:
