@@ -1,0 +1,21 @@
+--- exec.c	2012-10-29 09:21:42.374154227 +0100
++++ exec.c	2012-10-29 09:14:02.000000000 +0100
+@@ -2662,10 +2662,18 @@
+             if (xen_enabled()) {
+                 xen_ram_alloc(new_block->offset, size, mr);
+             } else {
++#if defined(__linux__) && defined(__x86_64__)
++#define MAX_TRANSPARENT_HUGEPAGE_SIZE (2*1024*1024)
++            if (size >= MAX_TRANSPARENT_HUGEPAGE_SIZE)
++		new_block->host = qemu_memalign(MAX_TRANSPARENT_HUGEPAGE_SIZE, size);
++            else
++#undef MAX_TRANSPARENT_HUGEPAGE_SIZE
++#endif
+                 new_block->host = qemu_vmalloc(size);
+             }
+ #endif
+             qemu_madvise(new_block->host, size, QEMU_MADV_MERGEABLE);
++            qemu_madvise(new_block->host, size, MADV_HUGEPAGE);
+         }
+     }
+     new_block->length = size;
