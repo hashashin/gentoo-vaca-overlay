@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Generador claves por defecto de ONOXXXX."
 HOMEPAGE="http://www.seguridadwireless.net"
-SRC_URI="http://www.seguridadwireless.net/archivos/${PN}-${PV}.tar.gz"
+SRC_URI="http://dl.dropbox.com/u/12425024/${PN}-${PV}.tar.gz"
 IUSE=""
 
 LICENSE="GPL-3"
@@ -19,10 +19,6 @@ RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${PV}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-hexformat-r1.patch"
-}
 
 src_install() {
 	dobin ono4xx

@@ -1,6 +1,27 @@
 # ChangeLog for net-wireless/ono4xx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*ono4xx-0.0.4a (31 Oct 2012)
+
+  31 Oct 2012; <hash@gentoo.org> -ono4xx-0.0.3a-r2.ebuild,
+  +ono4xx-0.0.4a.ebuild, -files, -files/ono4xx-hexformat-r1.patch:
+
+
+  Changes:
+
+  modified: Manifest
+
+  deleted: files
+
+  new file: ono4xx-0.0.4a.ebuild
+
+  deleted: files/ono4xx-hexformat-r1.patch
+
+  deleted: ono4xx-0.0.3a-r2.ebuild
+
+  Version bump, remove patches, proper download link as upstream uses box.com
+
 
   11 Aug 2011; <hash@gentoo.org> +metadata.xml:
 
