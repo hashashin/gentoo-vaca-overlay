@@ -1,6 +1,23 @@
 # ChangeLog for net-wireless/wlandecrypter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*wlandecrypter-1.3.4 (31 Oct 2012)
+
+  31 Oct 2012; <hash@gentoo.org> -wlandecrypter-1.3.2.ebuild,
+  +wlandecrypter-1.3.4.ebuild:
+
+
+  Changes:
+
+  deleted: wlandecrypter-1.3.2.ebuild
+
+  modified: Manifest
+
+  new file: wlandecrypter-1.3.4.ebuild
+
+  version bump
+
 
   11 Aug 2011; <hash@gentoo.org> +metadata.xml:
 
