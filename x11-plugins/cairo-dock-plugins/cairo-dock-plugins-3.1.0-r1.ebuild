@@ -16,7 +16,7 @@ SRC_URI="http://launchpad.net/${MY_PN}/${MM_PV}/${PV}/+download/${PN}-${PV}.tar.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa exif gmenu gtk3 kde terminal tomboy vala webkit xfce xgamma xklavier"
+IUSE="alsa exif gmenu gtk3 kde terminal gnote vala webkit xfce xgamma xklavier"
 
 RDEPEND="
 	dev-libs/dbus-glib
@@ -40,7 +40,7 @@ RDEPEND="
 	xfce? ( xfce-base/thunar )
 	xgamma? ( x11-libs/libXxf86vm )
 	xklavier? ( x11-libs/libxklavier )
-	tomboy? ( app-misc/tomboy )
+	gnote? ( app-misc/gnote )
 "
 
 DEPEND="${RDEPEND}
