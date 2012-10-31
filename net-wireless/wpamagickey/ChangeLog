@@ -2,6 +2,23 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*wpamagickey-0.2.3 (31 Oct 2012)
+
+  31 Oct 2012; <hash@gentoo.org> -wpamagickey-0.2.2-r1.ebuild,
+  +wpamagickey-0.2.3.ebuild:
+
+
+  Changes:
+
+  deleted: wpamagickey-0.2.2-r1.ebuild
+
+  modified: Manifest
+
+  new file: wpamagickey-0.2.3.ebuild
+
+  Version bump, provide proper source package download as upstream uses box.com
+
+
 *wpamagickey-0.2.2-r1 (25 Jan 2012)
 
   25 Jan 2012; <hash@gentoo.org> -wpamagickey-0.2.2.ebuild,
