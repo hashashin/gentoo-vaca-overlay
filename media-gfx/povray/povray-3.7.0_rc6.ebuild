@@ -41,7 +41,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/3.7.0_rc3-user-conf.patch
-	epatch "${FILESDIR}"3.7.0_rc5-make-compile-with-boost-1-49.patch
+	epatch "${FILESDIR}"/3.7.0_rc5-make-compile-with-boost-1-49.patch
 	# Change some destination directories that cannot be adjusted via configure
 	cp configure.ac configure.ac.orig
 	sed \
