@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>cpp</herd>
+  <use>
+    <flag name='tools'>
+      Build and install the boost tools (bcp, quickbook, inspect,
+      wave)
+    </flag>
+    <flag name='eselect' restrict='&lt;dev-libs/boost-1.50.0-r2'>
+      Run "eselect boost update" even if version is already selected
+    </flag>
+    <flag name='debug'>
+      Build and install debug versions of the Boost libraries. These
+      libraries are not used by default, and should not be used unless
+      you're developing against Boost.
+    </flag>
+  </use>
+</pkgmetadata>
