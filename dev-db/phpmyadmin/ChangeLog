@@ -2,6 +2,21 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*phpmyadmin-3.5.3 (01 Nov 2012)
+
+  01 Nov 2012; <hash@gentoo.org> +files/postinstall-en-3.1.txt,
+  +phpmyadmin-3.5.3.ebuild:
+
+
+  Changes:
+
+  new file: phpmyadmin-3.5.3.ebuild
+
+  new file: files/postinstall-en-3.1.txt
+
+  version bump due https://bugzilla.redhat.com/show_bug.cgi?id=870012
+
+
   10 Apr 2012; <hash@gentoo.org> metadata.xml:
 
 
