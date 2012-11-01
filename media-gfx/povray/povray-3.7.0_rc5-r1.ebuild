@@ -97,7 +97,7 @@ src_configure() {
 		--disable-strip \
 		--disable-optimiz \
 		--disable-optimiz-arch \
-		--with-boost-libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--with-boost-libdir="${EPREFIX}/usr/lib" \
 		--with-boost-thread=boost_thread-mt
 }
 
