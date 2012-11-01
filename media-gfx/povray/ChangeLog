@@ -2,6 +2,23 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.129 2012/06/17 20:53:46 jlec Exp $
 
+*povray-3.7.0_rc6 (01 Nov 2012)
+
+  01 Nov 2012; <hash@gentoo.org> -povray-3.7.0_rc5-r1.ebuild,
+  +povray-3.7.0_rc6.ebuild:
+
+
+  Changes:
+
+  deleted: povray-3.7.0_rc5-r1.ebuild
+
+  modified: Manifest
+
+  new file: povray-3.7.0_rc6.ebuild
+
+  bump
+
+
   01 Nov 2012; <hash@gentoo.org> povray-3.7.0_rc5-r1.ebuild:
 
 

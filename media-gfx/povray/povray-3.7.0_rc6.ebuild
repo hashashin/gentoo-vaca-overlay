@@ -41,7 +41,6 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/3.7.0_rc3-user-conf.patch
-	epatch "${FILESDIR}"/3.7.0_rc5-make-compile-with-boost-1-49.patch
 	# Change some destination directories that cannot be adjusted via configure
 	cp configure.ac configure.ac.orig
 	sed \
@@ -77,7 +76,7 @@ src_configure() {
 	# but the code compiles using incorrect [default] paths
 	# (based on /usr/local...), so povray will not find the system
 	# config files without the following fix:
-	append-cppflags -DPOVLIBDIR=\\\"${EROOT}usr/share/${PN}\\\" -DPOVCONFDIR=\\\"${EROOT}etc/${PN}\\\"
+	append-cppflags -lboost_system -DPOVLIBDIR=\\\"${EROOT}usr/share/${PN}\\\" -DPOVCONFDIR=\\\"${EROOT}etc/${PN}\\\"
 
 	if ! use tiff ; then
 		non_redist_conf="NON_REDISTRIBUTABLE_BUILD=yes"
@@ -97,8 +96,8 @@ src_configure() {
 		--disable-strip \
 		--disable-optimiz \
 		--disable-optimiz-arch \
-		--with-boost-libdir="${EPREFIX}/usr/lib" \
-		--with-boost-thread=boost_thread-mt
+		--with-boost-libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--with-boost-thread="boost_thread-mt"
 }
 
 src_test() {
