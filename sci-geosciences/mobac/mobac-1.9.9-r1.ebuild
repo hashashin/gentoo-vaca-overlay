@@ -16,9 +16,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="jai spanish-maps misc-maps"
 
-DEPEND=">=virtual/jre-1.6.0
-	jai? ( dev-java/sun-jai-bin )"
-DEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jre-1.6.0"
+DEPEND=">=virtual/jdk-1.4
+	dev-java/ant"
 
 S="${WORKDIR}"
 
@@ -28,7 +28,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	cd "${WORKDIR}" && ant || die uish
+	cd "${WORKDIR}" && ant || die
 }
 
 src_install() {
@@ -53,8 +53,9 @@ src_install() {
 		doins mp-misc.jar
 	fi
 	if use jai; then
-		cp lib/jai_codec.jar "${D}"/opt/${PN}/jai_codec.jar
-		cp lib/jai_core.jar "${D}"/opt/${PN}/jai_core.jar
+		insinto /opt/${PN}/
+		doins lib/jai_codec.jar
+		doins lib/jai_core.jar
 	fi
 	fowners -R ${PN}:${PN} /opt/${PN}
 	fperms 0775 /opt/${PN}
