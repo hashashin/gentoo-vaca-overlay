@@ -2,6 +2,20 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mobac-1.9.9-r1 (02 Nov 2012)
+
+  02 Nov 2012; <hash@gentoo.org> +mobac-1.9.9-r1.ebuild:
+
+
+  Changes:
+
+  modified: Manifest
+
+  new file: mobac-1.9.9-r1.ebuild
+
+  use src and not binaries, weird ebuild but seems works
+
+
   02 Nov 2012; <hash@gentoo.org> -mobac-1.9.8.ebuild:
 
 
