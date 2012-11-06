@@ -16,7 +16,7 @@ SRC_URI="http://launchpad.net/${MY_PN}/${MM_PV}/${PV}/+download/${PN}-${PV}.tar.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa exif gmenu gtk3 kde terminal gnote vala webkit xfce xgamma xklavier twitter"
+IUSE="alsa exif gmenu gtk3 kde terminal gnote vala webkit xfce xgamma xklavier twitter indicator3 zeitgeist mail"
 
 RDEPEND="
 	dev-libs/dbus-glib
@@ -41,6 +41,9 @@ RDEPEND="
 	xklavier? ( x11-libs/libxklavier )
 	gnote? ( app-misc/gnote )
 	twitter? ( dev-python/oauth dev-python/simplejson )
+	indicator3? ( dev-libs/libindicator )
+	zeitgeist? ( dev-libs/libzeitgeist )
+	mail? ( net-libs/libetpan )
 "
 
 DEPEND="${RDEPEND}

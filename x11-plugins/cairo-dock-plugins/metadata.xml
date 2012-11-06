@@ -15,5 +15,8 @@
 	 <flag name='xgamma'></flag>
 	 <flag name='xklavier'></flag>
 	 <flag name='twitter'></flag>
+	 <flag name='indicator3'></flag>
+	 <flag name='mail'></flag>
+	 <flag name='zeitgeist'></flag>
 </use>
 </pkgmetadata>
