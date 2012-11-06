@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>gentoo.power@gmail.com</email>
+		<name>hashahin</name>
+	</maintainer>
+<use>
+         <flag name='gtk3'></flag>
+         <flag name='crypt'></flag>
+         <flag name='xcomposite'></flag>
+</use>
+</pkgmetadata>
