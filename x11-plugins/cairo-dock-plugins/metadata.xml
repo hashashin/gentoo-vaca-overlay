@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>gentoo.power@gmail.com</email>
+		<name>hashahin</name>
+	</maintainer>
+<use>
+	 <flag name='gmenu'></flag>
+	 <flag name='gtk3'></flag>
+	 <flag name='terminal'></flag>
+	 <flag name='gnote'></flag>
+	 <flag name='vala'></flag>
+	 <flag name='xfce'></flag>
+	 <flag name='xgamma'></flag>
+	 <flag name='xklavier'></flag>
+	 <flag name='twitter'></flag>
+</use>
+</pkgmetadata>

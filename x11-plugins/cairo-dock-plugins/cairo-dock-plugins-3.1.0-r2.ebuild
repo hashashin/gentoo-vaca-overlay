@@ -16,7 +16,7 @@ SRC_URI="http://launchpad.net/${MY_PN}/${MM_PV}/${PV}/+download/${PN}-${PV}.tar.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa exif gmenu gtk3 kde terminal gnote vala webkit xfce xgamma xklavier"
+IUSE="alsa exif gmenu gtk3 kde terminal gnote vala webkit xfce xgamma xklavier twitter"
 
 RDEPEND="
 	dev-libs/dbus-glib
@@ -28,8 +28,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	x11-libs/gtkglext
 	~x11-misc/cairo-dock-${PV}
-
-    gtk3? ( x11-libs/gtk+:3 )
+	gtk3? ( x11-libs/gtk+:3 )
 	alsa? ( media-libs/alsa-lib )
 	exif? ( media-libs/libexif )
 	gmenu? ( gnome-base/gnome-menus )
@@ -41,16 +40,17 @@ RDEPEND="
 	xgamma? ( x11-libs/libXxf86vm )
 	xklavier? ( x11-libs/libxklavier )
 	gnote? ( app-misc/gnote )
+	twitter? ( dev-python/oauth dev-python/simplejson )
 "
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 S="${WORKDIR}/${PN}-${PV}"
 
 src_prepare() {
-    epatch "${FILESDIR}/python_sandbox.patch"
+	epatch "${FILESDIR}/python_sandbox.patch"
 }
