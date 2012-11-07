@@ -51,6 +51,7 @@ RDEPEND="sys-devel/gcc:4.6
 		x11-libs/libXrandr
 		x11-libs/libXrender
 		>=sys-libs/zlib-1.2.4
+		media-fonts/font-bitstream-100dpi
 		)"
 
 S="${WORKDIR}/"
