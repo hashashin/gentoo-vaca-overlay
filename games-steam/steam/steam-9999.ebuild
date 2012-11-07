@@ -20,7 +20,7 @@ RDEPEND="sys-devel/gcc:4.6
 		=app-emulation/emul-linux-x86-baselibs-20120520
 		=app-emulation/emul-linux-x86-xlibs-20120520
 		=app-emulation/emul-linux-x86-soundlibs-20120520
-		)
+			)
 	x86? (
 		media-libs/libjpeg-turbo
 		net-misc/curl
@@ -60,6 +60,10 @@ src_unpack() {
 	# fix QA notice
 	sed -r -i "s/^(MimeType=.*)/\1;/" usr/share/applications/steam.desktop
 	sed -r -i "s/^(Actions=.*)/\1;/" usr/share/applications/steam.desktop
+	# fix bash error and replace apt-get command with user info
+	# not important for current steam version
+	sed -r -i 's/if \[ \$NEEDSINSTALL \]; then/if \[ -n "\$NEEDSINSTALL" \]; then/' usr/bin/steam
+	sed -r -i 's/gksudo --disable-grab --message "\$MESSAGE" apt-get install \$NEEDSINSTALL/echo "\$MESSAGE \$NEEDSINSTALL"/' usr/bin/steam
 }
 
 src_install() {

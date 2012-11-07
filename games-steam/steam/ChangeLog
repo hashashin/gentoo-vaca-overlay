@@ -2,6 +2,16 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Nov 2012; <hash@gentoo.org> steam-9999.ebuild:
+
+
+  Changes:
+
+  modified: steam-9999.ebuild
+
+  fixes
+
+
 *steam-9999 (07 Nov 2012)
 
   07 Nov 2012; <hash@gentoo.org> +steam-9999.ebuild, +metadata.xml:
