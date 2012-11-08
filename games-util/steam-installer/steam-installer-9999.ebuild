@@ -72,8 +72,7 @@ src_prepare() {
 }
 
 src_install() {
-	exeinto "/usr/bin"
-	doexe "usr/bin/${PN}"
+	dobin "usr/bin/steam"
 	insinto "/usr/lib/"
 	doins -r usr/lib/steam
 	dodoc usr/share/doc/steam/{changelog.gz}
@@ -83,4 +82,10 @@ src_install() {
 	insinto /usr/share/icons/
 	doins -r usr/share/icons/
 	doicon usr/share/pixmaps/steam.xpm
+}
+
+pkg_postinst() {
+	einfo "This ebuild only installs the steam installer."
+	einfo "Execute \"steam\" to install the actual client into"
+	einfo "your home folder."
 }
