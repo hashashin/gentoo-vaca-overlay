@@ -75,7 +75,7 @@ src_install() {
 	dobin "usr/bin/steam"
 	insinto "/usr/lib/"
 	doins -r usr/lib/steam
-	dodoc usr/share/doc/steam/{changelog.gz}
+	dodoc usr/share/doc/steam/changelog.gz
 	doman usr/share/man/man6/steam.6.gz
 	insinto /usr/share/applications/
 	doins usr/share/applications/steam.desktop
