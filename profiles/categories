@@ -21,6 +21,7 @@ net-misc
 net-p2p
 net-wireless
 sci-geosciences
+sys-apps
 sys-auth
 sys-firmware
 sys-fs
