@@ -8,7 +8,7 @@ PYTHON_DEPEND="bazaar? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"
 
-inherit eutils bash-completion-r1 prefix python
+inherit eutils bash-completion-r1 python
 
 DESCRIPTION="A collection of tools to let /etc be stored in a repository"
 HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
@@ -44,11 +44,6 @@ src_install(){
 			die "bzr support installation failed!"
 	}
 	use bazaar && python_execute_function bzr_install
-
-	if use prefix; then
-		doenvd "${FILESDIR}"/99${PN}
-		eprefixify "${ED}"/etc/env.d/99${PN}
-	fi
 
 	newbashcomp bash_completion ${PN}
 	dodoc README TODO
