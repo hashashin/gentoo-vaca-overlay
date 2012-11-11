@@ -56,3 +56,35 @@
  	comment "old versions of files"
  	ignore "*.old"
  	# Not currently ignored as admins tend to rely on these files.
+--- post-install.d/50vcs-commit	2012-11-10 22:59:13 +0000
++++ post-install.d/50vcs-commit	2012-11-11 00:32:35 +0000
+@@ -1,11 +1,17 @@
+ #!/bin/sh
+ set -e
+-		
++
+ pl="/var/cache/etckeeper/packagelist"
+ 
+ if etckeeper unclean; then
++	case $LOWLEVEL_PACKAGE_MANAGER in
++	portage)
++	message="committing changes in /etc after $HIGHLEVEL_PACKAGE_MANAGER run ($CATEGORY/$P)"
++	;;
++	*)
+ 	message="committing changes in /etc after $HIGHLEVEL_PACKAGE_MANAGER run"
+-
++	;;
++	esac
+ 	if [ -e $pl.pre-install ]; then
+ 		(
+ 			echo "$message"
+@@ -17,7 +23,7 @@
+ 		etckeeper commit "$(printf "$message")"
+ 	fi
+ fi
+-	
++
+ if [ -e $pl.pre-install ]; then
+ 	rm -f $pl.pre-install
+ fi
+

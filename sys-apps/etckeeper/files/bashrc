@@ -1,3 +1,5 @@
+export BZR_EMAIL="portage@localhost"
+export BZR_USER="portage"
 case "${EBUILD_PHASE}" in
 	preinst|prerm) etckeeper pre-install ;;
 	postinst|postrm) etckeeper post-install ;;
