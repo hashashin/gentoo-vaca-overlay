@@ -49,6 +49,8 @@ src_install(){
 	dodoc README TODO
 	docinto examples
 	dodoc "${FILESDIR}"/bashrc
+	exeinto /etc/cron.daily
+	newexe debian/cron.daily etckeeper
 }
 
 pkg_postinst(){

@@ -2,6 +2,21 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.7 2012/08/11 16:05:37 hasufell Exp $
 
+*etckeeper-0.64-r2 (11 Nov 2012)
+
+  11 Nov 2012; <hash@gentoo.org> -etckeeper-0.64-r1.ebuild,
+  +etckeeper-0.64-r2.ebuild:
+
+
+  Changes:
+
+  deleted: etckeeper-0.64-r1.ebuild
+
+  new file: etckeeper-0.64-r2.ebuild
+
+  added missing cron
+
+
 *etckeeper-0.64-r1 (11 Nov 2012)
 
   11 Nov 2012; <hash@gentoo.org> -etckeeper-0.64.ebuild,
