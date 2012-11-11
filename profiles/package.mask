@@ -1,7 +1,2 @@
-#broken:
-=net-analyzer/wireshark-1.7.0
-=x11-libs/libvdpau-0.4.1-r2
 #need some testing but seems works:
 =net-analyzer/amun-9999
-#
-=net-analyzer/nikto-2.1.5
