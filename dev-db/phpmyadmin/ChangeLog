@@ -2,6 +2,24 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Nov 2012; <hash@gentoo.org> -files/reconfig-2.8,
+  -files/postinstall-en-2.8.0.txt, -files/phpmyadmin-2.11.5-custom-cert.patch,
+  -phpmyadmin-2.11.11.3.ebuild:
+
+
+  Changes:
+
+  deleted: files/postinstall-en-2.8.0.txt
+
+  deleted: files/phpmyadmin-2.11.5-custom-cert.patch
+
+  deleted: files/reconfig-2.8
+
+  deleted: phpmyadmin-2.11.11.3.ebuild
+
+  remove old
+
+
 *phpmyadmin-3.5.3 (01 Nov 2012)
 
   01 Nov 2012; <hash@gentoo.org> +files/postinstall-en-3.1.txt,
