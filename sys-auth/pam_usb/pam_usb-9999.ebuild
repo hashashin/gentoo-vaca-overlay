@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	sys-apps/pmount
 	sys-fs/udisks"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	emake CC="$(tc-getCC)"

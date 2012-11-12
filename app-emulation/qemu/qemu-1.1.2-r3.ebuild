@@ -195,7 +195,7 @@ src_prepare() {
 			epatch
 
 	epatch_user
-	epatch ${FILESDIR}/transparent_hugepages.patch
+	epatch "${FILESDIR}"/transparent_hugepages.patch
 }
 
 src_configure() {
