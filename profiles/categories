@@ -18,6 +18,5 @@ sys-apps
 sys-auth
 sys-firmware
 sys-fs
-www-apache
 x11-misc
 x11-plugins
