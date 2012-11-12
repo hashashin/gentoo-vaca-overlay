@@ -2,6 +2,23 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Nov 2012; <hash@gentoo.org> steam-installer-9999.ebuild,
+  +files/remove-ubuntu-specifics.patch, -files/no-extrapkgs.patch:
+
+
+  Changes:
+
+  modified: Manifest
+
+  new file: files/remove-ubuntu-specifics.patch
+
+  deleted: files/no-extrapkgs.patch
+
+  modified: steam-installer-9999.ebuild
+
+  import from https://github.com/anyc/steam-overlay
+
+
   08 Nov 2012; <hash@gentoo.org> -steam-9999.ebuild,
   +steam-installer-9999.ebuild, +files/no-extrapkgs.patch:
 

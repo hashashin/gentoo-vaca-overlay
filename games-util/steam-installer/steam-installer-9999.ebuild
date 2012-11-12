@@ -6,49 +6,31 @@ EAPI=5
 
 inherit eutils unpacker
 
-DESCRIPTION="Valve's Steam client installer for Linux"
+DESCRIPTION="Installer for Valve's native Steam client"
 HOMEPAGE="https://steampowered.com"
 SRC_URI="http://media.steampowered.com/client/installer/steam.deb"
 LICENSE="steam"
 
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="pulseaudio"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE=""
 
-DEPEND=""
-RDEPEND="virtual/opengl
-	x11-libs/libXext
-	>=x11-libs/libX11-1.5
-	media-libs/libsdl
-	media-libs/libtheora
-	media-libs/libvorbis
-	media-libs/alsa-lib
-	media-libs/libogg
-	x11-libs/gtk+:2
-	media-libs/openal
-	>=x11-libs/pixman-0.24.4
-	x11-libs/cairo
-	dev-libs/libgcrypt
-	net-misc/curl
-	x11-libs/gdk-pixbuf
-	dev-libs/nspr
-	dev-libs/nss
-	x11-libs/pango
-	media-libs/libpng:1.2
-	>=sys-libs/glibc-2.15
-	>=sys-libs/zlib-1.2.4
-	media-libs/libjpeg-turbo
-	sys-devel/gcc:4.6
-	media-libs/fontconfig
-	media-libs/freetype:2
-	pulseaudio? ( media-sound/pulseaudio )
-	sys-apps/dbus
-	media-fonts/font-bitstream-100dpi
-	media-fonts/corefonts
-	media-fonts/dejavu
-"
+RDEPEND=" amd64? (
+			>=app-emulation/emul-linux-x86-baselibs-20121028
+			>=app-emulation/emul-linux-x86-xlibs-20121028
+			>=sys-devel/gcc-4.6.0[multilib]
+			>=sys-libs/glibc-2.15[multilib]
+			)
+		x86? (
+			>=sys-devel/gcc-4.6.0
+			>=sys-libs/glibc-2.15
+			>=x11-libs/libX11-1.5
+			x11-libs/libXau
+			x11-libs/libxcb
+			x11-libs/libXdmcp
+			)"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	unpack_deb ${A}
@@ -58,19 +40,25 @@ src_prepare() {
 	# fix QA notice
 	sed -r -i "s/^(MimeType=.*)/\1;/" usr/share/applications/steam.desktop
 	sed -r -i "s/^(Actions=.*)/\1;/" usr/share/applications/steam.desktop
-	epatch "${FILESDIR}/no-extrapkgs.patch"
+
+	epatch "${FILESDIR}/remove-ubuntu-specifics.patch"
 }
 
 src_install() {
 	dobin "usr/bin/steam"
+
 	insinto "/usr/lib/"
 	doins -r usr/lib/steam
+
 	dodoc usr/share/doc/steam/changelog.gz
 	doman usr/share/man/man6/steam.6.gz
+
 	insinto /usr/share/applications/
 	doins usr/share/applications/steam.desktop
+
 	insinto /usr/share/icons/
 	doins -r usr/share/icons/
+
 	doicon usr/share/pixmaps/steam.xpm
 }
 
@@ -78,4 +66,10 @@ pkg_postinst() {
 	einfo "This ebuild only installs the steam installer."
 	einfo "Execute \"steam\" to install the actual client into"
 	einfo "your home folder."
+	einfo ""
+	einfo "To pull in the dependencies for the steam client, emerge:"
+	einfo "game-utils/steam-client-meta"
+
+	ewarn "The steam client and the games are not controlled by"
+	ewarn "portage. Updates are handled by the client itself."
 }
