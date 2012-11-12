@@ -44,6 +44,8 @@ RDEPEND="virtual/opengl
 	pulseaudio? ( media-sound/pulseaudio )
 	sys-apps/dbus
 	media-fonts/font-bitstream-100dpi
+	media-fonts/corefonts
+	media-fonts/dejavu
 "
 
 S="${WORKDIR}"
