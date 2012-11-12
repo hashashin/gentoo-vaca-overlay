@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Nov 2012;  <hash@gentoo.org> apktool-1.4.3-r1.ebuild:
+  readd ~amd64 to apktool
+
   17 Mar 2012; <hash@gentoo.org> -apktool-1.4.3.ebuild:
 
 
@@ -96,5 +99,3 @@
   modified: apktool-1.4.1.ebuild
 
   bump eapi 4, added missing stuff
-
-
