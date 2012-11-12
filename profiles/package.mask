@@ -1,2 +1,3 @@
 #need some testing but seems works:
 =net-analyzer/amun-9999
+=net-analyzer/nikto-2.1.5
