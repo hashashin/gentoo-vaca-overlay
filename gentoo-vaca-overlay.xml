@@ -8,5 +8,6 @@
        <email>gentoo.power@gmail.com</email>
      </owner>
      <source type="git">git://github.com/hashashin/gentoo-vaca-overlay.git</source>
+     <feed>https://github.com/hashashin/gentoo-vaca-overlay/commits/master.atom</feed>
    </repo>
 </repositories>
