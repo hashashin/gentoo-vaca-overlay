@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>gentoo.power@gmail.com</email>
+		<name>hashashin</name>
+	</maintainer>
+	<longdescription>Stan's Python Editor is a Python IDE with full Blender support.</longdescription>
+</pkgmetadata>

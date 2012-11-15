@@ -1,0 +1,253 @@
+--- _spe/plugins/pychecker2/Check.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/Check.py	2012-11-15 20:33:06.000000000 +0100
+@@ -1,7 +1,7 @@
+ 
+-from pychecker2.Warning import Warning
+-from pychecker2.File import File
+-from pychecker2 import Options
++from pychecker.Warning import Warning
++from pychecker.File import File
++from pychecker import Options
+ 
+ import time
+ import os
+--- _spe/plugins/pychecker2/ClassChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/ClassChecks.py	2012-11-15 20:37:40.000000000 +0100
+@@ -1,7 +1,7 @@
+-from pychecker2.Check import Check
+-from pychecker2.Check import Warning
+-from pychecker2 import symbols
+-from pychecker2.util import *
++from pychecker.Check import Check
++from pychecker.Check import Warning
++from pychecker import symbols
++from pychecker.util import *
+ 
+ from compiler.misc import mangle
+ from compiler import ast, walk
+--- _spe/plugins/pychecker2/ConditionalChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/ConditionalChecks.py	2012-11-15 20:34:50.000000000 +0100
+@@ -1,5 +1,5 @@
+-from pychecker2.Check import Check
+-from pychecker2.util import BaseVisitor
++from pychecker.Check import Check
++from pychecker.util import BaseVisitor
+ 
+ from compiler import ast, walk
+ 
+--- _spe/plugins/pychecker2/File.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/File.py	2012-11-15 20:34:59.000000000 +0100
+@@ -1,4 +1,4 @@
+-from pychecker2.util import parents
++from pychecker.util import parents
+ 
+ from compiler import ast
+ 
+--- _spe/plugins/pychecker2/FormatStringChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/FormatStringChecks.py	2012-11-15 20:33:29.000000000 +0100
+@@ -1,6 +1,6 @@
+-from pychecker2.Check import Check
+-from pychecker2.util import BaseVisitor
+-from pychecker2.Warning import Warning
++from pychecker.Check import Check
++from pychecker.util import BaseVisitor
++from pychecker.Warning import Warning
+ from compiler import ast, walk
+ from types import *
+ import re
+--- _spe/plugins/pychecker2/ImportChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/ImportChecks.py	2012-11-15 20:32:57.000000000 +0100
+@@ -1,6 +1,6 @@
+-from pychecker2.Check import Check
+-from pychecker2.Check import Warning
+-from pychecker2 import util
++from pychecker.Check import Check
++from pychecker.Check import Warning
++from pychecker import util
+ 
+ from compiler import walk
+ 
+--- _spe/plugins/pychecker2/main.py	2007-12-05 23:45:12.000000000 +0100
++++ _spe/plugins/pychecker2/main.py	2012-11-15 20:33:21.000000000 +0100
+@@ -26,19 +26,19 @@
+ #Patched by Stani http://pythonide.stani.be (end)
+ sys.path.append(dirname(dirname(realpath(sys.argv[0]))))
+ 
+-from pychecker2.Check import CheckList
++from pychecker.Check import CheckList
+ 
+-from pychecker2 import Options
+-from pychecker2 import ParseChecks
+-from pychecker2 import OpChecks
+-from pychecker2 import VariableChecks
+-from pychecker2 import ScopeChecks
+-from pychecker2 import ImportChecks
+-from pychecker2 import ClassChecks
+-from pychecker2 import ReachableChecks
+-from pychecker2 import ReturnChecks
+-from pychecker2 import ConditionalChecks
+-from pychecker2 import FormatStringChecks
++from pychecker import Options
++from pychecker import ParseChecks
++from pychecker import OpChecks
++from pychecker import VariableChecks
++from pychecker import ScopeChecks
++from pychecker import ImportChecks
++from pychecker import ClassChecks
++from pychecker import ReachableChecks
++from pychecker import ReturnChecks
++from pychecker import ConditionalChecks
++from pychecker import FormatStringChecks
+ 
+ 
+ def print_warnings(f, out):
+--- _spe/plugins/pychecker2/OpChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/OpChecks.py	2012-11-15 20:32:41.000000000 +0100
+@@ -1,6 +1,6 @@
+-from pychecker2.Check import Check
+-from pychecker2.Warning import Warning
+-from pychecker2.util import BaseVisitor
++from pychecker.Check import Check
++from pychecker.Warning import Warning
++from pychecker.util import BaseVisitor
+ 
+ import compiler
+ 
+--- _spe/plugins/pychecker2/Options.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/Options.py	2012-11-15 20:32:14.000000000 +0100
+@@ -77,7 +77,7 @@
+         for opt, arg in opts:
+             longopts[opt[2:]].set_value(arg)
+ 
+-        from pychecker2.File import File
++        from pychecker.File import File
+         return [ File(f) for f in args ]
+ 
+     def usage(self, argv0, stream):
+--- _spe/plugins/pychecker2/ParseChecks.py	2008-04-20 18:20:13.000000000 +0200
++++ _spe/plugins/pychecker2/ParseChecks.py	2012-11-15 20:34:03.000000000 +0100
+@@ -1,7 +1,7 @@
+-from pychecker2.Check import Check
+-from pychecker2.Warning import Warning
+-from pychecker2.Options import BoolOpt
+-from pychecker2 import symbols
++from pychecker.Check import Check
++from pychecker.Warning import Warning
++from pychecker.Options import BoolOpt
++from pychecker import symbols
+ 
+ from compiler import parseFile, walk
+ import parser
+--- _spe/plugins/pychecker2/ReachableChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/ReachableChecks.py	2012-11-15 20:32:33.000000000 +0100
+@@ -1,6 +1,6 @@
+-from pychecker2.Check import Check
+-from pychecker2.util import BaseVisitor
+-from pychecker2.Warning import Warning
++from pychecker.Check import Check
++from pychecker.util import BaseVisitor
++from pychecker.Warning import Warning
+ 
+ from compiler import ast, walk
+ 
+--- _spe/plugins/pychecker2/ReturnChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/ReturnChecks.py	2012-11-15 20:35:08.000000000 +0100
+@@ -1,7 +1,7 @@
+-from pychecker2.Check import Check
+-from pychecker2.Check import Warning
+-from pychecker2.util import BaseVisitor, type_filter
+-from pychecker2 import symbols
++from pychecker.Check import Check
++from pychecker.Check import Warning
++from pychecker.util import BaseVisitor, type_filter
++from pychecker import symbols
+ 
+ from compiler import ast, walk
+ 
+--- _spe/plugins/pychecker2/ScopeChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/ScopeChecks.py	2012-11-15 20:37:33.000000000 +0100
+@@ -1,7 +1,7 @@
+ 
+-from pychecker2.Check import Check
+-from pychecker2.Warning import Warning
+-from pychecker2 import util
++from pychecker.Check import Check
++from pychecker.Warning import Warning
++from pychecker import util
+ 
+ from compiler.ast import *
+ 
+--- _spe/plugins/pychecker2/test.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/test.py	2012-11-15 20:34:14.000000000 +0100
+@@ -18,7 +18,7 @@
+     files.sort()
+     for fname in files:
+         fname = os.path.split(fname)[1] # remove path
+-        module = 'pychecker2.utest.' + os.path.splitext(fname)[0]
++        module = 'pychecker.utest.' + os.path.splitext(fname)[0]
+         if not module.endswith('_'):    # ignore __init__
+             modules.append(module)
+     return modules
+@@ -39,8 +39,8 @@
+         raise Usage(str(detail))
+ 
+     root = os.path.dirname(os.path.realpath(sys.argv[0]))
+-    pychecker2 = os.path.split(root)[0]
+-    sys.path.append(pychecker2)
++    pychecker = os.path.split(root)[0]
++    sys.path.append(pychecker)
+ 
+     return test(_modules(root), verbosity)
+         
+--- _spe/plugins/pychecker2/TestSupport.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/TestSupport.py	2012-11-15 20:33:54.000000000 +0100
+@@ -1,5 +1,5 @@
+-from pychecker2 import main
+-from pychecker2 import Options
++from pychecker import main
++from pychecker import Options
+ 
+ import unittest
+ 
+--- _spe/plugins/pychecker2/VariableChecks.py	2007-03-14 23:55:30.000000000 +0100
++++ _spe/plugins/pychecker2/VariableChecks.py	2012-11-15 20:33:43.000000000 +0100
+@@ -1,8 +1,8 @@
+-from pychecker2.Check import Check
+-from pychecker2.Options import Opt, BoolOpt
+-from pychecker2.Warning import Warning
+-from pychecker2.util import *
+-from pychecker2 import symbols
++from pychecker.Check import Check
++from pychecker.Options import Opt, BoolOpt
++from pychecker.Warning import Warning
++from pychecker.util import *
++from pychecker import symbols
+ 
+ from compiler import ast, walk
+ 
+--- _spe/plugins/Pycheck.py	2008-04-20 19:07:41.000000000 +0200
++++ _spe/plugins/Pycheck.py	2012-11-15 20:37:52.000000000 +0100
+@@ -1,4 +1,4 @@
+-"""File ImportChecks of pychecker2 is modified."""
++"""File ImportChecks of pychecker is modified."""
+ import os
+ import wx
+ from wx.lib.evtmgr import eventManager
+@@ -17,13 +17,13 @@
+     import _spe.plugins.pychecker as pychecker
+ PYCHECKER   = os.path.join(os.path.dirname(pychecker.__file__),'checker.py')
+ try:
+-    import pychecker2
++    import pychecker
+ except ImportError:
+-    import _spe.plugins.pychecker2 as pychecker2
+-PYCHECKER2  = os.path.join(os.path.dirname(pychecker2.__file__),'main.py')
++    import _spe.plugins.pychecker as pychecker
++pychecker  = os.path.join(os.path.dirname(pychecker.__file__),'main.py')
+ METHOD_PATHS    = [\
+     '%s%s --stdlib --blacklist --varlist'%(PYCHECKER,QUOTE),
+-    '%s%s --incremental'%(PYCHECKER2,QUOTE)
++    '%s%s --incremental'%(PYCHECKER,QUOTE)
+     ]
+ 
+ #----------------------------------------------------------------------
