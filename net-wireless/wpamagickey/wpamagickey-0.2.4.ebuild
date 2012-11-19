@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Generador de claves wpa para Wlan_XXXX, Jazztel_XXXX."
 HOMEPAGE="http://www.seguridadwireless.net"
-SRC_URI="http://dl.dropbox.com/u/12425024/WPAmagickey-${PV}.tar.gz"
+SRC_URI="http://www.seguridadwireless.net/archivos/WPAmagickey-${PV}.tar.gz"
 IUSE=""
 
 LICENSE="GPL-3"
