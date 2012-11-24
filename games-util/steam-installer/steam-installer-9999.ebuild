@@ -9,7 +9,7 @@ inherit eutils unpacker
 DESCRIPTION="Installer for Valve's native Steam client"
 HOMEPAGE="https://steampowered.com"
 SRC_URI="http://media.steampowered.com/client/installer/steam.deb"
-LICENSE="stean"
+LICENSE="steam"
 
 RESTRICT="bindist mirror"
 SLOT="0"
