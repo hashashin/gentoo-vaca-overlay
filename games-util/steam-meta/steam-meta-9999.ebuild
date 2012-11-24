@@ -11,11 +11,16 @@ LICENSE="metapackage"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
+IUSE="+installer testdeps"
 
 RDEPEND="
-		games-util/steam-installer
 		games-util/steam-client-meta
+
+		installer? ( games-util/steam-installer )
+		testdeps? (
+			media-libs/libtxc_dxtn
+			sys-apps/pciutils
+			)
 		"
 
 pkg_postinst() {
