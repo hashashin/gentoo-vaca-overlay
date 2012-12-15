@@ -4,6 +4,9 @@
 
 EAPI=5
 
+# Please report bugs/suggestions on: https://github.com/anyc/steam-overlay
+# or come to #gentoo-gamerlay in freenode IRC
+
 DESCRIPTION="Meta package for Valve's native Steam client"
 HOMEPAGE="https://steampowered.com"
 SRC_URI=""
@@ -11,7 +14,7 @@ LICENSE="metapackage"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="video_cards_intel windows-games flash"
+IUSE="flash video_cards_intel windows-games"
 
 RDEPEND="
 		virtual/opengl
@@ -93,7 +96,7 @@ pkg_postinst() {
 	if use flash; then
 		einfo ""
 		einfo "In order to use flash, link the 32bit libflashplayer.so to"
-		einfo "/usr/lib/browser-plugins/"
+		einfo "\${STEAM_FOLDER}/ubuntu12_32/plugins/"
 	fi
 
 	ewarn "The steam client and the games are not controlled by"

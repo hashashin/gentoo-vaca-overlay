@@ -4,19 +4,32 @@
 
 EAPI=5
 
+# Please report bugs/suggestions on: https://github.com/anyc/steam-overlay
+# or come to #gentoo-gamerlay in freenode IRC
+
 inherit eutils unpacker
 
 DESCRIPTION="Installer for Valve's native Steam client"
 HOMEPAGE="https://steampowered.com"
-SRC_URI="http://media.steampowered.com/client/installer/steam.deb"
+
+if [[ "${PV}" == "9999" ]] ; then
+	SRC_URI="http://repo.steampowered.com/steam/archive/precise/steam_latest.deb"
+	KEYWORDS="-* ~amd64 ~x86"
+else
+	SRC_URI="http://repo.steampowered.com/steam/archive/precise/steam_${PV}_i386.deb"
+	KEYWORDS="-* ~amd64 ~x86"
+fi
+
 LICENSE="steam"
 
 RESTRICT="bindist mirror"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-RDEPEND=" amd64? (
+RDEPEND="
+		gnome-extra/zenity
+
+		amd64? (
 			>=app-emulation/emul-linux-x86-baselibs-20121028
 			>=app-emulation/emul-linux-x86-xlibs-20121028
 			>=sys-devel/gcc-4.6.0[multilib]
@@ -42,8 +55,9 @@ src_prepare() {
 	sed -r -i "s/^(MimeType=.*)/\1;/" usr/share/applications/steam.desktop
 	sed -r -i "s/^(Actions=.*)/\1;/" usr/share/applications/steam.desktop
 
-	epatch "${FILESDIR}/remove-ubuntu-specifics.patch"
-	epatch "${FILESDIR}/use-default-terminal.patch"
+	# disable ubuntu-specific package installation and use $TERM instead
+	# of "xterm"
+	epatch "${FILESDIR}/usr_bin_steam.patch"
 }
 
 src_install() {
@@ -61,17 +75,21 @@ src_install() {
 	insinto /usr/share/icons/
 	doins -r usr/share/icons/
 
-	doicon usr/share/pixmaps/steam.xpm
+	doicon usr/share/pixmaps/steam.png
 }
 
 pkg_postinst() {
-	einfo "This ebuild only provides the steam installer."
-	einfo "Execute \"steam\" to install the actual client into"
+	einfo "Execute /usr/bin/steam to install the actual client into"
 	einfo "your home folder."
+	einfo ""
+	einfo "After installing the client, /usr/bin/steam is also used to start"
+	einfo "the client. After unmerging the installer, you can start the client"
+	einfo "by executing ~/Steam/steam.sh"
 	einfo ""
 	einfo "To pull in the dependencies for the steam client and games,"
 	einfo "emerge: game-utils/steam-meta"
 
-	ewarn "The steam client and the games are not controlled by"
-	ewarn "portage. Updates are handled by the client itself."
+	ewarn "This ebuild _only_ provides the steam installer. The steam client"
+	ewarn "and the games are _not_ controlled by portage. Updates are handled"
+	ewarn "by the client itself."
 }
