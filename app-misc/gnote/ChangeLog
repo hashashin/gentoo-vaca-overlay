@@ -2,6 +2,20 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gnote-3.7.1 (18 Dec 2012)
+
+  18 Dec 2012; <hash@gentoo.org> -gnote-3.7.0.ebuild, +gnote-3.7.1.ebuild:
+
+
+  Changes:
+
+  deleted: gnote-3.7.0.ebuild
+
+  new file: gnote-3.7.1.ebuild
+
+  version bump
+
+
 *gnote-3.7.0 (12 Nov 2012)
 
   12 Nov 2012; <hash@gentoo.org> -gnote-3.6.1.ebuild, +gnote-3.7.0.ebuild:
