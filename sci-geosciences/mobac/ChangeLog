@@ -2,6 +2,19 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mobac-1.9.10 (18 Dec 2012)
+
+  18 Dec 2012; <hash@gentoo.org> -mobac-1.9.9-r1.ebuild, +mobac-1.9.10.ebuild:
+
+
+  Changes:
+
+  deleted: mobac-1.9.9-r1.ebuild
+
+  new file: mobac-1.9.10.ebuild
+  version bump
+
+
   02 Nov 2012; <hash@gentoo.org> -mobac-1.9.9.ebuild, mobac-1.9.9-r1.ebuild:
 
 
