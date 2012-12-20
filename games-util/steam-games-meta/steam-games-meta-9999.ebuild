@@ -14,11 +14,11 @@ LICENSE="metapackage"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="s3tc testdeps video_cards_intel"
+IUSE="s3tc testdeps video_cards_intel video_cards_fglrx"
 
 # add USE_EXPAND="${USE_EXPAND} STEAMGAMES" to your make.conf for proper
 # display of steamgames use flags
-IUSE_STEAMGAMES="unwritten_tales"
+IUSE_STEAMGAMES="unwritten_tales tf2"
 
 for sgame in ${IUSE_STEAMGAMES}; do
 	IUSE="${IUSE} steamgames_${sgame}"
@@ -28,13 +28,20 @@ RDEPEND="
 		s3tc? ( media-libs/libtxc_dxtn )
 		testdeps? (
 			dev-games/ogre
+			dev-lang/mono
 			media-libs/freealut
+			media-libs/sdl-image
+			media-libs/sdl-mixer
 			media-libs/sdl-ttf
 			media-libs/tiff
 			net-misc/curl
 			sys-apps/pciutils
+			x11-misc/xclip
 			)
 		steamgames_unwritten_tales? ( media-libs/jasper )
+		steamgames_tf2? (
+				video_cards_fglrx? ( >=x11-drivers/ati-drivers-12.8 )
+			)
 		"
 
 pkg_postinst() {
