@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.4h.ebuild,v 1.6 2012/09/05 07:43:56 jlec Exp $
 
