@@ -20,5 +20,5 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 src_install() {
 	insinto /usr/share/seabios
-	newins bios.bin-1.7.1 bios.bin
+	newins bios.bin-"${PV}" bios.bin
 }
