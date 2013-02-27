@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="A tool for reengineering 3rd party, closed, binary Android apps."
 HOMEPAGE="http://code.google.com/p/android-apktool/"
 SRC_URI="http://android-${PN}.googlecode.com/files/${PN}${PV}.tar.bz2
-	http://android-${PN}.googlecode.com/files/${PN}-install-linux-r04-brut1.tar.bz2"
+	http://android-${PN}.googlecode.com/files/${PN}-install-linux-r05-ibot.tar.bz2"
 S="${WORKDIR}"
 
 LICENSE="GPL-3"
@@ -21,13 +21,13 @@ DEPEND=""
 RDEPEND="dev-util/android-sdk-update-manager"
 
 src_prepare() {
-	epatch "$FILESDIR"/apktool.patch
+	epatch "$FILESDIR"/"${PN}".patch
 }
 
 src_install() {
 	exeinto /usr/local/bin
-	doexe apktool
-	doexe aapt
+	doexe "${PN}"-install-linux-r05-ibot/"${PN}"
+	doexe "${PN}"-install-linux-r05-ibot/aapt
 	insinto /usr/local/lib
-	doins apktool.jar
+	doins "${PN}${PV}"/"${PN}".jar
 }

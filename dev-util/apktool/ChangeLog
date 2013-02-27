@@ -1,6 +1,23 @@
 # ChangeLog for dev-util/apktool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*apktool-1.5.2 (27 Feb 2013)
+
+  27 Feb 2013; <hash@gentoo.org> -apktool-1.4.3-r1.ebuild,
+  +apktool-1.5.2.ebuild, files/apktool.patch:
+
+
+  Changes:
+
+  new file: apktool-1.5.2.ebuild
+
+  modified: files/apktool.patch
+
+  deleted: apktool-1.4.3-r1.ebuild
+
+  version bump
+
 
   12 Nov 2012;  <hash@gentoo.org> apktool-1.4.3-r1.ebuild:
   readd ~amd64 to apktool

@@ -1,6 +1,6 @@
---- apktool	2010-04-02 20:27:46.000000000 +0200
-+++ apktool.new	2012-03-16 00:54:09.000000000 +0100
-@@ -43,7 +43,7 @@
+--- apktool-install-linux-r05-ibot/apktool	2010-04-02 20:27:46.000000000 +0200
++++ apktool-install-linux-r05-ibot/apktool.new	2012-03-16 00:54:09.000000000 +0100
+@@ -46,7 +46,7 @@
  
  
  jarfile=apktool.jar
