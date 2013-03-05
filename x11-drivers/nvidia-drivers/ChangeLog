@@ -2,6 +2,18 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.414 2012/12/11 15:20:56 ssuominen Exp $
 
+*nvidia-drivers-313.26 (05 Mar 2013)
+
+  05 Mar 2013; <hash@gentoo.org> +nvidia-drivers-313.26.ebuild:
+
+
+  Changes:
+
+  new file: nvidia-drivers-313.26.ebuild
+
+  version bump
+
+
 *nvidia-drivers-313.18-r1 (21 Feb 2013)
 
   21 Feb 2013; <hash@gentoo.org> +nvidia-drivers-313.18-r1.ebuild,
