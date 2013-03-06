@@ -46,7 +46,7 @@ src_install() {
 	dodoc README* changelog.txt
 	doman ${PN}.1
 	insinto /usr/share/${PN}
-	newins "${WORKDIR}"/presets-libavcodec54_v1.wff presets.xml
+	newins "${DISTDIR}"/presets-libavcodec54_v1.wff presets.xml
 	doins -r languages
 	local res
 	for res in 16x16 24x24 32x32 48x48; do
