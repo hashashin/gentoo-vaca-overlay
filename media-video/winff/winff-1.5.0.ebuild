@@ -8,7 +8,8 @@ inherit eutils
 DESCRIPTION="GUI for the command line video converter ffmpeg"
 HOMEPAGE="http://winff.org/"
 SRC_URI="http://winff.googlecode.com/files/${P}-source.tar.gz
-	http://winff.googlecode.com/files/presets-libavcodec54_v1.wff"
+	http://winff.googlecode.com/files/presets-libavcodec54_v1.wff
+	http://dl.dropbox.com/u/12425024/lazarushomedir.7z"
 
 LICENSE="GPL-3 doc? ( FDL-1.3 )"
 SLOT="0"
@@ -36,7 +37,8 @@ RDEPEND="
 S="${WORKDIR}/${PN}"
 
 src_compile() {
-	lazbuild --widgetset=gtk2 -B winff.lpr || die
+	mv ../.lazarus ../../homedir/.lazarus
+	lazbuild -B winff.lpr || die
 }
 
 src_install() {

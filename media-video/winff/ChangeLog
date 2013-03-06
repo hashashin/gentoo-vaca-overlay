@@ -2,6 +2,16 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Mar 2013; <hash@gentoo.org> winff-1.5.0.ebuild:
+
+
+  Changes:
+
+  modified: winff-1.5.0.ebuild
+
+  make work for me but masked because the fix is sooo dirty and ugly
+
+
 *winff-1.5.0 (06 Mar 2013)
 
   06 Mar 2013; <hash@gentoo.org> +winff-1.5.0.ebuild, +metadata.xml:
