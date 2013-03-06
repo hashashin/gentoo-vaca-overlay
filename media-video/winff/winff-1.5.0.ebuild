@@ -38,7 +38,7 @@ S="${WORKDIR}/${PN}"
 
 src_compile() {
 	mv ../.lazarus ../../homedir/.lazarus
-	lazbuild -B winff.lpr || die
+	lazbuild --widgetset=gtk2 -B winff.lpr || die
 }
 
 src_install() {
