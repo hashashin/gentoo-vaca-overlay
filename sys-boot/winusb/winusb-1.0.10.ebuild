@@ -20,6 +20,14 @@ RDEPEND="x11-libs/wxGTK"
 DEPEND="${RDEPEND}"
 
 src_install() {
+	domenu src/linux-menu/winusbgui.desktop
+	doicon src/linux-menu/winusbgui-icon.png
 	dobin src/winusb
 	dobin src/winusbgui
+	doman src/winusb.1
+	doman src/winusbgui.1
+	insinto /usr/share/${PN}/data
+	doins src/data/c501-logo.png src/data/listDvdDrive src/data/listUsb src/data/icon.png
+	insinto /usr/share/${PN}/locale
+	doins -r src/locale/default.mo src/locale/default.po
 }
