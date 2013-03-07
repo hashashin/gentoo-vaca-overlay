@@ -16,7 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="x11-libs/wxGTK"
+RDEPEND="x11-libs/wxGTK
+	x11-libs/gksu"
 DEPEND="${RDEPEND}"
 
 src_install() {
