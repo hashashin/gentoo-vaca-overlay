@@ -27,7 +27,9 @@ src_install() {
 	doman src/winusb.1
 	doman src/winusbgui.1
 	insinto /usr/share/${PN}/data
-	doins src/data/c501-logo.png src/data/listDvdDrive src/data/listUsb src/data/icon.png
+	doins src/data/c501-logo.png src/data/icon.png
+	exeinto /usr/share/${PN}/data
+	doexe src/data/listDvdDrive src/data/listUsb
 	insinto /usr/share/${PN}/locale
 	doins -r src/locale/default.mo src/locale/default.po
 }
