@@ -13,7 +13,7 @@ mirror://sourceforge/mobac/Misc/mappack-misc.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="jai spanish-maps misc-maps"
 
 RDEPEND=">=virtual/jre-1.6.0"
