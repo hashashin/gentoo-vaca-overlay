@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/project/${PN}honey/${PN}/${PN}-v${PV}/${PN}-v${PV}
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="mysql surfnet"
 
 DEPEND="mysql? ( virtual/mysql )

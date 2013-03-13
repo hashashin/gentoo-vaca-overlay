@@ -10,7 +10,7 @@ SRC_URI="http://v7.guadalinex.org/guadalinex-lince/pool/main/f/${PN}/${PN}_${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND=">=app-accessibility/festival-1.96_beta"

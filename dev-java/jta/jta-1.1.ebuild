@@ -10,7 +10,7 @@ HOMEPAGE="http://www.oracle.com/technetwork/java/javaee/tech/jta-138684.html"
 SRC_URI="${At}"
 LICENSE="sun-bcla-jta"
 SLOT=0
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND=">=app-arch/unzip-5.50-r1
 	>=virtual/jdk-1.3"
