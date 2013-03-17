@@ -2,9 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.1.0.ebuild,v 1.5 2013/03/10 01:38:36 ottxor Exp $
 
-EAPI="2"
+EAPI="5"
 
-inherit autotools eutils user
+PYTHON_DEPEND="2:2.7"
+RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_6 python2_7 )
+inherit autotools eutils python user
 
 DESCRIPTION="Network traffic analyzer with web interface"
 HOMEPAGE="http://www.ntop.org/products/ntop/"
@@ -42,6 +45,7 @@ RDEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	enewgroup ntop
 	enewuser ntop -1 -1 /var/lib/ntop ntop
+	python_set_active_version 2
 }
 
 src_prepare() {
