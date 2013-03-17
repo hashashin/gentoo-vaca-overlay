@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.1.0.ebuild,v 1.5 2013/03/10 01:38:36 ottxor Exp $
+# $Header: $
 
 EAPI="5"
 
-PYTHON_DEPEND="2:2.7"
-RESTRICT_PYTHON_ABIS="3.*"
-PYTHON_COMPAT=( python2_6 python2_7 )
-inherit autotools eutils python user
+PYTHON_DEPEND="2"
+
+inherit autotools eutils user python
 
 DESCRIPTION="Network traffic analyzer with web interface"
 HOMEPAGE="http://www.ntop.org/products/ntop/"
@@ -15,11 +14,11 @@ SRC_URI="mirror://sourceforge/ntop/ntop/Stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="snmp ssl"
 
 COMMON_DEPEND="
-	virtual/awk
+	sys-apps/gawk
 	dev-lang/perl
 	sys-libs/gdbm
 	dev-libs/libevent
@@ -39,17 +38,22 @@ RDEPEND="${COMMON_DEPEND}
 	media-gfx/graphviz
 	net-misc/wget
 	app-arch/gzip
-	dev-libs/glib:2
-	dev-python/mako"
+	!arm? ( dev-libs/gdome2 )
+	dev-libs/glib:2"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 	enewgroup ntop
 	enewuser ntop -1 -1 /var/lib/ntop ntop
-	python_set_active_version 2
 }
 
 src_prepare() {
+	python_convert_shebangs -q -r 2 "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+#Waiting for the fix, see https://www.ntop.org/bugzilla3/show_bug.cgi?id=273
+#	epatch "${FILESDIR}"/${P}-system-ndpi.patch
+#	rm -r ./nDPI
 	cp /usr/share/aclocal/libtool.m4 libtool.m4.in
 	cat acinclude.m4.in libtool.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
