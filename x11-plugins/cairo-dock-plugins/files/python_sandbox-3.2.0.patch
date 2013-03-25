@@ -1,18 +1,5 @@
-diff -ru cairo-dock-plugins-2.4.0~2.orig//Dbus/interfaces/bash/BashInstall.cmake.in cairo-dock-plugins-2.4.0~2/Dbus/interfaces/bash/BashInstall.cmake.in
---- cairo-dock-plugins-2.4.0~2.orig//Dbus/interfaces/bash/BashInstall.cmake.in	2011-10-03 07:51:28.000000000 -0700
-+++ cairo-dock-plugins-2.4.0~2/Dbus/interfaces/bash/BashInstall.cmake.in	2012-01-27 18:31:33.714287648 -0800
-@@ -1,7 +1,7 @@
- IF("@ROOT_PREFIX@" STREQUAL "")
- 	EXEC_PROGRAM("@PYTHON_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
- 					"setup.py" "install"
--					"--prefix=${CMAKE_INSTALL_PREFIX}"
-+					"--prefix=$ENV{D}${CMAKE_INSTALL_PREFIX}"
- 					"@DEBIAN_INSTALL_LAYOUT@")
- ELSEIF(NOT "@ROOT_PREFIX@" STREQUAL "" AND "@python_no_deb_layout@" STREQUAL "")
- 	EXEC_PROGRAM("@PYTHON_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
-diff -ru cairo-dock-plugins-2.4.0~2.orig//Dbus/interfaces/python/PythonInstall.cmake.in cairo-dock-plugins-2.4.0~2/Dbus/interfaces/python/PythonInstall.cmake.in
---- cairo-dock-plugins-2.4.0~2.orig//Dbus/interfaces/python/PythonInstall.cmake.in	2013-03-23 16:55:27.000000000 +0100
-+++ cairo-dock-plugins-2.4.0~2/Dbus/interfaces/python/PythonInstall.cmake.in	2013-03-25 17:25:05.466099127 +0100
+--- cairo-dock-plugins-3.2.0/Dbus/interfaces/bash/BashInstall.cmake.in	2011-10-03 07:51:28.000000000 -0700
++++ cairo-dock-plugins-3.2.0/Dbus/interfaces/bash/BashInstall.cmake.in	2012-01-27 18:31:33.714287648 -0800
 @@ -2,7 +2,7 @@
  	IF("@ROOT_PREFIX@" STREQUAL "")
  		EXEC_PROGRAM("@PYTHON2_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
@@ -31,6 +18,23 @@ diff -ru cairo-dock-plugins-2.4.0~2.orig//Dbus/interfaces/python/PythonInstall.c
  						"@DEBIAN_INSTALL_LAYOUT@")
  	ELSEIF(NOT "@ROOT_PREFIX@" STREQUAL "" AND "@python_no_deb_layout@" STREQUAL "")
  		EXEC_PROGRAM("@PYTHON3_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
-@@ -32,4 +32,4 @@
+--- cairo-dock-plugins-3.2.0/Dbus/interfaces/python/PythonInstall.cmake.in	2013-03-23 16:55:27.000000000 +0100
++++ cairo-dock-plugins-3.2.0/Dbus/interfaces/python/PythonInstall.cmake.in	2013-03-25 17:25:05.466099127 +0100
+@@ -2,7 +2,7 @@
+ 	IF("@ROOT_PREFIX@" STREQUAL "")
+ 		EXEC_PROGRAM("@PYTHON2_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
  						"setup.py" "install"
- 						"--root=@ROOT_PREFIX@")
+-						"--prefix=${CMAKE_INSTALL_PREFIX}"
++						"--prefix=$ENV{D}${CMAKE_INSTALL_PREFIX}"
+ 						"@DEBIAN_INSTALL_LAYOUT@")
+ 	ELSEIF(NOT "@ROOT_PREFIX@" STREQUAL "" AND "@python_no_deb_layout@" STREQUAL "")
+ 		EXEC_PROGRAM("@PYTHON2_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
+@@ -20,7 +20,7 @@
+ 	IF("@ROOT_PREFIX@" STREQUAL "")
+ 		EXEC_PROGRAM("@PYTHON3_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
+ 						"setup.py" "install"
+-						"--prefix=${CMAKE_INSTALL_PREFIX}"
++						"--prefix=$ENV{D}${CMAKE_INSTALL_PREFIX}"
+ 						"@DEBIAN_INSTALL_LAYOUT@")
+ 	ELSEIF(NOT "@ROOT_PREFIX@" STREQUAL "" AND "@python_no_deb_layout@" STREQUAL "")
+ 		EXEC_PROGRAM("@PYTHON3_EXECUTABLE@" "${CMAKE_CURRENT_BINARY_DIR}" ARGS
