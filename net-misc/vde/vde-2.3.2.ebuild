@@ -34,6 +34,7 @@ src_compile() {
 }
 
 src_install() {
+	emake -j1
 	default
 	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 

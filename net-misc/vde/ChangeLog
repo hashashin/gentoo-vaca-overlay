@@ -1,3 +1,6 @@
+  10 Apr 2013;  <hash@gentoo.org> vde-2.3.2.ebuild:
+  fix
+
 *vde-2.3.2 (10 Apr 2013)
 
   10 Apr 2013;  <hash@gentoo.org> +metadata.xml, +vde-2.3.2.ebuild:
