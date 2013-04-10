@@ -21,7 +21,7 @@ if [[ ${PV} = 9999 ]]; then
 else
 	KEYWORDS="~amd64 ~x86"
 fi
-IUSE="debug"
+IUSE="debug spell"
 
 RDEPEND="
 	>=app-crypt/libsecret-0.8
@@ -33,6 +33,7 @@ RDEPEND="
 	>=x11-libs/gtk+-3.0:3
 	dev-libs/libxslt
 	x11-libs/libX11
+	spell? ( >=app-text/gtkspell-3.0.0:3 )
 "
 DEPEND="${DEPEND}
 	app-text/yelp-tools
