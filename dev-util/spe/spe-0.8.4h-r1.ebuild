@@ -22,7 +22,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND=""
 RDEPEND=">=dev-python/pychecker-0.8.18
-	>=dev-python/wxpython-2.6
+	<=dev-python/wxpython-2.8.12.1-r1
 	>=dev-util/wxglade-0.3.2"
 
 S="${WORKDIR}/spe-${MY_PV}"
