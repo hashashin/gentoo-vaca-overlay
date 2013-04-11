@@ -3,4 +3,3 @@
 =net-analyzer/nikto-2.1.5
 #dirty dont use!
 media-video/winff
-=net-misc/vde-2.3.2
