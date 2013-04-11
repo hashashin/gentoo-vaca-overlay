@@ -7,7 +7,6 @@ depend() {
 	after net.${VDE_TAP}
 }
 
-
 start() {
 	ebegin "Starting vde"
 	[ "${VDE_MODPROBE_TUN}" = "yes" ] && modprobe tun

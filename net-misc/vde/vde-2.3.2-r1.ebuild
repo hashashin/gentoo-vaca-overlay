@@ -27,6 +27,7 @@ src_configure() {
 		$(use_enable pcap) \
 		$(use_enable ssl cryptcab) \
 		$(use_enable static-libs static) \
+#dont use python as flags qa warnings
 		--disable-python
 }
 
@@ -49,5 +50,4 @@ pkg_postinst() {
 	einfo "# rc-update add vde default"
 	einfo "You need to setup tap0 in /etc/conf.d/net"
 	einfo "To use it as an user be sure to set a group in /etc/conf.d/vde"
-	einfo "Users of the group can then run: $ vdeq qemu -sock /var/run/vde.ctl ..other opts"
 }
