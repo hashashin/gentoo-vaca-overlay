@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Allows to mount 7-zip supported archives"
 HOMEPAGE="http://gitorious.org/fuse-7z"
-SRC_URI="https://waf.googlecode.com/files/waf-1.6.11"
+SRC_URI="https://waf.googlecode.com/files/waf-1.7.10"
 EGIT_REPO_URI="git://gitorious.org/fuse-7z/fuse-7z.git"
 
 LICENSE="GPL-3"

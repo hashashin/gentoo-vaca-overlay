@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse_7z
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  11 Apr 2013;  <hash@gentoo.org> fuse_7z-9999.ebuild:
+  update waf in fuse_7z ebuild
 
 *fuse_7z-9999 (01 Mar 2012)
 
@@ -16,5 +19,3 @@
   new file: fuse_7z-9999.ebuild
 
   Just adapted ebuild from http://gitorious.org/fuse-7z
-
-
