@@ -27,7 +27,6 @@ src_configure() {
 		$(use_enable pcap) \
 		$(use_enable ssl cryptcab) \
 		$(use_enable static-libs static) \
-#dont use python as flags qa warnings
 		--disable-python
 }
 
