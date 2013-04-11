@@ -26,7 +26,8 @@ src_configure() {
 	econf \
 		$(use_enable pcap) \
 		$(use_enable ssl cryptcab) \
-		$(use_enable static-libs static)
+		$(use_enable static-libs static) \
+		--disable-python
 }
 
 src_compile() {
@@ -34,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1
+	emake -j1 DESTDIR="${D}" install
 	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 
 	newinitd "${FILESDIR}"/vde.init vde
