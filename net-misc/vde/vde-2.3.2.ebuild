@@ -43,8 +43,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	# default group already used in kqemu
-	enewgroup qemu
+	# default group already used in qemu
+	enewgroup kvm
 	einfo "To start vde automatically add it to the default runlevel:"
 	einfo "# rc-update add vde default"
 	einfo "You need to setup tap0 in /etc/conf.d/net"

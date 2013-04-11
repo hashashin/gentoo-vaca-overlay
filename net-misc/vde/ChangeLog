@@ -1,3 +1,6 @@
+  11 Apr 2013;  <hash@gentoo.org> vde-2.3.2.ebuild:
+  fix net-misc/vde use kvm instead of obsolete? qemu group
+
   11 Apr 2013;  <hash@gentoo.org> +files/vde.conf, +files/vde.init,
   vde-2.3.2.ebuild:
   unmask net-misc/vde/vde-2.3.2 hope work...
