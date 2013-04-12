@@ -33,6 +33,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/cleanup.patch
 }
 
+src_install() {
+	dodoc CHANGES.txt COPYING.txt SUPPORTED_TAGS.txt TODO.txt aiml/self-test.aiml aiml/personalidad.aiml
+	distutils_src_install
+}
+
 pkg_postinst() {
 	python_mod_optimize aiml
 }

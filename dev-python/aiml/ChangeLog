@@ -1,3 +1,6 @@
+  12 Apr 2013;  <hash@gentoo.org> aiml-0.8.6.ebuild:
+  pyaiml final ebuild
+
   12 Apr 2013;  <hash@gentoo.org> +files/cleanup.patch, aiml-0.8.6.ebuild:
   tweak dev-python/aiml
 
