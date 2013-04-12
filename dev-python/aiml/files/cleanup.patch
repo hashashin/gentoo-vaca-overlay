@@ -1,0 +1,20 @@
+--- setup.py.orig	2013-04-12 04:34:28.052235106 +0200
++++ setup.py	2013-04-12 04:34:51.332233533 +0200
+@@ -2,8 +2,6 @@
+ from distutils.core import setup
+ import glob
+ 
+-package_prefix = "Lib/site-packages/aiml"
+-
+ setup(name="PyAIML",
+     version="0.8.6",
+     author="Cort Stratton",
+@@ -27,8 +25,4 @@
+                  ],
+       
+     packages=["aiml"],
+-    data_files=[
+-        (package_prefix, glob.glob("aiml/self-test.aiml")),
+-        (package_prefix, glob.glob("*.txt")),
+-    ],
+ )

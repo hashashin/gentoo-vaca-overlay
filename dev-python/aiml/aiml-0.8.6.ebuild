@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 MY_PN="PyAIML"
 
-inherit distutils python
+inherit eutils distutils python
 
 DESCRIPTION="Python interpreter for AIML, the Artificial Intelligence Markup Language."
 HOMEPAGE="http://pyaiml.sourceforge.net/"
@@ -27,6 +27,10 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/cleanup.patch
 }
 
 pkg_postinst() {
