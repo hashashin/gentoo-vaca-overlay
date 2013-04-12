@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_install() {
-	dodoc CHANGES.txt COPYING.txt SUPPORTED_TAGS.txt TODO.txt aiml/self-test.aiml aiml/personalidad.aiml
+	dodoc CHANGES.txt SUPPORTED_TAGS.txt TODO.txt aiml/self-test.aiml aiml/personalidad.aiml
 	distutils_src_install
 }
 
