@@ -1,0 +1,4 @@
+*aiml-0.8.6 (12 Apr 2013)
+
+  12 Apr 2013;  <hash@gentoo.org> +aiml-0.8.6.ebuild, +metadata.xml:
+  pyaiml ebuild
