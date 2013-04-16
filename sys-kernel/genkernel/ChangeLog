@@ -1,5 +1,0 @@
-*genkernel-3.4.45-r1 (16 Apr 2013)
-
-  16 Apr 2013;  <hash@gentoo.org> +files/genkernel.bash,
-  +files/initramfs.mounts, +genkernel-3.4.45-r1.ebuild, +metadata.xml:
-  genkernel test
