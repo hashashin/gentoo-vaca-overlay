@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4"
-RDEPEND="${DEPEND}"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+"
 
 src_configure() {
 	eqmake4
