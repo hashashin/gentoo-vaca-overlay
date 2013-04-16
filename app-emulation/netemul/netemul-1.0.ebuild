@@ -24,7 +24,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake4
+	eqmake4 PREFIX=/usr
 }
 
 src_install() {

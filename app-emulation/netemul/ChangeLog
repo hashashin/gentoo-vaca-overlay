@@ -2,6 +2,9 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Apr 2013;  <hash@gentoo.org> netemul-1.0.ebuild:
+  change PREFIX to /usr from /usr/local
+
   16 Apr 2013;  <hash@gentoo.org> +files/fix-gcc.patch, netemul-1.0.ebuild:
   fix compile
 
