@@ -19,6 +19,10 @@ DEPEND="dev-qt/qtgui:4
 	dev-qt/qtopengl:4
 "
 
+src_prepare() {
+	epatch "${FILESDIR}"/fix-gcc.patch
+}
+
 src_configure() {
 	eqmake4
 }
