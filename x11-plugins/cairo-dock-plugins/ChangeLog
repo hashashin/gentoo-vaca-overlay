@@ -2,6 +2,10 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Apr 2013;  <hash@gentoo.org> +files/python_sandbox-3.2.1.patch,
+  -files/python_sandbox-3.2.0.patch:
+  typo
+
 *cairo-dock-plugins-3.2.1 (17 Apr 2013)
 
   17 Apr 2013;  <hash@gentoo.org> +cairo-dock-plugins-3.2.1.ebuild,
