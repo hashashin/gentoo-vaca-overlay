@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gnote-3.9.0 (01 May 2013)
+
+  01 May 2013;  <hash@gentoo.org> +gnote-3.9.0.ebuild, -gnote-3.8.0.ebuild:
+  version bump
+
   10 Apr 2013;  <hash@gentoo.org> gnote-3.8.0.ebuild, metadata.xml:
   add spell use gnote
 
