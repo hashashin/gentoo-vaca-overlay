@@ -1,0 +1,5 @@
+*hackedbox-0.8.5 (01 May 2013)
+
+  01 May 2013;  <hash@gentoo.org> +files/gcc.patch, +hackedbox-0.8.5.ebuild,
+  +metadata.xml:
+  add hackedbox ebuild

@@ -1,0 +1,11 @@
+--- Image.cc	2003-04-28 14:25:15.000000000 +0200
++++ Image.cc.nuevo	2013-05-01 16:22:07.234028247 +0200
+@@ -39,7 +39,7 @@
+ #include "GCCache.hh"
+ #include "Image.hh"
+ #include "Texture.hh"
+-
++#include <cstring>
+ 
+ BImage::BImage(BImageControl *c, int w, int h) {
+   control = c;
