@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
-PYTHON_DEPEND="2:2.7"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils python
+inherit eutils python-r1
 
 DESCRIPTION="SSH honeypot, log brute force attacks and shell interaction performed by the attacker."
 HOMEPAGE="http://code.google.com/p/kippo/"
