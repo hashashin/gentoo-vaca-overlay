@@ -1,0 +1,5 @@
+*aufs-sources-3.8.11 (05 May 2013)
+
+  05 May 2013;  <hash@gentoo.org> +aufs-sources-3.8.11.ebuild,
+  +files/aufs-sources-3.8.8-CONFIG_USER_NS.patch, +metadata.xml:
+  aufs-sources 3.8.11
