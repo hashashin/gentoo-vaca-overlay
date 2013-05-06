@@ -40,6 +40,7 @@ src_install() {
 	dodoc README RELEASE-DATE-${MY_PV} ChangeLog || die
 	rm -f LICENSE README* RELEASE-DATE-${MY_PV}
 	rm -rf doc
+
 	if ! use setup; then
 		rm -rf setup || die "Cannot remove setup utility"
 		elog "The phpMyAdmin setup utility has been removed."
