@@ -37,9 +37,9 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	dodoc Documentation.txt README RELEASE-DATE-${MY_PV} ChangeLog || die
+	dodoc README RELEASE-DATE-${MY_PV} ChangeLog || die
 	rm -f LICENSE README* RELEASE-DATE-${MY_PV}
-
+	rm -rf doc
 	if ! use setup; then
 		rm -rf setup || die "Cannot remove setup utility"
 		elog "The phpMyAdmin setup utility has been removed."
