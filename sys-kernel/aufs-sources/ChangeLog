@@ -1,3 +1,8 @@
+*aufs-sources-3.9.1 (08 May 2013)
+
+  08 May 2013;  <hash@gentoo.org> +aufs-sources-3.9.1.ebuild:
+  unnoficial version bump
+
 *aufs-sources-3.8.11 (05 May 2013)
 
   05 May 2013;  <hash@gentoo.org> +aufs-sources-3.8.11.ebuild,
