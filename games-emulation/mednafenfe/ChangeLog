@@ -1,0 +1,22 @@
+# ChangeLog for games-emulation/mednafenfe
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  19 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  mednafenfe-0.1.6.ebuild:
+  Forced move to EAPI-3 from distutils eclass
+
+*mednafenfe-0.1.6 (09 Jul 2010)
+
+  09 Jul 2010; Michał Górny (sedzimir) <mgorny.3ehbo@mailnull.com>
+  -mednafenfe-0.1.3.ebuild, +mednafenfe-0.1.6.ebuild:
+  Version bump with a cleanup.
+
+  24 Dec 2008; Renan Rangel (rvr777) <rvr777@gmail.com>
+  mednafenfe-0.1.3.ebuild:
+  removed DEPEND, added PN to SRC_URI and put the keywords in alphabetical order
+
+  24 Dec 2008; Renan Rangel (rvr777) <rvr777@gmail.com>
+  +mednafenfe-0.1.3.ebuild, +metadata.xml:
+  New ebuild for bug 246637
+
