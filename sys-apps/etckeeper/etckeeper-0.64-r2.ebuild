@@ -2,13 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.10 2012/08/11 16:05:37 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="bazaar? 2:2.6"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils bash-completion-r1 python
+inherit eutils bash-completion-r1 python-r1
 
 DESCRIPTION="A collection of tools to let /etc be stored in a repository"
 HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
