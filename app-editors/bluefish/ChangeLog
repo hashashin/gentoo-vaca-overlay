@@ -1,3 +1,6 @@
+  18 May 2013;  <hash@gentoo.org> bluefish-2.2.4.ebuild:
+  eapi and inherit bump
+
 *bluefish-2.2.4 (14 Apr 2013)
 
   14 Apr 2013;  <hash@gentoo.org> +bluefish-2.2.4.ebuild, +metadata.xml:

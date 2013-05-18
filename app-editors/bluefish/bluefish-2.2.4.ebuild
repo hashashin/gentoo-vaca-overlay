@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.3.ebuild,v 1.1 2013/02/10 11:47:38 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="python? 2"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils fdo-mime python
+inherit eutils fdo-mime python-r1
 
 MY_P=${P/_/-}
 
