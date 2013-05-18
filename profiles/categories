@@ -1,15 +1,16 @@
 app-accessibility
 app-crypt
+app-editors
 app-emulation
 app-misc
 dev-db
 dev-java
 dev-python
 dev-util
+games-emulation
 games-sports
 games-strategy
 media-gfx
-media-libs
 media-tv
 media-video
 net-analyzer
@@ -22,7 +23,9 @@ sys-auth
 sys-boot
 sys-firmware
 sys-fs
+sys-kernel
 www-client
 x11-drivers
 x11-misc
 x11-plugins
+x11-wm
