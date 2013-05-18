@@ -5,8 +5,9 @@
 EAPI="5"
 
 PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_SINGLE_TARGET=( python2_6 python2_7 )
 
-inherit autotools eutils user python-r1
+inherit autotools eutils user python-single-r1
 
 DESCRIPTION="Network traffic analyzer with web interface"
 HOMEPAGE="http://www.ntop.org/products/ntop/"
@@ -42,14 +43,13 @@ RDEPEND="${COMMON_DEPEND}
 	dev-libs/glib:2"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	python_export python2_7
+	python-single-r1_pkg_setup
 	enewgroup ntop
 	enewuser ntop -1 -1 /var/lib/ntop ntop
 }
 
 src_prepare() {
-	python_convert_shebangs -q -r 2 "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 #Waiting for the fix, see https://www.ntop.org/bugzilla3/show_bug.cgi?id=273
 #	epatch "${FILESDIR}"/${P}-system-ndpi.patch
@@ -60,6 +60,7 @@ src_prepare() {
 }
 
 src_configure() {
+	python_export python2_7
 	export \
 		ac_cv_header_glib_h=no \
 		ac_cv_header_glibconfig_h=no \
@@ -81,6 +82,7 @@ src_configure() {
 }
 
 src_install() {
+	python_export python2_7
 	LC_ALL=C # apparently doesn't work with some locales (#191576 and #205382)
 	emake DESTDIR="${D}" install || die "install problem"
 

@@ -3,6 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.115 2013/03/10 01:38:36 ottxor Exp $
 
   18 May 2013;  <hash@gentoo.org> ntop-5.0.1.ebuild:
+  make compile again, oops
+
+  18 May 2013;  <hash@gentoo.org> ntop-5.0.1.ebuild:
   inherit bump
 
   18 Mar 2013; <hash@gentoo.org> files/ntop-initd:
