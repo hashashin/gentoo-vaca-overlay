@@ -7,7 +7,7 @@ EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
 PYTHON_SINGLE_TARGET=( python2_6 python2_7 )
 
-inherit eutils pam python-r1 toolchain-funcs git-2
+inherit eutils pam python-single-r1 toolchain-funcs git-2
 
 DESCRIPTION="A pam module to provide authentication using USB device"
 HOMEPAGE="http://pamusb.org/"
@@ -33,11 +33,12 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	python_export python2_7
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-openpam.patch
+	epatch "${FILESDIR}"/${P}-python2.patch
 }
 
 src_compile() {
