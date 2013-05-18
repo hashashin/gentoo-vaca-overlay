@@ -2,13 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r2.ebuild,v 1.2 2012/10/28 09:27:24 zmedico Exp $
 
-EAPI="4"
+EAPI="5"
 
 MY_PN="qemu-kvm"
 MY_P=${MY_PN}-${PV}
 
-PYTHON_DEPEND="2"
-inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
+PYTHON_COMPAT=( python2_6 python2_7 )
+
+inherit eutils flag-o-matic linux-info toolchain-funcs multilib python-r1 user
 BACKPORTS=6cee76f0
 
 if [[ ${PV} = *9999* ]]; then
