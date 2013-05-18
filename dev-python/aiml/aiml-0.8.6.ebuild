@@ -6,10 +6,11 @@ EAPI=5
 
 PYTHON_DEPEND="2:2.7"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_7 )
 
 MY_PN="PyAIML"
 
-inherit eutils distutils python
+inherit eutils distutils-r1 python-r1
 
 DESCRIPTION="Python interpreter for AIML, the Artificial Intelligence Markup Language."
 HOMEPAGE="http://pyaiml.sourceforge.net/"

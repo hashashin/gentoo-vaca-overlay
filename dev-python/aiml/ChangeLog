@@ -1,3 +1,6 @@
+  18 May 2013;  <hash@gentoo.org> aiml-0.8.6.ebuild:
+  inherit bump
+
   12 Apr 2013;  <hash@gentoo.org> aiml-0.8.6.ebuild:
   pyaiml final ebuild
 
