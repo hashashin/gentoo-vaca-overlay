@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xwinwrap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  18 May 2013;  <hash@gentoo.org> xwinwrap-9999.ebuild:
+  eapi bump, corrected license   upstream.workaround           1
+  x11-misc/xwinwrap/xwinwrap-9999.ebuild: Upstream asneeded linking bug (no-as-
+  needed on line: 30)
 
 *xwinwrap-9999 (14 Mar 2012)
 
@@ -52,4 +57,3 @@
   -xwinwrap-1.1.1_alpha20060318.ebuild,
   -xwinwrap-1.1.1_alpha20060318-r1.ebuild, +metadata.xml:
   Cleanup
-
