@@ -1,13 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.4h.ebuild,v 1.6 2012/09/05 07:43:56 jlec Exp $
+# $Header: $
 
-EAPI="3"
+EAPI="5"
+
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit distutils eutils
+inherit distutils-r1 eutils
 
 MY_PV="0.8.4.h"
 
