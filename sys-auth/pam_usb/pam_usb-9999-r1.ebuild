@@ -5,6 +5,7 @@
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_SINGLE_TARGET=( python2_6 python2_7 )
 
 inherit eutils pam python-r1 toolchain-funcs git-2
 
@@ -31,20 +32,21 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	python_set_active_version 2
+	python_export python2_7
 	python_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-openpam.patch
-	python_convert_shebangs 2 tools/pamusb-{conf,agent} #413025
 }
 
 src_compile() {
+	python_export python2_7
 	emake CC="$(tc-getCC)"
 }
 
 src_install() {
+	python_export python2_7
 	emake \
 		DESTDIR="${D}" \
 		DOCS_DEST="${D}/usr/share/doc/${PF}" \
