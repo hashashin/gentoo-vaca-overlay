@@ -4,10 +4,8 @@
 
 EAPI="5"
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
 PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_SINGLE_TARGET=( python2_6 python2_7 )
 
 inherit distutils-r1 eutils
 
@@ -36,7 +34,7 @@ src_prepare() {
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
 	doicon _spe/images/spe.png
 

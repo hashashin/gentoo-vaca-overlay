@@ -3,6 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.43 2012/09/05 07:43:56 jlec Exp $
 
   18 May 2013;  <hash@gentoo.org> spe-0.8.4h-r1.ebuild:
+  fix
+
+  18 May 2013;  <hash@gentoo.org> spe-0.8.4h-r1.ebuild:
   eapi, inherit bump
 
   11 Apr 2013;  <hash@gentoo.org> spe-0.8.4h-r1.ebuild:
