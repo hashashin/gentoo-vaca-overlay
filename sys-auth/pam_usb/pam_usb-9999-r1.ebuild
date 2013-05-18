@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils pam python toolchain-funcs git-2
+inherit eutils pam python-r1 toolchain-funcs git-2
 
 DESCRIPTION="A pam module to provide authentication using USB device"
 HOMEPAGE="http://pamusb.org/"
