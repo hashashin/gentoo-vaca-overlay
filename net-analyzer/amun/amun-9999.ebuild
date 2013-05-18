@@ -2,12 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.7"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils python subversion
+inherit eutils python-r1 subversion
 
 DESCRIPTION="Low-interaction honeypot, capture autonomous spreading malware in an automated fashion."
 HOMEPAGE="http://amunhoney.sourceforge.net/"
