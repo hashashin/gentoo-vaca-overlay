@@ -4,9 +4,9 @@
 
 EAPI="5"
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit autotools eutils user python
+inherit autotools eutils user python-r1
 
 DESCRIPTION="Network traffic analyzer with web interface"
 HOMEPAGE="http://www.ntop.org/products/ntop/"
