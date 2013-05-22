@@ -8,11 +8,11 @@ DESCRIPTION="Programs for accessing Mega service from a command line of your des
 HOMEPAGE="http://megatools.megous.com/"
 SRC_URI="http://megatools.megous.com/builds/${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="fuse"
 
 DEPEND="dev-libs/gobject-introspection
 	dev-libs/glib
-	sys-fs/fuse"
+	fuse? ( sys-fs/fuse )"
