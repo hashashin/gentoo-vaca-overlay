@@ -14,5 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="fuse"
 
 DEPEND="dev-libs/gobject-introspection
-	dev-libs/glib
+	dev-libs/glib:2
+	net-misc/curl
+	dev-libs/openssl
 	fuse? ( sys-fs/fuse )"
+RDEPEND=""
