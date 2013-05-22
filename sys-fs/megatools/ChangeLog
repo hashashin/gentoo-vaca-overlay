@@ -1,0 +1,4 @@
+*megatools-1.9.91 (22 May 2013)
+
+  22 May 2013;  <hash@gentoo.org> +megatools-1.9.91.ebuild, +metadata.xml:
+  new package megatools
