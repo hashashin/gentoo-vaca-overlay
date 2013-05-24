@@ -5,4 +5,7 @@
 		<email>gentoo.power@gmail.com</email>
 		<name>hashashin</name>
 	</maintainer>
+<use>
+<flag name='fuse'>Adds optional fuse support.</flag>
+</use>
 </pkgmetadata>

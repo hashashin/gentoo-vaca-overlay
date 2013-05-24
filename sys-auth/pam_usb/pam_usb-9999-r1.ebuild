@@ -24,7 +24,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python
 	dev-python/pygobject:2
 	sys-apps/pmount
-	sys-fs/udisks:0"
+	sys-fs/udisks:2"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
