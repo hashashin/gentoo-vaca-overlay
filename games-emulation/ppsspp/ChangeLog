@@ -1,0 +1,5 @@
+*ppsspp-9999 (24 May 2013)
+
+  24 May 2013;  <hash@gentoo.org> +files/ppssppheadless, +files/ppssppsdl,
+  +metadata.xml, +ppsspp-9999.ebuild:
+  new package ppsspp psp emulator
