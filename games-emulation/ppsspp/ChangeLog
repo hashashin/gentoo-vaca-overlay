@@ -1,3 +1,6 @@
+  25 May 2013;  <hash@gentoo.org> ppsspp-9999.ebuild:
+  add sys-libs/zlib dep
+
 *ppsspp-9999 (24 May 2013)
 
   24 May 2013;  <hash@gentoo.org> +files/ppssppheadless, +files/ppssppsdl,

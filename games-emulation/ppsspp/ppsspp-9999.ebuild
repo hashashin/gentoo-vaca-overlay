@@ -18,7 +18,8 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="media-libs/libsdl
-	dev-util/cmake"
+	dev-util/cmake
+	sys-libs/zlib"
 
 src_prepare() {
 	git submodule update --init
