@@ -23,16 +23,15 @@ pkg_nofetch() {
 	einfo "Please download"
 	einfo "  - opensc-${P}.tar.gz"
 	einfo "from https://forja.cenatic.es/frs/?group_id=160"
-	eingo "and place it in ${DISTDIR}"
+	einfo "and place it in ${DISTDIR}"
 }
 
-src_compile() {
+src_configure() {
 econf --prefix=/usr \
       --sysconfdir=/etc \
       --datadir=/usr/share \
       --infodir=/usr/share/info \
       --mandir=/usr/share/man || die "Could not configure"
-emake || die "Emake failed"
 }
 
 src_install() {
