@@ -2,21 +2,29 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
 DESCRIPTION="Driver OpenDNIe para el DNI electronico"
 HOMEPAGE="http://opendnie.cenatic.es"
-SRC_URI="http://forja.cenatic.es/frs/download.php/1332/opensc-opendnie-0.12.2.tar.gz"
+SRC_URI="https://forja.cenatic.es/frs/download.php/1332/opensc-${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="fetch mirror"
 
 DEPEND="sys-apps/pcsc-lite"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/opensc-${PV}"
+
+pkg_nofetch() {
+	einfo "Please download"
+	einfo "  - opensc-${P}.tar.gz"
+	einfo "from https://forja.cenatic.es/frs/?group_id=160"
+	eingo "and place it in ${DISTDIR}"
+}
 
 src_compile() {
 econf --prefix=/usr \
