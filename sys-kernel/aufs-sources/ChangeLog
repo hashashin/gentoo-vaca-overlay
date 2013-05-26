@@ -1,3 +1,7 @@
+  26 May 2013;  <hash@gentoo.org> -aufs-sources-3.8.13.ebuild,
+  -files/aufs-sources-3.8.8-CONFIG_USER_NS.patch:
+  cleanup
+
 *aufs-sources-3.8.13 (16 May 2013)
 
   16 May 2013;  <hash@gentoo.org> +aufs-sources-3.8.13.ebuild,
