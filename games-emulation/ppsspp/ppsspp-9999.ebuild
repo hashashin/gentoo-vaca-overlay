@@ -36,4 +36,6 @@ src_install() {
 	doexe "${WORKDIR}"/"${P}"_build/PPSSPPHeadless
 	insinto /usr/share/"${PN}"
 	doins -r "${WORKDIR}"/"${P}"_build/assets
+	doins -r "${WORKDIR}"/"${P}"/lang
+	rm "${D}"/usr/share/"${PN}"/lang/README.md
 }

@@ -1,3 +1,6 @@
+  27 May 2013;  <hash@gentoo.org> ppsspp-9999.ebuild:
+  add missing lang dir
+
   25 May 2013;  <hash@gentoo.org> ppsspp-9999.ebuild:
   add sys-libs/zlib dep
 
