@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 inherit distutils eutils
 
 DESCRIPTION="Wine-doors is a package manager for wine."
-HOMEPAGE="http://www.wine-doors.org"
+HOMEPAGE="http://sourceforge.net/projects/winedoors/"
 SRC_URI="http://sourceforge.net/projects/winedoors/files/${PN}-0.1.4a2.tar.gz"
 
 LICENSE="GPL-2"
