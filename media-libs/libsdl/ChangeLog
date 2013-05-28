@@ -1,0 +1,4 @@
+*libsdl-2.0.0_pre7238 (28 May 2013)
+
+  28 May 2013;  <hash@gentoo.org> +libsdl-2.0.0_pre7238.ebuild, +metadata.xml:
+  libsdl-2 ebuild

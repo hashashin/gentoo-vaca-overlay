@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>gentoo.power@gmail.com</email>
+		<name>hashashin</name>
+	</maintainer>
+	<use>
+		<flag name="asm">Enable assembly for optimization (3dnow, mmx, sse, sse2)</flag>
+		<flag name="fusionsound">Enable FusionSound audio support</flag>
+		<flag name="gles">Enable OpenGL ES video support</flag>
+		<flag name="tslib">Enable tslib-based touchscreen device support</flag>
+		<flag name="video">Control video support (disable at your own risk)</flag>
+	</use>
+</pkgmetadata>
