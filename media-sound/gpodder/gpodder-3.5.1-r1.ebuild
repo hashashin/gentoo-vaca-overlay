@@ -9,7 +9,7 @@ PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils gnome2-utils
+inherit distutils gnome2-utils eutils
 
 DESCRIPTION="A free cross-platform podcast aggregator"
 HOMEPAGE="http://gpodder.org/"
@@ -36,6 +36,11 @@ DEPEND="${RDEPEND}
 	sys-apps/help2man
 	test? ( dev-python/minimock
 		dev-python/coverage )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/ted_subtitles_fix.patch
+	epatch "${FILESDIR}"/audio_normalize_fix.patch
+}
 
 src_compile() {
 	emake DESTDIR="${D}" install || die
