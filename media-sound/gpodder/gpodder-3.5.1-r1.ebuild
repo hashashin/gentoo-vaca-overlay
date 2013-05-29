@@ -40,6 +40,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/ted_subtitles_fix.patch
 	epatch "${FILESDIR}"/audio_normalize_fix.patch
+	epatch "${FILESDIR}"/fix_eye3d.patch
 }
 
 src_compile() {

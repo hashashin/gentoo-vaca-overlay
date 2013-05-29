@@ -1,0 +1,20 @@
+--- src/gpodder/sync.py	2013-03-05 18:19:04.000000000 +0100
++++ src/gpodder/sync.py	2013-05-29 15:24:47.290145838 +0200
+@@ -58,7 +58,7 @@
+ #    logger.warning('Could not load gpopymtp (libmtp not installed?).')
+ 
+ try:
+-    import eyeD3
++    import eyed3
+ except:
+     logger.warning('Could not find eyeD3')
+ 
+@@ -133,7 +133,7 @@
+         logger.info('Please install MPlayer for track length detection.')
+ 
+     try:
+-        eyed3_info = eyeD3.Mp3AudioFile(filename)
++        eyed3_info = eyed3.Mp3AudioFile(filename)
+         return int(eyed3_info.getPlayTime()*1000)
+     except:
+         pass
