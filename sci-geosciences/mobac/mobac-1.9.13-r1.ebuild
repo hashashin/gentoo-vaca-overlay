@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="jai spanish-maps misc-maps"
 
-RDEPEND=">=virtual/jre-1.6.0"
+RDEPEND=">=virtual/jre-1.6.0
+	dev-java/log4j"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant"
 
@@ -39,6 +40,7 @@ src_install() {
 	doins Mobile_Atlas_Creator.jar
 	doins lib/sqlite-jdbc-3.7.2.jar
 	doins -r mapsources
+	doins log4j.xml
 	dodir /opt/${PN}/tilestore
 	dodoc README.HTM
 	dodoc CHANGELOG.txt
