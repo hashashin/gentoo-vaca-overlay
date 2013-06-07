@@ -11,11 +11,10 @@ SRC_URI="http://megatools.megous.com/builds/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fuse"
+IUSE=""
 
-DEPEND="dev-libs/gobject-introspection
-	dev-libs/glib:2
+DEPEND="dev-libs/glib:2
 	net-misc/curl
 	dev-libs/openssl
-	fuse? ( sys-fs/fuse )"
-RDEPEND=""
+	sys-fs/fuse"
+RDEPEND="net-libs/glib-networking"

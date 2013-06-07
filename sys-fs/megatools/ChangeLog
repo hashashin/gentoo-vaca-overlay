@@ -1,3 +1,9 @@
+*megatools-1.9.91-r1 (07 Jun 2013)
+
+  07 Jun 2013;  <hash@gentoo.org> +megatools-1.9.91-r1.ebuild,
+  -megatools-1.9.91.ebuild, metadata.xml:
+  sync with stuff overlay ebuild for megatools
+
   22 May 2013;  <hash@gentoo.org> megatools-1.9.91.ebuild:
   more deps
 
