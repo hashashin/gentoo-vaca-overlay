@@ -1,3 +1,9 @@
+*aufs-sources-3.9.5 (08 Jun 2013)
+
+  08 Jun 2013;  <hash@gentoo.org> +aufs-sources-3.9.5.ebuild,
+  -aufs-sources-3.9.1.ebuild:
+  aufs-sources temp 3.9.5
+
   26 May 2013;  <hash@gentoo.org> -aufs-sources-3.8.13.ebuild,
   -files/aufs-sources-3.8.8-CONFIG_USER_NS.patch:
   cleanup
