@@ -2,6 +2,9 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/ChangeLog,v 1.4 2013/01/22 19:34:25 wired Exp $
 
+  15 Jun 2013;  <hash@gentoo.org> tmux-mem-cpu-load-2.2.0.ebuild:
+  fix ebuild tmux-mem-cpu-load
+
   22 Jan 2013; Alex Alexander <wired@gentoo.org>
   tmux-mem-cpu-load-2.1.0.ebuild:
   updated LICENSE, bug #444504
@@ -18,4 +21,3 @@
   18 Nov 2010; Alex Alexander <wired@gentoo.org>
   +tmux-mem-cpu-load-2.1.0.ebuild, +metadata.xml:
   new ebuild
-
