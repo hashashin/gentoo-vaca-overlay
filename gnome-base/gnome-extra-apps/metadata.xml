@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer>
+                <email>gentoo.power@gmail.com</email>
+                <name>hashashin</name>
+        </maintainer>
+<use>
+  <flag name="shotwell">Install the <pkg>media-gfx/shotwell</pkg> photo
+    manager</flag>
+  <flag name="tracker">Install the <pkg>app-misc/tracker</pkg> indexer and the
+    GNOME packages that require it</flag>
+  <flag name="evolution">Install the <pkg>mail-client/evolution</pkg> mail client</flag>
+  <flag name="juicer">Install the <pkg>media-sound/sound-juicer</pkg> cd ripper</flag>
+  <flag name="webcam">Install the <pkg>media-video/cheese</pkg> webcam program</flag>
+  <flag name="browser">Install the <pkg>www-client/epiphany</pkg> web browser</flag>
+
+</use>
+</pkgmetadata>
