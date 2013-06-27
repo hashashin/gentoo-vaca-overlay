@@ -1,0 +1,11 @@
+--- qt/app.cc	2013-06-26 04:35:26.215458867 +0200
++++ qt/app.cc.nuevo	2013-06-27 16:28:31.256883341 +0200
+@@ -98,7 +98,7 @@
+   installTranslator (&qtTranslator);
+ 
+   // install the transmission translator
+-  appTranslator.load (QString (MY_CONFIG_NAME) + "_" + QLocale::system ().name (), QCoreApplication::applicationDirPath () + "/translations");
++  appTranslator.load( QString(MY_CONFIG_NAME) + "_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath) );
+   installTranslator (&appTranslator);
+ 
+   Formatter::initUnits ();
