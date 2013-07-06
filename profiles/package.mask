@@ -6,3 +6,4 @@ media-video/winff
 =app-portage/elogviewer-2.0
 #breaks libreoffice
 =app-text/libexttextcat-3.4.1
+=x11-drivers/nvidia-drivers-325.08
