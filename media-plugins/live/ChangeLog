@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.163 2013/02/21 14:29:09 aballier Exp $
 
+*live-2013.07.03 (08 Jul 2013)
+
+  08 Jul 2013;  <hash@gentoo.org> +live-2013.07.03.ebuild,
+  -live-2013.06.18.ebuild:
+  bump media-plugins/live
+
 *live-2013.06.18 (25 Jun 2013)
 
   25 Jun 2013;  <hash@gentoo.org> +live-2013.06.18.ebuild,
