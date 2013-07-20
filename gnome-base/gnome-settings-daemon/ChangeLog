@@ -1,0 +1,7 @@
+*gnome-settings-daemon-3.8.3 (20 Jul 2013)
+
+  20 Jul 2013;  <hash@gentoo.org>
+  +files/gnome-settings-daemon-3.7.90-optional-color-wacom.patch,
+  +files/gnome-settings-daemon-3.7.90-short-touchpad-timeout.patch,
+  +gnome-settings-daemon-3.8.3.ebuild, +metadata.xml:
+  last gnome-base/gnome-settings-daemon without systemd
