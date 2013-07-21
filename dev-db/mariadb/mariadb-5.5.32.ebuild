@@ -24,12 +24,6 @@ RDEPEND="${RDEPEND}"
 # Please do not add a naive src_unpack to this ebuild
 # If you want to add a single patch, copy the ebuild to an overlay
 # and create your own mysql-extras tarball, looking at 000_index.txt
-src_prepare() {
-	sed -i \
-		-e '/^noinst_PROGRAMS/s/basic-t//g' \
-		"${S}"/unittest/mytap/t/Makefile.am
-	mysql-v2_src_prepare
-}
 
 # Official test instructions:
 # USE='berkdb -cluster embedded extraengine perl ssl community' \
