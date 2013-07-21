@@ -3,6 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.28 2013/03/14 01:02:16 robbat2 Exp $
 
   21 Jul 2013;  <hash@gentoo.org> mariadb-5.5.32.ebuild:
+  more sync mariadb
+
+  21 Jul 2013;  <hash@gentoo.org> mariadb-5.5.32.ebuild:
   sync to gentoo mariadb ebuild
 
 *mariadb-5.5.32 (21 Jul 2013)
