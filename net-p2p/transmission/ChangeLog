@@ -1,3 +1,12 @@
+*transmission-2.81 (21 Jul 2013)
+
+  21 Jul 2013;  <hash@gentoo.org>
+  +files/transmission-2.81-translations-path-fix.patch,
+  +transmission-2.81.ebuild,
+  -files/transmission-2.80-translations-path-fix.patch,
+  -transmission-2.80.ebuild:
+  bump net-p2p/transmission
+
 *transmission-2.80 (27 Jun 2013)
 
   27 Jun 2013;  <hash@gentoo.org>
