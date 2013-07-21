@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.45 2013/05/15 06:10:04 radhermit Exp $
 
+*p11-kit-0.19.2 (21 Jul 2013)
+
+  21 Jul 2013;  <hash@gentoo.org> +p11-kit-0.19.2.ebuild,
+  -p11-kit-0.19.1.ebuild:
+  bump app-crypt/p11-kit
+
 *p11-kit-0.18.2 (15 May 2013)
 
   15 May 2013; Tim Harder <radhermit@gentoo.org> +p11-kit-0.18.2.ebuild:
