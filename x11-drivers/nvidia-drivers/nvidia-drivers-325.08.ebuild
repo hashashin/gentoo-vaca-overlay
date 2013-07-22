@@ -164,7 +164,7 @@ src_prepare() {
 		fi
 
 		# If greater than 2.6.5 use M= instead of SUBDIR=
-		convert_to_m "${NV_SRC}"/Makefile.kbuild
+		convert_to_m "${NV_SRC}"/Makefile
 	fi
 
 	if use pax_kernel; then
