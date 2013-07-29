@@ -1,21 +1,22 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.10 2012/08/11 16:05:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.4.ebuild,v 1.4 2013/07/27 22:23:08 ago Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils bash-completion-r1 python-r1
+inherit eutils bash-completion-r1 prefix python-r1
 
 DESCRIPTION="A collection of tools to let /etc be stored in a repository"
 HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
-SRC_URI="http://git.kitenet.net/?p=${PN}.git;a=snapshot;h=refs/tags/${PV};sf=tgz -> ${P}.tar.gz"
+SRC_URI="https://github.com/joeyh/etckeeper/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-IUSE="bazaar"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
+IUSE="bazaar cron"
+REQUIRED_USE="bazaar? ( ${PYTHON_REQUIRED_USE} )"
 
 VCS_DEPEND="
 	dev-vcs/git
@@ -24,6 +25,8 @@ VCS_DEPEND="
 DEPEND="bazaar? ( dev-vcs/bzr )"
 RDEPEND="${DEPEND}
 	app-portage/portage-utils
+	cron? ( virtual/cron )
+	bazaar? ( ${PYTHON_DEPS} )
 	!bazaar? ( || ( ${VCS_DEPEND} ) )"
 
 src_prepare(){
@@ -31,24 +34,32 @@ src_prepare(){
 }
 
 src_compile() {
-	use bazaar && emake
+	:
 }
 
 src_install(){
 	emake DESTDIR="${ED}" install
 
 	bzr_install() {
-		$(PYTHON) ./${PN}-bzr/__init__.py install --root="${ED}" ||
+		${PYTHON} ./${PN}-bzr/__init__.py install --root="${ED}" ||
 			die "bzr support installation failed!"
 	}
-	use bazaar && python_execute_function bzr_install
+	use bazaar && python_foreach_impl bzr_install
+
+	if use prefix; then
+		doenvd "${FILESDIR}"/99${PN}
+		eprefixify "${ED%/}"/etc/env.d/99${PN}
+	fi
 
 	newbashcomp bash_completion ${PN}
 	dodoc README TODO
 	docinto examples
 	dodoc "${FILESDIR}"/bashrc
-	exeinto /etc/cron.daily
-	newexe debian/cron.daily etckeeper
+
+	if use cron ; then
+		exeinto /etc/cron.daily
+		newexe debian/cron.daily etckeeper
+	fi
 }
 
 pkg_postinst(){

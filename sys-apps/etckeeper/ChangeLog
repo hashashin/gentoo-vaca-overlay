@@ -2,6 +2,13 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.7 2012/08/11 16:05:37 hasufell Exp $
 
+*etckeeper-1.5 (29 Jul 2013)
+
+  29 Jul 2013;  <hash@gentoo.org> +etckeeper-1.5.ebuild, +files/99etckeeper,
+  +files/etckeeper-1.5-gentoo.patch, -etckeeper-0.64-r2.ebuild,
+  -files/etckeeper-0.64-gentoo.patch, metadata.xml:
+  bump sys-apps/etckeeper
+
   18 May 2013;  <hash@gentoo.org> etckeeper-0.64-r2.ebuild:
   eapi and inherit bump
 
