@@ -9,6 +9,7 @@ inherit eutils cmake-utils git-2
 DESCRIPTION="A PSP emulator for Android, Windows, Mac, Linux and Blackberry 10, written in C++."
 HOMEPAGE="http://www.ppsspp.org/"
 EGIT_REPO_URI="git://github.com/hrydgard/ppsspp.git"
+EGIT_HAS_SUBMODULES="true"
 SRC_URI=""
 
 LICENSE="GPL-2"
@@ -20,9 +21,8 @@ RDEPEND=""
 DEPEND="media-libs/libsdl
 	dev-util/cmake
 	sys-libs/zlib"
-
-src_prepare() {
-	git submodule update --init
+src_unpack(){
+	git-2_src_unpack
 }
 
 src_configure() {
