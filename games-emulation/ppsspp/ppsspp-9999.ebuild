@@ -30,7 +30,7 @@ src_configure() {
 }
 
 src_install() {
-	dobin "${FILESDIR}"/ppssppsdl "${FILESDIR}"/ppssppheadless
+	dobin "${FILESDIR}"/ppssppsdl
 	exeinto /usr/share/"${PN}"
 	doexe "${WORKDIR}"/"${P}"_build/PPSSPPSDL
 	insinto /usr/share/"${PN}"
