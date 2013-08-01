@@ -37,4 +37,7 @@ src_install() {
 	doins -r "${WORKDIR}"/"${P}"_build/assets
 	doins -r "${WORKDIR}"/"${P}"/lang
 	rm "${D}"/usr/share/"${PN}"/lang/README.md
+	chrpath -r /usr/share/"${PN}" "${D}"/usr/share/"${PN}"/PPSSPPSDL
+	chrpath -r /usr/share/"${PN}" "${D}"/usr/share/"${PN}"/assets
+	chrpath -r /usr/share/"${PN}" "${D}"/usr/share/"${PN}"/lang
 }

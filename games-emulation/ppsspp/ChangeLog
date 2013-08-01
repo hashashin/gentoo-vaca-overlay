@@ -1,3 +1,7 @@
+  01 Aug 2013;  <hash@gentoo.org> ppsspp-9999.ebuild:
+  try fix games-emulation/ppsspp QA Notice: The following files contain
+  insecure RUNPATHs
+
   31 Jul 2013;  <hash@gentoo.org> -files/ppssppheadless, ppsspp-9999.ebuild:
   moar fixes
 
