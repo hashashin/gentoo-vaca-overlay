@@ -1,3 +1,9 @@
+*aufs-sources-3.10.5 (04 Aug 2013)
+
+  04 Aug 2013;  <hash@gentoo.org> +aufs-sources-3.10.5.ebuild,
+  -aufs-sources-3.10.4.ebuild:
+  bump sys-kernel/aufs-sources
+
 *aufs-sources-3.10.4 (29 Jul 2013)
 
   29 Jul 2013;  <hash@gentoo.org> +aufs-sources-3.10.4.ebuild,
