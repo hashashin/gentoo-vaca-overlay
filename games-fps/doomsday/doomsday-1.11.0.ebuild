@@ -94,7 +94,6 @@ src_prepare() {
 		sed -i \
 			-e 's:\# Generic Unix.:LIBS += -lopenal:' \
 			dep_openal.pri || die
-		epatch "${FILESDIR}"/${P}-openal-link.patch
 	fi
 
 	qt4-r2_src_prepare
