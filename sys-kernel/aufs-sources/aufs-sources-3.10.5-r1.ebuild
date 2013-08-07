@@ -12,7 +12,7 @@ inherit kernel-2 eutils
 detect_version
 detect_arch
 
-AUFS_VERSION=3.10_p20130722
+AUFS_VERSION=3.10_p20130807
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
 # git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs${AUFS_VERSION/_p*} > aufs-sources-${AUFS_VERSION}.tar
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
@@ -28,7 +28,7 @@ UNIPATCH_LIST="
 	"${WORKDIR}"/aufs3-kbuild.patch
 	"${WORKDIR}"/aufs3-base.patch"
 
-PDEPEND=">=sys-fs/aufs-util-3.8"
+PDEPEND=">=sys-fs/aufs-util-3.10"
 
 src_unpack() {
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
