@@ -21,6 +21,7 @@ RDEPEND=""
 DEPEND="media-libs/libsdl
 	dev-util/cmake
 	sys-libs/zlib"
+
 src_unpack(){
 	git-2_src_unpack
 }
@@ -38,6 +39,4 @@ src_install() {
 	doins -r "${WORKDIR}"/"${P}"/lang
 	rm "${D}"/usr/share/"${PN}"/lang/README.md
 	chrpath -r /usr/share/"${PN}" "${D}"/usr/share/"${PN}"/PPSSPPSDL
-	chrpath -r /usr/share/"${PN}" "${D}"/usr/share/"${PN}"/assets
-	chrpath -r /usr/share/"${PN}" "${D}"/usr/share/"${PN}"/lang
 }

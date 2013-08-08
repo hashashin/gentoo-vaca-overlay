@@ -1,3 +1,6 @@
+  08 Aug 2013;  <hash@gentoo.org> ppsspp-9999.ebuild:
+  tweak games-emulation/ppsspp
+
   01 Aug 2013;  <hash@gentoo.org> ppsspp-9999.ebuild:
   try fix games-emulation/ppsspp QA Notice: The following files contain
   insecure RUNPATHs
