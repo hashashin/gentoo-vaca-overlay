@@ -47,7 +47,7 @@ CDEPEND="
 	dev-libs/openssl
 	sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
-	perl? ( dev-lang/perl[-build] )
+	perl? ( dev-lang/perl )
 	tk? ( dev-lang/tk )
 	curl? (
 		net-misc/curl
