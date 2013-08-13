@@ -1,3 +1,8 @@
+*aufs-sources-3.10.6 (13 Aug 2013)
+
+  13 Aug 2013;  <hash@gentoo.org> +aufs-sources-3.10.6.ebuild:
+  bump sys-kernel/aufs-sources
+
   07 Aug 2013;  <hash@gentoo.org> aufs-sources-3.10.5-r1.ebuild:
   sync sys-kernel/aufs-sources from portage tree
 
