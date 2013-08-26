@@ -3,6 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.200 2013/05/18 13:48:37 lxnay Exp $
 
   26 Aug 2013;  <hash@gentoo.org> git-1.8.4.ebuild:
+  fix 2 dev-vcs/git
+
+  26 Aug 2013;  <hash@gentoo.org> git-1.8.4.ebuild:
   fix dev-vcs/git
 
 *git-1.8.4 (26 Aug 2013)
