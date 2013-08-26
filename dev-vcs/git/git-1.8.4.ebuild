@@ -217,7 +217,7 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.8.2-optional-cvs.patch
+	epatch "${FILESDIR}"/git-1.8.4-optional-cvs.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
