@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.68 2013/02/24 17:46:45 ago Exp $
 
+*po4a-0.45 (29 Aug 2013)
+
+  29 Aug 2013;  <hash@gentoo.org> +po4a-0.45.ebuild, -po4a-0.44.ebuild:
+  bump app-text/po4a
+
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> po4a-0.42.ebuild:
   Stable for sh, wrt bug #453122
 
