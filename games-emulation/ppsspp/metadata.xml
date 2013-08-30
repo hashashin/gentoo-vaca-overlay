@@ -5,4 +5,7 @@
 		<email>gentoo.power@gmail.com</email>
 		<name>hashashin</name>
 	</maintainer>
+<use>
+        <flag name="atrac">atrac libs</flag>
+</use>
 </pkgmetadata>
