@@ -24,7 +24,7 @@ DEPEND="media-libs/libsdl
 	atrac? ( media-libs/maiat3plusdec )"
 
 src_unpack(){
-        git-2_src_unpack
+	git-2_src_unpack
 }
 
 src_configure() {

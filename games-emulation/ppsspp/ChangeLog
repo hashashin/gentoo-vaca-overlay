@@ -1,3 +1,6 @@
+  30 Aug 2013;  <hash@gentoo.org> ppsspp-9999-r1.ebuild:
+  minor fix
+
 *ppsspp-9999-r1 (30 Aug 2013)
 
   30 Aug 2013;  <hash@gentoo.org> +files/atrac3plus.cpp.patch,
