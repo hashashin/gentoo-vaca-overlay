@@ -24,7 +24,6 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	[[ -d "${EGIT_STORE_DIR}/${PN}" ]] ||
-		einfo 'Cloning may take up to several minutes on slow connections.'
 	git-2_src_unpack
 }
 
