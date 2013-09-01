@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.1.ebuild,v 1.7 2013/06/21 16:14:25 idella4 Exp $
+# $Header: $
 
 EAPI=5
 
