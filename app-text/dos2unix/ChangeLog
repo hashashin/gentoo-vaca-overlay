@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.134 2013/03/16 09:00:32 jlec Exp $
 
+*dos2unix-6.0.4_beta3 (01 Sep 2013)
+
+  01 Sep 2013;  <hash@gentoo.org> +dos2unix-6.0.4_beta3.ebuild,
+  -dos2unix-6.0.4_beta2.ebuild:
+  bump app-text/dos2unix
+
   16 Mar 2013; Justin Lecher <jlec@gentoo.org> -dos2unix-6.0.2.ebuild:
   Dop old
 
