@@ -1,3 +1,6 @@
+  01 Sep 2013;  <hash@gentoo.org> ppsspp-9999-r1.ebuild:
+  fix QA notice games-emulation/ppsspp
+
   30 Aug 2013;  <hash@gentoo.org> files/ppssppsdl:
   fix
 
