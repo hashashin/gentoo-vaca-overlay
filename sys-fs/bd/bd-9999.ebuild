@@ -22,6 +22,5 @@ src_unpack(){
 
 src_install() {
 	dodoc README.md
-	into /usr/bin
 	dobin bd
 }

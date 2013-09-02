@@ -1,3 +1,6 @@
+  02 Sep 2013;  <hash@gentoo.org> bd-9999.ebuild:
+  fix
+
 *bd-9999 (02 Sep 2013)
 
   02 Sep 2013;  <hash@gentoo.org> +bd-9999.ebuild, +metadata.xml:
