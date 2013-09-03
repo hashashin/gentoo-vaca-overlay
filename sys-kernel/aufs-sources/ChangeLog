@@ -1,3 +1,6 @@
+  03 Sep 2013;  <hash@gentoo.org> aufs-sources-3.10.10.ebuild:
+  update aufs to 20130902
+
 *aufs-sources-3.11.0 (03 Sep 2013)
 
   03 Sep 2013;  <hash@gentoo.org> +aufs-sources-3.11.0.ebuild:
