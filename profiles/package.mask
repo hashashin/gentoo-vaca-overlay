@@ -7,3 +7,5 @@ media-video/winff
 #breaks libreoffice
 =app-text/libexttextcat-3.4.1
 =x11-drivers/nvidia-drivers-325.08
+#dont work for now
+=sys-kernel/aufs-sources-3.11.0
