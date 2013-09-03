@@ -15,7 +15,7 @@ detect_arch
 AUFS_VERSION=3.10_p20130902
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
 # git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs${AUFS_VERSION/_p*} > aufs-sources-${AUFS_VERSION}.tar
-AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
+AUFS_URI="https://www.dropbox.com/s/w3vfzz5x4ixgscz/${AUFS_TARBALL}"
 
 KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/"
