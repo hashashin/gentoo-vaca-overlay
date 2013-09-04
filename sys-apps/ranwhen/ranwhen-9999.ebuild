@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/p-e-w/ranwhen"
 EGIT_REPO_URI="git://github.com/p-e-w/ranwhen.git"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

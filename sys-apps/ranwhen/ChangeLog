@@ -1,3 +1,6 @@
+  04 Sep 2013;  <hash@gentoo.org> ranwhen-9999.ebuild:
+  sys-apps/ranwhen correct license
+
 *ranwhen-9999 (04 Sep 2013)
 
   04 Sep 2013;  <hash@gentoo.org> +metadata.xml, +ranwhen-9999.ebuild:
