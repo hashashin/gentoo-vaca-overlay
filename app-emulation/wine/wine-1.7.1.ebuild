@@ -24,7 +24,7 @@ fi
 
 GV="2.21"
 MV="0.0.8"
-PULSE_PATCHES="winepulse-patches-1.7.0"
+PULSE_PATCHES="winepulse-patches-1.7.1"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"

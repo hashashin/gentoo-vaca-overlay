@@ -1,3 +1,6 @@
+  05 Sep 2013;  <hash@gentoo.org> wine-1.7.1.ebuild:
+  forgot bump winepulse-patches in ebuild
+
 *wine-1.7.1 (05 Sep 2013)
 
   05 Sep 2013;  <hash@gentoo.org> +files/wine-1.6-memset-O3.patch,
