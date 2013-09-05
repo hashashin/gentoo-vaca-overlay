@@ -1,3 +1,9 @@
+*wine-1.7.1 (05 Sep 2013)
+
+  05 Sep 2013;  <hash@gentoo.org> +files/wine-1.6-memset-O3.patch,
+  +wine-1.7.1.ebuild, -wine-1.6_rc4.ebuild, metadata.xml:
+  bump app-emulation/wine
+
   29 Jun 2013;  <hash@gentoo.org> wine-1.6_rc4.ebuild:
   cleanup
 
