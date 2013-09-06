@@ -1,4 +1,6 @@
 app-accessibility
+app-admin
+app-arch
 app-crypt
 app-editors
 app-emulation
@@ -17,6 +19,7 @@ games-engines
 games-simulation
 games-sports
 games-strategy
+gnome-base
 media-fonts
 media-libs
 media-plugins
@@ -24,6 +27,7 @@ media-sound
 media-tv
 media-video
 net-analyzer
+net-mail
 net-misc
 net-p2p
 net-wireless
@@ -35,6 +39,7 @@ sys-boot
 sys-firmware
 sys-fs
 sys-kernel
+sys-libs
 www-client
 x11-drivers
 x11-misc
