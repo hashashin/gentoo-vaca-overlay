@@ -1,0 +1,5 @@
+*steam-launcher-1.0.0.41 (07 Sep 2013)
+
+  07 Sep 2013;  <hash@gentoo.org> +metadata.xml,
+  +steam-launcher-1.0.0.41.ebuild:
+  bump games-util/steam-launcher
