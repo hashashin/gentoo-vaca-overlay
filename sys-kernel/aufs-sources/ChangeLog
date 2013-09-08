@@ -1,3 +1,9 @@
+*aufs-sources-3.10.11 (08 Sep 2013)
+
+  08 Sep 2013;  <hash@gentoo.org> +aufs-sources-3.10.11.ebuild:
+  bump sys-kernel/aufs-sources to 3.10.11 and custom made genpatches  packs,
+  only adds 3.10.10 to 3.10.11 patch and repack.
+
   03 Sep 2013;  <hash@gentoo.org> aufs-sources-3.10.10-r1.ebuild:
   change to provisional uri the file aufs-sources-3.10_p20130902.tar.xz
 
