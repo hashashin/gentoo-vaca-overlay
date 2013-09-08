@@ -1,3 +1,6 @@
+  08 Sep 2013;  <hash@gentoo.org> aufs-sources-3.10.11.ebuild, metadata.xml:
+  fix
+
   08 Sep 2013;  <hash@gentoo.org> aufs-sources-3.10.11.ebuild:
   proper genpatches sys-kernel/aufs-sources
 

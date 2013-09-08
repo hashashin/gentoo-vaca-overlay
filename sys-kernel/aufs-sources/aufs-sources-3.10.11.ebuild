@@ -5,7 +5,7 @@
 EAPI=5
 
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras"
+K_WANT_GENPATCHES="base extras experimental"
 K_GENPATCHES_VER="18"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2 eutils
@@ -19,7 +19,7 @@ AUFS_URI="https://www.dropbox.com/s/w3vfzz5x4ixgscz/${AUFS_TARBALL}"
 
 KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/"
-IUSE="deblob module proc"
+IUSE="deblob module proc experimental"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and aufs3 support"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${AUFS_URI}"
