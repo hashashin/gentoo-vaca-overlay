@@ -1,3 +1,8 @@
+*gnome-settings-daemon-3.8.5 (08 Sep 2013)
+
+  08 Sep 2013;  <hash@gentoo.org> +gnome-settings-daemon-3.8.5.ebuild:
+  bump gnome-base/gnome-settings-daemon
+
 *gnome-settings-daemon-3.8.3 (20 Jul 2013)
 
   20 Jul 2013;  <hash@gentoo.org>
