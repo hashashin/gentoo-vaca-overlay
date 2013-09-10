@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.5.3.ebuild,v 1.5 2012/11/15 14:56:11 nativemad Exp $
+# $Header: $
 
 EAPI="4"
 
