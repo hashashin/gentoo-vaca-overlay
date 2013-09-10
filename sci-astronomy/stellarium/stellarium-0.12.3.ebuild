@@ -3,8 +3,7 @@
 # $Header: $
 
 EAPI=5
-
-inherit cmake-utils eutils flag-o-matic
+inherit cmake-utils eutils flag-o-matic gnome2-utils
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time"
 HOMEPAGE="http://www.stellarium.org/"
@@ -21,7 +20,7 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug nls stars"
+IUSE="debug nls sound stars"
 
 RESTRICT="test"
 
@@ -35,6 +34,7 @@ RDEPEND="
 	dev-qt/qtsvg:4
 	dev-qt/qttest:4
 	virtual/opengl
+	sound? ( dev-qt/qtphonon:4 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
@@ -46,7 +46,7 @@ LANGS=(
 	cy da de el en en_CA en_GB en_US eo es et eu fa fi fil fr
 	ga gd gl gu he hi hr hu hy ia id is it ja ka kk kn ko ky
 	la lb lo lt lv mk ml mn mr ms mt nan nb nl nn oc pa pl pt pt_BR ro
-	ru sco se si sk sl sq sr sv sw ta te tg th tl tr tt uk uz vi zh
+	ru se si sk sl sq sr sv sw ta te tg th tl tr tt uk uz vi zh
 	zh_CN zh_HK zh_TW zu
 	)
 
@@ -57,10 +57,12 @@ done
 S=${WORKDIR}/${PN}-${PV/a/}
 
 src_prepare() {
-	sed \
-		-e '/aa ab ae/d' \
-		-e "/GETTEXT_CREATE_TRANSLATIONS/a \ ${LINGUAS}" \
-		-i po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
+	if [[ -n ${LINGUAS} ]] ; then
+		sed \
+			-e '/aa ab ae/d' \
+			-e "/GETTEXT_CREATE_TRANSLATIONS/a \ ${LINGUAS}" \
+			-i po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
+	fi
 	sed \
 		-e '/USE_PLUGIN_SIMPLEDRAWLINE/s: 0 : 1 :g' \
 		-e '/USE_PLUGIN_RENDERERSTATISTICS/s: 0 : 1 :g' \
@@ -69,7 +71,10 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs=( $(cmake-utils_use_enable nls NLS) )
+	local mycmakeargs=(
+		$(cmake-utils_use_enable nls NLS)
+		$(cmake-utils_use_enable sound SOUND)
+	)
 	CMAKE_IN_SOURCE_BUILD=1 cmake-utils_src_configure
 }
 
@@ -86,4 +91,16 @@ src_install() {
 		doins "${DISTDIR}"/stars_[45678]_[12]v0_0*.cat
 	fi
 	newicon doc/images/stellarium-logo.png ${PN}.png
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
