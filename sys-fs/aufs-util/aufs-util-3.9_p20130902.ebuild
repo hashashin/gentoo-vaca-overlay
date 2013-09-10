@@ -8,7 +8,7 @@ inherit flag-o-matic linux-info multilib toolchain-funcs
 
 DESCRIPTION="Utilities are always necessary for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
-SRC_URI="https://www.dropbox.com/s/swt9d9z09255x00/${P}.tar.xz"
+SRC_URI="https://dl.dropboxusercontent.com/u/210030302/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-2"
