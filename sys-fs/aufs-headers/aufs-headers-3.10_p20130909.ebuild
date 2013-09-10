@@ -14,7 +14,7 @@ HOMEPAGE="http://aufs.sourceforge.net/"
 # make headers_install INSTALL_HDR_PATH=${T}
 # find ${T} -type f \( ! -name "*aufs*" \) -delete
 # find ${T} -type d -empty -delete
-SRC_URI="https://www.dropbox.com/s/puhl25jvlqptfll/${P}.tar.xz"
+SRC_URI="https://dl.dropboxusercontent.com/u/210030302/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-2"
