@@ -2,6 +2,14 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.171 2013/06/10 09:25:33 pacho Exp $
 
+*networkmanager-0.9.8.4 (14 Sep 2013)
+
+  14 Sep 2013;  <hash@gentoo.org> +files/networkmanager-0.9.8.4-pre-sleep.patch,
+  +networkmanager-0.9.8.4.ebuild,
+  -files/networkmanager-0.9.7.995-pre-sleep.patch,
+  -networkmanager-0.9.8.2-r1.ebuild:
+  bump net-misc/networkmanager
+
 *networkmanager-0.9.8.2 (10 Jun 2013)
 
   10 Jun 2013; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.8.2.ebuild,
