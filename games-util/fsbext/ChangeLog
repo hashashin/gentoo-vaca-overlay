@@ -1,0 +1,4 @@
+*fsbext-9999 (14 Sep 2013)
+
+  14 Sep 2013;  <hash@gentoo.org> +fsbext-9999.ebuild, +metadata.xml:
+  add games-util/fsbext
