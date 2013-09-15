@@ -1,3 +1,9 @@
+*aufs-sources-3.10.12 (15 Sep 2013)
+
+  15 Sep 2013;  <hash@gentoo.org> +aufs-sources-3.10.12.ebuild,
+  -aufs-sources-3.10.10-r1.ebuild:
+  bump sys-kernel/aufs-sources
+
   10 Sep 2013;  <hash@gentoo.org> aufs-sources-3.10.11.ebuild:
   fix dropbox link aufs-sources
 
