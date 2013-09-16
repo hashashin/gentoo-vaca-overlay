@@ -17,7 +17,7 @@ HOMEPAGE="https://code.google.com/p/kosciak-misc/wiki/DropboxIndex"
 SRC_URI=""
 ESVN_REPO_URI="http://kosciak-misc.googlecode.com/svn/python/dropbox-index/trunk/"
 
-LICENSE="GPL-3"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
