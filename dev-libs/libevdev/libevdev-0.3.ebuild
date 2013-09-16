@@ -14,8 +14,8 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="http://cgit.freedesktop.org/${PN}/snapshot/${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86 ~x86-fbsd ~arm"
 fi
-KEYWORDS="~amd64 ~x86 ~x86-fbsd ~arm"
 
 LICENSE="BSD"
 SLOT="0"

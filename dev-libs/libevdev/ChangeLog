@@ -1,3 +1,6 @@
+  16 Sep 2013;  <hash@gentoo.org> libevdev-0.3.ebuild:
+  forgot things
+
   16 Sep 2013;  <hash@gentoo.org> libevdev-9999.ebuild:
   proper keywords dev-libs/libevdev-9999
 
