@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*eclipse-sdk-bin-4.3 (15 Sep 2013)
+
+  15 Sep 2013;  <hash@gentoo.org> +eclipse-sdk-bin-4.3.ebuild,
+  +files/eclipse-bin-4.3, +files/eclipserc-bin-4.3:
+  bump dev-util/eclipse-sdk-bin
+
 *eclipse-sdk-bin-4.2.1-r1 (11 Feb 2013)
 
   11 Feb 2013; Ralph Sennhauser <sera@gentoo.org>
@@ -23,4 +29,3 @@
   maintained again.
   Thanks to Carlos Silva <r3pek@r3pek.org> for the ebuild, added with some
   modifications. #424457
-

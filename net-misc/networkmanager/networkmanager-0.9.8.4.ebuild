@@ -107,7 +107,7 @@ src_prepare() {
 		root password, add your user account to the 'plugdev' group."
 
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
-	epatch "${FILESDIR}/${PN}-0.9.7.995-pre-sleep.patch"
+	epatch "${FILESDIR}/${P}-pre-sleep.patch"
 
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
