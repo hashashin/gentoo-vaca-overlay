@@ -1,0 +1,6 @@
+*libevdev-0.3 (16 Sep 2013)
+*libevdev-9999 (16 Sep 2013)
+
+  16 Sep 2013;  <hash@gentoo.org> +libevdev-0.3.ebuild, +libevdev-9999.ebuild,
+  +metadata.xml:
+  add dev-libs/libevdev
