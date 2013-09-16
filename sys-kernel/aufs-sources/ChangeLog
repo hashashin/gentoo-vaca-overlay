@@ -1,3 +1,6 @@
+  16 Sep 2013;  <hash@gentoo.org> aufs-sources-3.10.12.ebuild:
+  official genpatches for sys-kernel/aufs-sources
+
 *aufs-sources-3.10.12 (15 Sep 2013)
 
   15 Sep 2013;  <hash@gentoo.org> +aufs-sources-3.10.12.ebuild,
