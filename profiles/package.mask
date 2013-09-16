@@ -8,5 +8,4 @@ media-video/winff
 =app-text/libexttextcat-3.4.1
 =x11-drivers/nvidia-drivers-325.08
 #dont work for now
-=sys-kernel/aufs-sources-3.11.0
 =app-emulation/wine-1.7.1
