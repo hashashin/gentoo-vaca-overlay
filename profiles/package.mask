@@ -9,5 +9,4 @@ media-video/winff
 =x11-drivers/nvidia-drivers-325.08
 #dont work for now
 =sys-kernel/aufs-sources-3.11.0
-=sys-fs/aufs-util-3.9_p20130902
 =app-emulation/wine-1.7.1
