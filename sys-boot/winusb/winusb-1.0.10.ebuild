@@ -9,7 +9,7 @@ inherit eutils wxwidgets
 DESCRIPTION="Creates Windows usb installers."
 HOMEPAGE="http://en.congelli.eu/prog_info_winusb.html"
 #not using upstream download link cause is not a direct one
-SRC_URI="http://dl.dropbox.com/u/12425024/${P}.tar.gz"
+SRC_URI="https://dl.dropboxusercontent.com/u/210030302/${P}.tar.gz"
 IUSE=""
 
 LICENSE="GPL-3"
