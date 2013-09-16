@@ -4,15 +4,11 @@
 
 EAPI=5
 
-PYTHON_DEPEND="2:2.7"
-RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_COMPAT=( python2_7 )
-
-MY_PN="PyAIML"
 
 inherit eutils distutils-r1 subversion python-r1
 
-DESCRIPTION="Placeholder"
+DESCRIPTION="Creates index.html for directory contents shared publicly on Dropbox."
 HOMEPAGE="https://code.google.com/p/kosciak-misc/wiki/DropboxIndex"
 SRC_URI=""
 ESVN_REPO_URI="http://kosciak-misc.googlecode.com/svn/python/dropbox-index/trunk/"
