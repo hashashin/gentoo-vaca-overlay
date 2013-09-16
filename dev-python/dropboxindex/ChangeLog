@@ -1,0 +1,4 @@
+*dropboxindex-9999 (16 Sep 2013)
+
+  16 Sep 2013;  <hash@gentoo.org> +dropboxindex-9999.ebuild, +metadata.xml:
+  add dev-python/dropboxindex
