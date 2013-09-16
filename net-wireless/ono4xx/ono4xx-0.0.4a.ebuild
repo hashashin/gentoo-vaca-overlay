@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Generador claves por defecto de ONOXXXX."
 HOMEPAGE="http://www.seguridadwireless.net"
-SRC_URI="http://dl.dropbox.com/u/12425024/${PN}-${PV}.tar.gz"
+SRC_URI="https://dl.dropboxusercontent.com/u/210030302/${PN}-${PV}.tar.gz"
 IUSE=""
 
 LICENSE="GPL-3"
