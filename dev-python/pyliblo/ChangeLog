@@ -1,0 +1,4 @@
+*pyliblo-0.9.1 (17 Sep 2013)
+
+  17 Sep 2013;  <hash@gentoo.org> +metadata.xml, +pyliblo-0.9.1.ebuild:
+  add dev-python/pyliblo
