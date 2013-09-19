@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.106 2013/05/20 17:42:33 ago Exp $
 
+*e2fsprogs-libs-1.42.8-r1 (19 Sep 2013)
+
+  19 Sep 2013;  <hash@gentoo.org> +e2fsprogs-libs-1.42.8-r1.ebuild,
+  -e2fsprogs-libs-1.42.8.ebuild:
+  add multilib support sys-libs/e2fsprogs-libs
+
   26 Jun 2013;  <hash@gentoo.org> -files/e2fsprogs-libs-1.42.5-ldflags.patch:
   remove unused file
 
