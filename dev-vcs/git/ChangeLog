@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.200 2013/05/18 13:48:37 lxnay Exp $
 
+*git-1.8.4.1 (10 Oct 2013)
+
+  10 Oct 2013;  <hash@gentoo.org> +files/git-1.8.4.1-optional-cvs.patch,
+  +git-1.8.4.1.ebuild, -files/git-1.8.4-optional-cvs.patch, -git-1.8.4.ebuild:
+  bump dev-vcs/git
+
   26 Aug 2013;  <hash@gentoo.org> git-1.8.4.ebuild:
   fix 2 dev-vcs/git
 
