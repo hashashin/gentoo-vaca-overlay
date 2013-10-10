@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.479 2012/11/15 14:56:11 nativemad Exp $
 
+*phpmyadmin-4.0.7 (10 Oct 2013)
+
+  10 Oct 2013;  <hash@gentoo.org> +phpmyadmin-4.0.7.ebuild,
+  -phpmyadmin-4.0.6.ebuild:
+  bump dev-db/phpmyadmin
+
 *phpmyadmin-4.0.6 (10 Sep 2013)
 
   10 Sep 2013;  <hash@gentoo.org> +phpmyadmin-4.0.6.ebuild,
