@@ -55,6 +55,6 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-${PV}"
 
-src_prepare() {
-	epatch "${FILESDIR}/python_sandbox-"${PV}".patch"
-}
+#src_prepare() {
+#	epatch "${FILESDIR}/python_sandbox-"${PV}".patch"
+#}
