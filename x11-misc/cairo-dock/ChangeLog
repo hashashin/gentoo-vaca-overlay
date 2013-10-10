@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*cairo-dock-3.2.1 (10 Oct 2013)
+
+  10 Oct 2013;  <hash@gentoo.org> +cairo-dock-3.2.1.ebuild,
+  -cairo-dock-3.3.0.ebuild:
+  revert
+
 *cairo-dock-3.3.0 (10 Oct 2013)
 
   10 Oct 2013;  <hash@gentoo.org> +cairo-dock-3.3.0.ebuild,
