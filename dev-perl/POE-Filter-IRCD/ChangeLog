@@ -1,0 +1,4 @@
+*POE-Filter-IRCD-2.44 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +POE-Filter-IRCD-2.44.ebuild, +metadata.xml:
+  new ebuild dev-perl/POE-Filter-IRCD

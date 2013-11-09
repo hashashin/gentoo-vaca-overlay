@@ -1,0 +1,4 @@
+*URI-Title-1.86 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +URI-Title-1.86.ebuild, +metadata.xml:
+  new ebuild dev-perl/URI-Title

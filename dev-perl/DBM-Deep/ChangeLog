@@ -1,0 +1,4 @@
+*DBM-Deep-2.0009 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +DBM-Deep-2.0009.ebuild, +metadata.xml:
+  new ebuild dev-perl/DBM-Deep
