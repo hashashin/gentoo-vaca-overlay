@@ -1,0 +1,4 @@
+*Tree-DAG_Node-1.180.0 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +Tree-DAG_Node-1.180.0.ebuild, +metadata.xml:
+  new ebuild dev-perl/Tree-DAG_Node
