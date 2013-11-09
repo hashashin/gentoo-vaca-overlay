@@ -1,0 +1,4 @@
+*Crypt-SaltedHash-0.09 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +Crypt-SaltedHash-0.09.ebuild, +metadata.xml:
+  new ebuild dev-perl/Crypt-SaltedHash
