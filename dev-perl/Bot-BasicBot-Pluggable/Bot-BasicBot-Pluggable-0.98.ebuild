@@ -19,6 +19,7 @@ RDEPEND=""
 DEPEND="dev-perl/POE
 	dev-perl/POE-Component-IRC
 	dev-lang/perl
+	dev-perl/Bot-BasicBot
 	virtual/perl-Getopt-Long
 	dev-perl/DBM-Deep
 	dev-perl/DBD-SQLite
