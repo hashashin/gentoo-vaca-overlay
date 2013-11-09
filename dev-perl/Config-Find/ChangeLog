@@ -1,0 +1,4 @@
+*Config-Find-0.26 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +Config-Find-0.26.ebuild, +metadata.xml:
+  new ebuild dev-perl/Config-Find
