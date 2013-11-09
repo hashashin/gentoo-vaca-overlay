@@ -1,0 +1,5 @@
+*Bot-BasicBot-Pluggable-Module-GitHub-0.04 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org>
+  +Bot-BasicBot-Pluggable-Module-GitHub-0.04.ebuild, +metadata.xml:
+  new ebuild dev-perl/Bot-BasicBot-Pluggable-Module-GitHub
