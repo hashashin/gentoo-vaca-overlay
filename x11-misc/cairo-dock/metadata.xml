@@ -9,5 +9,6 @@
          <flag name='gtk3'></flag>
          <flag name='crypt'></flag>
          <flag name='xcomposite'></flag>
+         <flag name='desktop_manager'></flag>
 </use>
 </pkgmetadata>
