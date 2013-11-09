@@ -1,4 +1,7 @@
   09 Nov 2013;  <hash@gentoo.org> Bot-BasicBot-Pluggable-0.98.ebuild:
+  more deps
+
+  09 Nov 2013;  <hash@gentoo.org> Bot-BasicBot-Pluggable-0.98.ebuild:
   missing dep dev-perl/Bot-BasicBot-Pluggable
 
 *Bot-BasicBot-Pluggable-0.98 (09 Nov 2013)

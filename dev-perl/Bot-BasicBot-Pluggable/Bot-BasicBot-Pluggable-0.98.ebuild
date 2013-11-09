@@ -25,4 +25,14 @@ DEPEND="dev-perl/POE
 	dev-perl/DBD-SQLite
 	dev-perl/URI-Title
 	dev-perl/Text-Unidecode
-	dev-perl/URI-Find-Simple"
+	dev-perl/URI-Find-Simple
+	dev-perl/Config-Find
+	dev-perl/Crypt-SaltedHash
+	dev-perl/List-MoreUtils
+	dev-perl/Log-Log4perl
+	dev-perl/Moose
+	dev-perl/MooseX-Getopt
+	dev-perl/MooseX-SimpleConfig
+	dev-perl/Try-Tiny
+	dev-perl/XML-Feed
+	dev-perl/YAML-LibYAML"
