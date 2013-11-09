@@ -35,4 +35,6 @@ DEPEND="dev-perl/POE
 	dev-perl/MooseX-SimpleConfig
 	dev-perl/Try-Tiny
 	dev-perl/XML-Feed
-	dev-perl/YAML-LibYAML"
+	dev-perl/YAML-LibYAML
+	dev-perl/IO-Pipely
+	virtual/perl-Module-Build"
