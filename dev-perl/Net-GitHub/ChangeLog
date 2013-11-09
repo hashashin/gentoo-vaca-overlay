@@ -1,3 +1,8 @@
+*Net-GitHub-0.54 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +Net-GitHub-0.54.ebuild:
+  test
+
 *Net-GitHub-0.22 (09 Nov 2013)
 
   09 Nov 2013;  <hash@gentoo.org> +Net-GitHub-0.22.ebuild, +metadata.xml:
