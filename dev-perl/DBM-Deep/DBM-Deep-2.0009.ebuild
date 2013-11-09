@@ -18,4 +18,7 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND=""
 DEPEND="dev-perl/POE
 	dev-lang/perl
+	virtual/perl-Module-Build
+	dev-perl/Test-Warn
+	dev-perl/Test-Exception
 	dev-perl/Test-Deep"
