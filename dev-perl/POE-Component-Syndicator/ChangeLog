@@ -1,0 +1,5 @@
+*POE-Component-Syndicator-0.06 (09 Nov 2013)
+
+  09 Nov 2013;  <hash@gentoo.org> +POE-Component-Syndicator-0.06.ebuild,
+  +metadata.xml:
+  new ebuild dev-perl/POE-Component-Syndicator
