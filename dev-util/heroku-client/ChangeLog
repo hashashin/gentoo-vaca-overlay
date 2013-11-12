@@ -1,0 +1,4 @@
+*heroku-client-9999 (12 Nov 2013)
+
+  12 Nov 2013;  <hash@gentoo.org> +heroku-client-9999.ebuild, +metadata.xml:
+  new ebuild heroku-client
