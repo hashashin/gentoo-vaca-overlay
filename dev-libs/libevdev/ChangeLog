@@ -1,3 +1,8 @@
+*libevdev-0.5 (23 Nov 2013)
+
+  23 Nov 2013;  <hash@gentoo.org> +libevdev-0.5.ebuild, -libevdev-0.4.ebuild:
+  bump dev-libs/libevdev
+
 *libevdev-0.4 (18 Sep 2013)
 
   18 Sep 2013;  <hash@gentoo.org> +libevdev-0.4.ebuild, -libevdev-0.3.ebuild:
