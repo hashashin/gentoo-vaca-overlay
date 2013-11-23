@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="4"
-MY_EXTRAS_VER="20130602-1946Z"
+MY_EXTRAS_VER="live"
 
 # Build system
 BUILD="cmake"
@@ -26,7 +26,7 @@ RDEPEND="${RDEPEND}"
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 # Official test instructions:
-# USE='berkdb -cluster embedded extraengine perl ssl community' \
+# USE='-cluster embedded extraengine perl ssl community' \
 # FEATURES='test userpriv -usersandbox' \
 # ebuild mariadb-X.X.XX.ebuild \
 # digest clean package
@@ -60,6 +60,9 @@ src_test() {
 
 		# create directories because mysqladmin might right out of order
 		mkdir -p "${S}"/mysql-test/var-tests{,/log}
+
+		# create symlink for the tests to find mysql_tzinfo_to_sql
+		ln -s "${CMAKE_BUILD_DIR}/sql/mysql_tzinfo_to_sql" "${S}/sql/"
 
 		# These are failing in MySQL 5.5 for now and are believed to be
 		# false positives:
