@@ -1,6 +1,21 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.191 2012/05/13 11:31:08 swift Exp $
+
+*courier-imap-4.14 (23 Nov 2013)
+
+  23 Nov 2013;  <hash@gentoo.org> +courier-imap-4.14.ebuild,
+  +files/courier-imap-4.14-aclocal-fix.patch,
+  +files/courier-imap-4.14-db4-bdbobj_configure.ac.patch,
+  +files/courier-imap-4.14-db4-configure.ac.patch,
+  +files/courier-imap-4.14-disable-fam-configure.ac.patch,
+  -courier-imap-4.13.ebuild,
+  -files/courier-imap-4.0.1-disable-fam-configure.in.patch,
+  -files/courier-imap-4.0.6-aclocal-fix.patch,
+  -files/courier-imap-4.0.6-db4-bdbobj_configure.in.patch,
+  -files/courier-imap-4.0.6-db4-configure.in.patch,
+  -files/courier-imap-4.0.6-db4-tcpd_configure.in.patch:
+  bump net-mail/courier-imap
 
   13 May 2012; <swift@gentoo.org> courier-imap-4.0.6-r3.ebuild,
   courier-imap-4.5.0.ebuild, courier-imap-4.6.0.ebuild,

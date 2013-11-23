@@ -1,18 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.6 2012/05/13 11:31:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0-r1.ebuild,v 1.11 2013/09/26 17:30:39 ago Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils multilib libtool
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs."
 HOMEPAGE="http://www.courier-mta.org/"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="berkdb debug fam gdbm ipv6 selinux gnutls trashquota"
+IUSE="berkdb debug fam +gdbm ipv6 selinux gnutls trashquota"
+REQUIRED_USE="|| ( berkdb gdbm )"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
 		!gnutls? ( >=dev-libs/openssl-0.9.6 )
@@ -38,31 +39,20 @@ RDEPEND="${RDEPEND}
 RC_VER="4.0.6-r1"
 INITD_VER="4.0.6-r1"
 
-pkg_setup() {
-	if ! use berkdb && ! use gdbm ; then
-		echo
-		eerror "Either the 'berkdb' or the 'gdbm' USE flag is required."
-		eerror "Please add it to '/etc/make.conf' or '/etc/portage/package.use'."
-		eerror "Use 'man 5 portage' for more info on '/etc/portage/package.use'."
-		echo
-		die "Required USE flag missing."
-	fi
-}
-
 src_prepare() {
 	# Bug #48838. Patch to enable/disable FAM support.
 	# 20 Aug 2004 langthang@gentoo.org
 	# This patch should fix bug #51540. fam USE flag is not needed for shared folder support.
-	epatch "${FILESDIR}"/${PN}-4.0.1-disable-fam-configure.in.patch
+	epatch "${FILESDIR}"/${PN}-4.14-disable-fam-configure.ac.patch
 
 	# Kill unneeded call to AC_PROG_SYSCONFTOOL (bug #168206).
-	epatch "${FILESDIR}"/${PN}-4.0.6-aclocal-fix.patch
+	epatch "${FILESDIR}"/${PN}-4.14-aclocal-fix.patch
 
 	# These patches should fix problems detecting BerkeleyDB.
 	# We now can compile with db4 support.
 	if use berkdb ; then
-		epatch "${FILESDIR}"/${PN}-4.0.6-db4-bdbobj_configure.in.patch
-		epatch "${FILESDIR}"/${PN}-4.0.6-db4-configure.in.patch
+		epatch "${FILESDIR}"/${PN}-4.14-db4-bdbobj_configure.ac.patch
+		epatch "${FILESDIR}"/${PN}-4.14-db4-configure.ac.patch
 	fi
 
 	eautoreconf
@@ -118,22 +108,22 @@ src_configure() {
 
 	# Change the pem file location.
 	sed -i -e "s:^\(TLS_CERTFILE=\).*:\1/etc/courier-imap/imapd.pem:" \
-		imap/imapd-ssl.dist || \
+		libs/imap/imapd-ssl.dist || \
 		die "sed failed"
 
 	sed -i -e "s:^\(TLS_CERTFILE=\).*:\1/etc/courier-imap/pop3d.pem:" \
-		imap/pop3d-ssl.dist || \
+		libs/imap/pop3d-ssl.dist || \
 		die "sed failed"
 }
 
 src_compile() {
 	# spurious failures with parallel compiles
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
 src_install() {
 	dodir /var/lib/${PN} /etc/pam.d
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	rm -Rf "${D}/etc/pam.d"
 
 	# Avoid name collisions in /usr/sbin wrt imapd and pop3d
@@ -183,19 +173,21 @@ src_install() {
 	done
 
 	exeinto /usr/sbin
-	doexe "${FILESDIR}/mkimapdcert" "${FILESDIR}/mkpop3dcert" || die "doexe failed"
+	doexe "${FILESDIR}/mkimapdcert" "${FILESDIR}/mkpop3dcert"
 
-	dosym /usr/sbin/courierlogger /usr/$(get_libdir)/${PN}/courierlogger || die "dosym failed"
+	dosym /usr/sbin/courierlogger /usr/$(get_libdir)/${PN}/courierlogger
 
 	mkdir "${WORKDIR}/tmp" ; cd "${WORKDIR}/tmp"
+
 	for initd in courier-{imapd,pop3d}{,-ssl} ; do
 		sed -e "s:GENTOO_LIBDIR:$(get_libdir):g" "${FILESDIR}/${PN}-${INITD_VER}-${initd}.rc6" > "${initd}" || die "initd libdir-sed failed"
-		doinitd "${initd}" || die "doinitd ${initd} failed"
+		doinitd "${initd}"
 	done
+
 	exeinto /usr/$(get_libdir)/${PN}
 	for exe in gentoo-{imapd,pop3d}{,-ssl}.rc courier-{imapd,pop3d}.indirect ; do
 		sed -e "s:GENTOO_LIBDIR:$(get_libdir):g" "${FILESDIR}/${PN}-${RC_VER}-${exe}" > "${exe}" || die "exe libdir-sed failed"
-		doexe "${exe}" || die "doexe ${exe} failed"
+		doexe "${exe}"
 	done
 
 	dodir /usr/bin
@@ -204,13 +196,13 @@ src_install() {
 	# Bug #45953, more docs.
 	cd "${S}"
 	dohtml -r "${S}"/*
-	dodoc "${S}"/{00README.NOW.OR.SUFFER,AUTHORS,INSTALL,NEWS,README,ChangeLog} "${FILESDIR}"/${PN}-gentoo.readme
+	dodoc "${S}"/{AUTHORS,INSTALL,NEWS,README,ChangeLog} "${FILESDIR}"/${PN}-gentoo.readme
 	docinto imap
-	dodoc "${S}"/imap/{ChangeLog,BUGS,BUGS.html,README}
+	dodoc "${S}"/libs/imap/{ChangeLog,BUGS,BUGS.html,README}
 	docinto maildir
-	dodoc "${S}"/maildir/{AUTHORS,INSTALL,README.maildirquota.txt,README.sharedfolders.txt}
+	dodoc "${S}"/libs/maildir/{AUTHORS,INSTALL,README.maildirquota.txt,README.sharedfolders.txt}
 	docinto tcpd
-	dodoc "${S}"/tcpd/README.couriertls
+	dodoc "${S}"/libs/tcpd/README.couriertls
 }
 
 pkg_postinst() {
