@@ -1,3 +1,9 @@
+*steam-launcher-1.0.0.45 (27 Nov 2013)
+
+  27 Nov 2013;  <hash@gentoo.org> +steam-launcher-1.0.0.45.ebuild,
+  -steam-launcher-1.0.0.44.ebuild:
+  bump games-util/steam-launcher
+
 *steam-launcher-1.0.0.44 (14 Nov 2013)
 
   14 Nov 2013;  <hash@gentoo.org> +steam-launcher-1.0.0.44.ebuild,
