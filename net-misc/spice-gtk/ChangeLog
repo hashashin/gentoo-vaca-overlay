@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.58 2013/05/12 12:14:10 pacho Exp $
 
+*spice-gtk-0.21 (28 Nov 2013)
+
+  28 Nov 2013;  <hash@gentoo.org> +spice-gtk-0.21.ebuild:
+  mask 0.22 until api bump readd 0.21
+
 *spice-gtk-0.22 (27 Nov 2013)
 
   27 Nov 2013;  <hash@gentoo.org> +spice-gtk-0.22.ebuild,
