@@ -9,3 +9,4 @@ media-video/winff
 =x11-drivers/nvidia-drivers-325.08
 #dont work for now
 =app-emulation/wine-1.7.1
+=net-misc/spice-gtk-0.22
