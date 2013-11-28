@@ -29,12 +29,6 @@ src_unpack(){
 
 src_configure() {
 	cmake-utils_src_configure
-	if use atrac ; then
-		# If we are using a atrac+ encoder we need to patch the code
-		# as PPSSPP's library autodetection does not work on linux
-		cd "${WORKDIR}"/"${P}"/Core/HW
-		epatch "${FILESDIR}"/atrac3plus.cpp.patch
-	fi
 }
 
 src_install() {
