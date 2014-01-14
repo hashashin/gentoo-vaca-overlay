@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libzip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.59 2013/05/19 16:48:30 aballier Exp $
+
+*libzip-0.11.2 (14 Jan 2014)
+
+  14 Jan 2014;  <hash@gentoo.org> +libzip-0.11.2.ebuild, -libzip-0.11.1.ebuild,
+  files/libzip-0.10_rc1-fix_headers.patch:
+  bump dev-libs/libzip
 
   19 May 2013; Alexis Ballier <aballier@gentoo.org> libzip-0.11.ebuild:
   keyword ~amd64-fbsd, bug #469248
