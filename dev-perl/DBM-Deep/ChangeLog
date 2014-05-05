@@ -1,3 +1,9 @@
+*DBM-Deep-2.0011 (05 May 2014)
+
+  05 May 2014;  <hash@gentoo.org> +DBM-Deep-2.0011.ebuild,
+  -DBM-Deep-2.0010.ebuild:
+  dev-perl/DBM-Deep
+
 *DBM-Deep-2.0010 (14 Nov 2013)
 
   14 Nov 2013;  <hash@gentoo.org> +DBM-Deep-2.0010.ebuild,
