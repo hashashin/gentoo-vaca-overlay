@@ -1,0 +1,83 @@
+--- CMakeLists.txt	2014-07-30 13:41:37.000000000 +0200
++++ CMakeLists.txt.new	2014-09-09 01:03:35.346504500 +0200
+@@ -275,7 +275,7 @@
+ 	"install_manifest.txt")
+ SET(PRJ_COMMON_IGNORE_FILES ${COMMON_IGNORE_FILES} "ANNOUNCEMENT_102_ALPHA" "ANNOUNCEMENT_103_ALPHA" "ANNOUNCEMENT_104_BETA" "ANNOUNCEMENT_105_GA" "ANNOUNCEMENT_110_GA" "ANNOUNCEMENT_111_GA" "ANNOUNCEMENT_DRAFT" )
+ 
+-SET(CPACK_SOURCE_IGNORE_FILES ${PRJ_COMMON_IGNORE_FILES}  "./cppconn/config.h$" "./driver/nativeapi/binding_config.h$" "./driver/version_info.h$")
++SET(CPACK_SOURCE_IGNORE_FILES ${PRJ_COMMON_IGNORE_FILES}  "${CMAKE_CURRENT_SOURCE_DIR}/cppconn/config.h$" "${CMAKE_CURRENT_SOURCE_DIR}/driver/nativeapi/binding_config.h$")
+ SET(CPACK_PACKAGE_IGNORE_FILES ${PRJ_COMMON_IGNORE_FILES} "something_there" )
+ SET(CPACK_SOURCE_GENERATOR "TGZ")
+ 
+--- cppconn/CMakeLists.txt	2014-07-30 13:41:37.000000000 +0200
++++ cppconn/CMakeLists.txt.new	2014-09-09 01:04:22.930500858 +0200
+@@ -58,7 +58,7 @@
+ 
+ SET(MYSQLCPPCONN_INSTALL_HEADERS
+ 		build_config.h
+-		config.h
++		${CMAKE_CURRENT_BINARY_DIR}/config.h
+ 		connection.h
+ 		datatype.h
+ 		driver.h
+--- driver/CMakeLists.txt	2014-07-30 13:41:37.000000000 +0200
++++ driver/CMakeLists.txt.new	2014-09-09 01:09:01.298479554 +0200
+@@ -28,6 +28,9 @@
+ 
+ INCLUDE_DIRECTORIES(${MYSQLCPPCONN_SOURCE_DIR})
+ INCLUDE_DIRECTORIES(${MYSQLCPPCONN_SOURCE_DIR}/cppconn)
++INCLUDE_DIRECTORIES(${MYSQLCPPCONN_BINARY_DIR})
++INCLUDE_DIRECTORIES(${MYSQLCPPCONN_BINARY_DIR}/cppconn)
++INCLUDE_DIRECTORIES(${MYSQLCPPCONN_BINARY_DIR}/driver/nativeapi)
+ INCLUDE_DIRECTORIES(${MYSQLCPPCONN_BOOST_INCLUDE_DIRS})
+ MESSAGE(STATUS "BOOST_INCLUDE_DIRS=${MYSQLCPPCONN_BOOST_INCLUDE_DIRS}")
+ 
+@@ -156,21 +159,22 @@
+ 		nativeapi/native_statement_wrapper.h
+ 		nativeapi/mysql_native_resultset_wrapper.h
+ 		nativeapi/native_resultset_wrapper.h
+-		../cppconn/warning.h
+-		../cppconn/statement.h
+-		../cppconn/sqlstring.h
+-		../cppconn/resultset_metadata.h
+-		../cppconn/resultset.h
+-		../cppconn/prepared_statement.h
+-		../cppconn/parameter_metadata.h
+-		../cppconn/metadata.h
+-		../cppconn/exception.h
+-		../cppconn/driver.h
+-		../cppconn/datatype.h
+-		../cppconn/connection.h
+-		../cppconn/config.h
+-		../cppconn/build_config.h
+-
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/warning.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/statement.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/sqlstring.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/resultset_metadata.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/resultset.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/prepared_statement.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/parameter_metadata.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/metadata.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/exception.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/driver.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/datatype.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/connection.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/config.h
++		${CMAKE_CURRENT_BINARY_DIR}/cppconn/config.h
++		${CMAKE_CURRENT_SOURCE_DIR}/cppconn/build_config.h
++		${CMAKE_CURRENT_BINARY_DIR}/cppconn/build_config.h
+ 	)
+ 
+ 	IF(NOT MYSQLCLIENT_STATIC_BINDING)
+@@ -309,8 +313,8 @@
+ 	)
+ ELSE(WIN32)
+ 	INSTALL(TARGETS mysqlcppconn mysqlcppconn-static
+-		LIBRARY DESTINATION ${INSTALL_LIBDIR}
+-		ARCHIVE DESTINATION ${INSTALL_LIBDIR}
++		LIBRARY DESTINATION lib${LIB_SUFFIX}
++		ARCHIVE DESTINATION lib${LIB_SUFFIX}
+ 	)
+ ENDIF(WIN32)
+ 
