@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.68 2013/06/26 11:57:27 ago Exp $
+
+*iw-3.15 (08 Sep 2014)
+
+  08 Sep 2014;  <hash@gentoo.org> +iw-3.15.ebuild, -iw-3.11.ebuild:
+  net-wireless/iw version bump
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> iw-3.10.ebuild:
   Stable for arm, wrt bug #474290
