@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/tmux-mem-cpu-load-2.1.0.ebuild,v 1.4 2013/01/22 19:34:25 wired Exp $
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://github.com/thewtex/tmux-mem-cpu-load/"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-S="${WORKDIR}"/thewtex-${PN}-be75ed8
+S="${WORKDIR}"/thewtex-${PN}-660481f
 
 src_install() {
 	cmake-utils_src_install
