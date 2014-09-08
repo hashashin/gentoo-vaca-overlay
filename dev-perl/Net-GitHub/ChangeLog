@@ -1,3 +1,9 @@
+*Net-GitHub-0.68 (08 Sep 2014)
+
+  08 Sep 2014;  <hash@gentoo.org> +Net-GitHub-0.68.ebuild,
+  -Net-GitHub-0.55.ebuild:
+  dev-perl/Net-GitHub version bump
+
 *Net-GitHub-0.55 (14 Jan 2014)
 
   14 Jan 2014;  <hash@gentoo.org> +Net-GitHub-0.55.ebuild,
