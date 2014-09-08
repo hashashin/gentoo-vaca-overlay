@@ -1,3 +1,9 @@
+*wine-1.7.22 (08 Sep 2014)
+
+  08 Sep 2014;  <hash@gentoo.org> +wine-1.7.22.ebuild, -wine-1.7.1.ebuild,
+  metadata.xml:
+  app-emulation/wine version bump
+
   05 Sep 2013;  <hash@gentoo.org> wine-1.7.1.ebuild:
   forgot bump winepulse-patches in ebuild
 
