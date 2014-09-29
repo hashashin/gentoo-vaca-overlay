@@ -73,7 +73,7 @@ src_install() {
 	fi
 
 	if use doc; then
-		dodoc revisions.txt "${S}"/readme.md
+		dodoc revisions.txt "${S}"/README.md
 		dohtml -r reference
 		java-pkg_dojavadoc "${S}"/build/javadoc/everything
 	fi

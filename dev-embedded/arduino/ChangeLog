@@ -1,4 +1,7 @@
   29 Sep 2014;  <hash@gentoo.org> arduino-1.0.6.ebuild:
+  typo
+
+  29 Sep 2014;  <hash@gentoo.org> arduino-1.0.6.ebuild:
   fix dodoc arduino 1.0.6
 
 *arduino-1.0.6 (28 Sep 2014)
