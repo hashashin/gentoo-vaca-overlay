@@ -1,0 +1,6 @@
+*jenkins-bin-1.588 (06 Nov 2014)
+
+  06 Nov 2014;  <hash@gentoo.org> +files/jenkins-bin.confd,
+  +files/jenkins-bin.init2, +files/jenkins-bin.logrotate,
+  +jenkins-bin-1.588.ebuild, +metadata.xml:
+  add jenkins-bin
