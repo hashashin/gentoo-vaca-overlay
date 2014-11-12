@@ -1,3 +1,10 @@
+*wine-1.7.30 (12 Nov 2014)
+
+  12 Nov 2014;  <hash@gentoo.org> +files/wine-1.7.12-osmesa-check.patch,
+  +files/wine-1.7.2-osmesa-check.patch, +files/wine-1.7.28-gstreamer-v4.patch,
+  +wine-1.7.30.ebuild, -wine-1.7.22.ebuild:
+  version bump wine
+
 *wine-1.7.22 (08 Sep 2014)
 
   08 Sep 2014;  <hash@gentoo.org> +wine-1.7.22.ebuild, -wine-1.7.1.ebuild,
