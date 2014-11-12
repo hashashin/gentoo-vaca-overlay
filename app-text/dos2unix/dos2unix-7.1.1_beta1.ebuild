@@ -1,21 +1,22 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-7.1.ebuild,v 1.1 2014/10/07 04:51:53 polynomial-c Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_P=${P/_beta/-beta}
 
 DESCRIPTION="Convert DOS or MAC text files to UNIX format or vice versa"
 HOMEPAGE="http://www.xs4all.nl/~waterlan/dos2unix.html http://sourceforge.net/projects/dos2unix/"
-SRC_URI="http://www.xs4all.nl/~waterlan/${PN}/${MY_P}.tar.gz"
+SRC_URI="
+	http://www.xs4all.nl/~waterlan/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
-IUSE="debug nls"
+IUSE="debug nls test"
 
 RDEPEND="
 	!app-text/hd2u
@@ -24,6 +25,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	nls? ( sys-devel/gettext )
+	test? ( virtual/perl-Test-Simple )
 	dev-lang/perl"
 
 S="${WORKDIR}/${MY_P}"
@@ -52,10 +54,10 @@ lintl() {
 
 src_compile() {
 	emake prefix="${EPREFIX}/usr" \
-		$(use nls && echo "LDFLAGS_EXTRA=$(lintl)" || echo "ENABLE_NLS=")
+		$(usex nls "LDFLAGS_EXTRA=$(lintl)" "ENABLE_NLS=")
 }
 
 src_install() {
 	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" \
-		$(use nls || echo "ENABLE_NLS=") install
+		$(usex nls "" "ENABLE_NLS=") install
 }
