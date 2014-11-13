@@ -29,6 +29,10 @@ JAVA_ANT_ENCODING="ISO-8859-1"
 EANT_TEST_GENTOO_CLASSPATH="junit-4"
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 
+src_prepare() {
+	epatch "${FILESDIR}"/version-1.10.patch
+}
+
 src_test() {
 	java-pkg-2_src_test
 }

@@ -1,0 +1,11 @@
+--- default.properties	2014-11-06 05:25:24.000000000 +0100
++++ default.properties.new	2014-11-13 15:04:52.933061450 +0100
+@@ -41,7 +41,7 @@
+ component.title = Encode/Decode Utilities
+ 
+ # The current version number of this component
+-component.version = 1.9-SNAPSHOT
++component.version = 1.10-SNAPSHOT
+ 
+ # The name that is used to create the jar file
+ final.name = ${component.name}-${component.version}
