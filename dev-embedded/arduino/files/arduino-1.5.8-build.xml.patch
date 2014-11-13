@@ -1,5 +1,5 @@
---- build/build.xml	2014-11-13 18:11:39.526395432 +0100
-+++ build/build.xml	2014-11-13 18:12:46.006397414 +0100
+--- build/build.xml	2014-11-13 19:11:11.671501891 +0100
++++ build/build.xml	2014-11-13 19:12:09.494503614 +0100
 @@ -48,7 +48,6 @@
      <include name="app/lib/commons-exec-1.1.jar" />
      <include name="app/lib/commons-httpclient-3.1.jar" />
@@ -30,7 +30,26 @@
  
      <delete includeEmptyDirs="true" quiet="true">
        <fileset dir="macosx/work/${staging_hardware_folder}/tools" includes="**/3.4.6/**/*"/>
-@@ -488,30 +479,10 @@
+@@ -265,10 +256,6 @@
+       <fileset dir="macosx/work/${staging_hardware_folder}/tools" includes="**/man"/>
+     </delete>
+ 
+-    <get src="http://downloads.arduino.cc/libastylej-2.03.zip" dest="macosx" usetimestamp="true" skipexisting="true"/>
+-    <unzip src="macosx/libastylej-2.03.zip" dest="macosx" overwrite="true"/>
+-    <copy file="macosx/libastylej/libastylej.jnilib" todir="macosx/work/Arduino.app/Contents/Resources/Java/lib/" />
+-    <chmod perm="755" file="macosx/work/Arduino.app/Contents/Resources/Java/lib/libastylej.jnilib" />
+   </target>
+ 
+   <target name="macosx-run" depends="macosx-build" description="Run Mac OS X version">
+@@ -480,38 +467,14 @@
+     <copy todir="linux/work" file="linux/dist/arduino" />
+     <chmod perm="755" file="linux/work/arduino" />
+ 
+-    <get src="http://downloads.arduino.cc/libastylej-2.03.zip" dest="linux" usetimestamp="true" skipexisting="true" />
+-    <unzip src="linux/libastylej-2.03.zip" dest="linux" overwrite="true"/>
+-    <copy file="linux/libastylej/libastylej${arch-bits}.so" tofile="linux/work/lib/libastylej.so" />
+-    <chmod perm="755" file="linux/work/lib/libastylej.so" />
+   </target>
  
    <target name="linux32-build" depends="linux-build" description="Build linux (32-bit) version">
      <!-- Unzip ARM tools -->
@@ -61,7 +80,7 @@
    </target>
  
    <target name="linux32-run" depends="linux32-build" description="Run Linux (32-bit) version">
-@@ -522,28 +493,6 @@
+@@ -522,28 +485,6 @@
      <exec executable="./linux/work/arduino" spawn="false"/>
    </target>
  
@@ -90,7 +109,18 @@
  
  
  
-@@ -781,12 +730,6 @@
+@@ -741,10 +682,6 @@
+       <param name="file_arch" value="win32" />
+     </antcall>
+ 
+-    <get src="http://downloads.arduino.cc/libastylej-2.03.zip" dest="windows" usetimestamp="true" skipexisting="true" />
+-    <unzip src="windows/libastylej-2.03.zip" dest="windows" overwrite="true"/>
+-    <copy file="windows/libastylej/AStylej.dll" todir="windows/work/lib" />
+-
+     <!-- Copy bossac.exe tool -->
+     <copy todir="windows/work/hardware/tools">
+       <fileset file="windows/bossac.exe" />
+@@ -781,12 +718,6 @@
      </chmod>
  
      <!-- Unzip ARM toolchain -->

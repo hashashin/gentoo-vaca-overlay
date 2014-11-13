@@ -86,12 +86,18 @@ src_install() {
 
 	# use system avrdude
 	# patching class files is too hard
-	dosym /usr/bin/avrdude "/usr/share/${PN}/hardware/tools/avrdude"
-	dosym /etc/avrdude.conf "/usr/share/${PN}/hardware/tools/avrdude.conf"
+	dosym /usr/bin/avrdude "/usr/share/${PN}/hardware/tools/avr/bin/avrdude"
+	mkdir -p "/usr/share/${PN}/hardware/tools/avr/etc/"
+	dosym /etc/avrdude.conf "/usr/share/${PN}/hardware/tools/avr/etc/avrdude.conf"
 
 	dosym /usr/lib64/libastyle.so "/usr/share/${PN}/lib/libastylej.so"
-	dosym /usr/bin/avr-g++ "/usr/share/arduino/hardware/tools/avr/bin/avr-g++"
-
+	mkdir -p "/usr/share/${PN}/hardware/tools/avr/bin/"
+	dosym /usr/bin/avr-g++ "/usr/share/${PN}/hardware/tools/avr/bin/avr-g++"
+	dosym /usr/bin/avr-gcc "/usr/share/${PN}/hardware/tools/avr/bin/avr-gcc"
+	dosym /usr/bin/avr-ar "/usr/share/${PN}/hardware/tools/avr/bin/avr-ar"
+	dosym /usr/bin/avr-objcopy "/usr/share/${PN}/hardware/tools/avr/bin/avr-objcopy"
+	dosym /usr/bin/avr-size "/usr/share/${PN}/hardware/tools/avr/bin/avr-size"
+	
 	# install menu and icons
 	domenu "${FILESDIR}/${PN}.desktop"
 	for sz in 16 24 32 48 128 256; do
