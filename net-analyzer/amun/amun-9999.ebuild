@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,14 +6,14 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils python-r1 subversion
+inherit eutils python subversion user
 
 DESCRIPTION="Low-interaction honeypot, capture autonomous spreading malware in an automated fashion."
 HOMEPAGE="http://amunhoney.sourceforge.net/"
-ESVN_REPO_URI="https://amunhoney.svn.sourceforge.net/svnroot/amunhoney"
+ESVN_REPO_URI="https://svn.code.sf.net/p/amunhoney/code/"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="mysql surfnet"
 
 DEPEND="mysql? ( virtual/mysql )
@@ -31,6 +31,11 @@ pkg_setup() {
 
 pkg_info() {
 	"${ROOT}"/opt/amun/amun_server.py --version
+}
+
+src_prepare() {
+        einfo "This patch set runtime (after bind ports) privileges to user amun, default is root."
+        epatch "${FILESDIR}/${PN}.conf.patch"
 }
 
 src_install() {
