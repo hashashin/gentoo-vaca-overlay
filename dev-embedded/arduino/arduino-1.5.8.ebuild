@@ -62,7 +62,7 @@ src_compile() {
 
 src_install() {
 	cd "${S}"/build/linux/work || die
-	java-pkg_dojar lib/core.jar lib/pde.jar
+	java-pkg_dojar lib/*.jar
 	java-pkg_dolauncher ${PN} --pwd /usr/share/${PN} --main processing.app.Base
 
 	if use examples; then
