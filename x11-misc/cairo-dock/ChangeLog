@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/cairo-dock
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*cairo-dock-3.4.0 (13 Nov 2014)
+
+  13 Nov 2014;  <hash@gentoo.org> +cairo-dock-3.4.0.ebuild:
+  bump x11-misc/cairo-dock
 
 *cairo-dock-3.3.2-r1 (09 Nov 2013)
 
