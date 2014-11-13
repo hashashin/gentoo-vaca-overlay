@@ -1,3 +1,6 @@
+  13 Nov 2014;  <hash@gentoo.org> arduino-1.5.8.ebuild:
+  tweak arduino-1.5.8.ebuild
+
 *arduino-1.5.8 (13 Nov 2014)
 
   13 Nov 2014;  <hash@gentoo.org> +arduino-1.5.8.ebuild,

@@ -18,8 +18,7 @@ IUSE=""
 
 COMMONDEP="
 dev-java/jna
->dev-java/rxtx-2.1
->dev-java/jmdns-3.4.1"
+>dev-java/rxtx-2.1"
 
 RDEPEND="${COMMONDEP}
 dev-embedded/avrdude
