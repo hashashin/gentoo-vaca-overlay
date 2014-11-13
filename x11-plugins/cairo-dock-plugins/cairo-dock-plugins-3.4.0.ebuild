@@ -35,7 +35,7 @@ RDEPEND="
 	kde? ( kde-base/kdelibs )
 	terminal? ( x11-libs/vte )
 	vala? ( dev-lang/vala )
-	webkit? ( >=net-libs/webkit-gtk-1.0 )
+	webkit? ( net-libs/webkit-gtk )
 	xfce? ( xfce-base/thunar )
 	xgamma? ( x11-libs/libXxf86vm )
 	xklavier? ( x11-libs/libxklavier )
