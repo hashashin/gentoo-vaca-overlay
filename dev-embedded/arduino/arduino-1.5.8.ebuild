@@ -18,7 +18,8 @@ IUSE=""
 
 COMMONDEP="
 dev-java/jna
->dev-java/rxtx-2.1"
+>dev-java/rxtx-2.1
+dev-util/astyle"
 
 RDEPEND="${COMMONDEP}
 dev-embedded/avrdude
@@ -87,6 +88,8 @@ src_install() {
 	# patching class files is too hard
 	dosym /usr/bin/avrdude "/usr/share/${PN}/hardware/tools/avrdude"
 	dosym /etc/avrdude.conf "/usr/share/${PN}/hardware/tools/avrdude.conf"
+
+	dosym /usr/lib64/libastyle.so "/usr/share/${PN}/lib/libastylej.so"
 
 	# install menu and icons
 	domenu "${FILESDIR}/${PN}.desktop"
