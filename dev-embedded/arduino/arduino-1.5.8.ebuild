@@ -90,6 +90,7 @@ src_install() {
 	dosym /etc/avrdude.conf "/usr/share/${PN}/hardware/tools/avrdude.conf"
 
 	dosym /usr/lib64/libastyle.so "/usr/share/${PN}/lib/libastylej.so"
+	dosym /usr/bin/avr-g++ "/usr/share/arduino/hardware/tools/avr/bin/avr-g++"
 
 	# install menu and icons
 	domenu "${FILESDIR}/${PN}.desktop"
