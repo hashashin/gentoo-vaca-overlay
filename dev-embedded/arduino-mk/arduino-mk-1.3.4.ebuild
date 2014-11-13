@@ -35,11 +35,11 @@ src_install(){
 	dobin bin/ard-reset-arduino
 	insinto /usr/share/arduino
 	doins Arduino.mk Common.mk arduino-mk-vars.md chipKIT.mk
-	#if use doc; then
-	dodoc HISTORY.md ard-reset-arduino.1 README.md
-	#fi
-	#if use examples; then
-	insinto /usr/share/doc/"${P}"/
-	doins -r examples/
-	#fi
+	if use doc; then
+		dodoc HISTORY.md ard-reset-arduino.1 README.md
+	fi
+	if use examples; then
+		insinto /usr/share/doc/"${P}"/
+		doins -r examples
+	fi
 }
