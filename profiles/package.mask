@@ -10,3 +10,4 @@ media-video/winff
 #dont work for now
 =app-emulation/wine-1.7.1
 =net-misc/spice-gtk-0.22
+=dev-embedded/arduino-1.5.8
