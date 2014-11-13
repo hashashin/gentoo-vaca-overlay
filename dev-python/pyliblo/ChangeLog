@@ -1,3 +1,8 @@
+*pyliblo-0.9.2 (13 Nov 2014)
+
+  13 Nov 2014;  <hash@gentoo.org> +pyliblo-0.9.2.ebuild, -pyliblo-0.9.1.ebuild:
+  bump dev-python/pyliblo
+
 *pyliblo-0.9.1 (17 Sep 2013)
 
   17 Sep 2013;  <hash@gentoo.org> +metadata.xml, +pyliblo-0.9.1.ebuild:
