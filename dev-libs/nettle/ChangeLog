@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.91 2013/05/27 19:46:39 grobian Exp $
+
+*nettle-3.0 (13 Nov 2014)
+
+  13 Nov 2014;  <hash@gentoo.org> +nettle-3.0.ebuild:
+  bump dev-libs/nettle
 
   27 May 2013; Fabian Groffen <grobian@gentoo.org> nettle-2.7.ebuild:
   Use prefixed libdir, bug #471298
