@@ -1,0 +1,4 @@
+*arduino-mk-1.3.4 (13 Nov 2014)
+
+  13 Nov 2014;  <hash@gentoo.org> +arduino-mk-1.3.4.ebuild, +metadata.xml:
+  added dev-embedded/arduino-mk
