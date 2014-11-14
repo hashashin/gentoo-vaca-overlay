@@ -44,6 +44,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog 'You need to add yourself to the group ${PN} to be able to run the server.'
+	elog 'You need to add yourself to the group "dmp" to be able to run the server.'
 }
 
