@@ -39,7 +39,7 @@ src_install() {
 	doins Server/bin/Release/*.exe
 
 	make_wrapper DMPServer  "mono /opt/${PN}/DMPServer.exe"
-	chmod 770 "${D}"/opt/${PN}/
+	chmod 775 "${D}"/opt/${PN}/
 	fowners -R ${PN}:${PN} /opt/${PN}
 }
 

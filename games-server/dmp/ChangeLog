@@ -1,4 +1,7 @@
   14 Nov 2014;  <hash@gentoo.org> dmp-0.1.6.2.ebuild:
+  fix dir perms
+
+  14 Nov 2014;  <hash@gentoo.org> dmp-0.1.6.2.ebuild:
   fix elog msg
 
 *dmp-0.1.6.2 (14 Nov 2014)
