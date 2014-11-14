@@ -1,3 +1,7 @@
+  14 Nov 2014;  <hash@gentoo.org> Net-GitHub-0.22.ebuild,
+  Net-GitHub-0.68.ebuild:
+  eapi bump
+
 *Net-GitHub-0.68 (08 Sep 2014)
 
   08 Sep 2014;  <hash@gentoo.org> +Net-GitHub-0.68.ebuild,
