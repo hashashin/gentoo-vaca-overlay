@@ -1,0 +1,4 @@
+*dmp-0.1.6.2 (14 Nov 2014)
+
+  14 Nov 2014;  <hash@gentoo.org> +dmp-0.1.6.2.ebuild, +metadata.xml:
+  add games-server/dmp
