@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="creates offline atlases for GPS handhelds and cell phone applications"
 HOMEPAGE="http://mobac.sourceforge.net"
@@ -38,7 +38,7 @@ src_install() {
 	doexe "${FILESDIR}"/mobac
 	insinto /opt/${PN}
 	doins Mobile_Atlas_Creator.jar
-	doins lib/sqlite-jdbc-3.7.2.jar
+	doins lib/sqlite-jdbc-3.7.15-M1.jar
 	doins -r mapsources
 	doins log4j.xml
 	dodir /opt/${PN}/tilestore
