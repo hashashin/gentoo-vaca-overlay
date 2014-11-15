@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/godarklight/${MY_PN}/archive/v${PV}.zip"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND=">=dev-lang/mono-3.0.0"
 RDEPEND="${DEPEND}"
@@ -45,9 +45,13 @@ src_install() {
 	make_wrapper DMPServer  "mono /opt/${PN}/DMPServer.exe"
 	chmod 775 "${D}"/opt/${PN}/
 	fowners -R ${PN}:${PN} /opt/${PN}
+
+	newdoc README.md README
+	if use doc; then
+		dodoc Documentation/*
+	fi
 }
 
 pkg_postinst() {
 	elog 'You need to add yourself to the group "dmp" to be able to run the server.'
 }
-

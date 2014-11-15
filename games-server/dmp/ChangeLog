@@ -1,4 +1,7 @@
   15 Nov 2014;  <hash@gentoo.org> dmp-0.1.6.2.ebuild:
+  add doc USE flag
+
+  15 Nov 2014;  <hash@gentoo.org> dmp-0.1.6.2.ebuild:
   proper version stuff
 
   14 Nov 2014;  <hash@gentoo.org> dmp-0.1.6.2.ebuild:
