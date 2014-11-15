@@ -27,6 +27,10 @@ pkg_setup() {
 	enewuser ${PN} -1 -1 /dev/null ${PN}
 }
 
+src_prepare() {
+	sed -i "s/\(.*PROGRAM_VERSION = \"\)Custom\(\".*\)/\1${PV}\2/g" Common/Common.cs
+}
+
 src_compile() {
 	xbuild /target:Server /p:Configuration=Release
 }
