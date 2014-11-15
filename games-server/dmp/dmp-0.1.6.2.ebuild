@@ -53,5 +53,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog 'You need to add yourself to the group "dmp" to be able to run the server.'
+	ewarn "IMPORTANT:"
+	ewarn "DONT run DMPServer as root add your user to group dmp"
 }
