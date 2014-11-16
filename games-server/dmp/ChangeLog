@@ -1,3 +1,8 @@
+*dmp-9999 (16 Nov 2014)
+
+  16 Nov 2014;  <hash@gentoo.org> +dmp-9999.ebuild:
+  add dmp-9999.ebuild
+
   15 Nov 2014;  <hash@gentoo.org> dmp-0.1.6.2.ebuild:
   tweaks
 
