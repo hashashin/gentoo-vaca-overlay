@@ -1,3 +1,11 @@
+*aufs-sources-3.17.3 (16 Nov 2014)
+
+  16 Nov 2014;  <hash@gentoo.org> +aufs-sources-3.17.3.ebuild,
+  -aufs-sources-3.10.11.ebuild, -aufs-sources-3.10.12.ebuild,
+  -aufs-sources-3.11.1.ebuild, -aufs-sources-3.11.2.ebuild,
+  -aufs-sources-3.11.4.ebuild:
+  cleanup and bump
+
 *aufs-sources-3.11.4 (06 Oct 2013)
 
   06 Oct 2013;  <hash@gentoo.org> +aufs-sources-3.11.4.ebuild:
