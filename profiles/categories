@@ -17,12 +17,14 @@ dev-python
 dev-util
 games-emulation
 games-engines
+games-server
 games-simulation
 games-sports
 games-strategy
 games-util
 gnome-base
 media-fonts
+media-gfx
 media-libs
 media-plugins
 media-sound
