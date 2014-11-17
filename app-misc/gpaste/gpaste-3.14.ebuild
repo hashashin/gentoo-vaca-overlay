@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="5"
-inherit autotools bash-completion gnome2 systemd
+inherit autotools bash-completion gnome2
 
 MY_PN="GPaste"
 
@@ -29,21 +29,10 @@ RDEPEND="${DEPEND}
 	zsh-completion? ( app-shells/zsh app-shells/zsh-completion )
 	systemd? ( sys-apps/systemd )"
 
-WANT_AUTOMAKE="1.11"
-
-#G2CONF="
-#	--disable-schemas-compile
-#	$(use_enable applet)
-#	$(use_enable gnome-shell gnome-shell-extension)"
-
 DOCS="AUTHORS NEWS ChangeLog"
 
 src_prepare() {
-#	gnome2_src_prepare
-#	if ! has_version gnome-base/gnome-shell; then
-#		einfo "You do not have gnome-shell installed, building gtk+ applet"
-#		G2CONF+="--enable-applet"
-#	fi
+	epatch "${S}/ubuntu-patches/0001-ubuntu-disable-appdata-stuff.patch"
 	eautoreconf -i -Wall
 }
 
@@ -51,15 +40,10 @@ src_configure() {
 	econf \
 		--disable-schemas-compile \
 		$(use_enable applet) \
-		$(use_enable gnome-shell gnome-shell-extension) \
-		$(use_enable systemd)
+		$(use_enable gnome-shell gnome-shell-extension)
 }
 
 src_install() {
 	use bash-completion && BASHCOMPLETION_NAME="gpaste" dobashcompletion completions/gpaste
-#	if use zsh-completion ; then
-#		insinto /usr/share/zsh/site-functions
-#		doins completions/_gpaste
-#	fi
 	gnome2_src_install
 }
