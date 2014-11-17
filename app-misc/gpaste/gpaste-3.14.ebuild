@@ -14,7 +14,7 @@ SRC_URI="https://github.com/Keruspe/${MY_PN}/archive/v${PV}.zip"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="applet bash-completion gnome-shell zsh-completion systemd"
+IUSE="applet bash-completion gnome-shell"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
@@ -25,9 +25,7 @@ DEPEND="dev-libs/glib:2
 	dev-lang/vala"
 RDEPEND="${DEPEND}
 	bash-completion? ( app-shells/bash )
-	gnome-shell? ( >=gnome-base/gnome-shell-3.9.90 )
-	zsh-completion? ( app-shells/zsh app-shells/zsh-completion )
-	systemd? ( sys-apps/systemd )"
+	gnome-shell? ( >=gnome-base/gnome-shell-3.9.90 )"
 
 DOCS="AUTHORS NEWS ChangeLog"
 

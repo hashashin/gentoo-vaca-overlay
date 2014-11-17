@@ -1,4 +1,7 @@
   17 Nov 2014;  <hash@gentoo.org> gpaste-3.14.ebuild:
+  cleanup
+
+  17 Nov 2014;  <hash@gentoo.org> gpaste-3.14.ebuild:
   missing patch
 
 *gpaste-3.14 (17 Nov 2014)
