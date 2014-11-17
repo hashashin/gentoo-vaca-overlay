@@ -1,0 +1,4 @@
+*gpaste-3.14 (17 Nov 2014)
+
+  17 Nov 2014;  <hash@gentoo.org> +gpaste-3.14.ebuild, +metadata.xml:
+  add app-misc/gpaste
