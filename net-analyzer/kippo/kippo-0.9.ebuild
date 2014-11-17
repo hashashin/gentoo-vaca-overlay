@@ -35,10 +35,9 @@ pkg_setup() {
 src_install() {
 	insinto ${KIPPO_INSTALL_DIR}
 	dodir ${KIPPO_INSTALL_DIR}
-	chmod 770 "${D}/${KIPPO_INSTALL_DIR}"
-	chmod 660 "${D}/${KIPPO_INSTALL_DIR}/kippo.cfg.dist"
 	diropts -m0770
 	doins -r "${S}"/*
+	chmod 660 "${D}/${KIPPO_INSTALL_DIR}/kippo.cfg.dist"
 	dodoc doc/README doc/sql/mysql.sql
 	rm -rf "${D}/opt/${PN}/doc"
 	exeinto ${KIPPO_INSTALL_DIR}
