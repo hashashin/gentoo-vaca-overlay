@@ -1,3 +1,9 @@
+*jenkins-bin-1.590 (18 Nov 2014)
+
+  18 Nov 2014;  <hash@gentoo.org> +jenkins-bin-1.590.ebuild,
+  -jenkins-bin-1.588.ebuild:
+  version bump
+
 *jenkins-bin-1.588 (06 Nov 2014)
 
   06 Nov 2014;  <hash@gentoo.org> +files/jenkins-bin.confd,
