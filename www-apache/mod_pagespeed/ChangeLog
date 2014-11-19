@@ -1,0 +1,5 @@
+*mod_pagespeed-9999 (19 Nov 2014)
+
+  19 Nov 2014;  <hash@gentoo.org> +files/80_mod_pagespeed.conf, +metadata.xml,
+  +mod_pagespeed-9999.ebuild:
+  add www-apache/mod_pagespeed
