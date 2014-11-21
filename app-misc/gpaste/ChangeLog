@@ -1,3 +1,8 @@
+*gpaste-3.14-r1 (21 Nov 2014)
+
+  21 Nov 2014;  <hash@gentoo.org> +gpaste-3.14-r1.ebuild, -gpaste-3.14.ebuild:
+  fix bash completion
+
   17 Nov 2014;  <hash@gentoo.org> gpaste-3.14.ebuild:
   cleanup
 

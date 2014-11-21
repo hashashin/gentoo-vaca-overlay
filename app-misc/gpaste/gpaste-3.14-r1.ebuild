@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="5"
-inherit autotools bash-completion gnome2
+inherit autotools bash-completion-r1 gnome2
 
 MY_PN="GPaste"
 
@@ -42,6 +42,6 @@ src_configure() {
 }
 
 src_install() {
-	use bash-completion && BASHCOMPLETION_NAME="gpaste" dobashcompletion completions/gpaste
+	use bash-completion && BASHCOMPLETION_NAME="gpaste" dobashcompletion data/completions/"${PN}"
 	gnome2_src_install
 }
