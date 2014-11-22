@@ -1,3 +1,9 @@
+*aufs-sources-3.17.4 (22 Nov 2014)
+
+  22 Nov 2014;  <hash@gentoo.org> +aufs-sources-3.17.4.ebuild,
+  -aufs-sources-3.17.3.ebuild:
+  version bump
+
   16 Nov 2014;  <hash@gentoo.org> +files/README.gentoo-r1:
   missing file
 
