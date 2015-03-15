@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.3.ebuild,v 1.1 2013/02/10 11:47:38 scarabeus Exp $
 
@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-inherit eutils fdo-mime python-r1
+inherit eutils fdo-mime python-single-r1
 
 MY_P=${P/_/-}
 
@@ -41,8 +41,8 @@ RESTRICT="test"
 
 pkg_setup() {
 	if use python ; then
-		python_set_active_version 2
-		python_pkg_setup
+		#python_set_active_version 2
+		python-single-r1_pkg_setup
 	fi
 }
 

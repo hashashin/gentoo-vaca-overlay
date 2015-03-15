@@ -1,3 +1,9 @@
+*bluefish-2.2.7 (15 Mar 2015)
+
+  15 Mar 2015;  <hash@gentoo.org> +bluefish-2.2.7.ebuild,
+  -bluefish-2.2.6.ebuild:
+  version bump app-editors/bluefish
+
   18 May 2013;  <hash@gentoo.org> bluefish-2.2.4.ebuild:
   eapi and inherit bump
 
