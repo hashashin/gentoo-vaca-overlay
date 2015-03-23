@@ -1,0 +1,5 @@
+*arduino-bin-1.6.1 (23 Mar 2015)
+
+  23 Mar 2015;  <hash@gentoo.org> +arduino-bin-1.6.1.ebuild, +files/arduino-bin,
+  +files/arduino-bin.desktop, +metadata.xml:
+  add arduino-bin
