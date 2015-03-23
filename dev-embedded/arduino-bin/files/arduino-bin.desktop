@@ -2,7 +2,7 @@
 Version=1.0
 Name=arduino-bin
 Comment=Open-source electronics prototyping platform
-Exec=arduino
+Exec=arduino-bin
 Icon=arduino
 Terminal=false
 Type=Application
