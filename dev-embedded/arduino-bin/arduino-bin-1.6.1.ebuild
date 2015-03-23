@@ -36,11 +36,8 @@ src_install() {
 	exeinto /opt/bin
 	doexe "${FILESDIR}"/arduino-bin
 	insinto "/opt/${PN}/"
-	doins -r hardware libraries reference examples java
+	doins -r hardware libraries reference examples lib
 	fowners -R root:uucp "/opt/${PN}/hardware"
-
-	insinto "/opt/${PN}/lib"
-	doins -r lib/*.txt lib/theme lib/*.jpg
 
 	# use system avrdude
 	# patching class files is too hard
