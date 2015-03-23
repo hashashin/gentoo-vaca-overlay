@@ -33,10 +33,11 @@ src_unpack(){
 }
 
 src_install() {
-	exeinto /opt/bin
-	doexe "${FILESDIR}"/arduino-bin
 	insinto "/opt/${PN}/"
 	doins -r *
+	exeinto "/opt/${PN}/"
+	newexe arduino arduino-bin
+	dosym /opt/"${PN}"/"${PN}" /opt/bin/"${PN}"
 	fowners -R root:uucp "/opt/${PN}/hardware"
 
 	# use system avrdude
