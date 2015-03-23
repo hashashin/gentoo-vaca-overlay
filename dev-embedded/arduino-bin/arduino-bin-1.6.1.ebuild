@@ -36,7 +36,7 @@ src_install() {
 	exeinto /opt/bin
 	doexe "${FILESDIR}"/arduino-bin
 	insinto "/opt/${PN}/"
-	doins -r hardware libraries reference examples lib
+	doins -r *
 	fowners -R root:uucp "/opt/${PN}/hardware"
 
 	# use system avrdude
@@ -50,7 +50,7 @@ src_install() {
 	dosym /usr/bin/avr-ar "/opt/${PN}/hardware/tools/avr/bin/avr-ar"
 	dosym /usr/bin/avr-objcopy "/opt/${PN}/hardware/tools/avr/bin/avr-objcopy"
 	dosym /usr/bin/avr-size "/opt/${PN}/hardware/tools/avr/bin/avr-size"
-	
+
 	# install menu and icons
 	domenu "${FILESDIR}/${PN}-bin.desktop"
 	for sz in 16 24 32 48 128 256; do
