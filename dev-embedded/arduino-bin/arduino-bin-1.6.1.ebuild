@@ -58,7 +58,7 @@ src_install() {
 	domenu "${FILESDIR}/${PN}-bin.desktop"
 	for sz in 16 24 32 48 128 256; do
 		newicon -s $sz \
-			"${WORKDIR}/arduino-icons/debian_icons_${sz}x${sz}_apps_${PN}.png" \
+			"${WORKDIR}/arduino-icons/debian_icons_${sz}x${sz}_apps_arduino.png" \
 			"${PN}.png"
 	done
 }
