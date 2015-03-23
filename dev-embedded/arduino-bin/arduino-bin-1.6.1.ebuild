@@ -36,7 +36,7 @@ src_install() {
 	exeinto /opt/bin
 	doexe "${FILESDIR}"/arduino-bin
 	insinto "/opt/${PN}/"
-	doins -r hardware libraries reference examples
+	doins -r hardware libraries reference examples java
 	fowners -R root:uucp "/opt/${PN}/hardware"
 
 	insinto "/opt/${PN}/lib"
