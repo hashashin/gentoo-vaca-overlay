@@ -1,3 +1,6 @@
+  23 Mar 2015;  <hash@gentoo.org> arduino-bin-1.6.1.ebuild:
+  fix
+
 *arduino-bin-1.6.1 (23 Mar 2015)
 
   23 Mar 2015;  <hash@gentoo.org> +arduino-bin-1.6.1.ebuild, +files/arduino-bin,

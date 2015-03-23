@@ -45,11 +45,9 @@ src_install() {
 	# use system avrdude
 	# patching class files is too hard
 	dosym /usr/bin/avrdude "/opt/${PN}/hardware/tools/avr/bin/avrdude"
-	mkdir -p "/opt/${PN}/hardware/tools/avr/etc/"
 	dosym /etc/avrdude.conf "/opt/${PN}/hardware/tools/avr/etc/avrdude.conf"
 
 	dosym /usr/lib64/libastyle.so "/opt/${PN}/lib/libastylej.so"
-	mkdir -p "/opt/${PN}/hardware/tools/avr/bin/"
 	dosym /usr/bin/avr-g++ "/opt/${PN}/hardware/tools/avr/bin/avr-g++"
 	dosym /usr/bin/avr-gcc "/opt/${PN}/hardware/tools/avr/bin/avr-gcc"
 	dosym /usr/bin/avr-ar "/opt/${PN}/hardware/tools/avr/bin/avr-ar"
