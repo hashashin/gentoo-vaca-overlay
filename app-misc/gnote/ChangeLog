@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gnote-3.16.0 (03 Apr 2015)
+
+  03 Apr 2015;  <hash@gentoo.org> +gnote-3.16.0.ebuild, -gnote-3.15.1.ebuild:
+  app-misc/gnote
+
 *gnote-3.15.1 (15 Mar 2015)
 
   15 Mar 2015;  <hash@gentoo.org> +gnote-3.15.1.ebuild, -gnote-3.14.0.ebuild:
