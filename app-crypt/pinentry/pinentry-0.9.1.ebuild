@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.4.ebuild,v 1.1 2014/10/08 06:39:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.0-r3.ebuild,v 1.2 2015/03/31 17:18:11 ulm Exp $
 
 EAPI=5
 
-inherit autotools multilib eutils flag-o-matic
+inherit qmake-utils autotools multilib eutils flag-o-matic
 
 DESCRIPTION="Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="http://gnupg.org/aegypten2/index.html"
@@ -13,10 +13,10 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="gtk ncurses qt4 caps static"
+IUSE="clipboard gtk ncurses qt4 caps static"
 
 RDEPEND="
-	app-admin/eselect-pinentry
+	app-eselect/eselect-pinentry
 	caps? ( sys-libs/libcap )
 	gtk? ( x11-libs/gtk+:2 )
 	ncurses? ( sys-libs/ncurses )
@@ -42,11 +42,10 @@ src_prepare() {
 	if use qt4; then
 		local f
 		for f in qt4/*.moc; do
-			"${EPREFIX}"/usr/bin/moc ${f/.moc/.h} > ${f} || die
+			"$(qt4_get_bindir)"/moc ${f/.moc/.h} > ${f} || die
 		done
 	fi
 	epatch "${FILESDIR}/${PN}-0.8.2-ncurses.patch"
-	epatch "${FILESDIR}/${PN}-0.8.2-texi.patch"
 	eautoreconf
 }
 
@@ -63,15 +62,13 @@ src_configure() {
 	export QTLIB="${QTDIR}/$(get_libdir)"
 
 	econf \
-		--disable-pinentry-gtk \
-		--disable-pinentry-qt \
 		--enable-pinentry-tty \
 		$(use_enable gtk pinentry-gtk2) \
 		$(use_enable ncurses pinentry-curses) \
 		$(use_enable ncurses fallback-curses) \
 		$(use_enable qt4 pinentry-qt4) \
-		$(use_with caps libcap) \
-		--without-x
+		$(use qt4 && use_enable clipboard pinentry-qt4-clipboard) \
+		$(use_with caps libcap)
 }
 
 src_compile() {
