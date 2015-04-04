@@ -16,7 +16,7 @@ HOMEPAGE="http://github.com/thewtex/tmux-mem-cpu-load/"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-S="${WORKDIR}"/thewtex-${PN}-b6bdf01
+S="${WORKDIR}"/thewtex-${PN}-d82a4ab
 
 src_install() {
 	cmake-utils_src_install
