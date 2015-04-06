@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.1.4.ebuild,v 1.1 2013/06/22 11:02:26 radhermit Exp $
+# $Header: $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ src_install() {
 }
 
 pkg_postinst() {
-  elog "run: cp ${VHOST_ROOT}/${PN}-${PVR}/config.php.dist ${VHOST_ROOT}/${PN}-${PVR}/config.php"
-  elog "Edit ${VHOST_ROOT}/${PN}-${PVR}/config.php and set database settings."
+  elog "run: cp ${VHOST_ROOT}/${PN}/config.php.dist ${VHOST_ROOT}/${PN}/config.php"
+  elog "Edit ${VHOST_ROOT}/${PN}/config.php and set database settings."
   webapp_pkg_postinst
 }
