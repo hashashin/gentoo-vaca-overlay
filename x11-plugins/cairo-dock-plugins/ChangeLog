@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Apr 2015;  <hash@gentoo.org> cairo-dock-plugins-3.4.0-r2.ebuild:
+  typo
+
 *cairo-dock-plugins-3.4.0-r2 (06 Apr 2015)
 
   06 Apr 2015;  <hash@gentoo.org> +cairo-dock-plugins-3.4.0-r2.ebuild:
