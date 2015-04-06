@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/cairo-dock-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*cairo-dock-plugins-3.4.0-r2 (06 Apr 2015)
+
+  06 Apr 2015;  <hash@gentoo.org> +cairo-dock-plugins-3.4.0-r2.ebuild:
+  update x11-plugins/cairo-dock-plugins deps
 
 *cairo-dock-plugins-3.4.0-r1 (13 Nov 2014)
 
