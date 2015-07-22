@@ -6,13 +6,14 @@ EAPI=5
 
 inherit eutils toolchain-funcs
 
-#MY_P=${P/_beta/-beta}
+MY_P=${P/_beta/-beta}
 #http://www.xs4all.nl/~waterlan/${PN}/${MY_P}.tar.gz
+#http://www.xs4all.nl/~waterlan/${PN}/${P}.tar.gz
 
 DESCRIPTION="Convert DOS or MAC text files to UNIX format or vice versa"
 HOMEPAGE="http://www.xs4all.nl/~waterlan/dos2unix.html http://sourceforge.net/projects/dos2unix/"
 SRC_URI="
-	http://www.xs4all.nl/~waterlan/${PN}/${P}.tar.gz"
+	http://www.xs4all.nl/~waterlan/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
@@ -28,7 +29,7 @@ DEPEND="
 	test? ( virtual/perl-Test-Simple )
 	dev-lang/perl"
 
-#S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	sed \
