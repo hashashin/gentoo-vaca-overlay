@@ -1,3 +1,9 @@
+*megatools-1.9.95 (22 Jul 2015)
+
+  22 Jul 2015;  <hash@gentoo.org> +megatools-1.9.95.ebuild,
+  -megatools-1.9.94.ebuild:
+  sys-fs/megatools version bump
+
 *megatools-1.9.94 (06 Feb 2015)
 
   06 Feb 2015;  <hash@gentoo.org> +megatools-1.9.94.ebuild,
