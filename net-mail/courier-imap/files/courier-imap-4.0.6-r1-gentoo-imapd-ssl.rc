@@ -1,7 +1,7 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc,v 1.2 2007/04/07 01:08:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc,v 1.4 2014/11/20 10:25:15 mrueg Exp $
 #
-# Copyright 1998 - 2000 Double Precision, Inc.
+# Copyright 1998-2015 - 2000 Double Precision, Inc.
 # See COPYING for distribution information.
 
 prefix=/usr

@@ -1,6 +1,29 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.191 2012/05/13 11:31:08 swift Exp $
+
+*courier-imap-4.16.2 (02 Aug 2015)
+
+  02 Aug 2015;  <hash@gentoo.org> +courier-imap-4.16.2.ebuild,
+  +files/courier-authdaemond-r1.service,
+  +files/courier-imap-4.15-aclocal-fix.patch,
+  +files/courier-imap-4.15-db4-bdbobj_configure.ac.patch,
+  +files/courier-imap-4.15-db4-configure.ac.patch,
+  +files/courier-imap-4.15-disable-fam-configure.ac.patch,
+  +files/courier-imapd-r1.service, +files/courier-imapd-ssl-r1.service,
+  -courier-imap-4.15.ebuild, -files/courier-imap-4.14-aclocal-fix.patch,
+  -files/courier-imap-4.14-db4-bdbobj_configure.ac.patch,
+  -files/courier-imap-4.14-db4-configure.ac.patch,
+  -files/courier-imap-4.14-disable-fam-configure.ac.patch,
+  files/courier-imap-4.0.6-r1-courier-imapd-ssl.rc6,
+  files/courier-imap-4.0.6-r1-courier-imapd.rc6,
+  files/courier-imap-4.0.6-r1-courier-pop3d-ssl.rc6,
+  files/courier-imap-4.0.6-r1-courier-pop3d.rc6,
+  files/courier-imap-4.0.6-r1-gentoo-imapd-ssl.rc,
+  files/courier-imap-4.0.6-r1-gentoo-imapd.rc,
+  files/courier-imap-4.0.6-r1-gentoo-pop3d-ssl.rc,
+  files/courier-imap-4.0.6-r1-gentoo-pop3d.rc:
+  version bump net-mail/courier-imap
 
 *courier-imap-4.15 (14 Jan 2014)
 

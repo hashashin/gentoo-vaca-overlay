@@ -1,32 +1,37 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0-r1.ebuild,v 1.11 2013/09/26 17:30:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.16.0.ebuild,v 1.3 2015/05/01 05:02:52 jer Exp $
 
 EAPI=5
-inherit autotools eutils multilib libtool
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+inherit autotools eutils multilib libtool systemd
 
-DESCRIPTION="An IMAP daemon designed specifically for maildirs."
+DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 IUSE="berkdb debug fam +gdbm ipv6 selinux gnutls trashquota"
+
 REQUIRED_USE="|| ( berkdb gdbm )"
 
-RDEPEND="gnutls? ( net-libs/gnutls )
-		!gnutls? ( >=dev-libs/openssl-0.9.6 )
-		>=net-libs/courier-authlib-0.61
-		>=net-mail/mailbase-0.00-r8
-		berkdb? ( sys-libs/db )
-		fam? ( virtual/fam )
-		gdbm? ( >=sys-libs/gdbm-1.8.0 )
-		selinux? ( sec-policy/selinux-courier )"
-DEPEND="${RDEPEND}
-		dev-lang/perl
-		!mail-mta/courier
-		userland_GNU? ( sys-process/procps )"
+CDEPEND="
+	gnutls? ( net-libs/gnutls )
+	!gnutls? ( >=dev-libs/openssl-0.9.6:0= )
+	>=net-libs/courier-authlib-0.61
+	>=net-libs/courier-unicode-1.1
+	>=net-mail/mailbase-0.00-r8
+	berkdb? ( sys-libs/db:= )
+	fam? ( virtual/fam )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+DEPEND="${CDEPEND}
+	dev-lang/perl
+	!mail-mta/courier
+	userland_GNU? ( sys-process/procps )"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-courier )"
 
 # get rid of old style virtual - bug 350792
 # all blockers really needed?
@@ -43,16 +48,17 @@ src_prepare() {
 	# Bug #48838. Patch to enable/disable FAM support.
 	# 20 Aug 2004 langthang@gentoo.org
 	# This patch should fix bug #51540. fam USE flag is not needed for shared folder support.
-	epatch "${FILESDIR}"/${PN}-4.14-disable-fam-configure.ac.patch
+	epatch "${FILESDIR}"/${PN}-4.15-disable-fam-configure.ac.patch
 
 	# Kill unneeded call to AC_PROG_SYSCONFTOOL (bug #168206).
-	epatch "${FILESDIR}"/${PN}-4.14-aclocal-fix.patch
+	epatch "${FILESDIR}"/${PN}-4.15-aclocal-fix.patch
 
 	# These patches should fix problems detecting BerkeleyDB.
 	# We now can compile with db4 support.
 	if use berkdb ; then
-		epatch "${FILESDIR}"/${PN}-4.14-db4-bdbobj_configure.ac.patch
-		epatch "${FILESDIR}"/${PN}-4.14-db4-configure.ac.patch
+		epatch \
+			"${FILESDIR}"/${PN}-4.15-db4-bdbobj_configure.ac.patch \
+			"${FILESDIR}"/${PN}-4.15-db4-configure.ac.patch
 	fi
 
 	eautoreconf
@@ -69,18 +75,6 @@ src_configure() {
 	elif use berkdb ; then
 		einfo "Building with BerkeleyDB support"
 		myconf="${myconf} --with-db=db"
-	fi
-
-	# Disabling unicode is no longer supported
-	# By default all available character sets are included
-	# Set ENABLE_UNICODE=iso-8859-1,utf-8,iso-8859-10
-	# to include only specified translation tables.
-	if [[ -z "${ENABLE_UNICODE}" ]] ; then
-		einfo "ENABLE_UNICODE is not set, building with all available character sets"
-		myconf="${myconf} --enable-unicode"
-	else
-		einfo "ENABLE_UNICODE is set, building with unicode=${ENABLE_UNICODE}"
-		myconf="${myconf} --enable-unicode=${ENABLE_UNICODE}"
 	fi
 
 	if use trashquota ; then
@@ -104,7 +98,7 @@ src_configure() {
 		$(use_with fam) \
 		$(use_with ipv6) \
 		$(use_with gnutls) \
-		${myconf} || die "econf failed"
+		${myconf}
 
 	# Change the pem file location.
 	sed -i -e "s:^\(TLS_CERTFILE=\).*:\1/etc/courier-imap/imapd.pem:" \
@@ -123,25 +117,25 @@ src_compile() {
 
 src_install() {
 	dodir /var/lib/${PN} /etc/pam.d
-	emake DESTDIR="${D}" install
-	rm -Rf "${D}/etc/pam.d"
+	default
+	rm -Rf "${D}/etc/pam.d" || die
 
 	# Avoid name collisions in /usr/sbin wrt imapd and pop3d
-	cd "${D}/usr/sbin"
+	cd "${D}/usr/sbin" || die
 	for name in imapd pop3d ; do
 		mv -f "${name}" "courier-${name}" || die "Failed to mv ${name} to courier-${name}"
 	done
 
 	# Hack /usr/lib/courier-imap/foo.rc to use ${MAILDIR} instead of
 	# 'Maildir', and to use /usr/sbin/courier-foo names.
-	cd "${D}/usr/$(get_libdir)/${PN}"
+	cd "${D}/usr/$(get_libdir)/${PN}" || die
 	for service in {imapd,pop3d}{,-ssl} ; do
 		sed -i -e 's/Maildir/${MAILDIR}/' "${service}.rc" || die "sed failed"
 		sed -i -e "s/\/usr\/sbin\/${service}/\/usr\/sbin\/courier-${service}/" "${service}.rc" || die "sed failed"
 	done
 
 	# Rename the config files correctly and add a value for ${MAILDIR} to them.
-	cd "${D}/etc/${PN}"
+	cd "${D}/etc/${PN}" || die
 	for service in {imapd,pop3d}{,-ssl} ; do
 		mv -f "${service}.dist" "${service}" || die "Failed to mv ${service}.dist to ${service}"
 		echo -e '\n# Hardwire a value for ${MAILDIR}' >> "${service}"
@@ -172,8 +166,7 @@ src_install() {
 		mv -f "${D}/usr/sbin/${x}" "${D}/usr/sbin/${x}.orig" || die "Failed to mv /usr/sbin/${x} to /usr/sbin/${x}.orig"
 	done
 
-	exeinto /usr/sbin
-	doexe "${FILESDIR}/mkimapdcert" "${FILESDIR}/mkpop3dcert"
+	dosbin "${FILESDIR}/mkimapdcert" "${FILESDIR}/mkpop3dcert"
 
 	dosym /usr/sbin/courierlogger /usr/$(get_libdir)/${PN}/courierlogger
 
@@ -183,6 +176,10 @@ src_install() {
 		sed -e "s:GENTOO_LIBDIR:$(get_libdir):g" "${FILESDIR}/${PN}-${INITD_VER}-${initd}.rc6" > "${initd}" || die "initd libdir-sed failed"
 		doinitd "${initd}"
 	done
+
+	systemd_newunit "${FILESDIR}"/courier-authdaemond-r1.service courier-authdaemond.service
+	systemd_newunit "${FILESDIR}"/courier-imapd-ssl-r1.service courier-imapd-ssl.service
+	systemd_newunit "${FILESDIR}"/courier-imapd-r1.service courier-imapd.service
 
 	exeinto /usr/$(get_libdir)/${PN}
 	for exe in gentoo-{imapd,pop3d}{,-ssl}.rc courier-{imapd,pop3d}.indirect ; do
@@ -194,7 +191,7 @@ src_install() {
 	mv -f "${D}/usr/sbin/maildirmake" "${D}/usr/bin/maildirmake" || die "Failed to mv /usr/sbin/maildirmake to /usr/bin/maildirmake"
 
 	# Bug #45953, more docs.
-	cd "${S}"
+	cd "${S}" || die
 	dohtml -r "${S}"/*
 	dodoc "${S}"/{AUTHORS,INSTALL,NEWS,README,ChangeLog} "${FILESDIR}"/${PN}-gentoo.readme
 	docinto imap
@@ -206,8 +203,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Authdaemond is no longer provided by this package."
-	elog "Authentication libraries are now in courier-authlib."
+	elog "Please read http://www.courier-mta.org/imap/INSTALL.html#upgrading"
+	elog "and remove TLS_DHPARAMS from configuration files or run mkdhparams"
+
 	elog "For a quick-start howto please refer to"
 	elog "${PN}-gentoo.readme in /usr/share/doc/${PF}"
 	# Some users have been reporting that permissions on this directory were
