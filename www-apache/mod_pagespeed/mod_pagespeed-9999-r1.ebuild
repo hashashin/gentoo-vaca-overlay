@@ -57,6 +57,7 @@ src_unpack() {
 
 src_prepare() {
 	# move the sources to the working dir
+	cd "${WORKDIR}"
 	rsync -rlpgo --exclude=".svn" --exclude=".glient*" src/ "${S}"
 	find "${S}"/. -type f -print0 | xargs -0 sed -i 's/\-Werror//g'
 	einfo "   working copy: ${S}"
