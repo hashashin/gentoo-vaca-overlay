@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,7 +11,7 @@ inherit apache-module eutils subversion python-r1
 DESCRIPTION="Apache module for rewriting web pages to reduce latency and bandwidth"
 HOMEPAGE="http://code.google.com/p/modpagespeed"
 
-ESVN_REPO_URI="http://modpagespeed.googlecode.com/svn/trunk/src"
+ESVN_REPO_URI="https://github.com/hashashin/src.git"
 EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
 
 LICENSE="Apache-2.0"
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-vcs/subversion
+	dev-vcs/git
 	>=sys-devel/gcc-4.1.0[cxx]
 	dev-util/gperf"
 RDEPEND=">=www-servers/apache-2.2.0
@@ -52,7 +53,9 @@ src_unpack() {
 	einfo "gclient sync -->"
 	einfo "     repository: ${ESVN_REPO_URI}"
 	${EGCLIENT} sync --force || die "gclient: unable to sync"
+}
 
+src_prepare() {
 	# move the sources to the working dir
 	rsync -rlpgo --exclude=".svn" --exclude=".glient*" src/ "${S}"
 	find "${S}"/. -type f -print0 | xargs -0 sed -i 's/\-Werror//g'

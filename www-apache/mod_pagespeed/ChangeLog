@@ -1,3 +1,9 @@
+*mod_pagespeed-9999-r1 (03 Aug 2015)
+
+  03 Aug 2015;  <hash@gentoo.org> +mod_pagespeed-9999-r1.ebuild,
+  -mod_pagespeed-9999.ebuild:
+  fix www-apache/mod_pagespeed, ugly but seems to work
+
 *mod_pagespeed-9999 (19 Nov 2014)
 
   19 Nov 2014;  <hash@gentoo.org> +files/80_mod_pagespeed.conf, +metadata.xml,
