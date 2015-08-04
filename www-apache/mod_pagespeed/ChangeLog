@@ -1,3 +1,6 @@
+  04 Aug 2015;  <hash@gentoo.org> mod_pagespeed-9999-r1.ebuild:
+  change homepage www-apache/mod_pagespeed
+
   03 Aug 2015;  <hash@gentoo.org> mod_pagespeed-9999-r1.ebuild:
   more www-apache/mod_pagespeed stuff 2
 

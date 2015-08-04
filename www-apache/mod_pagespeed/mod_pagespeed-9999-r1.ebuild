@@ -9,7 +9,7 @@ PYTHON_REQ_USE='threads(+)'
 inherit apache-module eutils subversion python-r1
 
 DESCRIPTION="Apache module for rewriting web pages to reduce latency and bandwidth"
-HOMEPAGE="http://code.google.com/p/modpagespeed"
+HOMEPAGE="https://github.com/pagespeed/mod_pagespeed"
 
 ESVN_REPO_URI="https://github.com/hashashin/src.git"
 EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
