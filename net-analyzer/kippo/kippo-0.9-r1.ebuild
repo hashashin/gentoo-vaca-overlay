@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,7 +20,7 @@ IUSE=""
 DEPEND="dev-python/twisted-core
 	dev-python/twisted-conch
 	dev-python/twisted-web
-	net-zope/zope-interface
+	dev-python/zope-interface
 	dev-python/pycrypto
 	dev-python/pyasn1"
 RDEPEND="${DEPEND}"

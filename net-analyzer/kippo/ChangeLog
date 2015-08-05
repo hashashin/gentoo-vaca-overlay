@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/kippo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*kippo-0.9-r1 (05 Aug 2015)
+
+  05 Aug 2015;  <hash@gentoo.org> +kippo-0.9-r1.ebuild, -kippo-0.9.ebuild:
+  fix dep name net-analyzer/kippo
 
   17 Nov 2014;  <hash@gentoo.org> kippo-0.9.ebuild:
   fix
