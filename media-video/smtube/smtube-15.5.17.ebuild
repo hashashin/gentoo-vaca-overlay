@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,7 +9,7 @@ inherit l10n qt4-r2
 
 DESCRIPTION="A youtube search and play add-on for smplayer"
 HOMEPAGE="http://smplayer.sourceforge.net/"
-SRC_URI="mirror://sourceforge/smplayer/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/smtube/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,9 +31,6 @@ src_prepare() {
 		Makefile || die "sed on Makefile failed"
 
 	echo "#define SVN_REVISION \"SVN-${PV} (Gentoo)\"" > src/svn_revision.h
-
-	# remove unneeded files
-	rm Copying.txt Copying_BSD.txt || die 'remove unneeded files failed'
 
 	l10n_find_plocales_changes "src/translations" "${PN}_" '.ts'
 	l10n_for_each_disabled_locale_do remove_translation
