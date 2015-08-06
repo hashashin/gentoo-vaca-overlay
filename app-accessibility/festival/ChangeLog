@@ -1,0 +1,6 @@
+*festival-2.4 (06 Aug 2015)
+
+  06 Aug 2015;  <hash@gentoo.org> +festival-2.4.ebuild,
+  +files/festival-2.4-gentoo-system.patch, +files/festival-2.4-init-scm.patch,
+  +files/festival-2.4-ldflags.patch, +metadata.xml:
+  add upstream updated app-accessibility/festival
