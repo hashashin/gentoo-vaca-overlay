@@ -1,3 +1,8 @@
+*smtube-15.8.0 (11 Oct 2015)
+
+  11 Oct 2015;  <hash@gentoo.org> +smtube-15.8.0.ebuild, -smtube-15.5.17.ebuild:
+  version bump media-video/smtube
+
 *smtube-15.5.17 (06 Aug 2015)
 
   06 Aug 2015;  <hash@gentoo.org> +smtube-15.5.17.ebuild, -smtube-1.8.ebuild:
