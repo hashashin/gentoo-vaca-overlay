@@ -1,3 +1,9 @@
+*jenkins-bin-1.632 (11 Oct 2015)
+
+  11 Oct 2015;  <hash@gentoo.org> +jenkins-bin-1.632.ebuild,
+  -jenkins-bin-1.624.ebuild:
+  version bump dev-util/jenkins-bin
+
 *jenkins-bin-1.624 (12 Aug 2015)
 
   12 Aug 2015;  <hash@gentoo.org> +jenkins-bin-1.624.ebuild,
