@@ -1,13 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 inherit eutils
+MY_PN="WinFF"
 
 DESCRIPTION="GUI for the command line video converter ffmpeg"
 HOMEPAGE="http://winff.org/"
-SRC_URI="http://winff.googlecode.com/files/${P}-source.tar.gz
+SRC_URI="http://winff.googlecode.com/files/${MY_PN}-${PV}-source.tar.gz
 	http://winff.googlecode.com/files/presets-libavcodec54_v1.wff
 	https://dl.dropboxusercontent.com/u/210030302/lazarushomedir.7z"
 
@@ -34,10 +35,10 @@ RDEPEND="
 	|| ( x11-terms/xterm x11-terms/gnome-terminal )
 "
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}"
 
 src_compile() {
-	mv ../.lazarus ../../homedir/.lazarus
+	mv .lazarus ../homedir/.lazarus
 	lazbuild --widgetset=gtk2 -B winff.lpr || die
 }
 
