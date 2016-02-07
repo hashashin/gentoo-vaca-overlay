@@ -1,3 +1,9 @@
+*heroku-client-9999-r2 (07 Feb 2016)
+
+  07 Feb 2016;  <hash@gentoo.org> +heroku-client-9999-r2.ebuild,
+  -heroku-client-9999-r1.ebuild:
+  bump
+
 *heroku-client-9999-r1 (01 Aug 2015)
 
   01 Aug 2015;  <hash@gentoo.org> +heroku-client-9999-r1.ebuild,
