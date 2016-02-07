@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openimageio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.24 2013/06/13 12:32:51 xmw Exp $
+
+*openimageio-1.5.23 (07 Feb 2016)
+
+  07 Feb 2016;  <hash@gentoo.org> +files/openimageio-1.3.5-openexr-2.x.patch,
+  +openimageio-1.5.23.ebuild:
+  media-libs/openimageio version bump
 
 *openimageio-1.2.2 (10 Oct 2013)
 
