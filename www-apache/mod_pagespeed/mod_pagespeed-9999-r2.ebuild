@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,7 +12,7 @@ DESCRIPTION="Apache module for rewriting web pages to reduce latency and bandwid
 HOMEPAGE="https://github.com/pagespeed/mod_pagespeed"
 
 ESVN_REPO_URI="https://github.com/hashashin/src.git"
-EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
+EGCLIENT_REPO_URI="https://src.chromium.org/svn/trunk/tools/depot_tools"
 
 LICENSE="Apache-2.0"
 SLOT="0"
