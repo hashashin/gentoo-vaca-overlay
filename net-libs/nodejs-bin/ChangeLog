@@ -1,3 +1,6 @@
+  24 Mar 2016;  <hash@gentoo.org> nodejs-bin-5.9.1-r1.ebuild:
+  fix net-libs/nodejs-bin install bis
+
 *nodejs-bin-5.9.1-r1 (24 Mar 2016)
 
   24 Mar 2016;  <hash@gentoo.org> +nodejs-bin-5.9.1-r1.ebuild,
