@@ -19,9 +19,9 @@ src_install() {
 	exeinto /opt/bin
 	doexe bin/*
 	insinto /opt/include
-	doins -r include/
+	doins -r include/*
 	insinto /opt/lib
-	doins -r lib/
+	doins -r lib/*
 	insinto /opt/share
-	doins -r share/
+	doins -r share/*
 }
