@@ -16,12 +16,12 @@ IUSE=""
 S="${WORKDIR}/node-v${PV}-linux-x64"
 
 src_install() {
-	exeinto /usr/bin
+	exeinto /usr/local/bin
 	doexe bin/*
-	insinto /usr/include
+	insinto /usr/local/include
 	doins -r include/*
-	insinto /usr/lib
+	insinto /usr/local/lib
 	doins -r lib/*
-	insinto /usr/share
+	insinto /usr/local/share
 	doins -r share/*
 }
