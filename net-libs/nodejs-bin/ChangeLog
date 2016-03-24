@@ -1,0 +1,4 @@
+*nodejs-bin-5.9.1 (24 Mar 2016)
+
+  24 Mar 2016;  <hash@gentoo.org> +metadata.xml, +nodejs-bin-5.9.1.ebuild:
+  add net-libs/nodejs-bin for amd64
