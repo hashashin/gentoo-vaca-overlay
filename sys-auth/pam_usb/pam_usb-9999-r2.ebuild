@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ inherit eutils pam toolchain-funcs git-2
 
 DESCRIPTION="A pam module to provide authentication using USB device"
 HOMEPAGE="http://pamusb.org/"
-EGIT_REPO_URI="git://github.com/aluzzardi/pam_usb.git"
+EGIT_REPO_URI="git://github.com/luka-n/pam_usb.git"
 SRC_URI=""
 
 LICENSE="GPL-2"
