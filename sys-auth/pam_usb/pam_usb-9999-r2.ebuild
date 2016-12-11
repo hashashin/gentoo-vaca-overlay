@@ -30,7 +30,6 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-openpam.patch
-	epatch "${FILESDIR}"/${P}-python2.patch
 }
 
 src_compile() {
