@@ -1,5 +1,0 @@
-*wordpress-4.0.1 (21 Nov 2014)
-
-  21 Nov 2014;  <hash@gentoo.org> +files/postinstall-en.txt,
-  +files/postupgrade-en.txt, +metadata.xml, +wordpress-4.0.1.ebuild:
-  add and bump www-apps/wordpress

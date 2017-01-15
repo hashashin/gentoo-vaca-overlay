@@ -1,4 +1,0 @@
-*phpsysinfo-3.1.8 (23 Nov 2013)
-
-  23 Nov 2013;  <hash@gentoo.org> +metadata.xml, +phpsysinfo-3.1.8.ebuild:
-  new ebuild www-apps/phpsysinfo
