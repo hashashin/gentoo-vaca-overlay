@@ -1,8 +1,0 @@
---- dist/wine-doors.desktop	2013-05-28 16:02:55.327586236 +0200
-+++ dist/wine-doors.desktop	2013-05-28 16:04:15.740580805 +0200
-@@ -7,4 +7,4 @@
- Type=Application
- GenericName=Windows application Installer
- GenericName[pt_BR]=Instalador de Aplicações Windows
--Categories=Wine;Applications;GTK;System;Emulator
-+Categories=X-Wine;GTK;System;Emulator;

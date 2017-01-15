@@ -1,8 +1,0 @@
-  28 May 2013;  <hash@gentoo.org> wine-doors-0.1.4.2.ebuild:
-  fix upstream homepage
-
-*wine-doors-0.1.4.2 (28 May 2013)
-
-  28 May 2013;  <hash@gentoo.org> +files/desktop-qa.patch, +metadata.xml,
-  +wine-doors-0.1.4.2.ebuild:
-  wine-doors version bump

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/gkvm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass app-emulation/*
 
 *gkvm-0.3-r2 (15 Feb 2012)
 
