@@ -1,3 +1,6 @@
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass media-libs/*
+
   30 Aug 2013;  <hash@gentoo.org> maiat3plusdec-9999-r1.ebuild:
   force regen manifest
 
