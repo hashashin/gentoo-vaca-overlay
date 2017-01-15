@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=5
 JAVA_PKG_IUSE="doc source examples"
 
 inherit java-pkg-2 java-ant-2 java-osgi
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zlib"
 
-RDEPEND=">=virtual/jdk-1.5
+RDEPEND="virtual/jdk:1.8
 	zlib? ( dev-java/jzlib:0 )"
-DEPEND=">=virtual/jdk-1.5
+DEPEND="virtual/jdk:1.8
 	app-arch/unzip
 	${RDEPEND}"
 

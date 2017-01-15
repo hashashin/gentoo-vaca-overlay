@@ -2,6 +2,11 @@
 # Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.84 2013/05/06 09:29:48 fordfrog Exp $
 
+*jsch-0.1.54 (15 Jan 2017)
+
+  15 Jan 2017;  <hash@gentoo.org> +jsch-0.1.54.ebuild, -jsch-0.1.53.ebuild:
+  version bump dev-java/jsch
+
   15 Jan 2017;  <hash@gentoo.org> jsch-0.1.53.ebuild, metadata.xml:
   clean up and repoman pass dev-java/*
 
