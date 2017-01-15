@@ -1,3 +1,6 @@
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass dev-python/*
+
   17 Sep 2013;  <hash@gentoo.org> aiml-0.8.6-r1.ebuild:
   more fixes
 
