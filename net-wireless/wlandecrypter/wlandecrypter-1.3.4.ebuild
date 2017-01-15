@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-libs/openssl"
+RDEPEND="dev-libs/openssl:0"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/wlandecrypter-${PV}"

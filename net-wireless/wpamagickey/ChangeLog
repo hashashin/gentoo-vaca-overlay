@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpamagickey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass net-wireless/*
 
 *wpamagickey-0.2.4 (19 Nov 2012)
 
@@ -87,5 +90,3 @@
   Changes:
 
   new file: metadata.xml
-
-
