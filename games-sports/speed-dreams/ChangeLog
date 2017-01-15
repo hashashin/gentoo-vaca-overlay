@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/speed-dreams
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass games-sports/*
 
 *speed-dreams-2.0.0 (02 Oct 2012)
 
@@ -94,5 +97,3 @@
   new file: speed-dreams-2.0.0_beta1.ebuild
 
   new file: Manifest
-
-
