@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.5.ebuild,v 1.3 2013/08/18 13:27:34 ago Exp $
 
@@ -97,7 +97,7 @@ src_install() {
 	dosym /usr/bin/avr-ar "/usr/share/${PN}/hardware/tools/avr/bin/avr-ar"
 	dosym /usr/bin/avr-objcopy "/usr/share/${PN}/hardware/tools/avr/bin/avr-objcopy"
 	dosym /usr/bin/avr-size "/usr/share/${PN}/hardware/tools/avr/bin/avr-size"
-	
+
 	# install menu and icons
 	domenu "${FILESDIR}/${PN}.desktop"
 	for sz in 16 24 32 48 128 256; do
