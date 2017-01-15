@@ -1,4 +1,0 @@
-*URI-Find-Simple-1.03 (09 Nov 2013)
-
-  09 Nov 2013;  <hash@gentoo.org> +URI-Find-Simple-1.03.ebuild, +metadata.xml:
-  new ebuild dev-perl/URI-Find-Simple
