@@ -1,3 +1,6 @@
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass sys-apps/*
+
   04 Sep 2013;  <hash@gentoo.org> ranwhen-9999.ebuild:
   sys-apps/ranwhen correct license
 
