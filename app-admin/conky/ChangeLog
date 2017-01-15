@@ -1,3 +1,6 @@
+  15 Jan 2017;  <hash@gentoo.org> conky-1.10.0.ebuild, metadata.xml:
+  repoman pass app-admin/*
+
 *conky-1.10.0 (03 Aug 2015)
 
   03 Aug 2015;  <hash@gentoo.org> +conky-1.10.0.ebuild, +metadata.xml:

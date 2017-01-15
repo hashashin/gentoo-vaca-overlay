@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
+	<maintainer type="person">
 		<email>gentoo.power@gmail.com</email>
 		<name>hashashin</name>
 	</maintainer>
@@ -9,7 +9,6 @@
 		<maintainer>
 			<email>brenden@rty.ca</email>
 			<name>Brenden Matthews</name>
-			<description>Upstream author</description>
 		</maintainer>
 		<remote-id type="sourceforge">conky</remote-id>
 	</upstream>

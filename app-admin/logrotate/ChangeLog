@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.142 2013/06/10 20:32:29 jer Exp $
+
+  15 Jan 2017;  <hash@gentoo.org> logrotate-3.9.1.ebuild, metadata.xml:
+  repoman pass app-admin/*
 
 *logrotate-3.9.1 (03 Apr 2015)
 
