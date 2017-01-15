@@ -1,3 +1,6 @@
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass net-libs/*
+
   24 Mar 2016;  <hash@gentoo.org> nodejs-bin-5.9.1-r1.ebuild:
   fix net-libs/nodejs-bin install bisbis
 
