@@ -1,3 +1,6 @@
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass dev-util/*
+
 *heroku-client-9999-r2 (07 Feb 2016)
 
   07 Feb 2016;  <hash@gentoo.org> +heroku-client-9999-r2.ebuild,

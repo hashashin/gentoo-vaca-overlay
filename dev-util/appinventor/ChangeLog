@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/appinventor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-util/appinventor/ChangeLog,v 1.1 2011/08/26 13:49:27 hwoarang Exp $
+
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass dev-util/*
 
 *appinventor-1.1-r1 (01 May 2012)
 
@@ -22,4 +25,3 @@
   +metadata.xml:
   Initial commit. Thanks to Iván Atienza <gentoo.power@gmail.com> for the
   ebuild. Bug #380131
-

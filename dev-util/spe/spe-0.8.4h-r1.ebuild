@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND=""
 RDEPEND=">=dev-python/pychecker-0.8.18
-	<=dev-python/wxpython-2.8.12.1-r1
+	dev-python/wxpython:2.9
 	>=dev-util/wxglade-0.3.2"
 
 S="${WORKDIR}/spe-${MY_PV}"
