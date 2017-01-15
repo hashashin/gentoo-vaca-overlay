@@ -1,3 +1,9 @@
+*nodejs-bin-6.9.4 (15 Jan 2017)
+
+  15 Jan 2017;  <hash@gentoo.org> +nodejs-bin-6.9.4.ebuild,
+  -nodejs-bin-5.9.1-r1.ebuild:
+  version bump net-libs/nodejs-bin and add ~x86 keyword and proper src_uri
+
   15 Jan 2017;  <hash@gentoo.org> metadata.xml:
   clean up and repoman pass net-libs/*
 
