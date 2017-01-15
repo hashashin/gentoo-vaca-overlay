@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amun
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass net-analyzer/*
 
 *amun-0.2.2 (13 Nov 2014)
 

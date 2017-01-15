@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/kippo
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  15 Jan 2017;  <hash@gentoo.org> metadata.xml:
+  clean up and repoman pass net-analyzer/*
 
 *kippo-0.9-r1 (05 Aug 2015)
 
