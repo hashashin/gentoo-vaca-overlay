@@ -31,3 +31,6 @@ before_script:
 script:
     - ./../spinner.sh "python ../portage-portage-${PORTAGE_VER}/repoman/bin/repoman full -d"
 # You can append own scripts after this line
+notifications:
+  webhooks: https://ambrosio-tele.herokuapp.com/ambrosio_bot/travisci/133188453
+  on_start: true
